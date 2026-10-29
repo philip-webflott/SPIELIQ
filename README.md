@@ -43,6 +43,10 @@ Demo-Zugänge nach `db:seed` (nur lokal): Trainer `demo.trainer@spieliq.invalid`
 
 Nach Änderungen am Prisma-Schema `pnpm db:generate` erneut ausführen. Der Datenbanknutzer braucht das Recht, Datenbanken anzulegen (beim Docker-Container gegeben) – sonst die Datenbanken `spieliq` und `spieliq_test` vorher selbst anlegen.
 
+## Online-Vorschau (Vercel + Supabase)
+
+Ohne lokale Installation: Repository in Vercel importieren (Root Directory `apps/web`), Supabase als Datenbank verbinden, `SEED_DEMO_DATA=true` setzen – Schritt für Schritt in [docs/betrieb/vorschau-vercel-supabase.md](docs/betrieb/vorschau-vercel-supabase.md). Nur mit Demo-Daten nutzen.
+
 ## Prüfen
 
 ```bash

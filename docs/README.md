@@ -43,6 +43,7 @@ Stand: 29.10.2026 · Einstieg für jede Entwicklungssitzung: zuerst den [Entwick
 | ADRs | [0001 Monorepo](architektur/adr/0001-monorepo-mit-fachpaketen.md) · [0002 SVG](architektur/adr/0002-svg-rendering.md) · [0003 Sitzungen](architektur/adr/0003-eigene-sitzungsverwaltung.md) · [0004 Cache Components](architektur/adr/0004-cache-components.md) · [0005 Prisma/PostgreSQL](architektur/adr/0005-prisma-7-postgresql.md) · [0006 TypeScript 6](architektur/adr/0006-typescript-6.md) · [0007 Zeitbasierte Bewertung](architektur/adr/0007-zeitbasierte-bewertung.md) · [0008 Inhalte im Code](architektur/adr/0008-inhalte-im-code.md) |
 | [Datenschutz- und Kinderschutzkonzept](recht/datenschutzkonzept.md) | Daten, Sichtbarkeit, Einwilligung, Fristen, Betroffenenrechte, Speicher-Inventar, offene Rechtsfragen |
 | [Barrierefreiheit](recht/barrierefreiheit.md) | rechtlicher Rahmen, Umsetzungsstand je WCAG-Kriterium, Prüfplan |
+| [Online-Vorschau mit Vercel und Supabase](betrieb/vorschau-vercel-supabase.md) | Einrichtung, Umgebungsvariablen, Fehlerbehebung, Datenschutz-Hinweise |
 | [Qualitätsstandards](qualitaet/qualitaetsstandards.md) | Freigabeprozess, Checklisten je Mission, Evaluation |
 | [Content-Report](qualitaet/content-report.md) | automatisch erzeugt (`pnpm content:report`): Kennzahlen je Mission |
 

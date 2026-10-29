@@ -20,6 +20,7 @@ Stand: 29.10.2026 · Grundlage: [Register D](../recherche/quellen/D-recht-datens
 | **Vereinsmodus** (Verein/Fußballschule → Mannschaft → Spieler:innen über Teamcode) | Verein als Verantwortlicher, SPIELIQ als Auftragsverarbeiter (Art. 28 DSGVO) – oder gemeinsame Verantwortung, weil SPIELIQ Inhalte und Bewertungslogik bestimmt (offene Rechtsfrage) | umgesetzt (Mandantentrennung über Organisation → Mannschaft) |
 | **Gastmodus** (`/try`) | keine personenbezogene Verarbeitung: nichts wird gespeichert, kein Cookie | umgesetzt |
 | **Direktnutzung (B2C)** | SPIELIQ als Verantwortlicher | nicht umgesetzt (Entscheidung E-1 in [Offene Fragen](../recherche/offene-fragen.md)) |
+| **Online-Vorschau** (Vercel, Funktionen in Frankfurt; Supabase, Region Frankfurt) | – | nur Demo-Daten; Anbieter mit US-Bezug, Auftragsverarbeitung und Drittlandübermittlung vor Echtbetrieb prüfen ([Anleitung](../betrieb/vorschau-vercel-supabase.md)) |
 
 ## 3. Welche Daten verarbeitet werden
 

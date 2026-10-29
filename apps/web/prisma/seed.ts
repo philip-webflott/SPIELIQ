@@ -4,6 +4,7 @@
  * "Demo-Daten" markiert. Keine echten Personen, keine echten Vereine.
  *
  * Aufruf: pnpm db:seed  (setzt DATABASE_URL voraus)
+ * Mit `--if-enabled` (Vercel-Build) nur, wenn SEED_DEMO_DATA=true gesetzt ist.
  *
  * Zugänge (nur lokal):
  *   Trainer:  demo.trainer@spieliq.invalid / demo-trainer-2026
@@ -14,6 +15,7 @@ import { assessStep, isInteractive } from '@spieliq/engine'
 import { getMission } from '@spieliq/content'
 import { PrismaClient } from '../src/generated/prisma/client'
 import { hashPassword } from '../src/server/auth/password'
+import { databaseUrl, poolConfig } from '../src/server/db-config'
 import { hashInviteCode } from '../src/server/auth/tokens'
 
 try {
@@ -22,7 +24,12 @@ try {
   // keine .env
 }
 
-const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL! }) })
+if (process.argv.includes('--if-enabled') && process.env.SEED_DEMO_DATA !== 'true') {
+  console.log('Demo-Daten übersprungen (SEED_DEMO_DATA ist nicht "true").')
+  process.exit(0)
+}
+
+const db = new PrismaClient({ adapter: new PrismaPg(poolConfig(databaseUrl(), process.env.DATABASE_CA_CERT)) })
 
 async function main() {
   await db.organization.deleteMany({ where: { isDemo: true } })

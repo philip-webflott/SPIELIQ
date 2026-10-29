@@ -6,6 +6,7 @@
  */
 import { PrismaPg } from '@prisma/adapter-pg'
 import { PrismaClient } from '../src/generated/prisma/client'
+import { databaseUrl, poolConfig } from '../src/server/db-config'
 import { applyRetention } from '../src/server/modules/retention'
 
 try {
@@ -14,7 +15,7 @@ try {
   // keine .env
 }
 
-const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL! }) })
+const db = new PrismaClient({ adapter: new PrismaPg(poolConfig(databaseUrl(), process.env.DATABASE_CA_CERT)) })
 
 applyRetention(db)
   .then((result) => console.log('Speicherfristen angewendet:', result))

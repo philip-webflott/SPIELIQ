@@ -16,7 +16,9 @@ Stand: 29.10.2026 · Lies zuerst diesen Plan und den [Doku-Index](README.md).
 - Funktionen: Gastmodus ohne Konto; Trainer-Registrierung mit Verein und Mannschaft; Teamcodes (Hash, Ablauf, Einwilligungsbestätigung für U16, keine Spielerkonten in G/F); pseudonyme Spielerkonten; Lerneinheit 1 mit Missionen 1–6 (Zuschauen, Erkennen, Positionieren, Feedback, Konsequenz, Zusammenfassung); serverseitige Neubewertung; Lernstand mit drei Zuständen; Hausaufgaben mit Bericht; Trainerbeobachtung „auf dem Platz“; Problemfelder und Spielform-Vorschläge; Auskunft (JSON), Berichtigung, Löschung; Speicherfristen-Job; Seite „Hilfe & Melden“; Demo-Daten klar gekennzeichnet.
 - Qualität: 41 Engine-, 3 Spielfeld-, 102 Content-, 26 Integrations- und 7 End-to-End-Tests (Smartphone und Desktop), alle grün; Content-Tests prüfen Beispiele, Zufallsschutz, Raterate, Spiegelinvarianz und die Existenz jeder Quellenangabe ([Content-Report](qualitaet/content-report.md)).
 
-**Noch nicht erfolgt:** fachliche Freigabe durch lizenzierte Jugendtrainer:innen, Kalibrierung der Schwellenwerte, rechtliche Prüfung, Nutzertests, Pilot, Betrieb (Hosting, CI, Monitoring).
+**Online-Vorschau:** vorbereitet für Vercel + Supabase (`apps/web/vercel.json`, Build mit Migrationen und optionalen Demo-Daten) – [Anleitung](betrieb/vorschau-vercel-supabase.md). Nur mit Demo-Daten.
+
+**Noch nicht erfolgt:** fachliche Freigabe durch lizenzierte Jugendtrainer:innen, Kalibrierung der Schwellenwerte, rechtliche Prüfung, Nutzertests, Pilot, Echtbetrieb (Hosting-Verträge, CI, Monitoring).
 
 ## 2. Entscheidungen, die ohne Rückfrage getroffen wurden
 

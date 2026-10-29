@@ -60,6 +60,7 @@ ESLint erzwingt: Engine/Content importieren kein React/Next/Prisma; UI-Komponent
 apps/web/
   prisma/              schema.prisma, migrations/, seed.ts (Demo-Daten, gekennzeichnet)
   scripts/             Betriebsjobs (retention.ts: Speicherfristen)
+  vercel.json          Online-Vorschau (Build mit Migrationen, Region fra1)
   src/app/             Routen (öffentlich, (auth), play, coach, account, api)
   src/app/actions/     Server Actions (prüfen Sitzung bei jedem Aufruf)
   src/components/ui/   Designsystem-Komponenten

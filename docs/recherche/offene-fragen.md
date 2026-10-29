@@ -13,7 +13,7 @@ Diese Punkte verändern Produktvision, Budget oder grundlegende technische Festl
 | E-3 | G- und F-Jugend ohne Spielerkonten? | ja, technisch durchgesetzt (kein Teamcode für G/F) | Datensparsamkeit, DFB-Linie gegen frühe Taktik (A-21, A-88) |
 | E-4 | Fachliche Prüfung: Wer gibt Inhalte frei (lizenzierte:r Jugendtrainer:in, mindestens B-Lizenz mit Jugendschwerpunkt, plus pädagogische Sicht)? | noch niemand; alle Inhalte stehen auf `review` | Voraussetzung für den Einsatz mit Kindern ([Qualitätsstandards](../qualitaet/qualitaetsstandards.md)) |
 | E-5 | Pilot mit der eigenen C-Jugend (Vorher/Nachher, Retention, Trainerbeobachtung)? | geplant, Design in Register C (Offene Punkte 4) | Wirksamkeitsnachweis; braucht Einwilligungen der Eltern |
-| E-6 | Hosting und Dienstleister (EU-Region, Auftragsverarbeitung) | noch offen; Anforderung: EU, keine US-Dienste ohne Prüfung | Kosten, Verträge, Datenschutz-Folgenabschätzung |
+| E-6 | Hosting und Dienstleister (EU-Region, Auftragsverarbeitung) | Online-Vorschau auf Vercel + Supabase (Region Frankfurt), nur Demo-Daten; für den Echtbetrieb offen | Kosten, Verträge, Datenschutz-Folgenabschätzung; beide Anbieter mit US-Bezug (D-51 [HW]) |
 | E-7 | Verhältnis zu DFB / MEIN FUSSBALL (Abgrenzung, ggf. Gespräch) | keine Kooperation, keine Anlehnung an DFB-Marken | Positionierung; MEIN FUSSBALL hat einen Spieler-Bereich „Eigentraining“ (A-101) |
 | E-8 | Geschäftsmodell (Vereinslizenz, kostenlos, Förderung) | offen | B2C-Abos lösen Pflichten aus (§§ 312j, 312k BGB, UWG, BFSG; D-10, D-14, D-15) |
 

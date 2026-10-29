@@ -36,3 +36,4 @@ Jede Server Action und jedes Fachmodul prüft selbst (nie nur die Oberfläche):
 4. Sitzungsübersicht („überall abmelden“) im Profil.
 5. Sicherheitsüberprüfung vor Echtbetrieb (Penetrationstest), Abhängigkeits-Scans in CI.
 6. Backups/Verschlüsselung im Ruhezustand beim Hoster (EU-Region), Auftragsverarbeitungsvertrag.
+7. **Datenbank-TLS mit Zertifikatsprüfung:** `sslmode=require` (und Supabase ohne Angabe) verschlüsselt, prüft das Serverzertifikat aber nicht (wie libpq). Für den Echtbetrieb das CA-Zertifikat als `DATABASE_CA_CERT` hinterlegen (`src/server/db-config.ts`).

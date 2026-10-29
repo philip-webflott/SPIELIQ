@@ -1,6 +1,7 @@
 import 'server-only'
 import { PrismaPg } from '@prisma/adapter-pg'
 import { PrismaClient } from '@/generated/prisma/client'
+import { databaseUrl, poolConfig } from './db-config'
 
 /**
  * Einziger Datenbankzugang der Anwendung. Fachmodule (src/server/modules)
@@ -8,9 +9,8 @@ import { PrismaClient } from '@/generated/prisma/client'
  * Komponenten greifen nie direkt auf die Datenbank zu.
  */
 function createClient(): PrismaClient {
-  const connectionString = process.env.DATABASE_URL
-  if (!connectionString) throw new Error('DATABASE_URL ist nicht gesetzt')
-  return new PrismaClient({ adapter: new PrismaPg({ connectionString }) })
+  const config = poolConfig(databaseUrl(), process.env.DATABASE_CA_CERT)
+  return new PrismaClient({ adapter: new PrismaPg(config) })
 }
 
 const globalForPrisma = globalThis as unknown as { spieliqPrisma?: PrismaClient }
