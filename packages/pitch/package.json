@@ -1,0 +1,28 @@
+{
+  "name": "@spieliq/pitch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SVG-Spielfeld von SPIELIQ: Rendering, Animation und Touch-/Tastatur-Interaktion (React)",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@spieliq/engine": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "react": "19.3.1",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5"
+  }
+}
