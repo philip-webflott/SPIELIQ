@@ -11,8 +11,8 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "lint": "eslint src test",
-    "report": "vitest run test/report.test.ts"
+    "lint": "eslint src test scripts",
+    "report": "tsx scripts/report.ts"
   },
   "dependencies": {
     "@spieliq/engine": "workspace:*",

@@ -31,7 +31,8 @@ async function Detail({ params }: { params: PageProps<'/coach/team/[teamId]/play
   const coach = await requireAdult()
   const detail = await playerDetail(db, coach.id, teamId, playerId)
   const observations = await observationsForPlayer(db, coach.id, teamId, playerId)
-  const fmt = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+  // Nur das Datum – Trainer:innen sehen Lernergebnisse, keine Nutzungszeiten (Datenschutzkonzept).
+  const fmt = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'short' })
   const competencyMap = new Map(COMPETENCIES.map((c) => [c.id, c]))
   return (
     <>
@@ -41,6 +42,9 @@ async function Detail({ params }: { params: PageProps<'/coach/team/[teamId]/play
       <PageHeader eyebrow={`Anmeldename: ${detail.user.loginName ?? '–'}`} title={detail.user.displayName}>
         {detail.user.isDemo && <DemoBadge />}
       </PageHeader>
+      <p className="-mt-3 mb-5 text-sm text-text-faint">
+        Der digitale Lernstand zeigt Verständnis in Aufgaben – er ist kein Kriterium für Kader- oder Einsatzentscheidungen.
+      </p>
       <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr]">
         <div className="space-y-6">
           <Card className="p-5">

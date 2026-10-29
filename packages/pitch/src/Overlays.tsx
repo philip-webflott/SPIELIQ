@@ -17,7 +17,7 @@ const TONE: Record<OverlayTone, string> = {
 const LANE_STYLE: Record<LaneStatus, { color: string; dash?: string; label: string }> = {
   open: { color: 'var(--lane-open, #f4fbff)', label: '✓' },
   risky: { color: 'var(--signal-warn, #ffc53d)', dash: '1.2 0.9', label: '!' },
-  blocked: { color: 'var(--signal-bad, #ff5d73)', dash: '0.5 0.7', label: '✕' },
+  blocked: { color: 'var(--lane-blocked, #ffa3b0)', dash: '0.5 0.7', label: '✕' },
 }
 
 /** Passweg vom Ballführenden zum Mitspieler – Form UND Symbol zeigen den Status (nicht nur Farbe). */

@@ -57,7 +57,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Leitgedanke "ohne Ball anspielbar sein": offener Passweg zum Ballführenden. Bewertet über ein zeitbasiertes Abfangmodell (Ball vs. schnellster Gegenspieler).',
     phase: 'mit-ball',
-    sources: ['A-57', 'B-48'],
+    sources: ['A-57', 'A-87', 'B-48'],
     status: 'review',
   },
   {
@@ -96,7 +96,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Zweiter Verteidiger: tiefer gestaffelt, schräg versetzt (bevorzugt Richtung Tor/innen), nah genug für sofortige Hilfe, weit genug, um nicht mit derselben Aktion überspielt zu werden; zugleich den nächsten Gegenspieler im Blick.',
     phase: 'gegen-ball',
-    sources: ['B-01', 'B-69', 'B-81'],
+    sources: ['A-87', 'B-01', 'B-69', 'B-81'],
     status: 'review',
   },
   {
@@ -106,7 +106,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Ballorientiertes Verschieben als Block: Schwerpunkt Richtung Ballseite, ballnah enge Abstände, ballfern größere – ausdrücklich keine gleichen Abstände.',
     phase: 'gegen-ball',
-    sources: ['A-50', 'A-51', 'B-05', 'B-12'],
+    sources: ['A-50', 'A-87', 'B-05', 'B-12'],
     status: 'review',
   },
   {

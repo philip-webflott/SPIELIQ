@@ -120,7 +120,7 @@ export const m6Abschlusstest: MissionInput = {
       area: { min: { x: 30, y: 1 }, max: { x: 80, y: 67 } },
       assessment: {
         criteria: [
-          { id: 'dreieck', kind: 'triangle', params: {}, required: true, weight: 3, principle: 'P-DREIECK' },
+          { id: 'dreieck', kind: 'triangle', params: { minAngle: 30 }, required: true, weight: 3, principle: 'P-DREIECK' },
           { id: 'anspielbar', kind: 'passOptions', params: { minOpen: 2 }, required: true, weight: 2, principle: 'P-ANSPIELBAR' },
           {
             id: 'abstand',
@@ -133,7 +133,7 @@ export const m6Abschlusstest: MissionInput = {
           {
             id: 'passdistanz',
             kind: 'groupDistance',
-            params: { band: { min: 3, idealMin: 6, idealMax: 18, max: 24 } },
+            params: { band: { min: 3, idealMin: 6, idealMax: 16, max: 22 } },
             required: true,
             weight: 1,
             principle: 'P-ABSTAND',
@@ -156,7 +156,7 @@ export const m6Abschlusstest: MissionInput = {
       board: coverBoard,
       view: { x: -3, y: 0, width: 46, height: 42 },
       controlled: ['d4'],
-      area: { min: { x: 0, y: 0 }, max: { x: 50, y: 54 } },
+      area: { min: { x: 0, y: 0 }, max: { x: 52, y: 68 } },
       assessment: {
         criteria: [
           { id: 'absichern', kind: 'cover', params: { cover: 'd4', first: 'd3' }, required: true, weight: 3, principle: 'P-ABSICHERN' },

@@ -8,6 +8,9 @@ export function SiteFooter() {
           SPIELIQ ist ein unabhängiges Projekt und steht in keiner Verbindung zu DFB, FIFA oder UEFA. Entwicklungsstand: Prototyp.
         </p>
         <nav className="flex gap-4" aria-label="Rechtliches">
+          <Link href="/help" className="hover:text-text">
+            Hilfe &amp; Melden
+          </Link>
           <Link href="/privacy" className="hover:text-text">
             Datenschutz
           </Link>

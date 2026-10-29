@@ -34,7 +34,7 @@ export const m3AufgabenVerteilen: MissionInput = {
   level: 2,
   estimatedMinutes: 3,
   prerequisites: ['nazb-m1-problem-erkennen'],
-  sources: ['B-01', 'B-02', 'B-03', 'B-69', 'B-81'],
+  sources: ['A-51', 'A-87', 'B-01', 'B-02', 'B-03', 'B-69', 'B-81'],
   pitch: FULL_PITCH,
   view: { x: -3, y: 26, width: 46, height: 44 },
   teams: TEAMS_STANDARD,

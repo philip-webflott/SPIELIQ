@@ -9,7 +9,7 @@ import {
   randomPlacementPassRate,
   type LoadedMission,
 } from '@spieliq/engine'
-import { allFeedbackKeys, COMPETENCIES, DRILLS, getMission, MISSION_INPUTS, PRINCIPLES, UNITS } from '../src'
+import { allFeedbackKeys, COMPETENCIES, DRILLS, GAME_FORMATS, getMission, MISSION_INPUTS, PRINCIPLES, UNITS } from '../src'
 
 /**
  * Content-Qualitätstests (laufen in CI)
@@ -150,6 +150,12 @@ describe('Inhaltsstruktur', () => {
       done.add(id)
     }
     for (const c of COMPETENCIES) visit(c.id)
+  })
+
+  it('Spielfeld-Vorlagen der Altersklassen sind gültige Spielfelder', () => {
+    for (const f of GAME_FORMATS) {
+      expect(() => missionSchema.shape.pitch.parse(f.pitch), f.id).not.toThrow()
+    }
   })
 
   it('Spielformen verweisen auf bekannte Prinzipien und haben Coachingpunkte', () => {

@@ -10,9 +10,11 @@ import type { AgeGroup } from '@spieliq/engine'
  *   unabhängig vom Alter.
  *
  * Status "verfügbar": Inhalte spielbar. "geplant": Teil des Lehrplans, Inhalte
- * folgen. Altersangaben sind eigene fachliche Ableitungen; der DFB nennt für
- * Raumdeckung, Viererkette oder Pressing keine verbindlichen Altersgrenzen
- * (Recherche A, Abschnitt 3).
+ * folgen. Altersangaben sind überwiegend eigene fachliche Ableitungen. Belegt
+ * ist: Grundlagen des Verteidigens auf einer Linie (Verschieben, Herausrücken,
+ * Absichern) spätestens ab D-Junioren, Positionsspezifik ab C-Junioren (DFB,
+ * TPD-Flipbook, Quelle A-87). Für Viererkette oder Pressing nennt der DFB
+ * keine verbindlichen Altersgrenzen.
  */
 
 export interface World {
@@ -69,7 +71,7 @@ export const COMPETENCIES: readonly Competency[] = [
 
   // Welt 4 – Gemeinsam verteidigen
   { id: 'K-BALANCE', worldId: 'W4', title: 'Mitte schützen (Balance)', canDo: 'Als ballferner Spieler rücke ich ein und schütze die Mitte.', prerequisites: ['K-ZWEITER-VERTEIDIGER'], principles: ['P-MITTE'], fromAgeGroup: 'D', level: 2, status: 'verfügbar' },
-  { id: 'K-VERSCHIEBEN', worldId: 'W4', title: 'Ballorientiert verschieben', canDo: 'Wir verschieben gemeinsam zur Ballseite.', prerequisites: ['K-ZWEITER-VERTEIDIGER', 'K-BALANCE'], principles: ['P-VERSCHIEBEN', 'P-MITTE'], fromAgeGroup: 'C', level: 3, status: 'verfügbar' },
+  { id: 'K-VERSCHIEBEN', worldId: 'W4', title: 'Ballorientiert verschieben', canDo: 'Wir verschieben gemeinsam zur Ballseite.', prerequisites: ['K-ZWEITER-VERTEIDIGER', 'K-BALANCE'], principles: ['P-VERSCHIEBEN', 'P-MITTE'], fromAgeGroup: 'D', level: 3, status: 'verfügbar' },
   { id: 'K-KOMPAKTHEIT', worldId: 'W4', title: 'Kompakt stehen', canDo: 'Wir halten ballnah enge Abstände zwischen den Mannschaftsteilen.', prerequisites: ['K-VERSCHIEBEN'], principles: ['P-VERSCHIEBEN'], fromAgeGroup: 'C', level: 3, status: 'geplant' },
   { id: 'K-PRESSING', worldId: 'W4', title: 'Pressing-Grundlagen', canDo: 'Ich erkenne Signale, wann wir gemeinsam anlaufen.', prerequisites: ['K-KOMPAKTHEIT'], principles: ['P-STELLEN', 'P-VERSCHIEBEN'], fromAgeGroup: 'B', level: 4, status: 'geplant' },
 

@@ -49,6 +49,17 @@ async function AccountContent() {
         </Card>
 
         <Card className="p-5">
+          <h2 className="eyebrow mb-2">Hilfe</h2>
+          <p className="text-sm text-text-muted">
+            Dich belastet etwas – im Verein, beim Training oder online?{' '}
+            <a href="/help" className="font-semibold text-accent hover:underline">
+              Hier findest du Hilfe
+            </a>
+            .
+          </p>
+        </Card>
+
+        <Card className="p-5">
           <h2 className="eyebrow mb-2">Deine Daten</h2>
           <p className="text-sm text-text-muted">Du kannst jederzeit alle Daten herunterladen, die SPIELIQ über dich gespeichert hat (Auskunft).</p>
           <a href="/api/account/export" className="mt-3 inline-flex items-center gap-2 rounded-full border border-line-strong bg-ink-600 px-4 py-2 text-sm font-semibold hover:bg-ink-500" download>

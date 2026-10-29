@@ -25,7 +25,7 @@
 
   --color-text: #e9eef7;
   --color-text-muted: #a5b1c8;
-  --color-text-faint: #73809b;
+  --color-text-faint: #8592ad;
 
   --color-pitch: #1d6b3f;
   --color-pitch-dark: #15502f;
@@ -90,6 +90,8 @@
   --team-opp-text: #2b1100;
   --team-opp-keeper: #ffc08a;
   --lane-open: #f4fbff;
+  --lane-blocked: #ffa3b0;
+  --team-opp-edge: #ffe3cc;
   --signal-good: #3bd671;
   --signal-warn: #ffc53d;
   --signal-bad: #ff5d73;

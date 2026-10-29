@@ -92,6 +92,10 @@ async function TeamContent({ params, searchParams }: Pick<PageProps<'/coach/team
           <p className="text-xs text-text-faint">✓ geschafft · ◉ begonnen · ○ offen · „verstanden“ = digital, „Platz“ = von dir beobachtet</p>
         </div>
         <ProgressMatrix teamId={team.id} missionIds={matrix.missionIds} rows={matrix.rows} />
+        <p className="mt-3 text-xs text-text-faint">
+          Keine Rangliste: Spieler:innen erscheinen in der Reihenfolge des Beitritts. Der digitale Lernstand ist kein Kriterium für Kader- oder
+          Einsatzentscheidungen.
+        </p>
       </Card>
 
       <div className="grid gap-4 lg:grid-cols-2">

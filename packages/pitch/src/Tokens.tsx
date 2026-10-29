@@ -84,6 +84,8 @@ export function PlayerToken({
       {interactive && !selected && !dragging && (
         <circle r={r * 1.38} fill="none" stroke="var(--focus-ring, #ffffff)" strokeWidth={0.12 * unit} strokeDasharray={`${0.5 * unit} ${0.35 * unit}`} opacity={0.85} />
       )}
+      {/* Gegner: heller Außenrand für ausreichenden Kontrast zum Rasen (WCAG 1.4.11), dunkler Innenrand als Formmerkmal */}
+      {!isOwn && <circle r={r + 0.3 * unit} fill="none" stroke="var(--team-opp-edge, #ffe3cc)" strokeWidth={0.16 * unit} />}
       <circle r={r} fill={fill} stroke={rim} strokeWidth={(isOwn ? 0.28 : 0.42) * unit} />
       {!isOwn && <circle r={r * 0.72} fill="none" stroke={rim} strokeWidth={0.1 * unit} opacity={0.6} />}
       <text
