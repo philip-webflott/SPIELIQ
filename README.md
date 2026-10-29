@@ -7,34 +7,50 @@ Interaktive Lernplattform für **Spielverständnis im Jugendfußball**: Spieler:
 
 ## Schnellstart (lokal)
 
-Voraussetzungen: Node.js ≥ 22, pnpm 10, PostgreSQL ≥ 15.
+Voraussetzungen: Node.js 22 (siehe `.nvmrc`), pnpm 10 (z. B. über `corepack enable`) und PostgreSQL ab Version 15. Am einfachsten startet die Datenbank per Docker – die Zugangsdaten passen dann ohne Änderung zu `.env.example`:
+
+```bash
+docker run --name spieliq-db -e POSTGRES_USER=spieliq -e POSTGRES_PASSWORD=spieliq -e POSTGRES_DB=spieliq -p 5432:5432 -d postgres:16
+```
+
+Danach im Projektordner:
 
 ```bash
 pnpm install
 ```
 
 ```bash
-cp apps/web/.env.example apps/web/.env   # Datenbank-URLs anpassen
+cp apps/web/.env.example apps/web/.env   # bei eigener PostgreSQL-Installation Zugangsdaten anpassen
 ```
 
 ```bash
-pnpm --filter @spieliq/web exec prisma migrate deploy
+pnpm db:generate   # erzeugt den Datenbank-Client (liegt nicht im Repository, braucht die .env)
 ```
 
 ```bash
-pnpm db:seed   # optional: klar gekennzeichnete Demo-Daten
+pnpm db:deploy     # legt die Datenbank bei Bedarf an und spielt die Migrationen ein
 ```
 
 ```bash
-pnpm dev       # http://localhost:3000
+pnpm db:seed       # optional: klar gekennzeichnete Demo-Daten
+```
+
+```bash
+pnpm dev           # http://localhost:3000
 ```
 
 Demo-Zugänge nach `db:seed` (nur lokal): Trainer `demo.trainer@spieliq.invalid` / `demo-trainer-2026`, Spieler `demo-falke-11` / `demo-spieler-2026`, Teamcode `DEMO-2026`. Ohne Konto: `/try`.
 
+Nach Änderungen am Prisma-Schema `pnpm db:generate` erneut ausführen. Der Datenbanknutzer braucht das Recht, Datenbanken anzulegen (beim Docker-Container gegeben) – sonst die Datenbanken `spieliq` und `spieliq_test` vorher selbst anlegen.
+
 ## Prüfen
 
 ```bash
-pnpm check        # Typprüfung, Lint, Unit-/Content-/Integrationstests
+pnpm check        # Typprüfung, Lint, Unit-/Content-/Integrationstests (Testdatenbank aus TEST_DATABASE_URL wird geleert)
+```
+
+```bash
+pnpm --filter @spieliq/web exec playwright install chromium   # einmalig: Browser für die End-to-End-Tests
 ```
 
 ```bash
