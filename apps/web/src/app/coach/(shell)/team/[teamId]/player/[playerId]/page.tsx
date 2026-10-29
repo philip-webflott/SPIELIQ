@@ -9,6 +9,7 @@ import { removePlayerAction, setLevelAction } from '@/app/actions/coach'
 import { playerDetail } from '@/server/modules/insights'
 import { observationsForPlayer } from '@/server/modules/observations'
 import { Button } from '@/components/ui/button'
+import { Checkbox } from '@/components/ui/form'
 import { Badge, Card, DemoBadge, PageHeader, Skeleton } from '@/components/ui/primitives'
 import { CompetencyStatus } from '@/features/player/competency-status'
 import { ObservationForm, ResetPasswordForm } from '@/features/coach/player-actions'
@@ -121,9 +122,14 @@ async function Detail({ params }: { params: PageProps<'/coach/team/[teamId]/play
           <Card className="p-5">
             <h2 className="eyebrow mb-3">Konto</h2>
             <ResetPasswordForm teamId={teamId} playerId={playerId} />
-            <form action={removePlayerAction} className="mt-4">
+            <form action={removePlayerAction} className="mt-5 space-y-3 border-t border-line pt-4">
               <input type="hidden" name="teamId" value={teamId} />
               <input type="hidden" name="playerId" value={playerId} />
+              <p className="text-sm text-text-muted">
+                Spielerkonten gehören zur Mannschaft. Ist der Spieler in keiner anderen Mannschaft, werden Konto und Lernergebnisse
+                endgültig gelöscht.
+              </p>
+              <Checkbox name="confirm" required label="Ich habe das verstanden und möchte den Spieler entfernen." />
               <Button type="submit" variant="danger" size="sm">
                 Aus der Mannschaft entfernen
               </Button>

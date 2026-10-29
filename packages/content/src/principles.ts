@@ -5,7 +5,8 @@
  * ordnet fachlich ein. Quellen-IDs verweisen auf docs/recherche/.
  *
  * Status "review": fachlich formuliert, Prüfung durch lizenzierte
- * Jugendtrainer steht aus (siehe docs/qualitaet/freigabeprozess.md).
+ * Jugendtrainer steht aus (siehe docs/qualitaet/qualitaetsstandards.md).
+ * Quellen: bevorzugt im Volltext geprüfte Einträge (docs/recherche/README.md).
  */
 export type GamePhase = 'mit-ball' | 'gegen-ball' | 'umschalten' | 'allgemein'
 
@@ -27,7 +28,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Aufgabenverteilung statt Rudelbildung: Ein Spieler übt Druck auf den Ball aus, die übrigen sichern ab, halten Gegenspieler und Räume. Gilt mit und gegen den Ball (mit Ball: Abstand zum Ballführenden).',
     phase: 'allgemein',
-    sources: ['B-01', 'B-14', 'A-57'],
+    sources: ['B-01', 'B-06', 'B-14', 'B-102'],
     status: 'review',
   },
   {
@@ -47,7 +48,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Sinnvolle Abstände zum Ballführenden und zwischen Mitspielern: nicht so nah, dass ein Gegenspieler mehrere stören kann, nicht so weit, dass der Pass unsicher wird. Abstandswerte sind Modellannahmen (C-Jugend, Großfeld).',
     phase: 'mit-ball',
-    sources: ['A-57', 'B-20'],
+    sources: ['B-19', 'B-20'],
     status: 'review',
   },
   {
@@ -57,7 +58,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Leitgedanke "ohne Ball anspielbar sein": offener Passweg zum Ballführenden. Bewertet über ein zeitbasiertes Abfangmodell (Ball vs. schnellster Gegenspieler).',
     phase: 'mit-ball',
-    sources: ['A-57', 'A-87', 'B-48'],
+    sources: ['A-14', 'A-15', 'B-48'],
     status: 'review',
   },
   {
@@ -65,18 +66,19 @@ export const PRINCIPLES: readonly Principle[] = [
     name: 'Breite und Tiefe',
     playerText: 'Macht das Feld groß: zur Seite und nach vorn/hinten verteilen.',
     coachText:
-      'Raumaufteilung in Breite und Tiefe ("so tief wie möglich, so breit wie nötig"). Tiefe umfasst ausdrücklich auch Anspielstationen hinter dem Ball. Nicht: "immer maximal breit".',
+      'Raumaufteilung in Breite und Tiefe: Abspielmöglichkeiten in Tiefe und Breite schaffen, Breite halten, Tiefe bedrohen – je nach Situation. Tiefe umfasst ausdrücklich auch Anspielstationen hinter dem Ball. Nicht: "immer maximal breit".',
     phase: 'mit-ball',
-    sources: ['A-58', 'A-55', 'B-67'],
+    sources: ['A-14', 'A-15', 'B-19', 'B-99'],
     status: 'review',
   },
   {
     id: 'P-DREIECK',
     name: 'Dreiecke bilden',
     playerText: 'Zu dritt im Dreieck hat der Ballführende zwei Passwege.',
-    coachText: 'Versetzte Positionen (kein Linienstand) schaffen zwei gleichzeitige Passoptionen und Anschlussaktionen.',
+    coachText:
+      'Versetzte Positionen (kein Linienstand) schaffen zwei gleichzeitige Passoptionen und Anschlussaktionen. Ein Lösungsweg, keine Pflicht: Das Prinzip dahinter ist Anspielbarkeit in mehreren Winkeln.',
     phase: 'mit-ball',
-    sources: ['B-20', 'B-24'],
+    sources: ['B-19', 'B-20', 'B-22'],
     status: 'review',
   },
   {
@@ -86,7 +88,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Erster Verteidiger: Druck auf den Ballführenden, torseitig, auf Distanz, die Zugriff erlaubt, ohne sofort überspielt zu werden. Lenkrichtung ist kontextabhängig und wird hier noch nicht bewertet.',
     phase: 'gegen-ball',
-    sources: ['B-02', 'B-03', 'B-14'],
+    sources: ['A-87', 'B-02', 'B-03', 'B-13'],
     status: 'review',
   },
   {
@@ -96,7 +98,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Zweiter Verteidiger: tiefer gestaffelt, schräg versetzt (bevorzugt Richtung Tor/innen), nah genug für sofortige Hilfe, weit genug, um nicht mit derselben Aktion überspielt zu werden; zugleich den nächsten Gegenspieler im Blick.',
     phase: 'gegen-ball',
-    sources: ['A-87', 'B-01', 'B-69', 'B-81'],
+    sources: ['A-87', 'B-01', 'B-17', 'B-94'],
     status: 'review',
   },
   {
@@ -106,7 +108,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Ballorientiertes Verschieben als Block: Schwerpunkt Richtung Ballseite, ballnah enge Abstände, ballfern größere – ausdrücklich keine gleichen Abstände.',
     phase: 'gegen-ball',
-    sources: ['A-50', 'A-87', 'B-05', 'B-12'],
+    sources: ['A-50', 'A-87', 'B-05', 'B-07', 'B-12'],
     status: 'review',
   },
   {
@@ -116,7 +118,7 @@ export const PRINCIPLES: readonly Principle[] = [
     coachText:
       'Balance: Der ballferne Spieler rückt ein und schützt den zentralen Raum bzw. kontrolliert den gefährlichsten Gegenspieler – ballferne Außenräume dürfen eher offen bleiben.',
     phase: 'gegen-ball',
-    sources: ['B-08', 'B-09', 'B-11'],
+    sources: ['A-14', 'B-07', 'B-08', 'B-14', 'B-94'],
     status: 'review',
   },
 ]

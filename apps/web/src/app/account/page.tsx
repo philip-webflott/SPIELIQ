@@ -9,6 +9,7 @@ import { logoutAction } from '@/app/actions/auth'
 import { Button } from '@/components/ui/button'
 import { Card, PageHeader, Skeleton } from '@/components/ui/primitives'
 import { DeleteAccountForm } from './delete-form'
+import { DisplayNameForm } from './name-form'
 
 export const metadata: Metadata = { title: 'Profil & Daten' }
 
@@ -41,6 +42,7 @@ async function AccountContent() {
             <dt className="text-text-faint">Mannschaften</dt>
             <dd>{teams.map((m) => `${m.team.name} (${m.team.org.name})`).join(', ') || '–'}</dd>
           </dl>
+          <DisplayNameForm current={user.displayName} isPlayer={user.kind === 'PLAYER'} />
           <form action={logoutAction} className="mt-4">
             <Button type="submit" variant="secondary" size="sm">
               <LogOut size={16} aria-hidden="true" /> Abmelden

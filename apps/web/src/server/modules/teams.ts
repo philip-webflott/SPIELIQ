@@ -16,6 +16,18 @@ export function needsGuardianConsent(ageGroup: string): boolean {
   return (UNDER_16_AGE_GROUPS as readonly string[]).includes(ageGroup) || ageGroup === 'B'
 }
 
+/**
+ * G- und F-Jugend: keine eigenen Spielerkonten (Datensparsamkeit, Kinderfußball
+ * ohne Taktikfokus; docs/konzept/lernsystem.md, Abschnitt 6). Trainer:innen
+ * nutzen die Missionen dort gemeinsam mit der Gruppe im Gastmodus.
+ */
+export const NO_PLAYER_ACCOUNT_AGE_GROUPS = ['G', 'F'] as const
+export function allowsPlayerAccounts(ageGroup: string): boolean {
+  return !(NO_PLAYER_ACCOUNT_AGE_GROUPS as readonly string[]).includes(ageGroup)
+}
+export const NO_PLAYER_ACCOUNTS_MESSAGE =
+  'In der G- und F-Jugend legt SPIELIQ keine Spielerkonten an. Nutzt die Missionen gemeinsam über „Ausprobieren“ – ohne Konto.'
+
 export const createInvitationSchema = z.object({
   teamId: z.string().min(1),
   guardianConsentConfirmed: z.boolean().default(false),
@@ -29,6 +41,7 @@ export async function createInvitation(db: Db, coachId: string, input: z.input<t
   const data = createInvitationSchema.parse(input)
   await requireTeamCoach(db, coachId, data.teamId)
   const team = await db.team.findUniqueOrThrow({ where: { id: data.teamId }, select: { ageGroup: true } })
+  if (!allowsPlayerAccounts(team.ageGroup)) throw invalid(NO_PLAYER_ACCOUNTS_MESSAGE)
   if (needsGuardianConsent(team.ageGroup) && !data.guardianConsentConfirmed) {
     throw invalid('Für Mannschaften mit Spieler:innen unter 16 Jahren musst du bestätigen, dass dem Verein die Einwilligungen der Sorgeberechtigten vorliegen.')
   }
@@ -140,10 +153,23 @@ export async function teamSummary(db: Db, coachId: string, teamId: string, now =
   }
 }
 
+/**
+ * Entfernt einen Spieler aus der Mannschaft. Spielerkonten entstehen nur über
+ * Mannschaften: Gehört das Konto danach keiner Mannschaft mehr an, wird es mit
+ * allen Lernergebnissen gelöscht (Datensparsamkeit, Speicherbegrenzung).
+ */
 export async function removePlayer(db: Db, coachId: string, teamId: string, playerId: string) {
   await requireCoachOfPlayer(db, coachId, teamId, playerId)
-  await db.teamMembership.delete({ where: { teamId_userId: { teamId, userId: playerId } } })
-  await audit(db, coachId, 'team.removePlayer', 'User', playerId)
+  const accountDeleted = await db.$transaction(async (tx) => {
+    await tx.teamMembership.delete({ where: { teamId_userId: { teamId, userId: playerId } } })
+    const player = await tx.user.findUniqueOrThrow({ where: { id: playerId }, select: { kind: true } })
+    const remaining = await tx.teamMembership.count({ where: { userId: playerId } })
+    if (player.kind !== 'PLAYER' || remaining > 0) return false
+    await tx.user.delete({ where: { id: playerId } })
+    return true
+  })
+  await audit(db, coachId, accountDeleted ? 'team.removePlayer.accountDeleted' : 'team.removePlayer', 'User', playerId)
+  return { accountDeleted }
 }
 
 export const setLevelSchema = z.object({ level: z.number().int().min(1).max(5).nullable() })

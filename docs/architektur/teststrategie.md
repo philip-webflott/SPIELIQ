@@ -6,9 +6,9 @@ Stand: 29.10.2026
 |---|---|---|---|---|
 | Unit – Engine | Vitest | `packages/engine/src/**/*.test.ts` | 41 | Geometrie, Passweg-Modell (inkl. Monotonie, Deckungsschatten, lange Pässe), Kriterien inkl. „keine gleichen Abstände nötig“, Robustheit gegen kleine Verschiebungen, Gesamtwertung, Alternativen, Zeitleisten, Konsequenz |
 | Unit – Spielfeld | Vitest | `packages/pitch/src/*.test.ts` | 3 | Projektion Hoch-/Querformat, Rückrechnung, Formatwahl |
-| Content-QA | Vitest | `packages/content/test/*.test.ts` | 101 | Schema, Referenzen, Beispiele richtig/falsch, Musterlösung, Zufallsschutz, Raterate, Spiegelinvarianz, Texte, Kompetenzbaum zyklenfrei, Fortschrittsregeln |
-| Integration | Vitest + PostgreSQL | `apps/web/test` | 20 | vertikaler Ablauf, serverseitige Neubewertung, Mandantentrennung, Einwilligungsbestätigung, Auskunft, Löschung |
-| End-to-End | Playwright (Smartphone + Desktop) | `apps/web/e2e` | 7 (+1 bewusst nur Desktop) | Gastmission komplett, Antippen statt Ziehen, Registrierung → Teamcode → Beitritt → Mission → Trainer sieht Fortschritt, Schutz geschützter Bereiche |
+| Content-QA | Vitest | `packages/content/test/*.test.ts` | 102 | Schema, Referenzen, Beispiele richtig/falsch, Musterlösung, Zufallsschutz, Raterate, Spiegelinvarianz, Texte, Kompetenzbaum zyklenfrei, Fortschrittsregeln, **jede Quellenangabe existiert im Quellenregister** |
+| Integration | Vitest + PostgreSQL | `apps/web/test` | 26 | vertikaler Ablauf, serverseitige Neubewertung, Mandantentrennung, Einwilligungsbestätigung, keine Spielerkonten in G/F, Auskunft, Berichtigung, Löschung, Entfernen aus der Mannschaft, Speicherfristen |
+| End-to-End | Playwright (Smartphone + Desktop) | `apps/web/e2e` | 7 (+1 bewusst nur Desktop) | Gastmission komplett, Antippen statt Ziehen, Registrierung → Teamcode → Beitritt → Mission → Trainer sieht Fortschritt → Spieler ändert Anzeigenamen → Trainer entfernt Spieler (Konto gelöscht), Schutz geschützter Bereiche |
 
 ## Grundsätze
 

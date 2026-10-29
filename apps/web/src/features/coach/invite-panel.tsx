@@ -1,6 +1,7 @@
 'use client'
 
 import { useActionState, useState } from 'react'
+import Link from 'next/link'
 import { Check, Copy, KeyRound } from 'lucide-react'
 import { createInviteAction } from '@/app/actions/coach'
 import { Button } from '@/components/ui/button'
@@ -17,10 +18,32 @@ export interface ActiveInvite {
  * Teamcode erstellen und teilen. Der Code wird nur direkt nach dem Erstellen
  * angezeigt (gespeichert ist nur ein Hash) – ein neuer Code ersetzt den alten.
  */
-export function InvitePanel({ teamId, needsConsent, active }: { teamId: string; needsConsent: boolean; active: ActiveInvite | null }) {
+export function InvitePanel({
+  teamId,
+  needsConsent,
+  allowsPlayers,
+  active,
+}: {
+  teamId: string
+  needsConsent: boolean
+  allowsPlayers: boolean
+  active: ActiveInvite | null
+}) {
   const [state, action, pending] = useActionState(createInviteAction, undefined)
   const [copied, setCopied] = useState(false)
   const fmt = (iso: string) => new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(iso))
+
+  if (!allowsPlayers) {
+    return (
+      <p className="text-sm text-text-muted">
+        In der G- und F-Jugend legt SPIELIQ keine Spielerkonten an. Nutzt die Missionen gemeinsam mit der Gruppe über{' '}
+        <Link href="/try" className="font-semibold text-accent hover:underline">
+          Ausprobieren
+        </Link>{' '}
+        – ohne Konto, es wird nichts gespeichert.
+      </p>
+    )
+  }
 
   return (
     <div className="space-y-4">

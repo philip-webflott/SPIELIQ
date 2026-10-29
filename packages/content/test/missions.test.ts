@@ -1,3 +1,6 @@
+import { readdirSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 import {
   assessStep,
@@ -163,5 +166,21 @@ describe('Inhaltsstruktur', () => {
       expect(d.coachingPoints.length).toBeGreaterThan(0)
       for (const p of d.principles) expect(PRINCIPLES.map((x) => x.id)).toContain(p)
     }
+  })
+
+  it('alle Quellenangaben existieren im Quellenregister (docs/recherche/quellen)', () => {
+    const dir = fileURLToPath(new URL('../../../docs/recherche/quellen/', import.meta.url))
+    const known = new Set(
+      readdirSync(dir)
+        .filter((f) => f.endsWith('.md'))
+        .flatMap((f) => [...readFileSync(join(dir, f), 'utf8').matchAll(/^### \[([A-D]-\d{2,3})\]/gm)].map((m) => m[1]!)),
+    )
+    const used = [
+      ...PRINCIPLES.flatMap((p) => p.sources.map((s) => [p.id, s] as const)),
+      ...missions.flatMap(([id, loaded]) => loaded.mission.sources.map((s) => [id, s] as const)),
+      ...GAME_FORMATS.flatMap((f) => f.sources.map((s) => [f.id, s] as const)),
+    ]
+    expect(known.size).toBeGreaterThan(300)
+    for (const [owner, source] of used) expect(known.has(source), `${owner} → ${source}`).toBe(true)
   })
 })

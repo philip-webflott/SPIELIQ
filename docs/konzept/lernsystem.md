@@ -17,13 +17,13 @@ SPIELIQ ist eine **Ergänzung** zum Training, kein Ersatz. Die Trainingsphilosop
 | Prinzip | Umsetzung in SPIELIQ | Evidenz (Recherche C) |
 |---|---|---|
 | Spielnah statt isoliert | echte Spielsituationen mit Toren und Spielrichtung, Folgeaktion wird gezeigt | Spielbasierte Ansätze verbessern Entscheidungen (Meta-Analysen, Evidenzqualität niedrig); Kritik an fehlendem Spielrealismus (A) |
-| Aktiv entscheiden statt zusehen | jede Mission enthält Antipp-, Positionier- oder Auswahlaufgaben | Transfer wahrscheinlicher bei aktiven, handlungsnahen Antworten (Hadlow et al. 2018; Pinder et al. 2011) |
-| Ein Prinzip pro Bildschirm, wenige Hinweise | eine Anweisung (≤ 140 Zeichen), höchstens 3 gestufte Tipps | Viele Instruktionen ließen Spieler freie Mitspieler übersehen (Memmert & Furley 2007) |
+| Aktiv entscheiden statt zusehen | jede Mission enthält Antipp-, Positionier- oder Auswahlaufgaben | Transfer wahrscheinlicher bei aktiven, handlungsnahen Antworten (Hadlow et al. 2018, C-44; Pinder et al. 2011, C-14) |
+| Ein Prinzip pro Bildschirm, wenige Hinweise | eine Anweisung (≤ 140 Zeichen), höchstens 3 gestufte Tipps | Viele Instruktionen ließen Spieler freie Mitspieler übersehen (Memmert & Furley 2007, C-17) |
 | Variation statt Auswendiglernen | Transfermission mit neuen Lagen, gespiegelte Varianten, Rollen aus der Position statt fest vergeben | Variabilität/Interleaving fördern Prinzip- statt Positionslernen (Hintergrundwissen, zu verifizieren) |
 | Unmittelbares, erklärendes Feedback | Ursache + Visualisierung (Passwege, Abstände) + Konsequenz-Animation | Feedback-Forschung (Hintergrundwissen, zu verifizieren) |
 | Fehler als Lernchance | „Noch nicht ganz“, Nochmal, Tipp, Lösung erst nach 2 Versuchen | Positive Fehlerkultur; Lösung zum Nachmachen statt Bestrafung |
 | Wissen ≠ Können | „digital verstanden“ ≠ „auf dem Platz angewendet“; Trainerbeobachtung als eigener Status | Wissen und Spielhandeln korrelieren nur schwach bis mittel (C) |
-| Transfer bewusst planen | Pflicht-Verknüpfung jeder Mission mit einer Spielform; Pilotstudie mit Retentionstest geplant | Laboreffekte deutlich größer als Feldeffekte (Zhu et al. 2024); keine Studie zu 2D-Simulatoren für U14/U15 (C) |
+| Transfer bewusst planen | Pflicht-Verknüpfung jeder Mission mit einer Spielform; Pilotstudie mit Retentionstest geplant | Laboreffekte deutlich größer als Feldeffekte (Zhu et al. 2024, C-49); keine Studie zu 2D-Simulatoren für U14/U15 (C) |
 
 ## 3. Zwei getrennte Dimensionen
 
@@ -56,18 +56,18 @@ Ein digital bestandener Test ist kein Beweis für richtiges Verhalten im Spiel �
 
 | Altersklasse | Digitaler Einsatz | Begründung |
 |---|---|---|
-| G, F (U6–U9) | **keine eigenen Spielerkonten**; höchstens Trainer-/Elternmaterial | Kinderfußball ohne Systeme/Taktik, Bildschirmzeit, Lesekompetenz (A, Abschnitt 3; eigene Ableitung) |
+| G, F (U6–U9) | **keine eigenen Spielerkonten** (technisch durchgesetzt: kein Teamcode für G/F); Missionen höchstens gemeinsam im Gastmodus | Kinderfußball ohne frühe Taktik (A-21, A-88), Bildschirmzeit, Lesekompetenz (eigene Ableitung) |
 | E (U10/U11) | kurze Einstiegsmissionen (Raum, anspielbar sein), gern gemeinsam mit Trainer | einfache Prinzipien, Spielformen 5v5/7v7 |
 | D (U12/U13) | Verteidigen zu zweit, Dreiecke, Überzahl, erstes Verteidigen auf einer Linie | DFB: Grundlagen des Verteidigens auf einer Linie (Verschieben, Herausrücken, Absichern) spätestens ab D-Junioren (A-87, Volltext geprüft) |
 | C (U14/U15) | Kette, Verschieben, Kompaktheit, Raum im Rücken, erste Positionsaufgaben | 11v11; Positionsspezifik ab C-Junioren (A-87); keine DFB-Altersvorgabe für Viererkette oder Pressing |
 | B, A (U16–U19) | Pressing, Umschalten, Spielintelligenz unter Zeitdruck | mannschaftstaktische Vertiefung |
 
-> Entscheidung (begründet, zur Bestätigung durch den Produktverantwortlichen): Die App richtet sich ab der E-Jugend direkt an Spieler:innen; G/F nur über Trainer:innen. Siehe [Entwicklungsplan](../entwicklungsplan.md), offene Entscheidungen.
+> Entscheidung (begründet, zur Bestätigung durch den Produktverantwortlichen): Die App richtet sich ab der E-Jugend direkt an Spieler:innen; G/F nur über Trainer:innen. Siehe [Offene Fragen](../recherche/offene-fragen.md), E-3.
 
 ## 7. Motivation ohne Manipulation
 
 - Belohnt werden **Verständnis und Fortschritt** (Prinzipien, Kompetenzzustände), nicht Klickmengen. Keine XP-Inflation.
-- **Keine öffentlichen Ranglisten**, keine Vergleiche zwischen Kindern; Trainer sehen eine alphabetische Übersicht, keine Rangfolge.
+- **Keine öffentlichen Ranglisten**, keine Vergleiche zwischen Kindern; Trainer sehen die Spieler:innen in der Reihenfolge des Beitritts, keine Rangfolge, mit dem Hinweis, dass der digitale Lernstand kein Kriterium für Kader- oder Einsatzentscheidungen ist.
 - Keine Streak-Zwänge, keine nächtlichen Benachrichtigungen, keine glücksspielähnlichen Belohnungen, keine Kaufaufforderungen an Kinder (Recherche D: § 10b JuSchG, UWG Anhang Nr. 28, Leitlinien zu Art. 28 DSA – teils nur Hintergrundwissen, siehe Rechtsteil).
 - Geplant: gemeinsame Mannschaftsziele („80 % der Mannschaft haben Mission 3 geschafft“), sichtbare persönliche Entwicklung, freischaltbare Lernwelten nach Kompetenz.
 

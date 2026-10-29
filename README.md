@@ -41,6 +41,12 @@ pnpm check        # Typprüfung, Lint, Unit-/Content-/Integrationstests
 pnpm build && pnpm test:e2e   # End-to-End (Playwright) gegen den Produktionsbuild
 ```
 
+## Betrieb
+
+```bash
+pnpm --filter @spieliq/web db:retention   # Speicherfristen anwenden – im Betrieb täglich einplanen
+```
+
 ## Aufbau
 
 | Paket | Inhalt |

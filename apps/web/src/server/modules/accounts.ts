@@ -12,6 +12,7 @@ import {
 import { assertNotLocked, clearFailures, registerFailure, throttleKey } from '../auth/throttle'
 import { generateLoginName, hashInviteCode } from '../auth/tokens'
 import { audit } from './audit'
+import { allowsPlayerAccounts, NO_PLAYER_ACCOUNTS_MESSAGE } from './teams'
 
 export const PRIVACY_NOTICE_VERSION = '2026-10-entwurf-1'
 
@@ -85,6 +86,8 @@ export async function joinTeamWithCode(db: Db, input: z.input<typeof joinTeamSch
   if (!invitation || !usable) {
     throw invalid('Dieser Teamcode passt nicht oder ist abgelaufen. Frag deinen Trainer nach dem aktuellen Code.')
   }
+  // Zweite Absicherung, falls ein Code vor einer Änderung der Altersklasse erstellt wurde.
+  if (!allowsPlayerAccounts(invitation.team.ageGroup)) throw invalid(NO_PLAYER_ACCOUNTS_MESSAGE)
   const passwordHash = await hashPassword(data.password)
   let loginName = generateLoginName()
   for (let i = 0; i < 10 && (await db.user.findUnique({ where: { loginName }, select: { id: true } })); i++) {
@@ -168,6 +171,16 @@ export async function exportPersonalData(db: Db, userId: string) {
   })
   await audit(db, userId, 'data.export', 'User', userId)
   return { exportedAt: new Date().toISOString(), format: 'spieliq-export-v1', data: user }
+}
+
+/** Berichtigung (Art. 16 DSGVO): eigenen Anzeigenamen ändern – für Spieler:innen gelten die Spitzname-Regeln. */
+export async function updateDisplayName(db: Db, userId: string, displayName: string) {
+  const user = await db.user.findUniqueOrThrow({ where: { id: userId }, select: { kind: true } })
+  const schema = user.kind === 'PLAYER' ? joinTeamSchema.shape.displayName : registerCoachSchema.shape.displayName
+  const parsed = schema.safeParse(displayName)
+  if (!parsed.success) throw invalid(parsed.error.issues[0]?.message ?? 'Ungültiger Name.')
+  await db.user.update({ where: { id: userId }, data: { displayName: parsed.data } })
+  await audit(db, userId, 'account.rename', 'User', userId)
 }
 
 /**

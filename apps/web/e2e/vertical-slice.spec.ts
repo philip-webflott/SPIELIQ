@@ -65,6 +65,24 @@ test('Trainer lädt ein, Spieler lernt, Trainer sieht den Fortschritt', async ({
     )
     .toBeGreaterThan(0)
   await expect(coach.getByRole('link', { name: 'Flitzer' })).toBeVisible()
+
+  // Spieler berichtigt seinen Anzeigenamen selbst (Profil)
+  await player.goto('/account')
+  await player.fill('#display-name', 'Flitzer 9')
+  await player.getByRole('button', { name: 'Speichern' }).click()
+  await expect(player.getByRole('status').filter({ hasText: 'Gespeichert.' })).toBeVisible()
+  await expect(player.getByRole('heading', { name: 'Flitzer 9' })).toBeVisible()
+
+  // Trainer entfernt den Spieler – nur mit ausdrücklicher Bestätigung; das Konto ohne Mannschaft wird gelöscht
+  await coach.reload()
+  await coach.getByRole('link', { name: 'Flitzer 9' }).click()
+  await coach.waitForURL(/\/player\//)
+  await coach.check('input[name="confirm"]')
+  await coach.getByRole('button', { name: 'Aus der Mannschaft entfernen' }).click()
+  await coach.waitForURL(/\/coach\/team\/[^/]+$/)
+  await expect(coach.getByRole('link', { name: 'Flitzer 9' })).toHaveCount(0)
+  await player.goto('/play')
+  await player.waitForURL(/\/login/)
   await playerContext.close()
 })
 

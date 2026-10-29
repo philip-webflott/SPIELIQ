@@ -113,7 +113,10 @@ export async function resetPasswordAction(_prev: ResetState, form: FormData): Pr
 export async function removePlayerAction(form: FormData): Promise<void> {
   const coach = await requireCoach()
   const teamId = field(form, 'teamId')
-  await removePlayer(db, coach.id, teamId, field(form, 'playerId'))
+  const playerId = field(form, 'playerId')
+  // Endgültige Aktion nur mit ausdrücklicher Bestätigung (Checkbox im Formular).
+  if (field(form, 'confirm') !== 'on') redirect(`/coach/team/${teamId}/player/${playerId}`)
+  await removePlayer(db, coach.id, teamId, playerId)
   redirect(`/coach/team/${teamId}`)
 }
 

@@ -92,10 +92,10 @@ model User {
   teamMemberships    TeamMembership[]
   attempts           Attempt[]
   missionProgress    MissionProgress[]
-  consents           ConsentRecord[]           @relation("consentSubject")
-  consentsRecorded   ConsentRecord[]           @relation("consentRecorder")
-  observationsGiven  FieldObservation[]        @relation("observer")
-  observationsAbout  FieldObservation[]        @relation("observed")
+  consents           ConsentRecord[]    @relation("consentSubject")
+  consentsRecorded   ConsentRecord[]    @relation("consentRecorder")
+  observationsGiven  FieldObservation[] @relation("observer")
+  observationsAbout  FieldObservation[] @relation("observed")
   assignmentsCreated Assignment[]
   invitationsCreated Invitation[]
 }
@@ -144,12 +144,12 @@ model OrgMembership {
 }
 
 model Team {
-  id        String   @id @default(cuid())
+  id        String       @id @default(cuid())
   orgId     String
   name      String
   ageGroup  AgeGroup
   season    String?
-  createdAt DateTime @default(now())
+  createdAt DateTime     @default(now())
   org       Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
 
   memberships  TeamMembership[]
@@ -161,38 +161,38 @@ model Team {
 }
 
 model TeamMembership {
-  id        String   @id @default(cuid())
-  teamId    String
-  userId    String
-  role      TeamRole
+  id       String   @id @default(cuid())
+  teamId   String
+  userId   String
+  role     TeamRole
   /// Vom Trainer zugeordnetes Lernniveau (1 Einsteiger … 5 fortgeschritten), optional
-  level     Int?
-  joinedAt  DateTime @default(now())
-  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  level    Int?
+  joinedAt DateTime @default(now())
+  team     Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([teamId, userId])
   @@index([userId])
 }
 
 model Invitation {
-  id          String    @id @default(cuid())
-  teamId      String
+  id                         String    @id @default(cuid())
+  teamId                     String
   /// SHA-256 des normalisierten Einladungscodes
-  codeHash    String    @unique
+  codeHash                   String    @unique
   /// Letzte Zeichen zur Wiedererkennung in der Oberfläche
-  codeHint    String
-  role        TeamRole  @default(PLAYER)
-  createdById String
-  expiresAt   DateTime
-  maxUses     Int       @default(40)
-  uses        Int       @default(0)
+  codeHint                   String
+  role                       TeamRole  @default(PLAYER)
+  createdById                String
+  expiresAt                  DateTime
+  maxUses                    Int       @default(40)
+  uses                       Int       @default(0)
   /// Trainer:in hat bestätigt, dass dem Verein die Einwilligungen der Sorgeberechtigten vorliegen
   guardianConsentConfirmedAt DateTime?
-  revokedAt   DateTime?
-  createdAt   DateTime  @default(now())
-  team        Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
-  createdBy   User      @relation(fields: [createdById], references: [id], onDelete: Cascade)
+  revokedAt                  DateTime?
+  createdAt                  DateTime  @default(now())
+  team                       Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  createdBy                  User      @relation(fields: [createdById], references: [id], onDelete: Cascade)
 
   @@index([teamId])
 }
@@ -216,28 +216,31 @@ model ConsentRecord {
 
 /// Ein Bewertungsversuch eines interaktiven Missionsschritts (serverseitig neu berechnet)
 model Attempt {
-  id             String      @id @default(cuid())
-  userId         String
-  missionId      String
-  missionVersion Int
-  stepId         String
+  id              String      @id @default(cuid())
+  userId          String
+  missionId       String
+  missionVersion  Int
+  stepId          String
   /// Spielereingabe (Positionen bzw. Auswahl) – Grundlage für reproduzierbare Neubewertung
-  answer         Json
-  rating         String
-  score          Float
+  answer          Json
+  rating          String
+  score           Float
   /// Prinzip-ID → bestanden
-  principles     Json
+  principles      Json
   /// Kompakte Kriterienergebnisse: [{ id, passed, score, feedbackKey }]
-  criteria       Json
-  hintsUsed      Int         @default(0)
-  durationMs     Int?
-  assignmentId   String?
-  createdAt      DateTime    @default(now())
-  user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  assignment     Assignment? @relation(fields: [assignmentId], references: [id], onDelete: SetNull)
+  criteria        Json
+  hintsUsed       Int         @default(0)
+  durationMs      Int?
+  /// Zeitpunkt, ab dem Eingabe und Dauer entfernt wurden (Speicherfrist, server/modules/retention.ts)
+  detailsPrunedAt DateTime?
+  assignmentId    String?
+  createdAt       DateTime    @default(now())
+  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  assignment      Assignment? @relation(fields: [assignmentId], references: [id], onDelete: SetNull)
 
   @@index([userId, missionId])
   @@index([assignmentId])
+  @@index([createdAt])
 }
 
 model MissionProgress {

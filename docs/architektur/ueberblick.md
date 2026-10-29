@@ -41,6 +41,7 @@ apps/web ──► @spieliq/pitch ──► @spieliq/engine
 | 10 Trainer-Dashboard | `apps/web/src/app/coach/*`, `features/coach/*` |
 | 11 Content-Management | Inhalte versioniert im Code + Content-Tests; `CustomScenario` für Editor (ADR 0008) |
 | 12 Analysen & Berichte | `server/modules/insights.ts` |
+| (Querschnitt) Datenschutz: Auskunft, Löschung, Speicherfristen | `server/modules/accounts.ts`, `server/modules/retention.ts`, `scripts/retention.ts` |
 
 ESLint erzwingt: Engine/Content importieren kein React/Next/Prisma; UI-Komponenten importieren keinen Datenbankzugriff.
 
@@ -58,6 +59,7 @@ ESLint erzwingt: Engine/Content importieren kein React/Next/Prisma; UI-Komponent
 ```
 apps/web/
   prisma/              schema.prisma, migrations/, seed.ts (Demo-Daten, gekennzeichnet)
+  scripts/             Betriebsjobs (retention.ts: Speicherfristen)
   src/app/             Routen (öffentlich, (auth), play, coach, account, api)
   src/app/actions/     Server Actions (prüfen Sitzung bei jedem Aufruf)
   src/components/ui/   Designsystem-Komponenten

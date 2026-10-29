@@ -1,10 +1,25 @@
 'use server'
 
 import { redirect } from 'next/navigation'
+import { refresh } from 'next/cache'
 import { db } from '@/server/db'
 import { currentUserForAction, endSession } from '@/server/auth/current-user'
 import { toActionError } from '@/server/action-result'
-import { deleteAccount } from '@/server/modules/accounts'
+import { deleteAccount, updateDisplayName } from '@/server/modules/accounts'
+
+export type NameState = { error?: string; saved?: boolean } | undefined
+
+export async function updateDisplayNameAction(_prev: NameState, form: FormData): Promise<NameState> {
+  const user = await currentUserForAction()
+  if (!user) redirect('/login')
+  try {
+    await updateDisplayName(db, user.id, String(form.get('displayName') ?? ''))
+  } catch (error) {
+    return { error: toActionError(error).error }
+  }
+  refresh()
+  return { saved: true }
+}
 
 export type DeleteState = { error?: string } | undefined
 

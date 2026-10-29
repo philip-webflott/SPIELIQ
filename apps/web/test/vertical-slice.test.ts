@@ -1,12 +1,12 @@
 import { beforeAll, describe, expect, it } from 'vitest'
 import { getMission } from '@spieliq/content'
 import { isInteractive } from '@spieliq/engine'
-import { authenticate, deleteAccount, exportPersonalData, joinTeamWithCode, registerCoach } from '@/server/modules/accounts'
+import { authenticate, deleteAccount, exportPersonalData, joinTeamWithCode, registerCoach, updateDisplayName } from '@/server/modules/accounts'
 import { assignmentReport, assignmentsForPlayer, createAssignment } from '@/server/modules/assignments'
 import { playerDetail, teamProgressMatrix, teamStruggles } from '@/server/modules/insights'
 import { recordObservation } from '@/server/modules/observations'
 import { completeMission, playerProgress, recordStepAttempt } from '@/server/modules/progress'
-import { createInvitation, resetPlayerPassword } from '@/server/modules/teams'
+import { createInvitation, createTeam, deleteTeam, removePlayer, resetPlayerPassword } from '@/server/modules/teams'
 import { createSession, validateSession } from '@/server/auth/sessions'
 import { DomainError } from '@/server/errors'
 import { db, resetTestDatabase } from './helpers'
@@ -58,6 +58,14 @@ describe('Trainer legt Mannschaft an und lädt ein', () => {
     expect(code).toMatch(/^[A-Z2-9]{4}-[A-Z2-9]{4}$/)
     const stored = await db.invitation.findFirstOrThrow({ where: { teamId } })
     expect(stored.codeHash).not.toContain(code.replace('-', ''))
+  })
+
+  it('legt in der G- und F-Jugend keine Spielerkonten an (kein Teamcode)', async () => {
+    const { orgId } = await db.team.findUniqueOrThrow({ where: { id: teamId }, select: { orgId: true } })
+    const small = await createTeam(db, coachId, { orgId, name: 'F1', ageGroup: 'F' })
+    await expect(createInvitation(db, coachId, { teamId: small.id, guardianConsentConfirmed: true })).rejects.toThrow(/keine Spielerkonten/)
+    expect(await db.invitation.count({ where: { teamId: small.id } })).toBe(0)
+    await deleteTeam(db, coachId, small.id)
   })
 
   it('lehnt unbekannte Teamcodes ab', async () => {
@@ -210,6 +218,12 @@ describe('Betroffenenrechte', () => {
     expect(JSON.stringify(exported)).not.toContain('passwordHash')
   })
 
+  it('lässt den Anzeigenamen selbst berichtigen (Spieler:innen: Spitzname-Regeln)', async () => {
+    await expect(updateDisplayName(db, playerId, '<b>Max</b>')).rejects.toBeInstanceOf(DomainError)
+    await updateDisplayName(db, playerId, 'Falke 7')
+    expect((await db.user.findUniqueOrThrow({ where: { id: playerId } })).displayName).toBe('Falke 7')
+  })
+
   it('löscht ein Spielerkonto mit allen Lernergebnissen', async () => {
     await expect(deleteAccount(db, playerId, 'falsch')).rejects.toBeInstanceOf(DomainError)
     await deleteAccount(db, playerId, 'mein-passwort')
@@ -220,5 +234,17 @@ describe('Betroffenenrechte', () => {
 
   it('lässt Trainer:innen mit Mannschaften ihr Konto nicht versehentlich löschen', async () => {
     await expect(deleteAccount(db, coachId, 'sehr-sicheres-passwort')).rejects.toThrow(/Mannschaften/)
+  })
+})
+
+describe('Spieler aus der Mannschaft entfernen', () => {
+  it('löscht ein Spielerkonto ohne weitere Mannschaft samt Lernergebnissen', async () => {
+    const invite = await createInvitation(db, coachId, { teamId, guardianConsentConfirmed: true })
+    const joined = await joinTeamWithCode(db, { code: invite.code, displayName: 'Luchs', password: 'luchs-passwort', acceptedPrivacy: true })
+    await recordStepAttempt(db, joined.userId, { missionId: m1.mission.id, stepIndex: m1Step, answer: { selection: { playerId: 'o7' } } })
+    const result = await removePlayer(db, coachId, teamId, joined.userId)
+    expect(result.accountDeleted).toBe(true)
+    expect(await db.user.findUnique({ where: { id: joined.userId } })).toBeNull()
+    expect(await db.attempt.count({ where: { userId: joined.userId } })).toBe(0)
   })
 })

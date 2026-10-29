@@ -36,7 +36,7 @@ export const m2AbstandHalten: MissionInput = {
   level: 1,
   estimatedMinutes: 3,
   prerequisites: ['nazb-m1-problem-erkennen'],
-  sources: ['A-57', 'A-58', 'B-20', 'B-48', 'B-67'],
+  sources: ['A-14', 'A-15', 'B-19', 'B-20', 'B-48'],
   pitch: FULL_PITCH,
   view: { x: 30, y: 4, width: 44, height: 60 },
   teams: TEAMS_STANDARD,

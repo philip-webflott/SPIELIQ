@@ -48,6 +48,29 @@ Die Engine nutzt ein bewusst einfaches, erklärbares Zeitmodell: *Wer ist zuerst
 
 > **Wichtig – Modellannahmen:** Keine der gesichteten Quellen nennt belastbare Zahlen für Absicherungsabstände, Unterstützungsdistanzen oder Linienabstände nach Altersklassen (Recherche B, Synthese S5). Die Werte bilden plausible Größenordnungen ab, damit Ursache und Wirkung nachvollziehbar werden. Sie werden in der Erprobung mit lizenzierten Jugendtrainer:innen kalibriert (siehe [Entwicklungsplan](../entwicklungsplan.md)). Jede Mission kann ein anderes Altersprofil wählen.
 
+### 4.1 Startwerte und ihre Anker in den Quellen
+
+Die wenigen Zahlen aus den Quellen stammen aus Übungen oder aus dem Spitzenfußball ([Taktische Grundlagen](../recherche/taktische-grundlagen.md), Abschnitt 6). Sie dienen als Anker, nicht als Norm. Die Kriterien arbeiten mit weichen Bändern; „bestanden“ liegt meist bei Score ≥ 0,5 (Absichern und Dreieck ≥ 0,6, Breite/Tiefe ≥ 0,75).
+
+| Parameter (Standard) | Startwert | Anker in den Quellen | Einordnung |
+|---|---|---|---|
+| `pressureDistance` (U15) | 2,5 m | 2–3 m Abstand des Verteidigers beim Ballempfang im 1v1, FIFA-Einheit U15 (B-13) | innerhalb des einzigen belegten Bereichs |
+| `pressure.band` (Stellen) | ideal 1–3 m, 0 ab 6,5 m; torseitig ≤ 45° | B-13; „abgebremst ankommen, nicht übercommitten“ (B-02, B-03) | M4 weitet auf ideal 1,5–4,5 m, weil der Ball während der Verlagerung unterwegs ist (Herausrücken) |
+| `chainGaps` ballnah | ideal ≤ 9 m, bestanden ≤ 12 m, 0 ab 15 m | 6–8 m zwischen Verteidigern einer Viererkette, Übung auf großem Feld (B-05); etwa 3 m auf 20 × 15 m (B-06) | etwas großzügiger als B-05, weil der direkte Abstand auch bei Höhenversatz gemessen wird und die Werte für die C-Jugend erst kalibriert werden müssen |
+| `chainGaps` ballfern | ideal ≤ 14 m, 0 ab 21 m | ballferne Spieler rücken ein, der ungefährlichste Gegner darf frei sein, der ferne Flügel darf offen bleiben (B-06, B-07, B-14) | bewusst weiter als ballnah – keine gleichen Abstände |
+| `compactness.width` | ideal ≤ 36 m, 0 ab 50 m | organisiertes 4-4-2 etwa strafraumbreit (B-95); Elite-Mittelfeldblock im Mittel 40,1 m breit (B-39) | nur Plausibilität; Elitewerte sind keine Jugendnorm (C-40) |
+| `cover.distance` | ideal 3,5–8 m | qualitativ: nah genug gegen den Pass durch die Lücke, nicht so weit, dass der erste Verteidiger isoliert ist (B-94; B-81 nur Suchergebnis) | reine Modellannahme |
+| `cover.depthGap`, `cover.stagger` | Tiefe ideal 1,5–6,5 m; Staffelung ideal ≤ 65°, 0 ab 88° | „hinter und innen“ (B-94); „versetzt statt auf einer Linie“ (B-17, B-07) | reine Modellannahme |
+| `groupDistance` (Passdistanz) | Standard ideal 6–22 m (M2: 7–20 m) | „weder zu nah noch zu weit“, 10-m-Dreieck als Übungsmaß (B-20); kurze, mittlere und lange Optionen (B-19) | reine Modellannahme |
+| `shiftTowardsBall.factor` | ideal 35–90 % der seitlichen Ballverschiebung, 0 unter 10 % und über 125 % | Verdichtung auf der Ballseite, Zentrum hat Vorrang (B-06, B-07, B-57) | reine Modellannahme; bestraft Über- und Unterverschieben |
+| Passweg „offen“ / „riskant“ | Zeitvorsprung ≥ 0,25 s bzw. 0–0,25 s | – | reine Modellannahme |
+| „frei“ (`timeOnBall`) | ≥ 0,8 s bis zum Druck | – | reine Modellannahme |
+| Lauf-, Reaktions- und Passgeschwindigkeiten | Tabelle oben | – | reine Modellannahme; Kalibrierung mit Videodaten aus Jugendspielen geplant |
+
+FIFA veröffentlicht für Druck und Blockklassifikation nur teilweise Heuristiken (B-39, B-44). Die Block-Kriterien (≥ 8 Feldspieler, ≤ 10 km/h, 1,6 s von 2,0 s stationär, ≥ 4 Verteidiger hinter dem Ball) eignen sich später für animierte Szenen, werden in v1 aber nicht genutzt.
+
+**Kalibrierung (geplant):** 30–50 standardisierte Situationen je Kriterium, von mindestens drei lizenzierten Jugendtrainer:innen unabhängig als „passt / vertretbar / nicht passend“ beurteilt; Bänder so anpassen, dass die Engine mit dem Expertenurteil übereinstimmt; Übereinstimmung und Abweichungen im Content-Report dokumentieren.
+
 ## 5. Taktische Analyse
 
 ### 5.1 Passweg-Analyse (zeitbasiertes Abfangmodell)

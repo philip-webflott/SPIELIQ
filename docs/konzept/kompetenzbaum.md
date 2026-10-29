@@ -6,7 +6,7 @@ Stand: 29.10.2026 · Code: `packages/content/src/curriculum.ts` · Status: Entwu
 
 Die Progression folgt drei belegten Linien:
 
-1. **Individuell → Gruppe → Mannschaft.** FIFA baut zonales Verteidigen in Stufen auf (1v1 → Druck/Absicherung → eine Linie → zwei Linien, B-01/B-02); DFB-Material vermittelt ballorientiertes Verteidigen von 1v1 über Gruppe zur Mannschaft (A-64) und nennt das Verteidigen auf einer Linie spätestens ab D-Junioren (A-87).
+1. **Individuell → Gruppe → Mannschaft.** FIFA baut zonales Verteidigen in drei Teilen auf: 1v1/1v2 → Kleingruppen 2v2/2v3/3v3 (Druck, Absicherung, Balance) → eine, zwei, drei Linien bis zum 11v11 (B-01, B-94, Volltext geprüft). Der DFB nennt das Verteidigen auf einer Linie (Verschieben, Herausrücken, Absichern) als Schwerpunkt spätestens ab D-Junioren (A-87); eine DFB-Videoreihe vom 1v1 über die Gruppe zur Mannschaft ist nur als Suchergebnis belegt (A-64).
 2. **Wahrnehmen → Entscheiden → Abstimmen.** Erst erkennen (Ball, Mitspieler, Gegner, freier Raum), dann die eigene Entscheidung, dann die Abstimmung mit anderen (Rollen).
 3. **Klein → groß.** Spielerzahl und Feldausschnitt wachsen: 1 Figur + Ball → 2v1 / 2v2 → 3v3 → Mannschaftsteil (Kette) → Mannschaft. Die TPD trainiert vom 1v1 bis 4v4 (A-01, A-87) und widerspricht ausdrücklich dem Missverständnis, es gehe ausschließlich um Kleinfeld (A-10) – darum folgt auf Kleingruppen der Transfer in 9v9/11v11-Ausschnitte.
 
@@ -19,10 +19,12 @@ Gegenüber dem Ausgangsvorschlag wurden Welten nach Spielphasen und Komplexität
 | W1 | Spielfeld & Raum | Orientierung, freier Raum, nicht alle zum Ball, Schulterblick | ab E |
 | W2 | Anspielbar sein | Freilaufen/Anbieten, Abstand, Breite & Tiefe, Dreiecke, Überzahl, dritter Mann | ab E |
 | W3 | Verteidigen zu zweit | Stellen, Absichern, Lenken, Passwege zustellen | ab E/D |
-| W4 | Gemeinsam verteidigen | Balance/Mitte schützen, Verschieben, Kompaktheit, Pressing-Grundlagen | ab D/C |
+| W4 | Gemeinsam verteidigen | Balance/Mitte schützen, Verschieben, Kompaktheit (im Verbund), Pressing-Grundlagen | ab D/C |
 | W5 | Räume im Angriff | Raum im Rücken, Verlagerung, Gegner binden, Verhalten nach dem Pass | ab D |
 | W6 | Umschalten | nach Ballverlust (Gegenpressing oder Ordnung), nach Ballgewinn | ab C |
 | W7 | Spielintelligenz | Entscheiden unter Zeitdruck, Risiko/Nutzen, Antizipation, Sequenzen | ab D |
+
+Die Altersrahmen der Welten und Kompetenzen sind überwiegend eigene Ableitungen; belegt sind nur „Linie verteidigen spätestens ab D“ und „Positionsspezifik ab C“ (A-87). Pressing-Grundlagen sind ab C eingeordnet, weil DFB- und FIFA-Einheiten für U14/U15 sie enthalten (A-15, B-10, B-12). Details: [Altersgerechte Lernziele](../recherche/altersgerechte-lernziele.md).
 
 Regelwissen (Abseits, Spielfortsetzungen) kann als Querschnittsthema ergänzt werden. **Technik** (Dribbling, Ballannahme, Passtechnik, Zweikampf) lässt sich digital nicht trainieren; SPIELIQ verweist hierfür ausschließlich auf Platz-Spielformen.
 

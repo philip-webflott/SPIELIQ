@@ -19,6 +19,7 @@ export interface GameFormat {
   readonly goals: string
   readonly notes: string
   readonly sources: readonly string[]
+  /** true = Spielerzahl, Feldmaße und Tore im Original geprüft (Recherche A, Volltext) */
   readonly verified: boolean
 }
 
@@ -85,9 +86,10 @@ export const GAME_FORMATS: readonly GameFormat[] = [
     players: '10 Feldspieler + Torwart',
     pitch: { kind: 'full', length: 105, width: 68 },
     goals: '7,32 × 2,44 m',
-    notes: 'Ab 2027/28 neue Formate für U14–U16 auf Leistungsebene angekündigt (Spielzeit in Dritteln).',
-    sources: ['A-10', 'A-89'],
-    verified: true,
+    notes:
+      '11 gegen 11 ab C-Jugend ist belegt; 105 × 68 m ist ein übliches Standardmaß (nicht im Original geprüft, regional auch kleiner). Ab 2027/28 neue Formate für U14–U16 auf Leistungsebene angekündigt (Spielzeit in Dritteln).',
+    sources: ['A-10', 'A-89', 'A-102'],
+    verified: false,
   },
 ]
 

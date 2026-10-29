@@ -14,7 +14,8 @@ import type { AgeGroup } from '@spieliq/engine'
  * ist: Grundlagen des Verteidigens auf einer Linie (Verschieben, Herausrücken,
  * Absichern) spätestens ab D-Junioren, Positionsspezifik ab C-Junioren (DFB,
  * TPD-Flipbook, Quelle A-87). Für Viererkette oder Pressing nennt der DFB
- * keine verbindlichen Altersgrenzen.
+ * keine verbindlichen Altersgrenzen; Pressing-Grundlagen ab C stützen sich auf
+ * U14-/U15-Einheiten von DFB und FIFA (A-15, B-10, B-12).
  */
 
 export interface World {
@@ -67,13 +68,13 @@ export const COMPETENCIES: readonly Competency[] = [
   { id: 'K-ERSTER-VERTEIDIGER', worldId: 'W3', title: 'Stellen', canDo: 'Als Nächster zum Ball stelle ich den Gegner zwischen Ball und Tor.', prerequisites: ['K-NICHT-ALLE'], principles: ['P-STELLEN'], fromAgeGroup: 'E', level: 1, status: 'verfügbar' },
   { id: 'K-ZWEITER-VERTEIDIGER', worldId: 'W3', title: 'Absichern', canDo: 'Ich sichere meinen Mitspieler schräg dahinter ab.', prerequisites: ['K-ERSTER-VERTEIDIGER'], principles: ['P-ABSICHERN'], fromAgeGroup: 'D', level: 2, status: 'verfügbar' },
   { id: 'K-LENKEN', worldId: 'W3', title: 'Gegner lenken', canDo: 'Ich lenke den Ballführenden dorthin, wo wir ihn erwarten.', prerequisites: ['K-ERSTER-VERTEIDIGER'], principles: ['P-STELLEN'], fromAgeGroup: 'D', level: 3, status: 'geplant' },
-  { id: 'K-PASSWEGE-ZU', worldId: 'W3', title: 'Passwege zustellen', canDo: 'Ich nutze meinen Deckungsschatten, um Pässe zu verhindern.', prerequisites: ['K-ERSTER-VERTEIDIGER'], principles: ['P-STELLEN'], fromAgeGroup: 'D', level: 3, status: 'geplant' },
+  { id: 'K-PASSWEGE-ZU', worldId: 'W3', title: 'Passwege zustellen', canDo: 'Ich stelle mich so, dass ich den Passweg mit meinem Körper verdecke.', prerequisites: ['K-ERSTER-VERTEIDIGER'], principles: ['P-STELLEN'], fromAgeGroup: 'D', level: 3, status: 'geplant' },
 
   // Welt 4 – Gemeinsam verteidigen
   { id: 'K-BALANCE', worldId: 'W4', title: 'Mitte schützen (Balance)', canDo: 'Als ballferner Spieler rücke ich ein und schütze die Mitte.', prerequisites: ['K-ZWEITER-VERTEIDIGER'], principles: ['P-MITTE'], fromAgeGroup: 'D', level: 2, status: 'verfügbar' },
   { id: 'K-VERSCHIEBEN', worldId: 'W4', title: 'Ballorientiert verschieben', canDo: 'Wir verschieben gemeinsam zur Ballseite.', prerequisites: ['K-ZWEITER-VERTEIDIGER', 'K-BALANCE'], principles: ['P-VERSCHIEBEN', 'P-MITTE'], fromAgeGroup: 'D', level: 3, status: 'verfügbar' },
   { id: 'K-KOMPAKTHEIT', worldId: 'W4', title: 'Kompakt stehen', canDo: 'Wir halten ballnah enge Abstände zwischen den Mannschaftsteilen.', prerequisites: ['K-VERSCHIEBEN'], principles: ['P-VERSCHIEBEN'], fromAgeGroup: 'C', level: 3, status: 'geplant' },
-  { id: 'K-PRESSING', worldId: 'W4', title: 'Pressing-Grundlagen', canDo: 'Ich erkenne Signale, wann wir gemeinsam anlaufen.', prerequisites: ['K-KOMPAKTHEIT'], principles: ['P-STELLEN', 'P-VERSCHIEBEN'], fromAgeGroup: 'B', level: 4, status: 'geplant' },
+  { id: 'K-PRESSING', worldId: 'W4', title: 'Pressing-Grundlagen', canDo: 'Ich erkenne Signale, wann wir gemeinsam anlaufen.', prerequisites: ['K-KOMPAKTHEIT'], principles: ['P-STELLEN', 'P-VERSCHIEBEN'], fromAgeGroup: 'C', level: 4, status: 'geplant' },
 
   // Welt 5 – Räume im Angriff
   { id: 'K-RAUM-IM-RUECKEN', worldId: 'W5', title: 'Raum im Rücken nutzen', canDo: 'Ich erkenne Räume hinter der gegnerischen Abwehr.', prerequisites: ['K-BREITE-TIEFE'], principles: ['P-FREIER-RAUM'], fromAgeGroup: 'D', level: 3, status: 'geplant' },

@@ -38,7 +38,7 @@ export const m1ProblemErkennen: MissionInput = {
   level: 1,
   estimatedMinutes: 2,
   prerequisites: [],
-  sources: ['B-01', 'B-14', 'A-57', 'C-17'],
+  sources: ['B-01', 'B-06', 'B-14', 'B-102', 'C-17'],
   pitch: FULL_PITCH,
   view: { x: -3, y: 24, width: 52, height: 46 },
   teams: TEAMS_STANDARD,

@@ -13,7 +13,8 @@ Lies zuerst `docs/README.md` (Index) und `docs/entwicklungsplan.md` (Stand, näc
 - Bewertung immer über die Engine; der Server bewertet Spielereingaben selbst neu (`apps/web/src/server/modules/progress.ts`).
 - Datenbankzugriff nur über `apps/web/src/server/modules/*` mit Berechtigungsprüfung (`src/server/policies.ts`).
 - Next.js 16 mit Cache Components: Sitzungszugriffe innerhalb von `<Suspense>`; Doku liegt in `node_modules/next/dist/docs/`.
-- Neue Missionen: Szenarioformat v1 (`packages/engine/src/scenario/schema.ts`), Beispiele für richtig/falsch sind Pflicht; `pnpm --filter @spieliq/content test` prüft Zufallsschutz und Spiegelinvarianz.
+- Neue Missionen: Szenarioformat v1 (`packages/engine/src/scenario/schema.ts`), Beispiele für richtig/falsch sind Pflicht; `pnpm --filter @spieliq/content test` prüft Zufallsschutz, Spiegelinvarianz und dass jede Quellen-ID im Register (`docs/recherche/quellen/`) existiert.
+- Neue personenbezogene Daten nur mit Eintrag im Datenschutzkonzept (`docs/recht/datenschutzkonzept.md`, Abschnitt 3) und festgelegter Speicherfrist (`apps/web/src/server/modules/retention.ts`).
 
 ## Befehle
 - `pnpm check` – Typprüfung, Lint, Tests (Integrationstests brauchen `TEST_DATABASE_URL`)

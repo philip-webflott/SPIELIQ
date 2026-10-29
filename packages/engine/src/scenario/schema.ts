@@ -207,7 +207,7 @@ export const missionSchema = z.object({
   level: z.number().int().min(1).max(5),
   estimatedMinutes: z.number().positive(),
   prerequisites: z.array(z.string()).default([]),
-  /** Quellen-IDs aus dem Quellenregister (docs/recherche/quellenregister.md) */
+  /** Quellen-IDs aus den Quellenregistern (docs/recherche/quellen/*.md), z. B. "A-87" */
   sources: z.array(z.string()).default([]),
   review: z
     .object({ reviewedBy: z.string().optional(), reviewedAt: z.string().optional(), notes: z.string().optional() })
