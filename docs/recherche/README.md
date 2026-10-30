@@ -1,12 +1,13 @@
 # Recherche – Methodik, Stand und Lesehilfe
 
-Stand: 30.10.2026 · Phase A (Grundlagenrecherche) mit Ergänzung zu Positionen, Didaktik und Darstellung
+Stand: 30.10.2026 · Phase A (Grundlagenrecherche) mit Ergänzung zu Positionen, Didaktik und Darstellung; Nachprüfung nach Freigabe der Domains
 
 Dieses Verzeichnis enthält die fachlichen, wissenschaftlichen und rechtlichen Grundlagen von SPIELIQ. Jede fachliche Aussage in Code, Inhalten und Konzepten soll auf eine Quelle aus diesen Registern verweisen oder ausdrücklich als Annahme gekennzeichnet sein (siehe `CLAUDE.md`).
 
 ## 1. Wie recherchiert wurde (ehrliche Einordnung)
 
 - **Internetzugang:** Die Sitzung hatte Internetzugang über einen Netzwerk-Proxy mit Freigabeliste. Viele Domains waren gesperrt (Proxy-Antwort 403), darunter meinfussball.de, dfb-akademie.de, die Seiten der Landesverbände, fifa.com/inside.fifa.com, thefa.com, EUR-Lex, EDPB, DSK, W3C sowie wissenschaftliche Verlage, PubMed/PMC und Repositorien. Erreichbar waren u. a. dfb.de, assets.dfb.de, fussball.de, fifatrainingcentre.com, uefa.com, editorial.uefa.com und gesetze-im-internet.de.
+- **Freigabe am 30.10.2026:** Der Produktverantwortliche hat den Netzzugang erweitert. Seitdem sind u. a. meinfussball.de, dfb-akademie.de, inside.fifa.com, w3.org, PubMed/PMC, link.springer.com, frontiersin.org, datenschutzkonferenz-online.de und publications.europa.eu erreichbar. EUR-Lex antwortet automatisierten Abrufen nur mit einer Bot-Abfrage (HTTP 202); EU-Rechtstexte werden deshalb in der amtlichen Fassung über das Amt für Veröffentlichungen (publications.europa.eu, „Cellar“) gelesen. Weiterhin nicht abrufbar: sciencedirect.com, tandfonline.com, mdpi.com (Bot-Schutz, HTTP 403) – Schutzmaßnahmen werden nicht umgangen.
 - **Zwei Werkzeuge:**
   1. *Websuche* (Trefferlisten mit Titel, URL und automatischer Zusammenfassung). Das Kontingent von 200 Suchen pro Durchlauf wurde mit parallel arbeitenden Recherche-Agenten geteilt und war vor Abschluss aller Fragen erschöpft.
   2. *Direkter Abruf* von Originalseiten und PDFs (curl über den Proxy, Text aus HTML bzw. PDF extrahiert, ein bildbasiertes ePaper seitenweise gelesen). Nur dort, wo die Domain freigegeben war.
@@ -30,10 +31,10 @@ Dieses Verzeichnis enthält die fachlichen, wissenschaftlichen und rechtlichen G
 |---|---|---|---|---|---|
 | [A – DFB und deutsche Strukturen](quellen/A-dfb-jugendfussball.md) | TPD, Kinderfußball-Spielformen, Altersklassen, Spielauffassung, MEIN FUSSBALL, Trainingsthemen, Positionen | 108 (A-01–A-108) | 48 (26 nachgeprüft, 22 neue Originale A-87–A-108) | 58 (Domains gesperrt) + A-05 (nur Weiterleitung), A-79 (HTTP 404) | einzelne Angaben, markiert |
 | [B – FIFA, UEFA, andere Verbände](quellen/B-fifa-uefa-verbaende.md) | Verteidigen individuell/kollektiv, Druck–Absicherung–Balance, Zonenverteidigung, Passen/Freilaufen, Wahrnehmung, Football Language, UEFA-Ausbildung, Positionen und Rollen (S8) | 120 (B-01–B-120) | 87 (60 nachgeprüft, 27 neue Originale B-94–B-120) | 33 (B-40, B-41, B-52, B-64–B-93) | einzelne Angaben, markiert |
-| [C – Sport- und Lernwissenschaft](quellen/C-sport-und-lernwissenschaft.md) | spielbasierte Vermittlung, taktisches Wissen, perzeptuell-kognitives Training, Transfer, Lernwissenschaft, Motivation, Entwicklung, Erklären/Staffeln/Sichern, visuelle Darstellung (Synthese 7) | 95 (C-01–C-95) + Prüfliste H-01–H-117 | 0 (Verlage/Repositorien gesperrt) | 95 | H-01–H-117 (Lernwissenschaft, Gamification, Entwicklung) |
-| [D – Recht, Datenschutz, Kinderschutz, Barrierefreiheit](quellen/D-recht-datenschutz-barrierefreiheit.md) | DSGVO/BDSG, TDDDG, DDG, JuSchG, SGB VIII, BFSG, BGB, UWG, KUG, DFB-Kinderschutz, DSA, KI-VO, WCAG | 51 (D-01–D-51) | 24 (D-01–D-24: Bundesgesetze, DFB-Dokumente) | 4 (D-25–D-28) | 23 (D-29–D-51, u. a. DSGVO-Volltext, EDPB, WCAG) |
+| [C – Sport- und Lernwissenschaft](quellen/C-sport-und-lernwissenschaft.md) | spielbasierte Vermittlung, taktisches Wissen, perzeptuell-kognitives Training, Transfer, Lernwissenschaft, Motivation, Entwicklung, Erklären/Staffeln/Sichern, visuelle Darstellung (Synthese 7) | 95 (C-01–C-95) + Prüfliste H-01–H-117 | 0 vollständig; 12 am 30.10.2026 im Original nachgeprüft (C-66, C-67, C-71, C-81, C-82, C-84, C-85, C-87–C-91; meist Abstract beim Verlag, PubMed oder ERIC, teils Volltext), mit Korrekturen | 83 | H-01–H-117 (Lernwissenschaft, Gamification, Entwicklung) |
+| [D – Recht, Datenschutz, Kinderschutz, Barrierefreiheit](quellen/D-recht-datenschutz-barrierefreiheit.md) | DSGVO/BDSG, TDDDG, DDG, JuSchG, SGB VIII, BFSG, BGB, UWG, KUG, DFB-Kinderschutz, DSA, KI-VO, WCAG | 51 (D-01–D-51) | 25 (D-01–D-24: Bundesgesetze, DFB-Dokumente; D-41: KI-Verordnung samt Digital-Omnibus-Änderung VO (EU) 2026/1744, amtliche Fassung) | 4 (D-25–D-28) | 22 (D-29–D-51 ohne D-41, u. a. DSGVO-Volltext, EDPB, WCAG) |
 
-Gesamt: 374 Registereinträge, davon 159 im Volltext geprüft. Suchläufe im ersten Durchgang: A 59, B 93, C 44, D 3; Ergänzung 30.10.2026: 11 (Positionen) und 30 (Didaktik/Darstellung).
+Gesamt: 374 Registereinträge, davon 160 im Volltext geprüft, weitere 12 am Original-Abstract. Suchläufe im ersten Durchgang: A 59, B 93, C 44, D 3; Ergänzung 30.10.2026: 11 (Positionen) und 30 (Didaktik/Darstellung).
 
 **Bekannte Fehlerquote des Suchwerkzeugs:** Bei der Volltextprüfung in A und B wurden falsche Zuordnungen (Aussage stammt aus einer anderen Quelle), eine nicht gedeckte Aussage (A-51: Viererkette „ab 11–12 Jahren“ steht nicht im Original) und mehrere falsche Negativbefunde gefunden. Ungeprüfte Einträge sind deshalb mit Vorsicht zu behandeln.
 
@@ -57,4 +58,4 @@ Rechtliche Ableitungen: [Datenschutzkonzept](../recht/datenschutzkonzept.md), [B
 4. **Landesverbände** (fvn.de, nfv.de, wuerttfv.de, bfv.de, badfv.de, sbfv.de): regionale D- und C-Formate.
 5. **Fachliche Validierung** durch lizenzierte Jugendtrainer:innen (mindestens B-Lizenz mit Jugendschwerpunkt): Begriffe, Einführungsalter, Schwellenwerte der Engine (siehe [Engine, Abschnitt 4](../konzept/engine.md)).
 
-Die Domain-Freigaben stellt die Person ein, die die Sitzungsumgebung verwaltet (Netzwerkeinstellungen der Umgebung).
+Die Domains für die Punkte 1–4 sind seit 30.10.2026 freigegeben; die Folgerecherche kann beginnen. Bei der Nachprüfung der Register C und D fielen mehrere ungedeckte Angaben auf (z. B. Zahlen aus Sekundärquellen, Aussagen, die im Abstract nicht stehen) – ein weiterer Grund, ungeprüfte Einträge vorsichtig zu verwenden.

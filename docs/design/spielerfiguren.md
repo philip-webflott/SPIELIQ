@@ -30,8 +30,8 @@ Grundlage: das vom Produktverantwortlichen geschickte Referenzblatt (Team Blau /
 8. **Bereit für Animation.** Gliedmaßen als getrennte Teile, ein gemeinsames Gerüst für alle Posen.
 
 **Was wir bewusst nicht übernehmen:**
-- *3/4-Ansicht auf dem Spielfeld:* Perspektive verfälscht Abstände und Linien (Passwege, Abstand zum Gegner), Figuren verdecken sich, und Füße stehen nicht dort, wo die Engine rechnet. Die Vogelperspektive führte in einer Studie mit Nachwuchsfußballern zu besseren Entscheidungen als die Spielerperspektive (C-84, Prüfstatus im Register).
-- *Schuhdetails, Gesichtsausdruck, Frisuren im Simulator:* Bei 25–35 Pixel Figurengröße unsichtbar oder ablenkend. Interessante, aber für das Lernziel unwichtige Details können Neulingen schaden (C-81, C-82). Details gehören in die großen Ansichten (Karten, Filme).
+- *3/4-Ansicht auf dem Spielfeld:* Perspektive verfälscht Abstände und Linien (Passwege, Abstand zum Gegner), Figuren verdecken sich, und Füße stehen nicht dort, wo die Engine rechnet. In einer Studie mit Nachwuchsfußballern führte die erhöhte Perspektive zu besseren Entscheidungen als die Spielerperspektive; aus Spielerperspektive wurde die richtige Option zwar angeschaut, aber seltener gewählt (C-84, Abstract geprüft). Gezeigt wurden dort gefilmte Szenen von oben, keine gezeichnete Draufsicht – die Übertragung auf unser Spielfeld ist eine Designfolgerung.
+- *Schuhdetails, Gesichtsausdruck, Frisuren im Simulator:* Bei 25–35 Pixel Figurengröße unsichtbar oder ablenkend. Interessante, aber für das Lernziel unwichtige Details verschlechterten das Lernen in zwei Meta-Analysen (C-81, C-82, Abstracts geprüft; beim Behalten kleiner bis mittlerer, beim Transfer mittlerer Effekt). Details gehören in die großen Ansichten (Karten, Filme), und auch dort nur, wenn sie etwas zeigen.
 
 ## 2. Lernperspektive zuerst: Was muss ein Kind sofort sehen?
 
@@ -71,7 +71,7 @@ Die Teamfarben kommen aus dem [Designsystem](designsystem.md) (`--team-own`, `--
 
 ### 3.4 Vielfalt
 
-Auf dem Feld zurückhaltend: Haut- und Haartöne variieren je Rückennummer aus einer kleinen Palette (5 Töne); das Trikot bleibt die größte Farbfläche, damit das Team auf einen Blick erkennbar bleibt. In den großen Ansichten (Avatar, Karten) dürfen Kinder Aussehen wählen. Identifikation mit Lernspiel-Figuren hängt in Studien eher mit Ähnlichkeit und Wahlmöglichkeit zusammen als mit Realismus (C-90, C-91, Prüfstatus im Register) – ein Grund mehr, Realismus nicht zu übertreiben.
+Auf dem Feld zurückhaltend: Haut- und Haartöne variieren je Rückennummer aus einer kleinen Palette (5 Töne); das Trikot bleibt die größte Farbfläche, damit das Team auf einen Blick erkennbar bleibt. In den großen Ansichten (Avatar, Karten) dürfen Kinder Aussehen wählen. Die Belege zu Avatar-Ähnlichkeit und Identifikation stammen überwiegend aus Studien mit Erwachsenen und sind gemischt; ein dauerhaft ähnlicher Avatar war in einem Experiment nicht überlegen (C-90, nachgeprüft). Erklärfiguren wirkten in einer Meta-Analyse bei Schüler:innen stärker als bei Studierenden (C-91). Wahlmöglichkeit im Avatar ist deshalb eine **Annahme** zur Motivation, kein belegter Lernhebel – Realismus bringt nach heutigem Stand jedenfalls keinen Vorteil.
 
 ## 4. Zustände
 
@@ -98,7 +98,7 @@ Später: **Dribbeln** (Laufen mit Ball am Fuß, Ball vor dem Fuß in Laufrichtun
 | **Seite** | Körperstellung erklären (offen/geschlossen, Annahme mit dem richtigen Fuß) | Erklärfilme, Karten | links/rechts (gespiegelt) | 3 |
 | **Hinten** | Rückennummer, „Positionskarte“ (6er, Außen, Stürmer) | Positionswelten, Mannschaftsübersicht | 1 | 3 |
 
-Im Simulator gibt es bewusst nur die Draufsicht: Abstrakte, übersichtliche Darstellungen reichen für das Erkennen von Spielerbeziehungen (C-85), und 3D-, VR- oder 360°-Darstellungen verbesserten Entscheidungen in den gefundenen Studien nicht (C-87, C-88, C-89; Prüfstatus im Register).
+Im Simulator gibt es bewusst nur die Draufsicht: Abstrakte Darstellungen (z. B. Spieler als Punkte) reichen in Studien zur Mustererkennung im Fußball für das Erkennen von Spielerbeziehungen (C-85), und 3D-, VR- oder 360°-Darstellungen verbesserten Entscheidungen in den gefundenen Studien nicht; in einer davon lernte auch die Gruppe mit herkömmlicher Taktiktafel gegenüber der Kontrollgruppe (C-87, C-88, C-89; am 30.10.2026 nachgeprüft).
 
 ## 6. Technikentscheidung: 2,5D, Sprites oder Echtzeit-3D?
 
@@ -160,7 +160,7 @@ Im Simulator gibt es bewusst nur die Draufsicht: Abstrakte, übersichtliche Dars
 
 ## 12. Quellen und Annahmen
 
-- C-81, C-82 (verführerische Details), C-84 (Vogelperspektive), C-85 (abstrakte Darstellungen), C-87, C-88, C-89 (3D/VR/360°), C-90, C-91 (Figuren, Ähnlichkeit, pädagogische Agenten) – [Register C](../recherche/quellen/C-sport-und-lernwissenschaft.md); der Prüfstatus steht jeweils dort.
+- C-81, C-82 (verführerische Details), C-84 (Vogelperspektive), C-85 (abstrakte Darstellungen), C-87, C-88, C-89 (3D/VR/360°), C-90, C-91 (Figuren, Ähnlichkeit, pädagogische Agenten) – [Register C](../recherche/quellen/C-sport-und-lernwissenschaft.md); am 30.10.2026 im Original nachgeprüft (meist Abstract, teils Volltext), Korrekturen stehen in den Einträgen.
 - Eine Studie, die realistische mit stilisierten Spielerfiguren direkt vergleicht, wurde nicht gefunden (Register C, Synthese 7). Die Wahl der Figuren ist deshalb eine **Designfolgerung**, die im Test mit Kindern (Phase 6) überprüft wird.
 - Alle Schwellen (Laufschwelle, Drehgrenze, Pixelgrößen, Leistungsbudget) sind **Annahmen**.
 - Die Figuren sind ein eigener Entwurf; keine Grafiken von Verbänden oder Spielen übernommen.

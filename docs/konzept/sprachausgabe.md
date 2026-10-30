@@ -4,7 +4,14 @@ Stand: 30.10.2026 · Code: `packages/content/src/speech.ts` (welche Texte), `app
 
 ## 1. Warum
 
-Ein Teil der Zielgruppe liest mühsam (Rückmeldung des Produktverantwortlichen, siehe [Einfach verstehen](../design/einfach-verstehen.md)). Gesprochener Text zur laufenden Animation entlastet das Lesen. Belege und ihre Grenzen: Register C, C-71 (Modalitätseffekt; Prüfstatus dort). Die konkrete Gestaltung (automatisch an, etwas langsamer als normal) ist eine **Annahme** und wird im Test mit Kindern geprüft.
+Ein Teil der Zielgruppe liest mühsam (Rückmeldung des Produktverantwortlichen, siehe [Einfach verstehen](../design/einfach-verstehen.md)). Was die Forschung dazu sagt (Register C, am 30.10.2026 im Original nachgeprüft):
+
+- Bild plus gesprochener Text führte im Mittel zu besseren Ergebnissen als Bild plus geschriebener Text; der Effekt war größer bei bewegten Bildern, bei vom System vorgegebenem Tempo und bei kurzen Materialien (C-71, Meta-Analysen, Abstracts geprüft). Das passt zu unseren Animationen.
+- Für Kinder ist die Lage dünn: In einer Studie mit Elfjährigen mit Legasthenie änderte gesprochener Text den Wissenszuwachs nicht, aber mit geschriebenem Text brauchten sie mehr Lernzeit; die Autor:innen empfehlen Audio für diese Gruppe (C-71, Volltext geprüft).
+- Gesprochene Information ist flüchtig; lange gesprochene Texte können belasten (C-71). Deshalb bleibt jeder Satz kurz und **steht immer auch auf dem Bildschirm**.
+- Ein Vorteil menschenähnlicher Erklärfiguren zeigte sich in einer Studie nur mit menschlicher, nicht mit Maschinenstimme (C-91, Mayer & DaPra 2012, mit Studierenden) – ein Hinweis, dass die Qualität der Stimme zählt.
+
+Die konkrete Gestaltung (automatisch an, etwas langsamer als normal) ist eine **Annahme** und wird im Test mit Kindern geprüft.
 
 Entscheidung des Produktverantwortlichen (30.10.2026): KI-Stimme über **ElevenLabs**.
 
@@ -62,7 +69,13 @@ Neue oder geänderte Missionstexte: `pnpm voice` erzeugt nur die fehlenden Absch
 
 ## 5. KI-Kennzeichnung (rechtliche Einordnung, vorläufig)
 
-Die KI-Verordnung (VO (EU) 2024/1689, Register D, D-41) enthält in Art. 50 Transparenzpflichten für synthetische Inhalte. Die Einordnung für vorab erzeugte Vorlese-Audios (Pflichten des Anbieters des KI-Systems vs. des Betreibers, Ausnahmen, Geltungsbeginn) steht in D-41; sie ist keine Rechtsberatung und vor dem Echtbetrieb rechtlich zu prüfen. Unabhängig davon kennzeichnet SPIELIQ die Stimme sichtbar als KI-Stimme.
+Grundlage: KI-Verordnung VO (EU) 2024/1689 in der amtlichen Fassung, geändert durch die Digital-Omnibus-Verordnung zur KI VO (EU) 2026/1744 (Register D, D-41, am 30.10.2026 im Wortlaut geprüft). **Keine Rechtsberatung – vor dem Echtbetrieb anwaltlich prüfen.**
+
+- **Geltung:** Art. 50 gilt seit 02.08.2026; die Omnibus-Verordnung hat diesen Termin nicht verschoben.
+- **Kennzeichnung in maschinenlesbarer Form (Art. 50 Abs. 2)** ist Pflicht des *Anbieters* des Systems, das das Audio erzeugt – hier ElevenLabs. SPIELIQ nutzt den Dienst und ist damit voraussichtlich *Betreiber*. ElevenLabs bettet nach eigenen Angaben ein Wasserzeichen ein (Abschnitt 2). Wir verändern die Dateien nicht (keine Nachbearbeitung, die Herkunftsmerkmale entfernen könnte).
+- **Offenlegungspflicht des Betreibers (Art. 50 Abs. 4)** betrifft Deepfakes, also Inhalte, die echten Personen ähneln und fälschlich als echt erscheinen würden. Eine frei gewählte Sprecherstimme, die keine reale Person nachahmt, fällt nach unserer Einschätzung nicht darunter. Deshalb gilt: **keine nachgebildete Stimme einer echten Person** (z. B. Trainer:in oder bekannter Spieler) ohne gesonderte Prüfung.
+- **Art. 50 Abs. 1** (Hinweis bei direkter Interaktion mit einem KI-System) betrifft vorproduzierte Aufnahmen nicht; er wird relevant, falls SPIELIQ später KI-Feedback oder einen KI-Chat anbietet.
+- **Unabhängig von der Pflichtfrage** kennzeichnet SPIELIQ die Stimme sichtbar („KI-Stimme“ am Schalter, Tooltip „die Stimme ist mit KI erzeugt“) – beim ersten Kontakt, klar und auch für Screenreader (Beschriftung „Vorlesen (KI-Stimme)“), in Anlehnung an Art. 50 Abs. 5.
 
 ## 6. Offen
 

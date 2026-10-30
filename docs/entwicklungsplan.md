@@ -5,7 +5,7 @@ Stand: 30.10.2026 · Lies zuerst diesen Plan und den [Doku-Index](README.md).
 ## 1. Aktueller Stand
 
 **Phase A (Recherche) – abgeschlossen für den ersten Durchgang**
-- Vier Quellenregister (DFB, FIFA/UEFA, Wissenschaft, Recht) mit 314 Einträgen, davon 138 im Originaltext geprüft; Kennzeichnung „verifiziert / nur Suchergebnis / Hintergrundwissen“ ([Recherche](recherche/README.md)).
+- Vier Quellenregister (DFB, FIFA/UEFA, Wissenschaft, Recht) mit 374 Einträgen, davon 160 im Originaltext und 12 weitere am Original-Abstract geprüft (Nachprüfung nach Freigabe der Domains am 30.10.2026); Kennzeichnung „verifiziert / nur Suchergebnis / Hintergrundwissen“ ([Recherche](recherche/README.md)).
 - Synthesen: [Ausbildungsprinzipien](recherche/ausbildungsprinzipien.md), [Taktische Grundlagen](recherche/taktische-grundlagen.md), [Altersgerechte Lernziele](recherche/altersgerechte-lernziele.md), [Lernvoraussetzungen](recherche/lernvoraussetzungen.md), [Offene Fragen](recherche/offene-fragen.md).
 
 **Phase B (Konzept) – Entwurf zur Abstimmung**
