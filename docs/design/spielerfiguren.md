@@ -1,8 +1,10 @@
 # Spielerfiguren – visuelles System für den Taktik-Simulator
 
-Stand: 30.10.2026 · Status: **Konzept + Prototyp, Entscheidung des Produktverantwortlichen zum Stil ausstehend** · Prototyp: [`prototypen/figuren/`](prototypen/figuren/) · Leistungsmessung: [`prototypen/leistung/`](prototypen/leistung/) · ADR: [0009](../architektur/adr/0009-figuren-als-sprites.md)
+Stand: 30.10.2026 · Status: **Stil abgenommen (30.10.2026), Phase 1–3 umgesetzt** – Figuren sind in allen Missionen Standard · Prototyp: [`prototypen/figuren/`](prototypen/figuren/) · Leistungsmessung: [`prototypen/leistung/`](prototypen/leistung/) · ADR: [0009](../architektur/adr/0009-figuren-als-sprites.md)
 
-![Prototyp der Draufsicht-Figuren: sechs Zustände, Blickrichtung, Vergleich mit Kreisen in Handygröße](bilder/spielerfiguren-prototyp.png)
+![Figuren in der App: Mission 1, alle drei Blauen laufen zum Ball und stehen in Verteidigungshaltung, der Torwart trägt Lila](bilder/figuren-in-der-app.png)
+
+Prototyp mit allen Zuständen und dem Vergleich zu den Kreisen: [bilder/spielerfiguren-prototyp.png](bilder/spielerfiguren-prototyp.png).
 
 ## Kurzfassung
 
@@ -40,7 +42,7 @@ Regel: **Ein Merkmal hat genau eine Bedeutung.** Farbe heißt nur „Team“, ni
 | Frage des Kindes | Merkmal auf dem Feld | Immer sichtbar? |
 |---|---|---|
 | Wer gehört zu uns? | Trikotfarbe (Blau/Orange) **und** Form des Nummernschilds (Kreis = wir, Quadrat = Gegner) **und** Stutzenfarbe (hell = wir, dunkel = Gegner) – drei Merkmale, damit es auch bei Farbsehschwäche klappt (WCAG 1.4.1); Legende über dem Feld bleibt | ja |
-| Wohin schaut er? | Gesicht und Nase vorne am Kopf, Schultern quer, **tropfenförmiger Fußabdruck mit Spitze in Blickrichtung**; bei Lektionen zur Körperstellung zusätzlich ein helles Blickfeld | Tropfen ja; weiße Spitze nur beim Zuschauen und in der Erklärung; Blickfeld nur in passenden Lektionen |
+| Wohin schaut er? | Gesicht und Nase vorne am Kopf, Schultern quer, **tropfenförmiger Fußabdruck mit Spitze in Blickrichtung**; bei Lektionen zur Körperstellung zusätzlich ein helles Blickfeld | Tropfen mit weißer Spitze ja (umgesetzt: auch in Aufgaben – Klarheit vor Ruhe); Blickfeld nur in passenden Lektionen (geplant) |
 | Wer läuft? | Schrittpose mit Armschwung (Beine im Takt der echten Geschwindigkeit) + kurze, verblassende Spur hinter der Figur | ja, solange er läuft |
 | Wer verteidigt / geht zum Ball? | Breite, tiefe Haltung, Arme leicht seitlich, Blick zum Ballführenden | ja |
 | Wer hat den Ball? | Ball am vorderen Fuß in Blickrichtung (nicht mehr starr unten rechts) | ja |
@@ -67,7 +69,7 @@ Maße relativ zur Schulterbreite (= 1): Kopf 0,5 (vorne versetzt, Gesicht als he
 
 ### 3.3 Farben (Tokens)
 
-Die Teamfarben kommen aus dem [Designsystem](designsystem.md) (`--team-own`, `--team-opp`, Torwart-Varianten). Neu je Kit: `shirt`, `shirtEdge`, `shorts`, `socks`, `numberInk`, `badgeShape`. Kontrast der Figur zum Rasen ≥ 3 : 1 für Schultern und Nummernschild (rechnerisch prüfen wie bei den heutigen Kreisen).
+Die Teamfarben kommen aus dem [Designsystem](designsystem.md) (`--team-own`, `--team-opp`). **Torhüter tragen wie im echten Spiel ein eigenes Trikot** (Entscheidung des Produktverantwortlichen): eigener Torwart lila, gegnerischer gelbgrün; Hose, Stutzen und Nummernschild bleiben in den Farben ihrer Mannschaft, damit die Zugehörigkeit klar bleibt. Neu je Kit: `shirt`, `shirtEdge`, `shorts`, `socks`, `numberInk`, `badgeShape`. Kontrast der Figur zum Rasen ≥ 3 : 1 für Schultern und Nummernschild (rechnerisch prüfen wie bei den heutigen Kreisen).
 
 ### 3.4 Vielfalt
 
@@ -120,12 +122,12 @@ Im Simulator gibt es bewusst nur die Draufsicht: Abstrakte Darstellungen (z. B. 
 
 - **Rendering bleibt SVG** ([ADR 0002](../architektur/adr/0002-svg-rendering.md)): neue Komponente `PlayerFigure` in `@spieliq/pitch` mit denselben Eigenschaften wie `PlayerToken` (Trefferfläche, Tastatur, ARIA, `data-player-id`) plus `pose`. Der Körper ist ein `<image>` im Atlas-Ausschnitt (verschachteltes `<svg viewBox>` je Figur), gedreht per `transform`; Nummernschild und „DU“ als SVG-Text darüber.
 - **Assets:** `apps/web/public/figures/<kit>-<look>@2x.webp` (und @3x) mit Atlas-Beschreibung (`frames.json`: Ausschnitt, Ankerpunkt = Fußmitte, Punkt für die Rückennummer in den großen Ansichten). Inhaltsadressierte Dateinamen → dauerhaft cachebar (wie bei der Sprachausgabe). Vorladen nur auf Missionsseiten.
-- **Erster Schritt ohne Grafiker:** Die Vorlage für die Draufsicht kann als Vektor-Rig im Code entstehen (wie der Prototyp). Ein Build-Skript rastert sie mit dem vorhandenen Chromium/Playwright zu Atlanten. Für die großen Ansichten (Vorne, Seite, Hinten, 3/4) empfiehlt sich eine Illustratorin bzw. ein 3D-Artist nach diesem Dokument.
-- **Leistungsbudget (Abnahme):** 22 Figuren + Ball bei CPU ÷6 im Mittel ≥ 55 Bilder/s und ≤ 5 % Bilder > 20 ms; Atlas je Team ≤ 150 KB; kein Layout-Sprung beim Laden (Kreise als Platzhalter, bis der Atlas da ist).
+- **Umgesetzt ohne Grafiker (kein Budget, Entscheidung 30.10.2026):** Die Vorlage für die Draufsicht ist ein Vektor-Rig im Code (`packages/pitch/src/figures/rig.ts`). Statt eines Build-Skripts rastert der Browser sie beim ersten Gebrauch einmal je Trikot und Aussehen zu Einzelbildern (`figures/atlas.ts`) – keine Binärdateien im Repository, beliebige Kits ohne Skriptlauf. Bis die Bilder bereit sind (Bruchteile einer Sekunde) und falls das Rastern fehlschlägt, zeigt das Feld die Kreise. Die großen Ansichten (Vorne, Seite, Hinten, 3/4) bauen wir ebenfalls selbst, aus derselben Vorlage (Phase 5).
+- **Leistungsbudget:** Ziel war bei CPU ÷6 im Mittel ≥ 55 Bilder/s. **Gemessen in der echten App** (Mission 1, Zuschauen, Produktionsbuild, Pixel-7-Emulation, je 4 Läufe, Median): CPU ÷4 – Figuren ≈ 58, Kreise 60 Bilder/s; CPU ÷6 – Figuren ≈ 41, Kreise ≈ 54 Bilder/s. Bei 4-facher Drosselung ist der Unterschied kaum spürbar, bei 6-facher **verfehlen die Figuren das Ziel**. Größter Kostenblock in beiden Fällen ist, dass React das Spielfeld in jedem Bild neu aufbaut; das Zeichnen der Figuren kommt hinzu. Messung auf einem echten günstigen Android-Gerät steht aus. Nächste Optimierungen: Spielfeld-Ebenen, die sich nicht bewegen, vom Neuaufbau ausnehmen; Figuren unabhängig von React per `requestAnimationFrame` bewegen; bei dauerhaft langsamen Geräten automatisch Kreise.
 
 ## 8. Skalierung: Teams, Nummern, Varianten
 
-- **Kit** (Trikot): `{ id, shirt, shirtEdge, shorts, socks, numberInk, badgeShape, pattern }` – heute `blau`, `orange`, `blau-torwart`, `orange-torwart`. Ein neues Kit (z. B. Vereinsfarben) = Eintrag + Skriptlauf, keine Code-Änderung am Renderer. Muster (Streifen, Ringel) nur in großen Ansichten; auf dem Feld zählt die Fläche.
+- **Kit** (Trikot): `{ id, shirt, shirtEdge, shorts, socks, numberInk, badgeShape, pattern }` – heute `own`, `opp`, `ownKeeper`, `oppKeeper` (`FIGURE_KITS`). Ein neues Kit (z. B. Vereinsfarben) = ein Eintrag, keine Änderung am Renderer. Muster (Streifen, Ringel) nur in großen Ansichten; auf dem Feld zählt die Fläche.
 - **Look** (Haut/Haar): kleine Palette; auf dem Feld nach Rückennummer verteilt, im Avatar wählbar.
 - **Nummer:** immer live als Text (beliebige Nummern, auch Kürzel wie „TW“) – im Simulator als aufrechtes Schild, in der Rückenansicht als Text auf dem Rückennummer-Punkt des Atlas.
 - **Atlanten nur bei Bedarf:** Es werden nur Kombinationen erzeugt, die Inhalte tatsächlich verwenden (Draufsicht: 4 Kits × 5 Looks), große Ansichten erst mit Phase 3.
@@ -144,19 +146,17 @@ Im Simulator gibt es bewusst nur die Draufsicht: Abstrakte Darstellungen (z. B. 
 
 | Phase | Inhalt | Abnahme |
 |---|---|---|
-| **0 – erledigt (30.10.2026)** | Analyse, Konzept, Prototyp Draufsicht, Leistungsmessung | dieses Dokument, Bild oben |
-| **1 – Blickrichtung und Zustände in der Engine** | `derivePoses`, optionales `facing` im Szenarioformat, Regeln aus Abschnitt 4 | Unit-Tests: steht → schaut zum Ball; läuft → Laufrichtung; Passfenster; Spiegelinvarianz; keine Sprünge > Drehgrenze |
-| **2 – Figuren-Renderer Draufsicht** | Vektor-Rig im Code, Build-Skript für Atlanten, `PlayerFigure`, Ball am Fuß in Blickrichtung, Spur, „frei“-Bereich in Erklärungen | Leistungsbudget (automatisierter Playwright-Lauf mit CPU-Drosselung), Kontrastprüfung, E2E-Screenshots Handy/Desktop |
-| **3 – Einbau in alle Missionen** | Figuren als Standard, „Einfach“-Schalter, „Weniger Bewegung“, ARIA-Texte | bestehende E2E-Tests grün, neue Tests für Zustände |
+| **0 – erledigt** | Analyse, Konzept, Prototyp Draufsicht, Leistungsmessung | dieses Dokument |
+| **1 – erledigt** | `staticPoses`/`timelinePoses` (`packages/engine/src/simulation/pose.ts`), Regeln aus Abschnitt 4, geglättete Drehung; optionales `facing` im Szenarioformat noch offen (erst bei Lektionen zur Körperstellung nötig) | 6 Unit-Tests: Blick zum Ball, Ballführender zum Tor, Verteidigen, Spiegelung, Laufrichtung und Strecke, Drehen ohne Sprung, Passen/Annehmen/Schießen |
+| **2 – erledigt** | Vektor-Rig, Rastern im Browser, Figur in `PlayerToken` (gleiche Bedienung, Trefferfläche, ARIA), Torwart-Trikots, Vielfalt, Ball vor dem Fuß, Spur beim Laufen | 4 Unit-Tests, E2E prüft Figuren; Leistungsziel bei CPU ÷6 verfehlt (siehe Abschnitt 7); „frei“-Bereich und Blickfeld offen |
+| **3 – erledigt** | Figuren Standard in Zuschauen, Erklärung, Aufgaben und Folge-Animation; „Weniger Bewegung“ ohne Laufanimation und Spur; Screenreader-Text nennt Zustand („verteidigt“, „hat den Ball“) | alle E2E-Tests grün; sichtbarer „Einfach“-Schalter noch offen |
 | **4 – Ball-Simulation mit Posen** | Folge-Animation: Passweg zum Gegner, Abfangpunkt, Durchlaufen + Schuss + „Tor!“, „So wäre es richtig“ | Content-Tests: jede Fehlerart hat eine sichtbare Folge |
 | **5 – Große Ansichten** | Vorne/Seite/Hinten/3/4 aus derselben Vorlage (Grafiker:in), Avatar-Wahl, Positionskarten, Figuren im Erklärfilm mit KI-Stimme | Stil-Abnahme durch den Produktverantwortlichen |
 | **6 – Test mit Kindern** | Vergleich Kreise vs. Figuren mit 3–5 Kindern der Zielgruppe: „Wohin schaut Nummer 4?“, „Wer ist frei?“, „Wer läuft?“ – richtig/falsch und Zeit | Figuren nur als Standard, wenn sie mindestens gleich gut verstanden werden |
 
-## 11. Offene Entscheidungen (Produktverantwortlicher)
+## 11. Entscheidungen des Produktverantwortlichen
 
-1. **Stil:** Passt die Richtung des Prototyps (freundlich, flach, Draufsicht mit Tropfen-Fußabdruck)? Wenn ja, Phase 1–3 ohne Grafiker:in.
-2. **Große Ansichten:** Grafiker:in bzw. 3D-Artist beauftragen (Budget) oder später?
-3. **Vielfalt auf dem Feld:** Haut-/Haartöne variieren (Vorschlag) oder alle Spieler eines Teams gleich?
+Entschieden am 30.10.2026: Stil passt; große Ansichten bauen wir selbst (kein Budget); Haut- und Haartöne variieren; Torhüter tragen ein eigenes Trikot. Neu angeregt: Aufstellung und Spielernamen durch die Trainer:in – siehe [Aufstellung und Namen](../konzept/aufstellung-und-namen.md).
 
 ## 12. Quellen und Annahmen
 

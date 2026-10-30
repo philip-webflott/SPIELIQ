@@ -8,13 +8,16 @@ import {
   findPlayer,
   fullWindow,
   passOptions,
+  staticPoses,
   teamPlayers,
   type BoardState,
   type Evidence,
   type LoadedMission,
   type Overlay,
   type PitchWindow,
+  type PlayerPose,
   type PlayerState,
+  type PoseMap,
   type Vec2,
 } from '@spieliq/engine'
 import { t } from '@spieliq/content'
@@ -31,12 +34,14 @@ import {
   PitchSvg,
   PlayerToken,
   preferredOrientation,
+  screenAngle,
   ShadowCone,
   TapMarker,
   usePitchTap,
   usePlacement,
   ZoneShape,
   type Orientation,
+  type Projection,
   type TokenTone,
 } from '@spieliq/pitch'
 
@@ -71,6 +76,10 @@ export interface BoardViewProps {
    * das eigene Tor liegt in jeder Aufgabe unten, wir spielen nach oben.
    */
   readonly fitOrientation?: boolean
+  /** Haltung der Figuren (aus der Zeitleiste); ohne Angabe aus der stehenden Situation abgeleitet */
+  readonly poses?: PoseMap
+  /** „Weniger Bewegung“: keine Laufanimation, keine Spur */
+  readonly reducedMotion?: boolean
 }
 
 function resolvePoint(state: BoardState, ref: string | Vec2): Vec2 | null {
@@ -81,6 +90,13 @@ function resolvePoint(state: BoardState, ref: string | Vec2): Vec2 | null {
 function nearestOpponentDistance(state: BoardState, player: PlayerState): number {
   const others = teamPlayers(state, player.team === 'own' ? 'opp' : 'own').filter((p) => p.role !== 'GK')
   return Math.min(...others.map((o) => Math.hypot(o.pos.x - player.pos.x, o.pos.y - player.pos.y)), 25)
+}
+
+/** Blickrichtung des Ballführenden auf dem Bildschirm – der Ball liegt vor seinem Fuß. */
+function ballFacing(state: BoardState, poses: PoseMap, projection: Projection): number | undefined {
+  const owner = state.ball.ownerId ? findPlayer(state, state.ball.ownerId) : undefined
+  const pose = owner ? poses[owner.id] : undefined
+  return owner && pose ? screenAngle(projection, owner.pos, pose.facing) : undefined
 }
 
 /** Beschriftung neben den Toren, damit die Spielrichtung ohne Vorwissen klar ist. */
@@ -98,10 +114,20 @@ function goalLabels(loaded: LoadedMission, window: PitchWindow): { at: Vec2; tex
   return loaded.pitch.goals.length === 2 ? labels : []
 }
 
-function describePlayer(p: PlayerState, controlled: boolean): string {
+const ACTION_TEXT: Record<PlayerPose['action'], string> = {
+  ready: '',
+  run: ', läuft',
+  defend: ', verteidigt',
+  receive: ', nimmt den Ball an',
+  pass: ', passt',
+  shoot: ', schießt',
+}
+
+function describePlayer(p: PlayerState, controlled: boolean, pose: PlayerPose | undefined, hasBall: boolean): string {
   const team = p.team === 'own' ? 'Blau, eigene Mannschaft' : 'Orange, Gegner'
   const role = p.role === 'GK' ? ', Torwart' : ''
-  return `Nummer ${p.label ?? p.id}, ${team}${role}${controlled ? '. Du kannst diesen Spieler bewegen' : ''}`
+  const action = `${hasBall ? ', hat den Ball' : ''}${pose ? ACTION_TEXT[pose.action] : ''}`
+  return `Nummer ${p.label ?? p.id}, ${team}${role}${action}${controlled ? '. Du kannst diesen Spieler bewegen' : ''}`
 }
 
 export function BoardView({
@@ -122,8 +148,11 @@ export function BoardView({
   label,
   legend = true,
   fitOrientation = false,
+  poses: posesProp,
+  reducedMotion = false,
 }: BoardViewProps) {
   const { pitch, model } = loaded
+  const poses = useMemo(() => posesProp ?? staticPoses(state, loaded), [posesProp, state, loaded])
   const pitchWindow = useMemo(() => view ?? loaded.mission.view ?? fullWindow(pitch), [view, loaded, pitch])
   const containerRef = useRef<HTMLDivElement | null>(null)
   const svgRef = useRef<SVGSVGElement | null>(null)
@@ -303,7 +332,9 @@ export function BoardView({
                   dragging={placementApi.draggingId === p.id}
                   tone={ringTones[p.id] ?? null}
                   isYou={controlled.length === 1 && controlled[0] === p.id}
-                  ariaLabel={describePlayer(p, isControlled)}
+                  ariaLabel={describePlayer(p, isControlled, poses[p.id], state.ball.ownerId === p.id)}
+                  pose={poses[p.id]}
+                  animate={!reducedMotion}
                   onPointerDown={isControlled ? placementApi.tokenHandlers.onPointerDown : undefined}
                   onKeyDown={
                     isControlled
@@ -322,7 +353,11 @@ export function BoardView({
               )
             })}
           </g>
-          <BallToken pos={state.ball.pos} owned={Boolean(state.ball.ownerId)} />
+          <BallToken
+            pos={state.ball.pos}
+            owned={Boolean(state.ball.ownerId)}
+            facing={ballFacing(state, poses, projection)}
+          />
           {tapPoint && <TapMarker at={tapPoint} tone="warn" />}
         </PitchSvg>
       </div>

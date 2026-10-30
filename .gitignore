@@ -30,3 +30,6 @@ blob-report/
 npm-debug.log*
 pnpm-debug.log*
 .vercel
+
+# von `next dev` erzeugt (Hinweis steht bereits in CLAUDE.md)
+apps/web/AGENTS.md

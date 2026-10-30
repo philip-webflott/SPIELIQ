@@ -8,6 +8,7 @@ import {
   planConsequence,
   possessionTeam,
   stepTimeline,
+  timelinePoses,
   withPositions,
   type AssessmentResult,
   type BoardState,
@@ -128,7 +129,17 @@ export function WatchStep({ loaded, index, reducedMotion, voice, onComplete }: S
   useAutoSpeak(voice, [caption], `${index}:${showAfter ? 'after' : 'before'}`)
   return (
     <StepLayout
-      board={<BoardView loaded={loaded} state={board} view={step.view} overlays={done ? (step.after?.overlays ?? []) : step.overlays} label="Spielsituation" />}
+      board={
+        <BoardView
+          loaded={loaded}
+          state={board}
+          poses={timeline ? timelinePoses(timeline, player.time, loaded) : undefined}
+          reducedMotion={reducedMotion}
+          view={step.view}
+          overlays={done ? (step.after?.overlays ?? []) : step.overlays}
+          label="Spielsituation"
+        />
+      }
       panel={
         <div className="flex h-full flex-col gap-4">
           <p className="eyebrow">Schau zu</p>
@@ -155,7 +166,17 @@ export function ExplainStep({ loaded, index, reducedMotion, voice, onComplete }:
   useAutoSpeak(voice, [t(step.text), ...step.keyPoints.map((k) => t(k))], `${index}`)
   return (
     <StepLayout
-      board={<BoardView loaded={loaded} state={board} view={step.view} overlays={showOverlays ? step.overlays : []} label="Erklärung am Spielfeld" />}
+      board={
+        <BoardView
+          loaded={loaded}
+          state={board}
+          poses={timeline ? timelinePoses(timeline, player.time, loaded) : undefined}
+          reducedMotion={reducedMotion}
+          view={step.view}
+          overlays={showOverlays ? step.overlays : []}
+          label="Erklärung am Spielfeld"
+        />
+      }
       panel={
         <div className="flex h-full flex-col gap-4">
           <p className="eyebrow">{t(step.instruction)}</p>
@@ -208,7 +229,17 @@ function ConsequenceBoard({
 }) {
   const player = useTimelinePlayer(plan.timeline, { autoplay: true, reducedMotion, onFinish })
   const state = player.frame?.state ?? plan.timeline.initial
-  return <BoardView loaded={loaded} state={state} view={view} highlight={highlight} label="Was passiert jetzt?" />
+  return (
+    <BoardView
+      loaded={loaded}
+      state={state}
+      poses={timelinePoses(plan.timeline, player.time, loaded)}
+      reducedMotion={reducedMotion}
+      view={view}
+      highlight={highlight}
+      label="Was passiert jetzt?"
+    />
+  )
 }
 
 export function InteractiveStepView({ loaded, index, reducedMotion, voice, onComplete, persistence, assignmentId }: InteractiveProps) {
@@ -406,6 +437,7 @@ export function InteractiveStepView({ loaded, index, reducedMotion, voice, onCom
               : undefined
           }
           placement={step.kind === 'place' ? { enabled: phase === 'answer', positions, onMove, clamp } : undefined}
+          reducedMotion={reducedMotion}
           label={step.kind === 'place' ? 'Spielfeld – ziehe deine Spieler oder tippe sie an und dann auf den Zielpunkt' : 'Spielfeld – tippe deine Antwort an'}
         />
       )}

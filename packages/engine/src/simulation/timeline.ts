@@ -90,7 +90,8 @@ export function ease(kind: Ease, t: number): number {
   }
 }
 
-function positionOnTrack(track: readonly PlayerSegment[] | undefined, initial: Vec2, t: number): Vec2 {
+/** Position eines Spielers zur Zeit t auf seiner Spur (ohne Spur: Startposition). */
+export function positionOnTrack(track: readonly PlayerSegment[] | undefined, initial: Vec2, t: number): Vec2 {
   if (!track || track.length === 0) return initial
   let pos = initial
   for (const seg of track) {

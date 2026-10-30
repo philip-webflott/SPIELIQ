@@ -11,6 +11,8 @@ test.describe('Gastmodus', () => {
     await page.goto('/try/nazb-m1-problem-erkennen')
     await expect(page.getByText('Schau zu: Was machen die Blauen?')).toBeVisible()
     await expect(page.getByText('Wir spielen nach oben')).toBeVisible()
+    // Figuren mit Blickrichtung statt Kreisen (sobald das Figurenbild im Browser erzeugt ist)
+    await expect(page.locator('[data-figure]').first()).toBeVisible()
     await finishWatch(page)
 
     await expect(page.getByText('Welcher Gegner ist frei? Tippe ihn an.')).toBeVisible()

@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import type { GoalSpec, Vec2 } from '@spieliq/engine'
 import { usePitchContext } from './context'
 import { pointsAttr, round } from './projection'
@@ -16,7 +17,7 @@ function arcPoints(center: Vec2, radius: number, from: number, to: number, steps
 }
 
 /** Rasen mit dezenten Mähstreifen, Linien und Toren – in Spielfeldkoordinaten. */
-export function PitchMarkings() {
+export const PitchMarkings = memo(function PitchMarkings() {
   const { pitch, projection, unit } = usePitchContext()
   const L = pitch.length
   const W = pitch.width
@@ -123,4 +124,4 @@ export function PitchMarkings() {
       </g>
     </g>
   )
-}
+})

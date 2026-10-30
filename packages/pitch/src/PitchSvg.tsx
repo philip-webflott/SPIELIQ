@@ -24,6 +24,8 @@ export const PitchSvg = forwardRef<SVGSVGElement, PitchSvgProps>(function PitchS
 ) {
   const projection = useMemo(() => createProjection(pitch, window, orientation), [pitch, window, orientation])
   const unit = Math.max(window.width, window.height) / 60
+  // Stabiler Kontextwert: Linien und andere unveränderte Ebenen zeichnen während einer Animation nicht neu.
+  const context = useMemo(() => ({ pitch, projection, unit }), [pitch, projection, unit])
   const vb = projection.viewBox
   return (
     <svg
@@ -37,7 +39,7 @@ export const PitchSvg = forwardRef<SVGSVGElement, PitchSvgProps>(function PitchS
       preserveAspectRatio="xMidYMid meet"
       {...rest}
     >
-      <PitchContextProvider value={{ pitch, projection, unit }}>
+      <PitchContextProvider value={context}>
         <PitchMarkings />
         {children}
       </PitchContextProvider>

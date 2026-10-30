@@ -58,3 +58,10 @@ export function pointsAttr(points: readonly Vec2[], projection: Projection): str
 export function round(v: number): number {
   return Math.round(v * 100) / 100
 }
+
+/** Richtung (Bogenmaß im Spielfeld) als Bildschirmwinkel: 0 = nach rechts, π/2 = nach unten. */
+export function screenAngle(projection: Projection, pos: Vec2, facing: number): number {
+  const a = projection.toScreen(pos)
+  const b = projection.toScreen({ x: pos.x + Math.cos(facing), y: pos.y + Math.sin(facing) })
+  return Math.atan2(b.y - a.y, b.x - a.x)
+}
