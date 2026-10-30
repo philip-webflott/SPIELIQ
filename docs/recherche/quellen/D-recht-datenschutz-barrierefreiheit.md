@@ -483,15 +483,68 @@ Verifikationsstufen in den Quelleneinträgen:
 
 ### [D-41] KI-Verordnung (AI Act), VO (EU) 2024/1689
 - Herausgeber: Europäisches Parlament und Rat der EU
-- URL: https://eur-lex.europa.eu/eli/reg/2024/1689/oj (aus dem Gedächtnis, nicht geöffnet)
-- Fassung/Datum: in Kraft seit 01.08.2024. Art. 4 und 5 gelten seit 02.02.2025, Art. 50 und die Hochrisikopflichten nach Anhang III nach dem ursprünglichen Zeitplan ab 02.08.2026. Im November 2025 schlug die Kommission mit dem „Digital Omnibus" vor, die Hochrisikopflichten zu verschieben; ob und wann das beschlossen wurde, habe ich nicht geprüft. [alles Hintergrundwissen, nicht per Suche bestätigt]
-- Zugriff / Verifikationsstatus: Nicht abgerufen – [Hintergrundwissen, nicht per Suche bestätigt]
-- Kernaussagen (paraphrasiert) [Hintergrundwissen, nicht per Suche bestätigt]:
-  - Art. 4: Anbieter und Betreiber müssen für ausreichende KI-Kompetenz ihres Personals sorgen.
-  - Art. 5 Abs. 1 lit. b verbietet KI-Systeme, die Schwächen einer Person oder Gruppe wegen Alter, Behinderung oder sozialer bzw. wirtschaftlicher Lage ausnutzen, um ihr Verhalten wesentlich zu beeinflussen, sodass erheblicher Schaden entsteht oder wahrscheinlich ist (Ziel oder Wirkung genügt). lit. a verbietet manipulative oder täuschende Techniken. lit. f verbietet Emotionserkennung am Arbeitsplatz und in Bildungseinrichtungen, außer aus medizinischen oder Sicherheitsgründen.
-  - Art. 6 mit Anhang III Nr. 3 (allgemeine und berufliche Bildung): Als hochriskant gelten u. a. KI-Systeme, die Lernergebnisse bewerten (auch wenn sie damit den Lernprozess steuern), das angemessene Bildungsniveau bestimmen, über Zugang oder Zulassung entscheiden oder verbotenes Verhalten bei Prüfungen überwachen, jeweils „in Einrichtungen der allgemeinen und beruflichen Bildung auf allen Ebenen". Art. 6 Abs. 3 nimmt eng begrenzte Aufgaben aus, aber nie, wenn natürliche Personen profiliert werden.
-  - Art. 50 (Transparenz): Nutzer müssen erfahren, dass sie mit einem KI-System interagieren, sofern das nicht offensichtlich ist. Synthetische Inhalte (Text, Bild, Audio, Video) sind maschinenlesbar zu kennzeichnen, mit Ausnahmen.
-- Konsequenzen für SPIELIQ: KI-Feedback später nur als Assistenz für Trainer und Spieler. Keine Auswahl- oder Einstufungsentscheidungen, keine Analyse von Emotionen oder Aufmerksamkeit, keine Optimierung auf Engagement, klar als KI gekennzeichnet, mit DSFA (D-30, D-31). Offen ist, ob Sportvereine oder Fußballschulen „Bildungseinrichtungen" sind; dann wäre KI-Feedback hochriskant.
+- URL:
+  - ELI http://data.europa.eu/eli/reg/2024/1689/oj ; EUR-Lex https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32024R1689 (am 30.10.2026 nur eine Bot-Abfrage, HTTP 202, kein Text).
+  - Gelesen wurde die amtliche deutsche Amtsblattfassung aus dem Cellar-Repositorium des Amts für Veröffentlichungen der EU: https://publications.europa.eu/resource/celex/32024R1689 (deutsche XHTML-Fassung „L_202401689DE").
+  - Änderungsverordnung: ELI http://data.europa.eu/eli/reg/2026/1744/oj ; https://publications.europa.eu/resource/celex/32026R1744 (deutsche XHTML-Fassung „L_202601744DE").
+- Fassung/Datum:
+  - VO (EU) 2024/1689 vom 13.06.2024, ABl. L 2024/1689 vom 12.07.2024. Sie trat am 20. Tag nach der Veröffentlichung in Kraft (Art. 113), also am 01.08.2024.
+  - Geltung nach Art. 113 in der Ursprungsfassung:
+    - allgemein ab 02.08.2026;
+    - Kapitel I und II (Art. 1–5) ab 02.02.2025;
+    - Kapitel III Abschnitt 4, Kapitel V, VII und XII sowie Art. 78 ab 02.08.2025 (außer Art. 101);
+    - Art. 6 Abs. 1 ab 02.08.2027.
+  - Art. 50 steht in Kapitel IV und fällt unter keine dieser Ausnahmen; er gilt also ab 02.08.2026.
+  - Geändert durch die VO (EU) 2026/1744 vom 08.07.2026 („Digital-Omnibus-Verordnung zur KI"), ABl. L 2026/1744 vom 24.07.2026. Sie tritt am dritten Tag nach der Veröffentlichung in Kraft (ihr Art. 4), also am 27.07.2026.
+  - Laut ihren Fußnoten: Standpunkt des Europäischen Parlaments vom 16.06.2026, Beschluss des Rates vom 29.06.2026.
+  - Für SPIELIQ relevante Änderungen:
+    - Kapitel III Abschnitte 1–3 (außer Art. 6 Abs. 5) gelten für Hochrisiko-Systeme nach Anhang III erst ab 02.12.2027, nach Anhang I ab 02.08.2028 (neuer Art. 113 Abs. 3 lit. c).
+    - Der allgemeine Geltungsbeginn von Art. 50 (02.08.2026) bleibt unverändert.
+    - Anbieter generativer Systeme, die vor dem 02.08.2026 in Verkehr gebracht wurden, müssen Art. 50 Abs. 2 erst bis 02.12.2026 erfüllen (neuer Art. 111 Abs. 4).
+  - Eine konsolidierte Fassung wurde nicht geöffnet.
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026: amtliche deutsche Fassungen von VO (EU) 2024/1689 und VO (EU) 2026/1744 über publications.europa.eu (Cellar), siehe URL. Gelesen wurden Art. 3 Nr. 3, 4, 11 und 60, Art. 4, 5, 6, 50, 113, Anhang III Nr. 3 und die Erwägungsgründe 132–137 der KI-Verordnung, außerdem die Liste aller Änderungen und deren Wortlaut zu Art. 4, 5, 50, 111 und 113 in der Omnibus-Verordnung.
+- Kernaussagen (paraphrasiert, im Volltext geprüft):
+  - Begriffe (Art. 3):
+    - **Anbieter** (Nr. 3) entwickelt ein KI-System oder lässt es entwickeln und bringt es unter eigenem Namen in Verkehr oder nimmt es so in Betrieb. Inbetriebnahme schließt nach Nr. 11 den Eigengebrauch ein.
+    - **Betreiber** (Nr. 4) verwendet ein KI-System in eigener Verantwortung, außer im persönlichen, nicht beruflichen Rahmen.
+    - **Deepfake** (Nr. 60) ist ein durch KI erzeugter oder manipulierter Bild-, Ton- oder Videoinhalt, der wirklichen Personen, Gegenständen, Orten, Einrichtungen oder Ereignissen ähnelt und fälschlich als echt oder wahrheitsgemäß erscheinen würde.
+  - Art. 4 (KI-Kompetenz):
+    - Ursprungsfassung: Anbieter und Betreiber ergreifen Maßnahmen, um nach besten Kräften ein ausreichendes Maß an KI-Kompetenz ihres Personals sicherzustellen.
+    - Seit der Omnibus-Verordnung: Sie ergreifen Maßnahmen, um die Entwicklung der KI-Kompetenz zu unterstützen; ein bestimmtes Niveau müssen sie nicht garantieren. Kommission und Mitgliedstaaten unterstützen dabei.
+    - Korrektur 30.10.2026: Die bisherige Angabe „müssen für ausreichende KI-Kompetenz sorgen" war schon in der Ursprungsfassung zu streng. Dort hieß es „nach besten Kräften".
+  - Art. 5 Abs. 1 (bestätigt):
+    - lit. a verbietet Techniken der unterschwelligen Beeinflussung sowie absichtlich manipulative oder täuschende Techniken, die das Verhalten wesentlich verändern und erheblichen Schaden verursachen oder wahrscheinlich verursachen.
+    - lit. b verbietet, eine Vulnerabilität wegen Alters, Behinderung oder sozialer bzw. wirtschaftlicher Situation auszunutzen, mit dem Ziel oder der Wirkung einer wesentlichen Verhaltensänderung, die erheblichen Schaden verursacht oder wahrscheinlich verursacht.
+    - lit. f verbietet Systeme zur Ableitung von Emotionen am Arbeitsplatz und in Bildungseinrichtungen, außer aus medizinischen oder Sicherheitsgründen.
+    - Die Omnibus-Verordnung fügt lit. ba und bb hinzu: ein Verbot sexualisierter Darstellungen bestimmbarer Personen ohne Zustimmung und von Missbrauchsdarstellungen Minderjähriger. Diese Verbote gelten ab 02.12.2026.
+  - Art. 6 mit Anhang III Nr. 3 (allgemeine und berufliche Bildung): Als hochriskant gelten KI-Systeme, die bestimmungsgemäß Folgendes tun sollen:
+    - (a) über Zugang, Zulassung oder Zuweisung zu Einrichtungen entscheiden,
+    - (b) Lernergebnisse bewerten, auch wenn die Ergebnisse den Lernprozess steuern,
+    - (c) das angemessene Bildungsniveau bewerten,
+    - (d) verbotenes Verhalten bei Prüfungen überwachen.
+
+    Korrektur 30.10.2026: lit. b spricht von „Einrichtungen oder Programmen" aller Ebenen der allgemeinen und beruflichen Bildung, lit. a, c und d nur von Einrichtungen. Art. 6 Abs. 3 nimmt Systeme aus, die kein erhebliches Risiko bergen und eine von vier eng gefassten Bedingungen erfüllen. Profiliert ein Anhang-III-System natürliche Personen, gilt es immer als hochriskant (bestätigt).
+  - Art. 50 (Transparenzpflichten):
+    - Abs. 1, Anbieter: Systeme, die für die direkte Interaktion mit natürlichen Personen bestimmt sind, müssen so gestaltet sein, dass die Personen erfahren, dass sie mit einem KI-System interagieren. Das gilt nicht, wenn es für eine angemessen informierte, aufmerksame und verständige Person offensichtlich ist.
+    - Abs. 2, Anbieter: Wer KI-Systeme (einschließlich solcher mit allgemeinem Verwendungszweck) anbietet, die synthetische Audio-, Bild-, Video- oder Textinhalte erzeugen, muss die Ausgaben „in einem maschinenlesbaren Format" kennzeichnen. Sie müssen als künstlich erzeugt oder manipuliert erkennbar sein. Die technischen Lösungen müssen, soweit technisch möglich, wirksam, interoperabel, belastbar und zuverlässig sein.
+    - Ausnahmen von Abs. 2: Systeme mit unterstützender Funktion für die Standardbearbeitung; Systeme, die die vom Betreiber bereitgestellten Eingabedaten oder deren Semantik nicht wesentlich verändern; gesetzlich zugelassene Strafverfolgung. Erwägungsgrund 133 nennt als Techniken z. B. Wasserzeichen, Metadaten, kryptografische Herkunftsnachweise und Fingerabdrücke.
+    - Abs. 3, Betreiber: Wer Emotionserkennung oder biometrische Kategorisierung betreibt, muss die Betroffenen informieren.
+    - Abs. 4, Betreiber, Deepfakes: Wer ein KI-System betreibt, das Bild-, Ton- oder Videoinhalte erzeugt oder manipuliert, die ein Deepfake sind, muss offenlegen, dass sie künstlich erzeugt oder manipuliert sind. Ist der Inhalt Teil eines offensichtlich künstlerischen, kreativen, satirischen, fiktionalen oder analogen Werks, genügt ein Hinweis auf solche Inhalte, der Darstellung und Genuss des Werks nicht beeinträchtigt.
+    - Abs. 4, Betreiber, Text: Veröffentlichter KI-Text, der die Öffentlichkeit über Angelegenheiten von öffentlichem Interesse informiert, ist offenzulegen. Das gilt nicht nach menschlicher Prüfung oder redaktioneller Kontrolle, wenn jemand die redaktionelle Verantwortung trägt.
+    - Abs. 5: Die Informationen müssen spätestens bei der ersten Interaktion oder Aussetzung klar und eindeutig gegeben werden und barrierefrei sein.
+    - Abs. 7, neu gefasst durch die Omnibus-Verordnung: Die Kommission fördert Praxisleitfäden zur Feststellung, Markierung und Kennzeichnung und prüft, ob sie für Abs. 2 und 4 genügen. Andernfalls kann sie einen Durchführungsrechtsakt erlassen. Ob ein solcher Leitfaden inzwischen vorliegt, wurde nicht geprüft.
+  - Erwägungsgrund 132: Bei der Hinweispflicht nach Abs. 1 sind Personen zu berücksichtigen, die wegen ihres Alters oder einer Behinderung schutzbedürftig sind.
+- Konsequenzen für SPIELIQ:
+  - KI-Feedback später nur als Assistenz für Trainer und Spieler. Keine Auswahl- oder Einstufungsentscheidungen, keine Analyse von Emotionen oder Aufmerksamkeit, keine Optimierung auf Engagement, klar als KI gekennzeichnet, mit DSFA (D-30, D-31).
+  - Offen ist, ob Sportvereine oder Fußballschulen „Einrichtungen" oder ihre Trainingsangebote „Programme" der allgemeinen oder beruflichen Bildung sind; dann wäre KI-Feedback, das Lernergebnisse bewertet, hochriskant. Für Anhang-III-Systeme gelten Kapitel III Abschnitte 1–3 (Einstufung, Anforderungen, Pflichten von Anbietern und Betreibern) nach der Omnibus-Verordnung erst ab 02.12.2027. Abschnitt 5 (Normen, Konformitätsbewertung, Registrierung) nennt die Änderung nicht; wie er zeitlich mit den verschobenen Abschnitten zusammenspielt, wurde nicht geprüft.
+  - Vorab erzeugte KI-Sprechertexte für Erklärfilme (Einordnung zur anwaltlichen Prüfung, keine Rechtsberatung):
+    - Die maschinenlesbare Kennzeichnung nach Abs. 2 ist Pflicht des **Anbieters** des erzeugenden Systems, also in der Regel des Sprachsynthese-Dienstes.
+    - SPIELIQ wäre bei Nutzung eines fremden Dienstes voraussichtlich **Betreiber**. Selbst Anbieter wäre SPIELIQ, wenn es ein eigenes Sprachsystem entwickelt oder entwickeln lässt und unter eigenem Namen selbst in Betrieb nimmt.
+    - Ob die Ausnahme „Eingabedaten oder deren Semantik nicht wesentlich verändern" für reine Text-zu-Sprache-Umwandlung greift, ist eine offene Auslegungsfrage.
+    - Die Betreiberpflicht nach Abs. 4 greift nur bei einem **Deepfake**: Der Ton- oder Bildinhalt ähnelt wirklichen Personen, Gegenständen, Orten, Einrichtungen oder Ereignissen und würde fälschlich als echt erscheinen, etwa bei einer nachgebildeten Stimme eines echten Trainers. Für eine erkennbar synthetische Erzählstimme zu stilisierten Animationen ist das voraussichtlich nicht der Fall; auch das ist anwaltlich zu prüfen.
+    - Abs. 1 betrifft die direkte Interaktion und damit vorproduzierte Filme nicht, wohl aber einen späteren KI-Chat oder KI-Feedback.
+    - Art. 50 gilt seit 02.08.2026.
+    - Vorschlag (Designfolgerung): Die KI-Stimme in jedem Fall sichtbar kennzeichnen (z. B. „Stimme KI-erzeugt" im Abspann bzw. in den Einstellungen), vorhandene Herkunftsmetadaten des Dienstes nicht entfernen und keine echten Personen nachbilden.
 
 ### [D-42] UK Information Commissioner's Office (ICO): „Age appropriate design: a code of practice for online services" (Children's code)
 - Herausgeber: Information Commissioner's Office (Vereinigtes Königreich)
