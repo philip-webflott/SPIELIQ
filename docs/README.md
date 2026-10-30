@@ -30,6 +30,7 @@ Stand: 29.10.2026 · Einstieg für jede Entwicklungssitzung: zuerst den [Entwick
 | [Lerneinheit 1](konzept/lerneinheit-1.md) | „Warum laufen wir nicht alle zum Ball?“ – Drehbuch der Missionen 1–6 |
 | [Engine](konzept/engine.md) | Bewegungs- und Abfangmodell, Modellparameter und ihre Anker, Kriterien, Gesamtbewertung, Simulation, Qualitätsprüfungen |
 | [Szenarioformat v1](konzept/szenarioformat.md) | Datenformat für Missionen und den späteren Editor |
+| [Sprachausgabe](konzept/sprachausgabe.md) | Vorlesen mit vorab erzeugter KI-Stimme (ElevenLabs): Katalog, Vertonung, Abspielen, Einrichtung, Datenschutz |
 
 ## Design, Architektur, Recht, Qualität
 

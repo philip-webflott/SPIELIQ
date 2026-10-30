@@ -16,7 +16,8 @@
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
-    "db:retention": "tsx scripts/retention.ts"
+    "db:retention": "tsx scripts/retention.ts",
+    "voice": "tsx scripts/voice.ts"
   },
   "dependencies": {
     "@fontsource-variable/inter": "5.3.0",

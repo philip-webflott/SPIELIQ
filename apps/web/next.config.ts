@@ -47,7 +47,11 @@ const nextConfig: NextConfig = {
     },
   },
   async headers() {
-    return [{ source: '/:path*', headers: securityHeaders }]
+    return [
+      { source: '/:path*', headers: securityHeaders },
+      // Aufnahmen sind inhaltsadressiert (Dateiname = Hash aus Text und Stimme) und ändern sich nie.
+      { source: '/voice/clips/:file*', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
+    ]
   },
 }
 

@@ -27,8 +27,8 @@ Stand: 29.10.2026 · Grundlage: [Register D](../recherche/quellen/D-recht-datens
 | Ausrichtung und Zoom | 1.3.4, 1.4.4, 1.4.10 | Gerät hoch oder quer nutzbar; das Spielfeld ist immer gleich ausgerichtet (eigenes Tor unten); responsives Layout; Spielfeld skaliert mit | umgesetzt; Test mit 200–400 % Zoom ausstehend |
 | Bewegungssteuerung | 2.5.4 | keine Gerätebewegung als Eingabe | umgesetzt |
 | Anmeldung und Teamcode | 3.3.7, 3.3.8; § 19 BFSGV | kein CAPTCHA, kein kognitiver Test; Einfügen erlaubt; Passwortmanager funktionieren; Teamcode unempfindlich gegen Groß-/Kleinschreibung und Bindestrich | umgesetzt; QR-Code/Link geplant |
-| Sprache | 3.1.1, 3.1.5 | Einfache Sprache nach [Einfach verstehen](../design/einfach-verstehen.md): kurze Sätze, keine Fachwörter, keine Zahlen mit Einheiten (automatisch geprüft); optionale Vorlesefunktion mit lokalen Gerätestimmen | umgesetzt; Test mit der Zielgruppe ausstehend |
-| Medien | 1.2.2, 1.2.5 | keine Videos; Animationen sind selbst erzeugte Grafiken mit Texterklärung | entfällt derzeit |
+| Sprache | 3.1.1, 3.1.5 | Einfache Sprache nach [Einfach verstehen](../design/einfach-verstehen.md): kurze Sätze, keine Fachwörter, keine Zahlen mit Einheiten (automatisch geprüft); Vorlesen: vorab erzeugte KI-Stimme (automatisch an, abschaltbar, sichtbar gekennzeichnet), sonst lokale Gerätestimme ([Sprachausgabe](../konzept/sprachausgabe.md)) | umgesetzt; Aufnahmen werden erzeugt, sobald der ElevenLabs-Zugang eingerichtet ist; Test mit der Zielgruppe ausstehend |
+| Medien | 1.2.2, 1.2.5 | keine Videos; Animationen sind selbst erzeugte Grafiken mit Texterklärung; jeder gesprochene Text steht auch auf dem Bildschirm | entfällt derzeit; geplante Erklärfilme brauchen sichtbaren Text zur Sprache |
 
 ## 3. Prüfplan
 

@@ -9,7 +9,8 @@ import type { Rect } from './schema'
  * - Ist eine (gespiegelte/variierte) Situation überhaupt lösbar?
  */
 
-function samplingArea(loaded: LoadedMission, stepIndex: number): Rect {
+/** Bereich, in dem Zufallsantworten gezogen werden (Aufgabenbereich, sonst Bildausschnitt, sonst Spielfeld). */
+export function samplingArea(loaded: LoadedMission, stepIndex: number): Rect {
   const step = getStep(loaded, stepIndex)
   if (step.kind === 'place' && step.area) return step.area
   const view = step.view ?? loaded.mission.view

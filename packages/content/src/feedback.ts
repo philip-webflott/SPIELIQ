@@ -1,4 +1,4 @@
-import type { AssessmentResult, CriterionResult, PlayoutOutcome, Rating } from '@spieliq/engine'
+import type { AssessmentResult, CriterionResult, InteractiveStep, PlayoutOutcome, Rating } from '@spieliq/engine'
 import { format, t, type Locale } from './i18n'
 
 /**
@@ -203,4 +203,17 @@ export function summarizeFeedback(
     })
     .filter((s) => s.length > 0)
   return { headline, main, positives }
+}
+
+/** Rückmeldung zu einem Aufgabenschritt – mit den Texten, die die Mission selbst festlegt. */
+export function summarizeStepFeedback(step: InteractiveStep, result: AssessmentResult, locale: Locale = 'de'): FeedbackSummary {
+  return summarizeFeedback(
+    result,
+    {
+      stepFeedback: step.feedback,
+      criterionTexts: Object.fromEntries(step.assessment.criteria.map((c) => [c.id, c.feedback])),
+      alternativeExplanation: step.assessment.alternatives.find((a) => a.id === result.alternativeId)?.explanation,
+    },
+    locale,
+  )
 }

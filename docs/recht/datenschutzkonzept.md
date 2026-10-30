@@ -21,6 +21,7 @@ Stand: 29.10.2026 · Grundlage: [Register D](../recherche/quellen/D-recht-datens
 | **Gastmodus** (`/try`) | keine personenbezogene Verarbeitung: nichts wird gespeichert, kein Cookie | umgesetzt |
 | **Direktnutzung (B2C)** | SPIELIQ als Verantwortlicher | nicht umgesetzt (Entscheidung E-1 in [Offene Fragen](../recherche/offene-fragen.md)) |
 | **Online-Vorschau** (Vercel, Funktionen in Frankfurt; Supabase, Region Frankfurt) | – | nur Demo-Daten; Anbieter mit US-Bezug, Auftragsverarbeitung und Drittlandübermittlung vor Echtbetrieb prüfen ([Anleitung](../betrieb/vorschau-vercel-supabase.md)) |
+| **Vertonung der Vorlesetexte** (ElevenLabs) | – | keine personenbezogenen Daten: nur feste Lerntexte werden einmalig beim Erstellen gesendet, die App ruft ElevenLabs nie auf ([Sprachausgabe](../konzept/sprachausgabe.md), Abschnitt 4) |
 
 ## 3. Welche Daten verarbeitet werden
 
@@ -84,7 +85,7 @@ Schema: `apps/web/prisma/schema.prisma`. Kein Feld für Geburtsdatum, Adresse, T
 | Cookie `spieliq_session` (HttpOnly, SameSite=Lax, Secure in Produktion), 30 Tage | angemeldet bleiben | ja, für den ausdrücklich gewünschten Dienst (Anmeldung) |
 | – | Gastmodus | keine Speicherung |
 
-Keine weiteren Cookies, kein `localStorage`, kein Service Worker, keine Analyse- oder Tracking-Werkzeuge, keine Werbe-IDs, keine Drittanbieter-Skripte; Schriften sind selbst gehostet; die Vorlesefunktion nutzt nur lokal installierte Stimmen des Geräts. Content-Security-Policy und Permissions-Policy (keine Kamera, kein Mikrofon, kein Standort) siehe [Sicherheit](../architektur/sicherheit.md). Eine künftige Offline-Funktion (PWA) wird in dieses Inventar aufgenommen.
+Keine weiteren Cookies, kein `localStorage`, kein Service Worker, keine Analyse- oder Tracking-Werkzeuge, keine Werbe-IDs, keine Drittanbieter-Skripte; Schriften sind selbst gehostet; die Vorlesefunktion spielt vorab erzeugte Aufnahmen von unserem eigenen Server ab oder nutzt lokal installierte Stimmen des Geräts; die Einstellung „Vorlesen“ wird nicht gespeichert, Aufnahmen liegen wie andere statische Dateien ohne Kennung im Browser-Cache. Content-Security-Policy und Permissions-Policy (keine Kamera, kein Mikrofon, kein Standort) siehe [Sicherheit](../architektur/sicherheit.md). Eine künftige Offline-Funktion (PWA) wird in dieses Inventar aufgenommen.
 
 ## 9. Kinderschutz im Produkt
 

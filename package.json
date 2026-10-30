@@ -19,7 +19,8 @@
     "db:deploy": "pnpm --filter @spieliq/web db:deploy",
     "db:migrate": "pnpm --filter @spieliq/web db:migrate",
     "db:seed": "pnpm --filter @spieliq/web db:seed",
-    "content:report": "pnpm --filter @spieliq/content report"
+    "content:report": "pnpm --filter @spieliq/content report",
+    "voice": "pnpm --filter @spieliq/web voice"
   },
   "devDependencies": {
     "@eslint/js": "9.39.5",

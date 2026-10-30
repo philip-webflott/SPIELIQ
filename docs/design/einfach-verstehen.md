@@ -78,7 +78,7 @@ Rückmeldung des Produktverantwortlichen nach der ersten Online-Vorschau: Für 1
 ## 6. Offen und als Nächstes
 
 1. **Test mit Kindern der Zielgruppe** (3–5 Spieler:innen, mit Einwilligung der Eltern): Verstehen sie jede Anweisung ohne Erklärung? Wo tippen sie? Verstehen sie „schräg dahinter“, „Lücke“, „Mitte“? Wird die Vorlesefunktion genutzt?
-2. **Vorlesen sichtbarer machen:** Die Funktion nutzt Gerätestimmen und erscheint nur, wenn eine deutsche Stimme vorhanden ist; prüfen, ob sie auf den Handys der Kinder verfügbar ist, und ggf. automatisches Vorlesen anbieten.
+2. **Vorlesen:** umgesetzt mit vorab erzeugter KI-Stimme (ElevenLabs), automatisch an, abschaltbar ([Sprachausgabe](../konzept/sprachausgabe.md)). Im Test prüfen: Tempo, Verständlichkeit, hilfreich oder störend?
 3. **Noch leichterer Einstieg:** eine Einheit mit nur einem Spieler pro Aufgabe (z. B. „Wo ist Platz?“) vor Lerneinheit 1.
 4. **Bildsymbole für Rollen** (zum Ball gehen, helfen, Mitte schützen), die in Texten, Anleitung und Feld gleich aussehen.
 5. **Trainer-Einstellung je Spieler:** Hilfen dauerhaft eingeblendet, „Langsam“ als Standard.

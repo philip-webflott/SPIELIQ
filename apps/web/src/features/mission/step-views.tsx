@@ -17,10 +17,11 @@ import {
   type Step,
   type Vec2,
 } from '@spieliq/engine'
-import { playoutMessage, summarizeFeedback, t } from '@spieliq/content'
+import { feedbackSpeech, playoutMessage, summarizeStepFeedback, t, UI_TEXT } from '@spieliq/content'
 import { useTimelinePlayer, type TokenTone } from '@spieliq/pitch'
-import { CircleCheck, Lightbulb, RotateCcw, Sparkles, Turtle, Volume2 } from 'lucide-react'
+import { CircleCheck, Lightbulb, RotateCcw, Sparkles, Turtle, Volume2, VolumeX } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useAutoSpeak, type Voice } from '@/features/voice/use-voice'
 import { BoardView } from './board-view'
 import type { MissionPersistence, StepOutcome } from './types'
 
@@ -28,7 +29,7 @@ interface StepProps {
   readonly loaded: LoadedMission
   readonly index: number
   readonly reducedMotion: boolean
-  readonly speech: { available: boolean; speak: (text: string) => void }
+  readonly voice: Voice
   readonly onComplete: (outcome: StepOutcome | null) => void
 }
 
@@ -45,20 +46,27 @@ function StepLayout({ board, panel }: { board: ReactNode; panel: ReactNode }) {
   )
 }
 
-function Instruction({ text, speech }: { text: string; speech: StepProps['speech'] }) {
+/** Vorlesen bzw. Vorlesen stoppen – erscheint nur, wenn der Text vorgelesen werden kann. */
+function SpeakButton({ voice, segments, label }: { voice: Voice; segments: readonly string[]; label: string }) {
+  if (!voice.canSpeak(segments)) return null
+  return (
+    <button
+      type="button"
+      onClick={() => (voice.speaking ? voice.stop() : voice.speak(segments))}
+      className="mt-1 shrink-0 rounded-full p-2 text-text-muted hover:bg-ink-700 hover:text-text"
+      aria-label={voice.speaking ? 'Vorlesen stoppen' : label}
+      data-testid="speak"
+    >
+      {voice.speaking ? <VolumeX size={20} aria-hidden="true" /> : <Volume2 size={20} aria-hidden="true" />}
+    </button>
+  )
+}
+
+function Instruction({ text, voice }: { text: string; voice: Voice }) {
   return (
     <div className="flex items-start gap-3" aria-live="polite">
       <p className="font-display text-2xl font-bold leading-tight text-text sm:text-[1.7rem]">{text}</p>
-      {speech.available && (
-        <button
-          type="button"
-          onClick={() => speech.speak(text)}
-          className="mt-1 shrink-0 rounded-full p-2 text-text-muted hover:bg-ink-700 hover:text-text"
-          aria-label="Anweisung vorlesen"
-        >
-          <Volume2 size={20} />
-        </button>
-      )}
+      <SpeakButton voice={voice} segments={[text]} label="Anweisung vorlesen" />
     </div>
   )
 }
@@ -102,27 +110,29 @@ function GuideBox({ guide, movedCount }: { guide: readonly LocalizedText[]; move
         ))}
       </div>
       <p className="text-sm font-semibold text-text-muted">{allDone ? 'Alle gesetzt' : `Schritt ${current + 1} von ${guide.length}`}</p>
-      <p className="text-lg font-semibold leading-snug text-text">{allDone ? 'Passt alles? Dann tippe auf „Prüfen“.' : t(guide[current]!)}</p>
+      <p className="text-lg font-semibold leading-snug text-text">{allDone ? UI_TEXT.allPlaced : t(guide[current]!)}</p>
     </div>
   )
 }
 
 /* ------------------------------------------------------------------ Zuschauen / Erklären */
 
-export function WatchStep({ loaded, index, reducedMotion, speech, onComplete }: StepProps) {
+export function WatchStep({ loaded, index, reducedMotion, voice, onComplete }: StepProps) {
   const step = loaded.mission.steps[index] as Extract<Step, { kind: 'watch' }>
   const timeline = useMemo(() => stepTimeline(loaded, index), [loaded, index])
   const player = useTimelinePlayer(timeline, { autoplay: true, reducedMotion })
   const board = player.frame?.state ?? loaded.boards[index]!
   const done = player.finished
-  const caption = done && step.after ? t(step.after.caption) : t(step.instruction)
+  const showAfter = done && step.after !== undefined
+  const caption = showAfter && step.after ? t(step.after.caption) : t(step.instruction)
+  useAutoSpeak(voice, [caption], `${index}:${showAfter ? 'after' : 'before'}`)
   return (
     <StepLayout
       board={<BoardView loaded={loaded} state={board} view={step.view} overlays={done ? (step.after?.overlays ?? []) : step.overlays} label="Spielsituation" />}
       panel={
         <div className="flex h-full flex-col gap-4">
           <p className="eyebrow">Schau zu</p>
-          <Instruction text={caption} speech={speech} />
+          <Instruction text={caption} voice={voice} />
           <div className="mt-auto flex items-center justify-between gap-3">
             <ReplayControls player={player} />
             {/* Erster Klick während der Animation springt ans Ende (Erklärung), der zweite geht weiter. */}
@@ -136,19 +146,20 @@ export function WatchStep({ loaded, index, reducedMotion, speech, onComplete }: 
   )
 }
 
-export function ExplainStep({ loaded, index, reducedMotion, speech, onComplete }: StepProps) {
+export function ExplainStep({ loaded, index, reducedMotion, voice, onComplete }: StepProps) {
   const step = loaded.mission.steps[index] as Extract<Step, { kind: 'explain' }>
   const timeline = useMemo(() => stepTimeline(loaded, index), [loaded, index])
   const player = useTimelinePlayer(timeline, { autoplay: true, reducedMotion })
   const board = player.frame?.state ?? loaded.boards[index]!
   const showOverlays = !timeline || player.finished
+  useAutoSpeak(voice, [t(step.text), ...step.keyPoints.map((k) => t(k))], `${index}`)
   return (
     <StepLayout
       board={<BoardView loaded={loaded} state={board} view={step.view} overlays={showOverlays ? step.overlays : []} label="Erklärung am Spielfeld" />}
       panel={
         <div className="flex h-full flex-col gap-4">
           <p className="eyebrow">{t(step.instruction)}</p>
-          <Instruction text={t(step.text)} speech={speech} />
+          <Instruction text={t(step.text)} voice={voice} />
           {step.keyPoints.length > 0 && (
             <ul className="space-y-2">
               {step.keyPoints.map((k) => (
@@ -200,7 +211,7 @@ function ConsequenceBoard({
   return <BoardView loaded={loaded} state={state} view={view} highlight={highlight} label="Was passiert jetzt?" />
 }
 
-export function InteractiveStepView({ loaded, index, reducedMotion, speech, onComplete, persistence, assignmentId }: InteractiveProps) {
+export function InteractiveStepView({ loaded, index, reducedMotion, voice, onComplete, persistence, assignmentId }: InteractiveProps) {
   const step = loaded.mission.steps[index] as InteractiveStep
   const start = loaded.boards[index]!
   const isTest = loaded.mission.mode === 'test'
@@ -276,7 +287,8 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
     const finalState = step.kind === 'place' ? applyPlacement(loaded, index, answer.positions ?? {}) : start
     const nextPlan = planConsequence(loaded, index, finalState)
     setPlan(nextPlan)
-    setConsequenceDone(!nextPlan)
+    // Ohne Animation (weniger Bewegung) gibt es kein Ende abzuwarten – die Folge steht sofort da.
+    setConsequenceDone(!nextPlan || reducedMotion)
     setBoardMode(nextPlan && !reducedMotion ? 'consequence' : 'evidence')
     persist(answer, solution ? step.hints.length + 1 : hintsShown)
   }
@@ -324,15 +336,30 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
       usedSolution,
     })
 
-  const feedback = result
-    ? summarizeFeedback(result, {
-        stepFeedback: step.feedback,
-        criterionTexts: Object.fromEntries(step.assessment.criteria.map((c) => [c.id, c.feedback])),
-        alternativeExplanation: step.assessment.alternatives.find((a) => a.id === result.alternativeId)?.explanation,
-      })
-    : null
+  const feedback = result ? summarizeStepFeedback(step, result) : null
 
   const attackingOwn = possessionTeam(start) === 'own'
+  const consequenceText = plan?.playout && consequenceDone ? playoutMessage(plan.playout.outcome, attackingOwn) : null
+  const feedbackSegments = feedback ? feedbackSpeech(feedback, { usedSolution, consequence: consequenceText }) : []
+
+  // Vorlesen: Anweisung beim Start, danach jeden neuen Teilschritt, jede Hilfe und die Rückmeldung (nach der Folge).
+  const guide = step.kind === 'place' ? step.guide : []
+  const guideText = guide.length === 0 ? '' : moved.length >= guide.length ? UI_TEXT.allPlaced : t(guide[moved.length])
+  const startSegments = [
+    t(step.instruction),
+    step.kind === 'place' && step.guide[0] ? t(step.guide[0]) : '',
+    step.kind === 'place' ? UI_TEXT.placeHint : '',
+  ]
+  useAutoSpeak(voice, startSegments, phase === 'answer' && attempts === 0 && moved.length === 0 ? `${index}:start` : null)
+  useAutoSpeak(voice, [guideText], phase === 'answer' && guide.length > 0 && moved.length > 0 ? `${index}:guide:${Math.min(moved.length, guide.length)}` : null)
+  useAutoSpeak(voice, [hintsShown > 0 ? t(step.hints[hintsShown - 1]) : ''], hintsShown > 0 ? `${index}:hint:${hintsShown}` : null)
+  const chosen = step.kind === 'choose' ? step.options.find((o) => o.id === selection.optionId) : undefined
+  useAutoSpeak(voice, [chosen ? t(chosen.label) : ''], phase === 'answer' && chosen ? `${index}:option:${chosen.id}` : null)
+  useAutoSpeak(
+    voice,
+    feedbackSegments,
+    phase === 'feedback' && (consequenceDone || !plan) ? `${index}:feedback:${attempts}:${usedSolution ? 'solution' : 'own'}:${replay}` : null,
+  )
   const evidence = result ? result.criteria.flatMap((c) => c.evidence) : []
   const highlight: Record<string, TokenTone> = {}
   if (step.kind === 'identify' && selection.playerId) highlight[selection.playerId] = phase === 'feedback' ? (passed ? 'good' : 'bad') : 'info'
@@ -406,11 +433,11 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
       <p className="eyebrow">{isTest ? 'Test' : step.kind === 'place' ? 'Du bist dran' : step.kind === 'identify' ? 'Erkennen' : 'Entscheiden'}</p>
       {phase === 'answer' && (
         <>
-          <Instruction text={t(step.instruction)} speech={speech} />
+          <Instruction text={t(step.instruction)} voice={voice} />
           {step.kind === 'place' && step.guide.length > 0 && <GuideBox guide={step.guide} movedCount={moved.length} />}
           {step.kind === 'place' && attempts === 0 && (
             <p className="text-sm text-text-faint">
-              Tippe einen Blauen mit gestricheltem Ring an. Dann tippe, wo er hin soll.
+              {UI_TEXT.placeHint}
               <span className="sr-only"> Mit der Tastatur: Tab und Pfeiltasten.</span>
             </p>
           )}
@@ -468,8 +495,11 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
               {passed ? <Sparkles size={22} /> : <RotateCcw size={22} />}
             </span>
             <h2 className="font-display text-3xl font-bold uppercase tracking-wide" data-testid="feedback-headline">
-              {usedSolution ? 'So geht es' : feedback.headline}
+              {usedSolution ? UI_TEXT.solutionHeadline : feedback.headline}
             </h2>
+            <span className="ml-auto">
+              <SpeakButton voice={voice} segments={feedbackSegments} label="Rückmeldung vorlesen" />
+            </span>
           </div>
           {feedback.main && <p className="text-lg leading-snug text-text">{feedback.main}</p>}
           {feedback.positives.length > 0 && (
@@ -482,9 +512,9 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
               ))}
             </ul>
           )}
-          {plan?.playout && consequenceDone && (
+          {consequenceText && (
             <p className="rounded-xl bg-ink-700 px-3 py-2 text-sm font-semibold text-text" data-testid="consequence">
-              {playoutMessage(plan.playout.outcome, attackingOwn)}
+              {consequenceText}
             </p>
           )}
           {saveError && <p className="text-xs text-bad">{saveError}</p>}

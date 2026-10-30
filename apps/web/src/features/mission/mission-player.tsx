@@ -5,11 +5,11 @@ import Link from 'next/link'
 import { loadMission, type MissionInput } from '@spieliq/engine'
 import { getPrinciple, t } from '@spieliq/content'
 import { usePrefersReducedMotion } from '@spieliq/pitch'
-import { ArrowLeft, CircleCheck, Flag, RotateCcw, Trophy, Waves, X } from 'lucide-react'
+import { ArrowLeft, CircleCheck, Flag, RotateCcw, Trophy, Volume2, VolumeX, Waves, X } from 'lucide-react'
 import { Button, LinkButton } from '@/components/ui/button'
 import { ExplainStep, InteractiveStepView, WatchStep } from './step-views'
 import type { MissionPersistence, StepOutcome } from './types'
-import { useSpeech } from './use-speech'
+import { useVoice } from '@/features/voice/use-voice'
 
 export interface MissionPlayerProps {
   readonly mission: MissionInput
@@ -33,7 +33,7 @@ export function MissionPlayer({ mission, persistence, exitHref, nextHref, assign
   const systemReducedMotion = usePrefersReducedMotion()
   const [motionOverride, setMotionOverride] = useState<boolean | null>(null)
   const reducedMotion = motionOverride ?? systemReducedMotion
-  const speech = useSpeech()
+  const voice = useVoice()
   const steps = loaded.mission.steps
 
   const advance = (outcome: StepOutcome | null) => {
@@ -71,7 +71,7 @@ export function MissionPlayer({ mission, persistence, exitHref, nextHref, assign
   }
 
   const step = steps[index]!
-  const common = { loaded, index, reducedMotion, speech, onComplete: advance }
+  const common = { loaded, index, reducedMotion, voice, onComplete: advance }
 
   return (
     <div className="flex h-dvh flex-col">
@@ -92,6 +92,24 @@ export function MissionPlayer({ mission, persistence, exitHref, nextHref, assign
           </ol>
         </div>
         {guest && <span className="hidden rounded-full border border-line-strong px-3 py-1 text-xs text-text-muted sm:inline">Gastmodus – nichts wird gespeichert</span>}
+        {voice.available && (
+          <button
+            type="button"
+            onClick={() => {
+              if (voice.auto) voice.stop()
+              voice.setAuto(!voice.auto)
+            }}
+            className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold hover:bg-ink-700 ${voice.auto ? 'text-accent' : 'text-text-muted hover:text-text'}`}
+            aria-pressed={voice.auto}
+            aria-label={voice.hasRecordings ? 'Vorlesen (KI-Stimme)' : 'Vorlesen'}
+            title={voice.hasRecordings ? 'Vorlesen – die Stimme ist mit KI erzeugt' : 'Vorlesen mit der Stimme deines Geräts'}
+            data-testid="voice-toggle"
+          >
+            {voice.auto ? <Volume2 size={18} aria-hidden="true" /> : <VolumeX size={18} aria-hidden="true" />}
+            <span className="hidden sm:inline">Vorlesen</span>
+            {voice.hasRecordings && <span className="rounded-full border border-line-strong px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-text-faint">KI-Stimme</span>}
+          </button>
+        )}
         <button
           type="button"
           onClick={() => setMotionOverride(!reducedMotion)}

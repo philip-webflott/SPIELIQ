@@ -155,7 +155,7 @@ export const reachInTime = defineCriterion({
       { type: 'lane', fromId: passer.id, toId: target.id, from: passer.pos, to: target.pos, status: pass.status },
     ]
     if (pass.status === 'blocked' && !p.ignoreBlockedLane) {
-      return { score: 1, passed: true, feedbackKey: 'reachInTime.laneClosed', evidence }
+      return { score: 1, passed: true, feedbackKey: 'reachInTime.laneClosed', feedbackParams: { target: target.label ?? target.id }, evidence }
     }
     const arrival = timeToReach(ctx.model, defender.pos, target.pos, ctx.model.pressureDistance)
     const delta = arrival - pass.ballTime
