@@ -1,8 +1,11 @@
 import { expect, test, type Page } from '@playwright/test'
 
-/** Erklärfilm überspringen: „Weiter“ geht je Abschnitt eins weiter. */
+/** Erklärfilm überspringen: auf dem Plakat „Überspringen“, im Film „Weiter“ je Abschnitt. */
 async function skipFilm(page: Page) {
-  for (let i = 0; i < 8 && (await page.getByTestId('film').isVisible()); i++) await page.getByTestId('next-step').click()
+  for (let i = 0; i < 8 && (await page.getByTestId('film').isVisible()); i++) {
+    if (await page.getByTestId('film-skip').isVisible()) await page.getByTestId('film-skip').click()
+    else await page.getByTestId('next-step').click()
+  }
   await expect(page.getByTestId('film')).toHaveCount(0)
 }
 
@@ -16,12 +19,16 @@ test.describe('Gastmodus', () => {
   test('Mission 1 vollständig spielen: zuschauen, freien Gegner erkennen, Feedback, Zusammenfassung', async ({ page }) => {
     await page.goto('/try/nazb-m1-problem-erkennen')
     // Erst der Erklärfilm (mit Stimme, falls vorhanden), dann die Aufgaben
-    await expect(page.getByText('Erklärfilm: Nicht alle zum Ball')).toBeVisible()
+    // Filmplakat mit großem Play-Knopf, deutlich als Film gekennzeichnet
+    await expect(page.getByTestId('film-play')).toBeVisible()
+    await expect(page.getByTestId('mode')).toHaveText(/Erklärfilm/)
+    await page.getByTestId('film-start').click()
     await expect(page.getByText('Der Gegner hat den Ball. Alle drei Blauen rennen zu ihm.')).toBeVisible()
     await page.getByTestId('next-step').click()
     await expect(page.getByText('Hinten ist jetzt alles leer.', { exact: false })).toBeVisible()
     await skipFilm(page)
-    await expect(page.getByText('Schau zu: Was machen die Blauen?')).toBeVisible()
+    await expect(page.getByText('Was machen die Blauen?')).toBeVisible()
+    await expect(page.getByTestId('mode')).toHaveText(/Schau zu/)
     await expect(page.getByText('Wir spielen nach oben')).toBeVisible()
     // Figuren mit Blickrichtung statt Kreisen (sobald das Figurenbild im Browser erzeugt ist)
     await expect(page.locator('[data-figure]').first()).toBeVisible()
@@ -31,14 +38,17 @@ test.describe('Gastmodus', () => {
     // Falsche Antwort zuerst: positive Fehlerkorrektur statt Bestrafung
     await page.locator('[data-player-id="o10"]').click()
     await page.getByTestId('check').click()
-    await expect(page.getByTestId('feedback-headline')).toContainText(/noch mal/i)
+    await expect(page.getByTestId('feedback-headline')).toHaveText('Noch nicht richtig.')
+    await expect(page.getByTestId('verdict')).toHaveAttribute('data-correct', 'false')
+    await expect(page.getByTestId('feedback-praise')).toHaveText('Schau noch mal hin.')
     // Nach dem ersten Fehlversuch gibt es sofort Hilfe
     await expect(page.getByTestId('show-solution')).toBeVisible()
     await page.getByTestId('retry').click()
 
     await page.locator('[data-player-id="o7"]').click()
     await page.getByTestId('check').click()
-    await expect(page.getByTestId('feedback-headline')).toContainText('Nummer 7')
+    await expect(page.getByTestId('feedback-headline')).toHaveText('Richtig!')
+    await expect(page.getByTestId('feedback-praise')).toContainText('Nummer 7')
     await page.getByTestId('next-step').click()
 
     // Erklärung der besseren Lösung
@@ -70,6 +80,6 @@ test.describe('Gastmodus', () => {
     })
     await page.mouse.click(target.x, target.y)
     await page.getByTestId('check').click()
-    await expect(page.getByTestId('feedback-headline')).toContainText(/abgesichert|Gut/)
+    await expect(page.getByTestId('verdict')).toHaveAttribute('data-correct', /true|false/)
   })
 })

@@ -1,4 +1,4 @@
-import type { AssessmentResult, CriterionResult, InteractiveStep, PlayoutOutcome, Rating } from '@spieliq/engine'
+import type { AssessmentResult, CriterionResult, InteractiveStep, PlayoutOutcome } from '@spieliq/engine'
 import { format, t, type Locale } from './i18n'
 
 /**
@@ -99,21 +99,11 @@ const DE: Record<string, string> = {
   'choice.none': 'Wähle eine Antwort.',
 }
 
-const RATING_DE: Record<Rating, string> = {
-  excellent: 'Super!',
-  good: 'Gut gemacht!',
-  'not-yet': 'Noch nicht ganz.',
-}
-
 export function criterionMessage(result: CriterionResult, customFail?: string, customPass?: string, locale: Locale = 'de'): string {
   if (result.passed && customPass) return customPass
   if (!result.passed && customFail) return customFail
   const template = DE[result.feedbackKey] ?? ''
   return format(template, result.feedbackParams, locale)
-}
-
-export function ratingHeadline(rating: Rating): string {
-  return RATING_DE[rating]
 }
 
 export function feedbackTemplate(key: string): string | undefined {
@@ -124,7 +114,12 @@ export function allFeedbackKeys(): string[] {
   return Object.keys(DE)
 }
 
-/** Texte zur Konsequenz-Animation – aus Sicht der eigenen Mannschaft formuliert. */
+/**
+ * Texte zur Folge-Animation („Was passiert?“), aus Sicht der eigenen
+ * Mannschaft. Sie beschreiben nur, was passiert – das Urteil („Richtig“ /
+ * „Noch nicht richtig“) steht ausschließlich in der Überschrift. So können
+ * Folge und Bewertung sich nicht widersprechen.
+ */
 export function playoutMessage(outcome: PlayoutOutcome, attackingTeamIsOwn: boolean): string {
   if (attackingTeamIsOwn) {
     switch (outcome) {
@@ -150,24 +145,62 @@ export function playoutMessage(outcome: PlayoutOutcome, attackingTeamIsOwn: bool
     case 'progress':
       return 'Der Gegner kommt weiter nach vorne.'
     case 'safePass':
-      return 'Der Gegner hat den Ball. Aber er kommt nicht durch.'
+      return 'Der Gegner behält den Ball. Er kommt aber nicht durch.'
     case 'interception':
-      return 'Wir haben den Ball! Gut verteidigt.'
+      return 'Wir haben den Ball!'
     case 'pressured':
-      return 'Ein Blauer ist sofort da. Gut verteidigt!'
+      return 'Ein Blauer ist sofort beim Gegner.'
     case 'forcedBack':
-      return 'Der Gegner muss zurückspielen. Gut verteidigt!'
+      return 'Der Gegner muss zurückspielen.'
     case 'noOption':
-      return 'Beim Gegner ist keiner frei. Super!'
+      return 'Beim Gegner ist keiner frei.'
   }
 }
 
-/** Kurze, priorisierte Rückmeldung: Überschrift + wichtigster Satz + bis zu zwei positive Punkte. */
+/** Ist die Folge gut, schlecht oder neutral für uns? */
+export function consequenceTone(outcome: PlayoutOutcome, attackingTeamIsOwn: boolean): 'good' | 'bad' | 'neutral' {
+  if (attackingTeamIsOwn) {
+    if (outcome === 'goalChance' || outcome === 'progress') return 'good'
+    if (outcome === 'safePass') return 'neutral'
+    return 'bad'
+  }
+  return outcome === 'goalChance' || outcome === 'progress' ? 'bad' : 'good'
+}
+
+/**
+ * Passt die Folge zur Bewertung? Gezeigt wird sie nur dann: bei einer
+ * richtigen Antwort keine schlechte Folge, bei einer falschen nur eine
+ * schlechte. (Die einfache Gegner-Simulation bildet nicht jeden Fehler ab –
+ * dann lieber keine Folge als eine widersprüchliche.)
+ */
+export function consequenceFits(correct: boolean, outcome: PlayoutOutcome, attackingTeamIsOwn: boolean): boolean {
+  const tone = consequenceTone(outcome, attackingTeamIsOwn)
+  return correct ? tone !== 'bad' : tone === 'bad'
+}
+
+/**
+ * Rückmeldung in vier Teilen, immer in dieser Reihenfolge:
+ * 1. Urteil (eindeutig): „Richtig!“ oder „Noch nicht richtig.“
+ * 2. optional ein Lob aus der Mission („Super abgesichert!“) – nur bei richtig
+ * 3. der wichtigste Satz: bei falsch die Ursache, bei richtig mit Verbesserung
+ *    ein Tipp („Noch besser: …“), sonst warum es richtig ist
+ * 4. höchstens ein weiterer positiver Punkt
+ */
 export interface FeedbackSummary {
+  readonly correct: boolean
   readonly headline: string
+  readonly praise: string
   readonly main: string
+  /** `main` ist ein Verbesserungstipp zu einer richtigen Antwort */
+  readonly isTip: boolean
   readonly positives: string[]
 }
+
+export const VERDICT_TEXT = {
+  correct: 'Richtig!',
+  wrong: 'Noch nicht richtig.',
+  tip: 'Noch besser:',
+} as const
 
 export function summarizeFeedback(
   result: AssessmentResult,
@@ -178,20 +211,18 @@ export function summarizeFeedback(
   } = {},
   locale: Locale = 'de',
 ): FeedbackSummary {
+  const correct = result.rating !== 'not-yet'
   const step = overrides.stepFeedback
-  const headline =
-    result.rating === 'excellent'
-      ? t(step?.excellent, locale) || RATING_DE.excellent
-      : result.rating === 'good'
-        ? t(step?.good, locale) || RATING_DE.good
-        : t(step?.notYet, locale) || RATING_DE['not-yet']
+  const praise = result.rating === 'excellent' ? t(step?.excellent, locale) : result.rating === 'good' ? t(step?.good, locale) : t(step?.notYet, locale)
   const primary = result.primary
   let main = ''
+  let isTip = false
   if (result.alternativeId && overrides.alternativeExplanation) {
     main = t(overrides.alternativeExplanation, locale)
   } else if (primary) {
     const custom = overrides.criterionTexts?.[primary.id]
     main = criterionMessage(primary, t(custom?.fail, locale) || undefined, t(custom?.pass, locale) || undefined, locale)
+    isTip = correct && !primary.passed
   }
   const positives = result.criteria
     .filter((c) => c.passed && !c.notApplicable && c.id !== primary?.id)
@@ -202,7 +233,7 @@ export function summarizeFeedback(
       return criterionMessage(c, undefined, t(custom?.pass, locale) || undefined, locale)
     })
     .filter((s) => s.length > 0)
-  return { headline, main, positives }
+  return { correct, headline: correct ? VERDICT_TEXT.correct : VERDICT_TEXT.wrong, praise, main, isTip, positives }
 }
 
 /** Rückmeldung zu einem Aufgabenschritt – mit den Texten, die die Mission selbst festlegt. */

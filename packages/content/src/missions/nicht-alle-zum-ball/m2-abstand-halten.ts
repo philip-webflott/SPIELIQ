@@ -106,7 +106,6 @@ export const m2AbstandHalten: MissionInput = {
       feedback: {
         excellent: { de: 'Super! Nummer 6 kann jeden anspielen.' },
         good: { de: 'Gut gemacht!' },
-        notYet: { de: 'Noch nicht ganz.' },
       },
       hints: [
         { de: 'Geh weg vom Ball. Such freien Platz.' },

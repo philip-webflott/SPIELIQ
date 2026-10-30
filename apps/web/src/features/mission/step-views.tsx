@@ -20,9 +20,9 @@ import {
   type Step,
   type Vec2,
 } from '@spieliq/engine'
-import { feedbackSpeech, playoutMessage, summarizeStepFeedback, t, UI_TEXT } from '@spieliq/content'
+import { consequenceFits, consequenceTone, feedbackSpeech, normalizeSpeech, playoutMessage, summarizeStepFeedback, t, UI_TEXT, VERDICT_TEXT } from '@spieliq/content'
 import { useTimelinePlayer, type TokenTone } from '@spieliq/pitch'
-import { CircleCheck, Lightbulb, RotateCcw, Sparkles, Turtle, Volume2, VolumeX } from 'lucide-react'
+import { CircleCheck, CircleX, ClipboardCheck, Clapperboard, Eye, Hand, Lightbulb, Pause, Play, RotateCcw, Turtle, Volume2, VolumeX } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useAutoSpeak, type Voice } from '@/features/voice/use-voice'
 import { BoardView } from './board-view'
@@ -45,6 +45,30 @@ function StepLayout({ board, panel }: { board: ReactNode; panel: ReactNode }) {
       <aside className="border-t border-line bg-ink-850/95 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 backdrop-blur lg:w-[400px] lg:border-l lg:border-t-0 lg:p-6">
         {panel}
       </aside>
+    </div>
+  )
+}
+
+type Mode = 'film' | 'watch' | 'explain' | 'task' | 'test'
+
+const MODE: Record<Mode, { label: string; icon: typeof Eye; className: string }> = {
+  film: { label: 'Erklärfilm', icon: Clapperboard, className: 'bg-film/20 text-film border-film/40' },
+  watch: { label: 'Schau zu', icon: Eye, className: 'bg-info/15 text-info border-info/30' },
+  explain: { label: 'So geht es', icon: Lightbulb, className: 'bg-info/15 text-info border-info/30' },
+  task: { label: 'Du bist dran', icon: Hand, className: 'bg-accent-soft text-accent border-accent/30' },
+  test: { label: 'Test', icon: ClipboardCheck, className: 'bg-warn/15 text-warn border-warn/30' },
+}
+
+/** Jeder Schritt zeigt deutlich, was gerade dran ist: zuschauen oder selbst machen. */
+function ModeChip({ mode, detail }: { mode: Mode; detail?: string }) {
+  const m = MODE[mode]
+  const Icon = m.icon
+  return (
+    <div className="flex items-center gap-2">
+      <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-bold uppercase tracking-wide ${m.className}`} data-testid="mode">
+        <Icon size={16} aria-hidden="true" /> {m.label}
+      </span>
+      {detail && <span className="truncate text-sm text-text-muted">{detail}</span>}
     </div>
   )
 }
@@ -134,10 +158,56 @@ function readingMs(text: string): number {
 export function FilmStep({ loaded, index, reducedMotion, voice, onComplete }: StepProps) {
   const step = loaded.mission.steps[index] as Extract<Step, { kind: 'film' }>
   const plans = useMemo(() => filmSegments(loaded, index), [loaded, index])
+  const [started, setStarted] = useState(false)
   const [segment, setSegment] = useState(0)
   const [replay, setReplay] = useState(0)
   const last = segment === plans.length - 1
   const next = useCallback(() => (last ? onComplete(null) : setSegment((k) => k + 1)), [last, onComplete])
+  if (!started) {
+    // Filmplakat: großer Play-Knopf – klar erkennbar als Film, und das Antippen erlaubt dem Browser den Ton.
+    const seconds = step.segments.reduce((sum, seg) => sum + readingMs(t(seg.text)), 0) / 1000
+    const title = t(step.instruction).replace(/^Erklärfilm:\s*/, '')
+    return (
+      <StepLayout
+        board={
+          <>
+            <BoardView loaded={loaded} state={plans[0]!.start} view={step.view} label="Erklärfilm – Startbild" />
+            <button
+              type="button"
+              onClick={() => setStarted(true)}
+              className="absolute inset-2 grid place-items-center rounded-2xl bg-black/55 backdrop-blur-[1px] transition-colors hover:bg-black/45 sm:inset-4"
+              aria-label="Erklärfilm starten"
+              data-testid="film-play"
+            >
+              <span className="flex flex-col items-center gap-3">
+                <span className="grid h-24 w-24 place-items-center rounded-full bg-film text-ink-900 shadow-2xl ring-8 ring-film/25">
+                  <Play size={46} fill="currentColor" aria-hidden="true" />
+                </span>
+                <span className="font-display text-2xl font-bold uppercase tracking-wide text-white">Film ansehen</span>
+              </span>
+            </button>
+          </>
+        }
+        panel={
+          <div className="flex h-full flex-col gap-3" data-testid="film">
+            <ModeChip mode="film" />
+            <h2 className="font-display text-3xl font-bold leading-tight text-text">{title}</h2>
+            <p className="text-base text-text-muted">
+              {step.segments.length} kurze Teile · etwa {seconds < 75 ? '1 Minute' : `${Math.round(seconds / 60)} Minuten`} · mit Ton
+            </p>
+            <div className="mt-auto flex items-center justify-between gap-3">
+              <Button variant="ghost" onClick={() => onComplete(null)} data-testid="film-skip">
+                Überspringen
+              </Button>
+              <Button size="lg" onClick={() => setStarted(true)} data-testid="film-start">
+                <Play size={20} fill="currentColor" aria-hidden="true" /> Film starten
+              </Button>
+            </div>
+          </div>
+        }
+      />
+    )
+  }
   return (
     <FilmSegmentView
       key={`${segment}-${replay}`}
@@ -184,6 +254,7 @@ function FilmSegmentView({
   const board = player.frame?.state ?? plan.start
   const animationDone = !plan.timeline || player.finished
   const [minTimeDone, setMinTimeDone] = useState(false)
+  const [paused, setPaused] = useState(false)
   useAutoSpeak(voice, [text], `${index}:film:${segment}`)
 
   useEffect(() => {
@@ -192,7 +263,7 @@ function FilmSegmentView({
   }, [text])
 
   // Mit Stimme: weiter, sobald Bewegung und Sprache fertig sind. Letzter Abschnitt: Kind entscheidet.
-  const autoAdvance = voice.auto && voice.available && !last
+  const autoAdvance = voice.auto && voice.available && !last && !paused
   const ready = animationDone && minTimeDone && !voice.speaking
   useEffect(() => {
     if (!autoAdvance || !ready) return
@@ -203,19 +274,26 @@ function FilmSegmentView({
   return (
     <StepLayout
       board={
-        <BoardView
-          loaded={loaded}
-          state={board}
-          poses={plan.timeline ? timelinePoses(plan.timeline, player.time, loaded) : undefined}
-          reducedMotion={reducedMotion}
-          view={step.view}
-          overlays={animationDone ? seg.overlays : []}
-          label="Erklärfilm"
-        />
+        <>
+          <BoardView
+            loaded={loaded}
+            state={board}
+            poses={plan.timeline ? timelinePoses(plan.timeline, player.time, loaded) : undefined}
+            reducedMotion={reducedMotion}
+            view={step.view}
+            overlays={animationDone ? seg.overlays : []}
+            label="Erklärfilm"
+          />
+          {/* Filmrahmen: deutlich anders als Aufgaben */}
+          <div className="pointer-events-none absolute inset-2 rounded-2xl ring-4 ring-film/60 sm:inset-4" aria-hidden="true" />
+          <span className="pointer-events-none absolute left-4 top-14 inline-flex items-center gap-1.5 rounded-full bg-film px-3 py-1 text-xs font-bold uppercase tracking-wide text-ink-900 sm:left-6 sm:top-16">
+            <Clapperboard size={14} aria-hidden="true" /> Film · Teil {segment + 1}/{step.segments.length}
+          </span>
+        </>
       }
       panel={
         <div className="flex h-full flex-col gap-4" data-testid="film">
-          <p className="eyebrow">{t(step.instruction)}</p>
+          <ModeChip mode="film" detail={t(step.instruction).replace(/^Erklärfilm:\s*/, '')} />
           <div className="flex gap-1.5" aria-label={`Teil ${segment + 1} von ${step.segments.length}`}>
             {step.segments.map((s, i) => (
               <span key={s.text.de} className={`h-2 flex-1 rounded-full ${i < segment ? 'bg-accent' : i === segment ? 'bg-accent/60' : 'bg-ink-600'}`} />
@@ -223,13 +301,31 @@ function FilmSegmentView({
           </div>
           <Instruction text={text} voice={voice} />
           <div className="mt-auto flex items-center justify-between gap-3">
-            <button
-              type="button"
-              onClick={onReplay}
-              className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-text-muted hover:bg-ink-700 hover:text-text"
-            >
-              <RotateCcw size={18} aria-hidden="true" /> Nochmal
-            </button>
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => {
+                  if (paused) {
+                    onReplay()
+                    return
+                  }
+                  setPaused(true)
+                  player.pause()
+                  voice.stop()
+                }}
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-text-muted hover:bg-ink-700 hover:text-text"
+                data-testid="film-pause"
+              >
+                {paused ? <Play size={18} aria-hidden="true" /> : <Pause size={18} aria-hidden="true" />} {paused ? 'Abspielen' : 'Pause'}
+              </button>
+              <button
+                type="button"
+                onClick={onReplay}
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-text-muted hover:bg-ink-700 hover:text-text"
+              >
+                <RotateCcw size={18} aria-hidden="true" /> Nochmal
+              </button>
+            </div>
             <Button size="lg" onClick={onNext} data-testid="next-step">
               {last ? 'Los geht’s' : 'Weiter'}
             </Button>
@@ -266,7 +362,7 @@ export function WatchStep({ loaded, index, reducedMotion, voice, onComplete }: S
       }
       panel={
         <div className="flex h-full flex-col gap-4">
-          <p className="eyebrow">Schau zu</p>
+          <ModeChip mode="watch" />
           <Instruction text={caption} voice={voice} />
           <div className="mt-auto flex items-center justify-between gap-3">
             <ReplayControls player={player} />
@@ -303,7 +399,7 @@ export function ExplainStep({ loaded, index, reducedMotion, voice, onComplete }:
       }
       panel={
         <div className="flex h-full flex-col gap-4">
-          <p className="eyebrow">{t(step.instruction)}</p>
+          <ModeChip mode="explain" detail={t(step.instruction)} />
           <Instruction text={t(step.text)} voice={voice} />
           {step.keyPoints.length > 0 && (
             <ul className="space-y-2">
@@ -335,6 +431,16 @@ interface InteractiveProps extends StepProps {
 }
 
 type Phase = 'answer' | 'feedback'
+
+/**
+ * Folge-Animation nur, wenn sie zur Bewertung passt (siehe consequenceFits).
+ * Erkennen-Aufgaben: erst nach der richtigen Antwort – dann zeigt die Folge,
+ * warum der erkannte Spieler gefährlich ist, und verrät keine Lösung.
+ */
+function showConsequence(step: InteractiveStep, correct: boolean, plan: NonNullable<ReturnType<typeof planConsequence>>, attackingOwn: boolean): boolean {
+  if (step.kind === 'identify' || !plan.playout) return correct
+  return consequenceFits(correct, plan.playout.outcome, attackingOwn)
+}
 
 function ConsequenceBoard({
   loaded,
@@ -410,6 +516,8 @@ export function InteractiveStepView({ loaded, index, reducedMotion, voice, onCom
     [loaded.pitch, step],
   )
 
+  const attackingOwn = possessionTeam(start) === 'own'
+
   const markStarted = () => {
     startedAt.current ??= performance.now()
   }
@@ -440,7 +548,8 @@ export function InteractiveStepView({ loaded, index, reducedMotion, voice, onCom
     setAttempts((a) => a + 1)
     if (solution) setUsedSolution(true)
     const finalState = step.kind === 'place' ? applyPlacement(loaded, index, answer.positions ?? {}) : start
-    const nextPlan = planConsequence(loaded, index, finalState)
+    const planned = planConsequence(loaded, index, finalState)
+    const nextPlan = planned && showConsequence(step, assessed.rating !== 'not-yet', planned, attackingOwn) ? planned : null
     setPlan(nextPlan)
     // Ohne Animation (weniger Bewegung) gibt es kein Ende abzuwarten – die Folge steht sofort da.
     setConsequenceDone(!nextPlan || reducedMotion)
@@ -493,9 +602,11 @@ export function InteractiveStepView({ loaded, index, reducedMotion, voice, onCom
 
   const feedback = result ? summarizeStepFeedback(step, result) : null
 
-  const attackingOwn = possessionTeam(start) === 'own'
   const consequenceText = plan?.playout && consequenceDone ? playoutMessage(plan.playout.outcome, attackingOwn) : null
   const feedbackSegments = feedback ? feedbackSpeech(feedback, { usedSolution, consequence: consequenceText }) : []
+  // Urteil sofort vorlesen (während die Folge läuft), den Rest danach
+  const verdictCount = feedback ? [usedSolution ? UI_TEXT.solutionHeadline : feedback.headline, usedSolution ? '' : feedback.praise].filter((x) => normalizeSpeech(x).length > 0).length : 0
+  const consequenceTextTone = plan?.playout ? consequenceTone(plan.playout.outcome, attackingOwn) : null
 
   // Vorlesen: Anweisung beim Start, danach jeden neuen Teilschritt, jede Hilfe und die Rückmeldung (nach der Folge).
   const guide = step.kind === 'place' ? step.guide : []
@@ -510,10 +621,12 @@ export function InteractiveStepView({ loaded, index, reducedMotion, voice, onCom
   useAutoSpeak(voice, [hintsShown > 0 ? t(step.hints[hintsShown - 1]) : ''], hintsShown > 0 ? `${index}:hint:${hintsShown}` : null)
   const chosen = step.kind === 'choose' ? step.options.find((o) => o.id === selection.optionId) : undefined
   useAutoSpeak(voice, [chosen ? t(chosen.label) : ''], phase === 'answer' && chosen ? `${index}:option:${chosen.id}` : null)
+  const feedbackKey = `${index}:${attempts}:${usedSolution ? 'solution' : 'own'}`
+  useAutoSpeak(voice, feedbackSegments.slice(0, verdictCount), phase === 'feedback' && plan && !consequenceDone ? `${feedbackKey}:verdict` : null)
   useAutoSpeak(
     voice,
-    feedbackSegments,
-    phase === 'feedback' && (consequenceDone || !plan) ? `${index}:feedback:${attempts}:${usedSolution ? 'solution' : 'own'}:${replay}` : null,
+    plan ? feedbackSegments.slice(verdictCount) : feedbackSegments,
+    phase === 'feedback' && (consequenceDone || !plan) ? `${feedbackKey}:rest:${replay}` : null,
   )
   const evidence = result ? result.criteria.flatMap((c) => c.evidence) : []
   const highlight: Record<string, TokenTone> = {}
@@ -522,10 +635,10 @@ export function InteractiveStepView({ loaded, index, reducedMotion, voice, onCom
   const canAnswer =
     step.kind === 'place' ? true : step.kind === 'identify' ? Boolean(step.target === 'player' ? selection.playerId : selection.point) : Boolean(selection.optionId)
 
-  const showConsequence = phase === 'feedback' && plan !== null && boardMode === 'consequence'
+  const consequenceVisible = phase === 'feedback' && plan !== null && boardMode === 'consequence'
   const boardNode = (
     <>
-      {showConsequence && plan ? (
+      {consequenceVisible && plan ? (
         <ConsequenceBoard
           key={`c${attempts}-${replay}`}
           loaded={loaded}
@@ -586,7 +699,7 @@ export function InteractiveStepView({ loaded, index, reducedMotion, voice, onCom
 
   const panel = (
     <div className="flex h-full flex-col gap-4">
-      <p className="eyebrow">{isTest ? 'Test' : step.kind === 'place' ? 'Du bist dran' : step.kind === 'identify' ? 'Erkennen' : 'Entscheiden'}</p>
+      <ModeChip mode={isTest ? 'test' : 'task'} />
       {phase === 'answer' && (
         <>
           <Instruction text={t(step.instruction)} voice={voice} />
@@ -642,36 +755,38 @@ export function InteractiveStepView({ loaded, index, reducedMotion, voice, onCom
       )}
 
       {phase === 'feedback' && feedback && result && (
-        <div className="flex h-full flex-col gap-4 animate-rise" role="status" aria-live="polite">
-          <div className="flex items-center gap-3">
-            <span
-              className={`grid h-11 w-11 place-items-center rounded-full ${passed ? 'bg-good/15 text-good' : 'bg-warn/15 text-warn'}`}
-              aria-hidden="true"
-            >
-              {passed ? <Sparkles size={22} /> : <RotateCcw size={22} />}
-            </span>
+        <div className="flex h-full flex-col gap-3 animate-rise" role="status" aria-live="polite">
+          <div
+            className={`flex items-center gap-3 rounded-2xl border-2 px-4 py-3 ${usedSolution ? 'border-info/50 bg-info/10 text-info' : passed ? 'border-good/60 bg-good/15 text-good' : 'border-bad/60 bg-bad/15 text-bad'}`}
+            data-testid="verdict"
+            data-correct={passed ? 'true' : 'false'}
+          >
+            {usedSolution ? <Lightbulb size={30} aria-hidden="true" /> : passed ? <CircleCheck size={30} aria-hidden="true" /> : <CircleX size={30} aria-hidden="true" />}
             <h2 className="font-display text-3xl font-bold uppercase tracking-wide" data-testid="feedback-headline">
               {usedSolution ? UI_TEXT.solutionHeadline : feedback.headline}
             </h2>
-            <span className="ml-auto">
+            <span className="ml-auto text-text">
               <SpeakButton voice={voice} segments={feedbackSegments} label="Rückmeldung vorlesen" />
             </span>
           </div>
-          {feedback.main && <p className="text-lg leading-snug text-text">{feedback.main}</p>}
-          {feedback.positives.length > 0 && (
-            <ul className="space-y-1.5">
-              {feedback.positives.slice(0, 1).map((p) => (
-                <li key={p} className="flex gap-2 text-sm text-text-muted">
-                  <CircleCheck size={16} className="mt-0.5 shrink-0 text-good" aria-hidden="true" />
-                  {p}
-                </li>
-              ))}
-            </ul>
+          {feedback.praise && !usedSolution && (
+            <p className="text-lg font-semibold text-text" data-testid="feedback-praise">
+              {feedback.praise}
+            </p>
+          )}
+          {feedback.main && (
+            <p className="text-lg leading-snug text-text" data-testid="feedback-main">
+              {feedback.isTip && !usedSolution && <span className="font-semibold text-accent">{VERDICT_TEXT.tip} </span>}
+              {feedback.main}
+            </p>
           )}
           {consequenceText && (
-            <p className="rounded-xl bg-ink-700 px-3 py-2 text-sm font-semibold text-text" data-testid="consequence">
-              {consequenceText}
-            </p>
+            <div className="rounded-xl bg-ink-700 px-3 py-2" data-testid="consequence">
+              <p className="text-xs font-semibold uppercase tracking-wide text-text-faint">
+                {passed && consequenceTextTone === 'bad' ? 'Darum ist das gefährlich' : 'Was passiert?'}
+              </p>
+              <p className="text-sm font-semibold text-text">{consequenceText}</p>
+            </div>
           )}
           {saveError && <p className="text-xs text-bad">{saveError}</p>}
           <div className="mt-auto flex flex-wrap items-center justify-end gap-3">

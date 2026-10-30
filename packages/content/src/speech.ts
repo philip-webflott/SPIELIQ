@@ -1,5 +1,5 @@
 import type { BoardState, LoadedMission, PlayoutOutcome } from '@spieliq/engine'
-import { allFeedbackKeys, feedbackTemplate, playoutMessage, ratingHeadline, type FeedbackSummary } from './feedback'
+import { allFeedbackKeys, feedbackTemplate, playoutMessage, VERDICT_TEXT, type FeedbackSummary } from './feedback'
 import { format, t } from './i18n'
 import { UI_TEXT } from './ui-texts'
 
@@ -40,19 +40,20 @@ export function normalizeSpeech(text: string): string {
 }
 
 /**
- * Was zu einer Rückmeldung vorgelesen wird, in dieser Reihenfolge: zuerst die
- * Folge („Der Gegner fängt den Ball ab.“), dann Überschrift, Begründung und
- * höchstens ein Lob – genau das, was der Bildschirm zeigt.
+ * Was zu einer Rückmeldung vorgelesen wird – genau das, was der Bildschirm
+ * zeigt, in derselben Reihenfolge: Urteil, Lob, (Tipp-Hinweis,) wichtigster
+ * Satz, zuletzt die Folge („Was passiert?“), falls sie gezeigt wird.
  */
 export function feedbackSpeech(
   summary: FeedbackSummary,
   options: { readonly usedSolution?: boolean; readonly consequence?: string | null } = {},
 ): string[] {
   return [
-    options.consequence ?? '',
     options.usedSolution ? UI_TEXT.solutionHeadline : summary.headline,
+    options.usedSolution ? '' : summary.praise,
+    summary.isTip && !options.usedSolution ? VERDICT_TEXT.tip : '',
     summary.main,
-    summary.positives[0] ?? '',
+    options.consequence ?? '',
   ]
     .map(normalizeSpeech)
     .filter((s) => s.length > 0)
@@ -135,7 +136,7 @@ export function missionSpeechTexts(loaded: LoadedMission): string[] {
 /** Abschnitte, die in jeder Mission vorkommen können (Überschriften, Folgen, Bedientexte). */
 export function commonSpeechTexts(): string[] {
   const texts = [
-    ...(['excellent', 'good', 'not-yet'] as const).map(ratingHeadline),
+    ...Object.values(VERDICT_TEXT),
     ...PLAYOUT_OUTCOMES.flatMap((o) => [playoutMessage(o, true), playoutMessage(o, false)]),
     ...Object.values(UI_TEXT),
   ]

@@ -123,7 +123,6 @@ export const m4Seitenwechsel: MissionInput = {
       feedback: {
         excellent: { de: 'Super verschoben!' },
         good: { de: 'Gut verschoben!' },
-        notYet: { de: 'Noch nicht ganz.' },
       },
       hints: [
         { de: 'Wer am nächsten an Nummer 7 ist, geht hin.' },

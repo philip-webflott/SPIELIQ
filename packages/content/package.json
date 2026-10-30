@@ -12,7 +12,8 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "lint": "eslint src test scripts",
-    "report": "tsx scripts/report.ts"
+    "report": "tsx scripts/report.ts",
+    "feedback-audit": "tsx scripts/feedback-audit.ts"
   },
   "dependencies": {
     "@spieliq/engine": "workspace:*",

@@ -115,7 +115,6 @@ export const m5NeueSituation: MissionInput = {
       feedback: {
         excellent: { de: 'Super verteilt!' },
         good: { de: 'Gut verteilt!' },
-        notYet: { de: 'Noch nicht ganz.' },
       },
       hints: [{ de: 'Nur einer bleibt am Ball.' }, { de: 'Der Dritte passt vor dem Tor auf Nummer 9 auf.' }],
       consequence: 'auto',
@@ -159,7 +158,6 @@ export const m5NeueSituation: MissionInput = {
       feedback: {
         excellent: { de: 'Super gemacht!' },
         good: { de: 'Gut gemacht!' },
-        notYet: { de: 'Noch nicht ganz.' },
       },
       hints: [{ de: 'Nur einer geht zu Nummer 7.' }, { de: 'Einer hilft schräg dahinter. Einer bleibt in der Mitte.' }],
       consequence: 'auto',

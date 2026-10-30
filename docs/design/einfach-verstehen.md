@@ -59,7 +59,8 @@ Rückmeldung des Produktverantwortlichen nach der ersten Online-Vorschau: Für 1
 - **Schritt für Schritt** bei mehreren Spielern: Feld `guide` im Szenarioformat. Ein kurzer Satz pro Teilschritt, beschreibt Aufgaben (Rollen), nicht feste Spieler oder Zielpunkte; gezählt wird, wie viele Spieler schon bewegt wurden. Die Bewertung bleibt unverändert.
 - Nach einer Antwort läuft zuerst die Folge („Was passiert?“), dann erscheint automatisch die Begründung am Feld; „Nochmal ansehen“ wiederholt beides.
 - „Hilfe“ (gestufte Tipps) jederzeit, „Zeig mir die Lösung“ schon nach dem ersten Fehlversuch. Wer die Lösung ansieht, gilt für diese Aufgabe nicht als „selbstständig gelöst“.
-- Höchstens eine positive Zusatzzeile im Feedback.
+- **Rückmeldung:** zuerst ein eindeutiges Urteil – „Richtig!“ (grün, Haken) oder „Noch nicht richtig.“ (rot, Kreuz) –, dann höchstens ein Lob (nur bei richtig) und **ein** wichtigster Satz; ein Tipp zu einer richtigen Antwort beginnt mit „Noch besser:“. Die Folge-Animation erscheint nur, wenn sie zur Bewertung passt ([Audit](../qualitaet/audit-2026-10-30.md)).
+- Jeder Schritt zeigt seinen Modus mit Farbe und Symbol: Erklärfilm, Schau zu, So geht es, Du bist dran, Test. Erklärfilme beginnen mit einem Plakat mit großem Play-Knopf.
 
 ## 3a. Erklärfilm
 

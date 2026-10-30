@@ -50,8 +50,8 @@ Ein digital bestandener Test ist kein Beweis für richtiges Verhalten im Spiel �
 1. **Zuschauen** – kurze Animation (Pause, Zeitlupe 0,5×, Wiederholen); am Ende Erklärung und Hervorhebung (z. B. „FREI“).
 2. **Erkennen / Entscheiden** – antippen oder auswählen.
 3. **Ausprobieren** – Spieler ziehen (oder antippen + Zielpunkt antippen, oder Tastatur); im Lernmodus optional Live-Passwege.
-4. **Feedback** – Überschrift, wichtigster Satz mit Ursache, bis zu zwei positive Punkte; am Feld: Passwege, Abstände, Zonen.
-5. **Konsequenz** – „Was passiert jetzt?“: Der Gegner spielt die beste Option; das Ergebnis wird benannt.
+4. **Feedback** – eindeutiges Urteil („Richtig!“ / „Noch nicht richtig.“), höchstens ein Lob, ein wichtigster Satz mit Ursache bzw. Tipp; am Feld: Passwege, Abstände, Zonen.
+5. **Konsequenz** – „Was passiert?“: Der Gegner spielt die beste Option; das Ergebnis wird ohne Urteil benannt. Gezeigt nur, wenn es zur Bewertung passt (sonst entfällt es); fehlerbezogene Folgen sind geplant.
 6. **Wiederholen / Lösung** – Nochmal; ab dem 1. Fehlversuch „Zeig mir die Lösung“ (zählt nicht als selbstständig gelöst).
 7. **Zusammenfassung** – Prinzipien „sicher“ / „üben“, Aufgabe für den Platz, nächste Mission.
 

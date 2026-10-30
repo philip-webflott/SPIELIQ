@@ -46,12 +46,16 @@ test('Trainer lädt ein, Spieler lernt, Trainer sieht den Fortschritt', async ({
   await player.getByRole('link', { name: /Training starten/ }).click()
   await player.waitForURL(/\/play\/mission\/nazb-m1/)
   // Erklärfilm und Zuschauen überspringen
-  for (let i = 0; i < 10 && !(await player.locator('[data-player-id="o7"][data-interactive="true"]').isVisible()); i++) {
-    await player.getByTestId('next-step').click()
+  const skip = player.getByTestId('film-skip')
+  const next = player.getByTestId('next-step')
+  for (let i = 0; i < 12 && !(await player.locator('[data-player-id="o7"][data-interactive="true"]').isVisible()); i++) {
+    await skip.or(next).first().waitFor()
+    if (await skip.isVisible()) await skip.click()
+    else await next.click()
   }
   await player.locator('[data-player-id="o7"]').click()
   await player.getByTestId('check').click()
-  await expect(player.getByTestId('feedback-headline')).toContainText('Nummer 7')
+  await expect(player.getByTestId('feedback-headline')).toHaveText('Richtig!')
   await player.getByTestId('next-step').click()
   await player.getByTestId('next-step').click()
   await expect(player.getByText('Geschafft!')).toBeVisible()

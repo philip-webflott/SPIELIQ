@@ -49,6 +49,7 @@ Stand: 30.10.2026 · Einstieg für jede Entwicklungssitzung: zuerst den [Entwick
 | [Barrierefreiheit](recht/barrierefreiheit.md) | rechtlicher Rahmen, Umsetzungsstand je WCAG-Kriterium, Prüfplan |
 | [Online-Vorschau mit Vercel und Supabase](betrieb/vorschau-vercel-supabase.md) | Einrichtung, Umgebungsvariablen, Fehlerbehebung, Datenschutz-Hinweise |
 | [Qualitätsstandards](qualitaet/qualitaetsstandards.md) | Freigabeprozess, Checklisten je Mission, Evaluation |
+| [Audit Lernerlebnis 30.10.2026](qualitaet/audit-2026-10-30.md) | Befunde zu Rückmeldung, Folge-Animation und Erklärfilm, Behebungen, offene Punkte; Prüfskript `pnpm content:audit` |
 | [Content-Report](qualitaet/content-report.md) | automatisch erzeugt (`pnpm content:report`): Kennzahlen je Mission |
 
 ## Grundregeln

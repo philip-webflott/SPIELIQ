@@ -95,7 +95,6 @@ export const m3AufgabenVerteilen: MissionInput = {
       feedback: {
         excellent: { de: 'Super abgesichert!' },
         good: { de: 'Gut gemacht!' },
-        notYet: { de: 'Noch nicht ganz.' },
       },
       hints: [
         { de: 'Nicht auch zum Ball. Bleib hinter Nummer 3.' },

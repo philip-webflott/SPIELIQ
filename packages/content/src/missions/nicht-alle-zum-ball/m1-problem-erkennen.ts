@@ -118,7 +118,7 @@ export const m1ProblemErkennen: MissionInput = {
     {
       id: 'zuschauen',
       kind: 'watch',
-      instruction: { de: 'Schau zu: Was machen die Blauen?' },
+      instruction: { de: 'Was machen die Blauen?' },
       board: start,
       script: [
         { type: 'dribble', player: 'o9', to: { x: 32, y: 57 }, at: 0, duration: 1.6 },

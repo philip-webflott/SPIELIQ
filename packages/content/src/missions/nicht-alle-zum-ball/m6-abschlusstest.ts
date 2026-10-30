@@ -64,8 +64,6 @@ const shiftBoard = {
 
 const noFeedbackOverrides = {
   excellent: { de: 'Stark!' },
-  good: { de: 'Gut!' },
-  notYet: { de: 'Noch nicht.' },
 }
 
 export const m6Abschlusstest: MissionInput = {

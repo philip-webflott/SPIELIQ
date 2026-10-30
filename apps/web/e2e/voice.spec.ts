@@ -34,7 +34,9 @@ test('liest mit KI-Stimme vor und lässt sich ausschalten', async ({ page }) => 
   await expect(toggle).toHaveAttribute('aria-pressed', 'true')
   await expect(toggle).toHaveAttribute('aria-label', 'Vorlesen (KI-Stimme)')
 
-  // Erklärfilm: Jeder Abschnitt wird vorgelesen.
+  // Erklärfilm: Start per Play-Knopf, jeder Abschnitt wird vorgelesen.
+  await page.getByTestId('film-start').click()
+  await expect.poll(played).toContain(fileFor(0))
   await page.getByTestId('next-step').click()
   await expect.poll(played).toContain(fileFor(1))
   // Rest des Films und das Zuschauen überspringen, bis die Aufgabe kommt

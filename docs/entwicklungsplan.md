@@ -20,6 +20,8 @@ Stand: 30.10.2026 · Lies zuerst diesen Plan und den [Doku-Index](README.md).
 
 **Sprachausgabe (30.10.2026):** Vorlesen mit vorab erzeugter KI-Stimme (ElevenLabs, Entscheidung des Produktverantwortlichen): Katalog aller vorlesbaren Texte inkl. Rückmeldungen mit Spielernummern, Skript `pnpm voice`, automatisches Vorlesen mit Schalter, Rückfall auf Gerätestimme – [Sprachausgabe](konzept/sprachausgabe.md). Die Aufnahmen selbst entstehen, sobald der ElevenLabs-Zugang hinterlegt ist.
 
+**Audit Lernerlebnis (30.10.2026):** Rückmeldung mit eindeutigem Urteil, Folge-Animation nur passend zur Bewertung (vorher oft widersprüchlich), Erklärfilm mit Plakat und Play-Knopf, Modus-Kennzeichen je Schritt – [Audit](qualitaet/audit-2026-10-30.md).
+
 **Erklärfilm (30.10.2026):** Neuer Schritttyp `film` – kurze Abschnitte mit Bewegung und Stimme vor den Aufgaben; Mission 1 beginnt mit einem Erklärfilm „Nicht alle zum Ball“ (5 Abschnitte). Nächste: Filme für die übrigen Missionen, gestufte Übungen, Sichern.
 
 **Spielerfiguren (30.10.2026):** Figuren mit Blickrichtung und Haltung (Bereit, Laufen, Verteidigen, Annehmen, Passen, Schießen) ersetzen die Kreise in allen Missionen; Torhüter mit eigenem Trikot, Haut- und Haartöne variieren – [Spielerfiguren](design/spielerfiguren.md), ADR 0009. Offen: Leistung auf sehr langsamen Geräten, Blickfeld und „frei“-Bereich, große Ansichten.
@@ -84,8 +86,9 @@ Begründet und umkehrbar; grundlegende Fragen stehen in [Offene Fragen](recherch
 ## 5. Nächste Schritte (konkret für die nächste Sitzung)
 
 1. **Vertonen:** sobald `ELEVENLABS_API_KEY` und `ELEVENLABS_VOICE_ID` in der Umgebung hinterlegt sind: `pnpm voice --dry-run`, `pnpm voice --limit=5` (Stimme anhören lassen), dann `pnpm voice` und `apps/web/public/voice/` committen ([Sprachausgabe](konzept/sprachausgabe.md), Abschnitt 3).
-2. **Figuren:** Leistung optimieren (Abschnitt 7 im [Figurenkonzept](design/spielerfiguren.md)), dann Phase 4 (Ball-Simulation mit Posen). Danach **Aufstellung und Namen** ([Konzept](konzept/aufstellung-und-namen.md)).
+2. **Fehlerbezogene Folgen** (wichtigster offener Punkt aus dem [Audit](qualitaet/audit-2026-10-30.md)): Durchlaufen und Torschuss bei falscher Absicherung, Pass in die Lücke, „So wäre es richtig“.
 3. **Lektionsformat** (Meilenstein L, Vorrang laut Produktverantwortlichem: „einfach und mit Stimme erklärt“): Erklärfilme für Missionen 2–6 bzw. einen Einheiten-Film „Wer macht was?“, gestufte Übungen (leicht → schwer), Sicherungsquiz am Ende der Einheit und spätere Wiederholung.
-4. Test der vereinfachten Fassung mit 3–5 Kindern der Zielgruppe; Erkenntnisse in [Einfach verstehen](design/einfach-verstehen.md), Abschnitt 6, einarbeiten.
-5. CI-Workflow (GitHub Actions) mit PostgreSQL-Service anlegen: `pnpm check`, `pnpm build`, `pnpm test:e2e`.
-6. Folgerecherche – die Domains sind seit 30.10.2026 freigegeben (siehe [Recherche](recherche/README.md), Abschnitt 5): MEIN FUSSBALL, EU-Rechtstexte, Studien im Volltext.
+4. **Figuren:** Leistung optimieren (Abschnitt 7 im [Figurenkonzept](design/spielerfiguren.md)), dann Phase 4 (Ball-Simulation mit Posen). Danach **Aufstellung und Namen** ([Konzept](konzept/aufstellung-und-namen.md)).
+5. Test der vereinfachten Fassung mit 3–5 Kindern der Zielgruppe; Erkenntnisse in [Einfach verstehen](design/einfach-verstehen.md), Abschnitt 6, einarbeiten.
+6. CI-Workflow (GitHub Actions) mit PostgreSQL-Service anlegen: `pnpm check`, `pnpm build`, `pnpm test:e2e`.
+7. Folgerecherche – die Domains sind seit 30.10.2026 freigegeben (siehe [Recherche](recherche/README.md), Abschnitt 5): MEIN FUSSBALL, EU-Rechtstexte, Studien im Volltext.

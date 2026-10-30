@@ -42,6 +42,8 @@
   --color-warn: #ffc53d;
   --color-bad: #ff5d73;
   --color-info: #9ecbff;
+  /* Erklärfilm: eigene Farbe, damit Filme sich deutlich von Aufgaben unterscheiden */
+  --color-film: #c9a7ff;
 
   --radius-card: 1.125rem;
   --radius-pill: 999px;

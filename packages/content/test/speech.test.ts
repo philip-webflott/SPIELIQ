@@ -78,13 +78,15 @@ describe('Vorlese-Katalog', () => {
     expect(expandTemplate('Ohne Nummer.', board)).toEqual(['Ohne Nummer.'])
   })
 
-  it('liest Rückmeldungen in der Reihenfolge des Bildschirms vor: Folge, Überschrift, Begründung, ein Lob', () => {
+  it('liest Rückmeldungen in der Reihenfolge des Bildschirms vor: Urteil, Lob, Tipp, Satz, Folge', () => {
     const segments = feedbackSpeech(
-      { headline: 'Gut gemacht!', main: 'Der Abstand passt.', positives: ['Erstes Lob.', 'Zweites Lob.'] },
-      { consequence: 'Wir haben den Ball! Gut verteidigt.' },
+      { correct: true, headline: 'Richtig!', praise: 'Super abgesichert!', main: 'Geh ein Stück nach hinten.', isTip: true, positives: ['Lob.'] },
+      { consequence: 'Wir haben den Ball!' },
     )
-    expect(segments).toEqual(['Wir haben den Ball! Gut verteidigt.', 'Gut gemacht!', 'Der Abstand passt.', 'Erstes Lob.'])
-    expect(feedbackSpeech({ headline: 'Super!', main: '', positives: [] }, { usedSolution: true })).toEqual([UI_TEXT.solutionHeadline])
+    expect(segments).toEqual(['Richtig!', 'Super abgesichert!', 'Noch besser:', 'Geh ein Stück nach hinten.', 'Wir haben den Ball!'])
+    expect(
+      feedbackSpeech({ correct: true, headline: 'Richtig!', praise: 'Super!', main: '', isTip: false, positives: [] }, { usedSolution: true }),
+    ).toEqual([UI_TEXT.solutionHeadline])
   })
 })
 
@@ -106,5 +108,25 @@ describe.each(missions.map((m) => [m.mission.id, m] as const))('Mission %s: alle
       }
       expect([...missing]).toEqual([])
     })
+  })
+})
+
+describe('Rückmeldung ist eindeutig', () => {
+  it('Urteil folgt nur der Bewertung; Lob nie bei falscher Antwort; Folgetexte ohne Urteil', () => {
+    for (const loaded of missions) {
+      loaded.mission.steps.forEach((step, index) => {
+        if (!isInteractive(step)) return
+        for (const answer of answersFor(loaded, index, step)) {
+          const result = assessStep(loaded, index, answer)
+          const summary = summarizeStepFeedback(step, result)
+          expect(summary.correct).toBe(result.rating !== 'not-yet')
+          expect(summary.headline).toBe(summary.correct ? 'Richtig!' : 'Noch nicht richtig.')
+          if (!summary.correct) expect(summary.praise, `${step.id}: Lob bei falscher Antwort`).not.toMatch(/super|gut|stark|genau/i)
+        }
+      })
+    }
+    for (const outcome of ['goalChance', 'progress', 'safePass', 'interception', 'pressured', 'forcedBack', 'noOption'] as const) {
+      for (const own of [true, false]) expect(playoutMessage(outcome, own)).not.toMatch(/gut verteidigt|super|richtig/i)
+    }
   })
 })
