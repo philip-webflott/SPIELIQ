@@ -2,7 +2,7 @@
 
 **Sportwissenschaft, Sportpädagogik und Lernwissenschaft**
 
-Stand: 29.10.2026 · Bereich C der Grundlagenrecherche · Zielgruppe zuerst: C-Jugend (U14/U15) mit Defiziten in Raumverständnis, Positionsspiel, Freilaufen und kollektivem Verteidigen.
+Stand: 29.10.2026, ergänzt 30.10.2026 (C-57–C-95, H-84–H-117, Synthese Abschnitt 7) · Bereich C der Grundlagenrecherche · Zielgruppe zuerst: C-Jugend (U14/U15) mit Defiziten in Raumverständnis, Positionsspiel, Freilaufen und kollektivem Verteidigen.
 
 ### Vorbemerkung: Methode, Kennzeichnung, Grenzen
 
@@ -14,6 +14,7 @@ Stand: 29.10.2026 · Bereich C der Grundlagenrecherche · Zielgruppe zuerst: C-J
   - Frage 6 (Entwicklung).
 
   Diese Teile stützen sich überwiegend auf Hintergrundwissen. Sie sind im Text durchgängig mit **„[Hintergrundwissen, nicht per Suche bestätigt]“** markiert und unter **H-01 ff.** als Prüfliste geführt. Für H-Einträge stehen bewusst **keine DOIs und keine Effektgrößen**.
+- **Ergänzungsrecherche 30.10.2026** (Erklären vor Üben, Erklärvideos, Staffelung und Sicherung, visuelle Darstellung, Leichte Sprache): 30 Websuchen, daraus C-57 bis C-95; Hintergrundwissen dazu als H-84 bis H-117. Je ein Direktabruf auf fünf offenen Domains (preprints.org, wikicap.ulb.be, cs.rochester.edu, ueaeprints.uea.ac.uk, repository.essex.ac.uk) scheiterte am Proxy (403). Auch diese Einträge sind daher „Originalseite nicht geöffnet“. Wo ein bisheriger H-Eintrag jetzt per Suche gefunden wurde, verweist er auf den neuen C-Eintrag.
 - **Kennzeichnung:**
   - **[C-xx]** = per Websuche gefundene Quelle. Bibliografie und Kernaussagen stammen aus dem Suchergebnis; Originalseite nicht geöffnet.
   - **[H-xx]** = Hintergrundwissen, nicht per Suche bestätigt. Vor externer Verwendung prüfen. Bei geringerer Sicherheit zusätzlich mit „(bibliogr. Details unsicher)“ markiert.
@@ -717,6 +718,550 @@ Stand: 29.10.2026 · Bereich C der Grundlagenrecherche · Zielgruppe zuerst: C-J
 - Kernaussagen und Evidenzstärke: [Hintergrundwissen, nicht per Suche bestätigt: Kinder zeigten häufiger Unaufmerksamkeitsblindheit als Erwachsene, Expert:innen seltener als Noviz:innen.] Evidenzstärke: nicht bewertbar.
 - Konsequenzen für SPIELIQ: Bei jüngeren oder schwächeren Spieler:innen besonders sparsam instruieren und die Aufmerksamkeitsbreite gezielt üben (vgl. C-17).
 
+### Ergänzung 30.10.2026 – E1. Erklären vor Üben: explizite Instruktion, Vormachen, ausgearbeitete Beispiele
+
+> Gilt für alle Einträge C-57 bis C-95: Zugriff Websuche 30.10.2026, Originalseite nicht geöffnet. Bibliografie und Kernaussagen stammen aus Trefferlisten und automatischen Zusammenfassungen. Effektgrößen sind vor jeder Zitation im Original zu prüfen. Direktabrufe auf fünf offenen Domains scheiterten (Proxy 403, siehe Vorbemerkung).
+
+### [C-57] Swanson (1999; 2001): Meta-Analysen zur Förderung von Kindern und Jugendlichen mit Lernschwierigkeiten (Learning Disabilities)
+- Typ, Stichprobe/Kontext: Zwei Meta-Analysen.
+  1. 1999: Leseinterventionen bei Kindern mit Lernschwierigkeiten, Studien von 1963 bis 1997.
+  2. 2001: 78 Gruppenstudien (1967–1993) mit Kindern und Jugendlichen von 6 bis 18 Jahren, 324 Effektgrößen, verschiedene Schulfächer.
+- Venue/Organisation: (1) Journal of Learning Disabilities; Titel laut Evidenzkarte „Reading Research for Students With LD: A Meta-Analysis of Intervention Outcomes“. (2) Focus on Exceptional Children 34(2); Titel im Ergebnis nicht angezeigt.
+- URL: https://journals.ku.edu/focusXchild/article/download/6785/6139 ; https://www.parentcenterhub.org/abstract19/ ; https://apps.asha.org/EvidenceMaps/Articles/ArticleSummary/6ff34b6a-d718-4f52-84f7-3e49822a01d5
+- Datum: 1999 und 2001
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Zahlen aus Suchzusammenfassungen; Moderatoranalysen und Konfidenzintervalle nicht geprüft.
+- Kernaussagen (paraphrasiert) und Evidenzstärke:
+  - 1999: Strategieinstruktion, direkte Instruktion und ihre Kombination verbesserten Worterkennung und Leseverstehen. Für das Leseverstehen war die Kombination am wirksamsten (mittlere ES 1,15), für die Worterkennung direkte Instruktion allein (ES 0,70).
+  - 2001: mittlere Effektgröße 0,85 gegenüber Kontrollbedingungen; direkte Instruktion 0,91, Strategieinstruktion 1,07, Förderunterricht 0,68, eklektische Ansätze 0,59. Auch andere Modelle erreichten hohe Effekte; explizite Instruktion ist also nicht das einzige wirksame Modell.
+  - Evidenzstärke: mittel für „explizite, strukturierte Instruktion hilft Lernenden mit Lernschwierigkeiten in Schulfächern“; für taktisches Lernen am Bildschirm nicht geprüft.
+- Konsequenzen für SPIELIQ: Für die Zielgruppe ist die Kombination aus dem Vormachen einer Vorgehensweise (Strategie, etwa „erst Ball, dann Gegner, dann Lücke“) und angeleitetem Üben am besten gestützt. Reines Ausprobieren ohne Erklärung ist für sie keine gute Standardeinstellung.
+
+### [C-58] Stockard, Wood, Coughlin & Rasplica Khoury (2018): The Effectiveness of Direct Instruction Curricula: A Meta-Analysis of a Half Century of Research
+- Typ, Stichprobe/Kontext: Meta-Analyse über die Literatur von 1966 bis 2016; laut Suchzusammenfassung 328 Studien mit fast 4.000 Effekten (andere Angaben: 318 Studien bzw. 327 analysierte Studien).
+- Venue/Organisation: Review of Educational Research 88(4), 479–507; DOI laut Suchergebnis 10.3102/0034654317751919.
+- URL: https://scholarsbank.uoregon.edu/items/9c5db747-52be-4bd8-8771-b05d0f7c0b01/full ; https://www.icpsr.umich.edu/web/ICPSR/studies/38766 ; https://texasldcenter.org/?p=360
+- Datum: 2018
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Direct-Instruction-Programme (stark strukturierte, geskriptete Lehrgänge) gingen in Lesen, Mathematik, Sprache und Rechtschreibung durchgehend mit mittleren bis großen Effekten einher.
+  - Publikationsmerkmale, Methodik und Stichprobenmerkmale hingen nicht systematisch mit den Effekten zusammen.
+  - Ein Teil der Rezeption (Fordham Institute, Education Next) ist ausdrücklich befürwortend; neutraler ist die Zusammenfassung des Texas LD Center.
+  - Evidenzstärke: mittel (große Meta-Analyse, aber ein bestimmtes Programmformat und Schulfächer, keine Taktik).
+- Konsequenzen für SPIELIQ: Klare Abfolge, kleine Schritte und viele Übungsgelegenheiten mit sofortiger Rückmeldung sind gut belegt. SPIELIQ übernimmt das Prinzip, nicht das geskriptete Format.
+
+### [C-59] Barbieri, Miller-Cotto, Clerjuste & Chawla (2023): A Meta-analysis of the Worked Examples Effect on Mathematics Performance
+- Typ, Stichprobe/Kontext: Meta-Analyse mit robuster Varianzschätzung; Mathematikleistung.
+- Venue/Organisation: Educational Psychology Review; DOI laut Suchergebnis 10.1007/s10648-023-09745-1.
+- URL: https://oaks.kent.edu/hcri/meta-analysis-worked-examples-effect-mathematics-performance ; https://www.cehd.udel.edu/?p=31410
+- Datum: 2023
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Mittlerer Gesamteffekt ausgearbeiteter Beispiele (g = 0,48).
+  - Nur korrekte Beispiele wirkten stärker als nur fehlerhafte oder gemischte.
+  - Zusätzliche Aufforderungen zur Selbsterklärung gingen mit einem negativen Effekt gegenüber Beispielen ohne solche Aufforderungen einher.
+  - Der Effekt war mittelgroß, gleich ob die Beispiele beim Ersterwerb oder beim Üben eingesetzt wurden.
+  - Evidenzstärke: mittel (Meta-Analyse, Mathematik; Moderation durch Alter oder Förderbedarf im Ergebnis nicht angezeigt).
+- Konsequenzen für SPIELIQ: Erst die richtige Lösung vollständig zeigen („So geht’s“), Fehlerbeispiele („Was ist hier falsch?“) erst später. Keine zusätzlichen Pflicht-Erklärfragen, die Lesen oder Schreiben verlangen.
+
+### [C-60] Ashford, Bennett & Davids (2006): [Meta-Analyse zum Beobachtungslernen motorischer Fertigkeiten – exakter Titel im Ergebnis nicht angezeigt]
+- Typ, Stichprobe/Kontext: Meta-Analyse; Beobachtungslernen (Demonstration) gegenüber reinem Üben; getrennt nach Bewegungsform (Bewegungsdynamik) und Bewegungsergebnis.
+- Venue/Organisation: Journal of Motor Behavior 38(3).
+- URL: https://shura.shu.ac.uk/3302 ; https://shura.shu.ac.uk/7302/ (Repositorieneinträge aus der Trefferliste; Zuordnung zu C-60 bzw. C-61 nicht geprüft)
+- Datum: 2006 (in einigen Katalogen 2007)
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Beobachtungslernen war reinem Üben überlegen: deutlich für die Bewegungsform (mittlere Effektgröße 0,77), kaum für das Bewegungsergebnis (0,17).
+  - Am größten war der Nutzen bei Bewegungsfolgen aus mehreren Teilen (serielle Aufgaben).
+  - Deutung der Autoren: Demonstrationen vermitteln vor allem die relative Bewegung, die nachgeahmt wird.
+  - Evidenzstärke: mittel für motorische Fertigkeiten; auf taktische Entscheidungen nicht direkt übertragbar.
+- Konsequenzen für SPIELIQ: Vormachen eignet sich besonders für Abfolgen („erst …, dann …“). Erklärsequenzen zeigen deshalb eine Handlungsfolge (Laufweg, Verschieben), nicht nur ein Endbild.
+
+### [C-61] Ashford, Davids & Bennett (2007): Developmental effects influencing observational modelling: A meta-analysis
+- Typ, Stichprobe/Kontext: Meta-Analyse mit 55 Studien bei Kindern und Erwachsenen.
+- Venue/Organisation: Journal of Sports Sciences 25(5).
+- URL: https://lida.sport-iat.de/ta/Record/4012575 ; https://sponet.de/sponet/Record/4012575
+- Datum: 2007
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Für die Bewegungsform war der Vorteil gegenüber reinem Üben bei Erwachsenen größer und nur bei ihnen signifikant.
+  - Für das Bewegungsergebnis war der Effekt bei Erwachsenen vernachlässigbar, bei Kindern dagegen deutlicher und signifikant.
+  - Evidenzstärke: mittel bis niedrig (Meta-Analyse, motorische Aufgaben; Altersgrenzen der Kindergruppe im Ergebnis nicht angezeigt).
+- Konsequenzen für SPIELIQ: Kinder profitieren vom Vormachen vor allem beim Erreichen des Aufgabenziels. Erklärsequenzen sollen klar zeigen, was am Ende erreicht ist („Jetzt kommt der Pass nicht mehr durch“), nicht nur die Bewegung.
+
+### [C-62] [Autor:innen und Jahr im Ergebnis nicht angezeigt]: Use of Observational Learning to Promote Motor Skill Learning in Physical Education: A Systematic Review
+- Typ, Stichprobe/Kontext: Systematisches Review zum Beobachtungslernen im Sportunterricht.
+- Venue/Organisation: PMC9407861; Zeitschrift im Ergebnis nicht angezeigt.
+- URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9407861/
+- Datum: nicht angezeigt
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Nur Titel und URL sind per Suche bestätigt.
+- Kernaussagen und Evidenzstärke: Ergebnisse nicht angezeigt; Evidenzstärke nicht bewertbar.
+- Konsequenzen für SPIELIQ: Sportunterrichtsnahe Quelle zum Vormachen; bei Freigabe von PMC als Erstes prüfen.
+
+### [C-63] Mason et al. (2013; 2016) sowie Takahashi & Todo (2025, im Druck): Einzelfall-Meta-Analysen zu Video-Modeling bei Menschen mit Behinderungen
+- Typ, Stichprobe/Kontext: Meta-Analysen von Einzelfallstudien (Single-Case Research Designs):
+  - Mason et al. (2013): „Efficacy of Point-of-View Video Modeling: A Meta-Analysis“.
+  - Mason et al. (2016): „Video Self-Modeling for Individuals with Disabilities: A Best-Evidence, Single Case Meta-Analysis“.
+  - Takahashi & Todo (2025, im Druck): 52 Einzelfallstudien.
+  - Ergänzend Hong et al. (2016): Alltagsfertigkeiten bei Autismus, Auswertung mit Tau-U.
+- Venue/Organisation: überwiegend nicht angezeigt (Einträge der ASHA-Evidenzkarten und von Epistemonikos).
+- URL: https://apps.asha.org/EvidenceMaps/Articles/ArticleSummary/441e9612-9bc7-4c4d-9a04-9c2d3bba5030 ; https://apps.asha.org/EvidenceMaps/Articles/ArticleSummary/9482a594-b1d9-49b4-bf2e-a736c17cf899 ; https://www.epistemonikos.org/en/documents/f86e1909bc25edc7c4d63a0e4875e1cde9c746e2 ; https://researchconnect.suny.edu/en/publications/effectiveness-of-video-modeling-intervention-for-individuals-with/
+- Datum: 2013, 2016, 2025
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Zuordnung der URLs zu den einzelnen Arbeiten nicht vollständig geprüft.
+- Kernaussagen und Evidenzstärke:
+  - Video-Selbstmodellieren wirkte über Behinderungsarten hinweg stark. Am schwächsten waren die Effekte auf schulische Leistungen, stärker auf Verhalten und Alltagsfertigkeiten (Mason et al. 2016).
+  - Video-Modeling aus der Ich-Perspektive zeigte insgesamt moderate Effekte, große bei Alltagsfertigkeiten (Mason et al. 2013).
+  - Takahashi & Todo: großer Gesamteffekt; die Art des Zielverhaltens moderierte, am stärksten bei adaptiven Fertigkeiten.
+  - Evidenzstärke: niedrig bis mittel (Einzelfalldesigns, überwiegend Autismus, kaum Sekundarstufe, kaum Sport).
+- Konsequenzen für SPIELIQ: Vormachen per Video ist für Lernende mit Förderbedarf ein eingeführtes Mittel, besonders für konkrete Handlungsabläufe. Für Wissen und Verstehen ist der Beleg schwächer; Video allein ersetzt das eigene Üben nicht.
+
+### [C-64] Kleinstudien zu Video-Modeling sportlicher und motorischer Fertigkeiten bei Kindern und Jugendlichen mit Behinderungen (Sammeleintrag)
+- Typ, Stichprobe/Kontext: Einzelfallstudien, Kleinstgruppen, Abschlussarbeiten:
+  1. Studie (2013) mit drei Jugendlichen mit schweren Behinderungen; multiple Baseline über sechs Bewegungsaufgaben, u. a. Seilspringen und Koordinationsleiter.
+  2. Studie mit je drei Schüler:innen mit mittelgradiger geistiger Behinderung bzw. Autismus (Fein- und Grobmotorik); nur über die Blogzusammenfassung eines Artikels im Journal of Special Education erschlossen.
+  3. Studie (2018) zu Kindern mit Autismus und dem Test of Gross Motor Development-3 (TGMD-3).
+  4. Abschlussarbeit BYU (2019): ein Schüler mit Schädel-Hirn-Trauma und geistiger Behinderung; Basketball-, Football- und Fußballfertigkeiten im Sportunterricht.
+  5. Dissertation (2024): menschliche vs. animierte Videomodelle für Übungsverhalten bei Highschool-Schüler:innen mit geistiger Behinderung; Ergebnisse nicht angezeigt.
+- Venue/Organisation: u. a. European Journal of Adapted Physical Activity 11, 9 (2018); weitere im Ergebnis nicht eindeutig angezeigt.
+- URL: https://link.springer.com/article/10.1007/s10882-012-9284-2 (Zuordnung zu Studie 1 wahrscheinlich, nicht bestätigt) ; https://www.yourtherapysource.com/blog1/2013/10/03/video-modeling-for-gross-and-fine-motor-tasks/ ; https://eujapa.upol.cz/artkey/euj-201802-0003_video-modeling-and-test-of-gross-motor-development-3-performance-among-children-with-autism-spectrum-disorder.php ; https://scholarsarchive.byu.edu/etd/7510 ; https://uknowledge.uky.edu/edsrc_etds/150 (Zuordnung zu Studie 5 nicht bestätigt)
+- Datum: 2013–2024
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Studie 1: Alle drei verbesserten sich, aber nur eine Person lernte mit dem Video allein. Die Autor:innen schlagen zusätzliche verbale oder gestische Hinweise vor.
+  - Studie 2: Nach Einführung des Video-Modelings wurden mehr Aufgaben korrekt ausgeführt.
+  - Studie 3: Kein Vorteil im TGMD-3; das Vorgehen mit Video dauerte länger als herkömmliche Instruktion.
+  - Evidenzstärke: niedrig (sehr kleine Stichproben, uneinheitliche Befunde).
+- Konsequenzen für SPIELIQ: Video-Vormachen allein reicht bei Förderbedarf oft nicht. Es braucht zusätzlich kurze Hinweise im Moment des Übens und das eigene Ausprobieren direkt danach. Ob ein menschliches oder ein animiertes Modell besser ist, ist für diese Zielgruppe offen (Studie 5).
+
+### [C-65] RTI International (2018, Konferenzbeitrag CIES): Gradual Release of Responsibility in der frühen Mathematik (Kenia, Liberia) – und Befund: kaum Wirksamkeitsforschung zu „I do – we do – you do“
+- Typ, Stichprobe/Kontext: Konferenzpräsentation zu zwei Programmen in Ländern mit niedrigem Einkommen. Daneben fanden sich nur kleine Dissertationen und Praxisquellen.
+- Venue/Organisation: Jahrestagung der Comparative and International Education Society (CIES) 2018; RTI International.
+- URL: https://shared.rti.org/node/611 ; https://digitalcommons.lindenwood.edu/dissertations/144 ; https://digitalcommons.gardner-webb.edu/education_etd/309
+- Datum: 2018
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Die Präsentation berichtet positive Ergebnisse für das Gradual-Release-Modell in der frühen Mathematik. Die starre Dreiteilung halten die Autor:innen aber für wenig passend; sie schlagen eine werkstattartige Variante „we do – you do“ vor.
+  - Eine kontrollierte Studie zur Abfolge selbst wurde nicht gefunden. Die übrigen Treffer sind kleine Dissertationen (eine davon qualitativ, mit Interviews) und Praxisseiten ohne Studienbelege.
+  - Evidenzstärke: niedrig für die Abfolge als Ganzes. Belegt sind eher ihre Bausteine (C-57 bis C-59, C-79).
+- Konsequenzen für SPIELIQ: „Zeigen – gemeinsam – allein“ ist als Gliederung brauchbar. Begründet wird sie über die Bausteine (explizite Instruktion, Beispiele, Ausblenden von Hilfen), nicht über das Schlagwort.
+
+### Ergänzung 30.10.2026 – E2. Erklärvideos und Animationen
+
+### [C-66] Rey, Beege, Nebel, Wirzberger, Schmitt & Schneider (2019): A meta-analysis of the segmenting effect
+- Typ, Stichprobe/Kontext: Meta-Analyse mit 56 Untersuchungen und 88 Paarvergleichen.
+- Venue/Organisation: Educational Psychology Review 31, 389–419; DOI 10.1007/s10648-018-9456-4.
+- URL: https://is.tuebingen.mpg.de/publications/rey2018segmenting ; https://www.doi.org/10.1007/S10648-018-9456-4
+- Datum: 2019 (online 2018)
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Entspricht H-31, das damit per Suche gefunden ist.
+- Kernaussagen und Evidenzstärke:
+  - Segmentierung heißt: Multimedia in sinnvollen Abschnitten darbieten, deren Tempo die Lernenden bestimmen, statt als durchlaufende Einheit.
+  - Signifikanter Effekt, klein bis mittel für Behalten und Transfer.
+  - Moderator: Lernende mit hohem Vorwissen profitierten beim Behalten stärker als solche mit wenig oder keinem Vorwissen.
+  - Evidenzstärke: mittel (Meta-Analyse; Alter der Stichproben im Ergebnis nicht angezeigt).
+- Konsequenzen für SPIELIQ: Erklärsequenzen in kurze Abschnitte mit „Weiter“ teilen. Der Vorwissensbefund steht im Widerspruch zur Fußballstudie C-73, in der die Noviz:innen profitierten. Beides spricht für Segmentierung, aber nicht eindeutig für eine bestimmte Gruppe.
+
+### [C-67] Schneider, Beege, Nebel & Rey (2018): A meta-analysis of how signaling affects learning with media
+- Typ, Stichprobe/Kontext: Meta-Analyse zur Signalisierung (Hervorhebungen, Pfeile, Farbcodes).
+- Venue/Organisation: Educational Research Review 23, 1–24.
+- URL: https://1cademy.com/node/a-meta-analysis-of-how-signaling-affects-learning-with-media/jhLu2vaVT6WD5leSHwf9 ; https://inspe-sciedu.gricad-pages.univ-grenoble-alpes.fr/slides/UE-24-option-rech-5.pdf ; https://www.clearinghouse.edu.tum.de/wp-content/uploads/2018/12/CHU_KR-22_-Schneider_2017_Lernmaterial_Hervorhebungen.pdf
+- Datum: 2018
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Der Behaltenswert stammt aus einer französischen Lehrfolie (Sekundärquelle). Entspricht H-30.
+- Kernaussagen und Evidenzstärke:
+  - Signalisierung förderte das Behalten: laut Sekundärquelle d = 0,53 (95-%-KI 0,42–0,64) über 139 Studien mit 11.571 Personen. Ein Transferwert wurde nicht gefunden.
+  - Eine weitere Meta-Analyse (2020, Educational Technology Research and Development; Autor:innen im Ergebnis nicht angezeigt) berichtet d = 0,38 über 44 Effekte.
+  - Eine deutschsprachige Kurzfassung des TUM-Clearinghouse wurde nur als Treffer gesehen.
+  - Evidenzstärke: mittel.
+- Konsequenzen für SPIELIQ: Hervorhebungen sind in Erklärphasen gut gestützt. Das Spannungsfeld zu C-17 (Hinweise verengen die Aufmerksamkeit) bleibt; in Entscheidungsphasen werden sie ausgeblendet.
+
+### [C-68] Richter, Scheiter & Eitel (2016): [Meta-Analyse „Signaling text-picture relations in multimedia learning“ – Titel nach den zugehörigen Daten- und Codeeinträgen; Zeitschrift im Ergebnis nicht angezeigt]
+- Typ, Stichprobe/Kontext: Meta-Analyse zur Signalisierung von Bezügen zwischen Text und Bild.
+- Venue/Organisation: im Ergebnis nicht angezeigt (Daten- und Codesätze bei PsychArchives).
+- URL: https://psycharchives.org/handle/20.500.12034/2018 ; https://b2find.eudat.eu/dataset/edf0e3e7-9eee-56de-9e2f-904511bfe462
+- Datum: 2016
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Kleiner bis mittlerer Vorteil signalisierter Text-Bild-Bezüge für Verstehen und Transfer (r = 0,17; 95-%-KI 0,11–0,22).
+  - Besonders wirksam bei Lernenden mit geringem Vorwissen.
+  - Evidenzstärke: mittel.
+- Konsequenzen für SPIELIQ: Gleiche Farbe und gleiches Zeichen in Text und Feld (die „Nummer 5“ im Satz ist die markierte Figur am Feld) helfen gerade schwächeren Lernenden.
+
+### [C-69] Noetel et al. (2022): Multimedia Design for Learning: An Overview of Reviews With Meta-Meta-Analysis
+- Typ, Stichprobe/Kontext: Überblick über systematische Reviews mit Meta-Meta-Analyse: 29 Reviews, 1.189 Studien, 78.177 Teilnehmende.
+- Venue/Organisation: Review of Educational Research 92(3), 413–454; DOI 10.3102/00346543211052329.
+- URL: https://acuresearchbank.acu.edu.au/item/8zqy4/multimedia-design-for-learning-an-overview-of-reviews-with-meta-meta-analysis ; https://researchers.uq.edu.au/researcher/37507 ; https://produccioncientifica.uca.es/documentos/64c85e0bacdc40244332085f
+- Datum: 2022 (online 2021)
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Entspricht H-33.
+- Kernaussagen und Evidenzstärke:
+  - 11 Gestaltungsprinzipien zeigten signifikante positive meta-analytische Effekte auf das Lernen, 5 verbesserten den Umgang mit kognitiver Belastung. Die vollständige Liste wurde nicht angezeigt.
+  - Den größten Nutzen brachten laut einem Volltextauszug Untertitel bei Videos in einer Zweitsprache.
+  - Die Theorien der kognitiven Belastung und des multimedialen Lernens werden gegen die Meta-Analysen geprüft.
+  - Evidenzstärke: mittel (breite Basis; für Kinder mit Förderbedarf und für Sport nicht spezifisch).
+- Konsequenzen für SPIELIQ: Die Multimedia-Prinzipien (GP-08) sind breit gestützt. Für Kinder, die Deutsch als Zweitsprache lernen, sind Untertitel ein Kandidat. Das relativiert für diese Gruppe die Regel, nicht gleichzeitig zu sprechen und zu schreiben.
+
+### [C-70] Höffler & Leutner (2007): Instructional animation versus static pictures: A meta-analysis
+- Typ, Stichprobe/Kontext: Meta-Analyse mit 26 Primärstudien und 76 Paarvergleichen dynamischer und statischer Darstellungen.
+- Venue/Organisation: Learning and Instruction 17(6), 722–738; DOI 10.1016/j.learninstruc.2007.09.013.
+- URL: https://www.leibniz-ipn.de/en/research/publications/instructional-animation-versus-static-pictures-a-meta-analysis ; https://fis.leuphana.de/de/publications/instructional-animation-versus-static-pictures-a-meta-analysis/ ; Aktualisierung Berney & Bétrancourt (Tagungsfassung): https://tecfa.unige.ch/perso/sandra/pdf/Earli2016_berney_betrancourt_FINAL.pdf
+- Datum: 2007
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Direktabruf einer PDF-Kopie auf wikicap.ulb.be am 30.10.2026: Proxy 403. Entspricht H-28; die Aktualisierung H-29 (Berney & Bétrancourt 2016) ist im Ergebnis erwähnt.
+- Kernaussagen und Evidenzstärke:
+  - Kleiner bis mittlerer Gesamtvorteil für Animationen und Videos (d = 0,37).
+  - Kodierte Moderatoren: Funktion der Animation, Wissensart, Fachgebiet; Einzelwerte wurden nicht angezeigt.
+  - Eine spätere Re-Analyse (Ploetzner u. a., 2020) folgert, dass Animationen deutlich wirksamer sind, wenn gerade die dargestellten Veränderungen gelernt werden sollen.
+  - Evidenzstärke: mittel.
+- Konsequenzen für SPIELIQ: Für Abläufe wie Verschieben, Freilaufen oder Absichern nach einem Ballwechsel sind Animationen statischen Taktiktafeln vorzuziehen. Nach C-74 und C-75 brauchen Noviz:innen dabei aber Verlangsamung oder Standbilder an Schlüsselstellen.
+
+### [C-71] Ginns (2005): Meta-analysis of the modality effect – mit der Folge-Meta-Analyse von Wang, Xie & Li (2016)
+- Typ, Stichprobe/Kontext: (1) Meta-Analyse mit 43 Studien und 1.887 Lernenden; (2) Folge-Meta-Analyse.
+- Venue/Organisation: (1) im Ergebnis nicht angezeigt [laut H-32, Hintergrundwissen: Learning and Instruction]; (2) Advances in Psychological Science 24(3), 335 (chinesischsprachig).
+- URL: https://journal.psych.ac.cn/adps/EN/Y2016/V24/I3/335 ; https://www.cambridge.org/core/books/abs/multimedia-learning/modality-principle/E5CD6E01CEA0B568CE260F66A3CD0D1F ; Kinderstudie (Titel nicht angezeigt): https://pmc.ncbi.nlm.nih.gov/articles/PMC6084336
+- Datum: 2005; 2016
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Entspricht H-32.
+- Kernaussagen und Evidenzstärke:
+  - Bild plus gesprochener Text führte zu besseren Ergebnissen als Bild plus geschriebener Text.
+  - Entscheidend ist das Tempo: Gibt das System das Tempo vor, zeigt sich der Effekt. Bestimmen die Lernenden das Tempo, kann er sich laut einer Zusammenfassung umkehren.
+  - Wang, Xie & Li (2016): Behalten d = 0,24, Transfer d = 0,25; bei vom System vorgegebenem Tempo d = 0,43 bzw. 0,44; kein Umkehreffekt.
+  - Eine Kinderstudie begründet, dass Kinder ihr Verstehen schlechter überwachen und weniger strategisch lesen als Erwachsene; die Übertragbarkeit des Modalitätseffekts wird dort diskutiert.
+  - Gegenbefund „Effekt flüchtiger Information“: In einer Studie (Singh, Marcus & Ayres 2012, nur als Zitat in einem Treffer) führte geschriebener Text zu größerem Lerngewinn als identischer gesprochener Text.
+  - Evidenzstärke: mittel (allgemein); niedrig für Kinder.
+- Konsequenzen für SPIELIQ: Solange eine Animation läuft, gehört die Erklärung gesprochen. Geschriebener Text ist vertretbar, wenn das Bild steht und das Kind selbst weiterschaltet. Gesprochene Sätze kurz halten, weil gesprochene Information flüchtig ist.
+
+### [C-72] Guo, Kim & Rubin (2014): How video production affects student engagement: An empirical study of MOOC videos
+- Typ, Stichprobe/Kontext: Auswertung von 6,9 Millionen Video-Sitzungen aus vier edX-Kursen; erwachsene Online-Lernende. Maß: Zuschaudauer und Versuch der Aufgaben nach dem Video, also Engagement, nicht Lernerfolg.
+- Venue/Organisation: Proceedings der ACM-Konferenz Learning @ Scale 2014, 41–50; DOI 10.1145/2556325.2566239.
+- URL: https://www.cs.rochester.edu/hci/pubs/pdfs/edX-MOOC-video-production-and-engagement_LAS-2014.pdf ; https://up.csail.mit.edu/other-pubs/las2014-pguo-engagement.pdf ; https://www.e-teaching.org/materialien/literatur/guo-kim-rubin-2014
+- Datum: 2014
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Direktabruf der PDF auf cs.rochester.edu am 30.10.2026: Proxy 403.
+- Kernaussagen und Evidenzstärke:
+  - Kürzere Videos halten die Aufmerksamkeit deutlich besser; Empfehlung: Lektionen in Abschnitte unter 6 Minuten gliedern.
+  - Persönlich wirkende Produktionen und handgezeichnete Tablet-Erklärungen waren fesselnder als aufwendige Studioaufnahmen oder Folien.
+  - Zerschnittene Vorlesungsaufzeichnungen fesselten weniger.
+  - Evidenzstärke: niedrig für SPIELIQ (Erwachsene, Engagement statt Lernen, korrelative Daten).
+- Konsequenzen für SPIELIQ: Die 6-Minuten-Grenze ist eine Obergrenze für Erwachsene, kein Zielwert für 14-Jährige mit Lernschwierigkeiten; für SPIELIQ deutlich kürzer planen (Synthese 7.6). Zeigen und Zeichnen direkt am Feld passt besser als Folien.
+
+### [C-73] Khacharem et al. (2013): Using segmentation to support the learning from animated soccer scenes: An effect of prior knowledge
+- Typ, Stichprobe/Kontext: Experiment zum Lernen aus animierten Fußballszenen; Noviz:innen und Expert:innen; segmentierte vs. durchlaufende Darbietung. Autorenliste laut H-15 (Hintergrundwissen): Khacharem, Spanjers, Zoudji, Kalyuga & Ripoll.
+- Venue/Organisation: im Ergebnis nicht angezeigt [laut H-15, Hintergrundwissen: Psychology of Sport and Exercise].
+- URL: https://lida.sport-iat.de/ta/Record/4027773
+- Datum: 2013
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Entspricht H-15.
+- Kernaussagen und Evidenzstärke:
+  - Segmentierung verbesserte die Lernergebnisse der Noviz:innen, nicht die der Expert:innen.
+  - Expert:innen investierten in den segmentierten Bedingungen weniger mentale Anstrengung und wiederholten die Animation seltener.
+  - Evidenzstärke: niedrig (Einzelstudie; Alter und Größe der Stichprobe nicht angezeigt).
+- Konsequenzen für SPIELIQ: Für Einsteiger:innen Erklärszenen in Abschnitte teilen. Fortgeschrittenen den durchlaufenden Ablauf zeigen oder das Überspringen erlauben.
+
+### [C-74] Khacharem et al. (2014): Improving learning from animated soccer scenes: Evidence for the expertise reversal effect
+- Typ, Stichprobe/Kontext: Experiment mit statischer vs. animierter Darbietung und verschiedenen Abspielgeschwindigkeiten; Noviz:innen und Expert:innen. Autorenliste laut H-16 (Hintergrundwissen): Khacharem, Zoudji, Spanjers & Kalyuga. Ergänzend ein Kongressabstract (2013) derselben Gruppe zu statisch vs. dynamisch.
+- Venue/Organisation: Computers in Human Behavior.
+- URL: https://hal-uphf.archives-ouvertes.fr/hal-03274601 ; https://isidore.science/document/10670/1.a1j2x9 ; Kongressabstract: https://www.studylib.net/doc/7062158/abstract_name_surnam_congress_i3saw
+- Datum: 2014
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Entspricht H-16.
+- Kernaussagen und Evidenzstärke:
+  - Noviz:innen profitierten stärker von langsamer Abspielgeschwindigkeit, Expert:innen von normaler und hoher.
+  - Laut Kongressabstract lernten Noviz:innen mit statischen Darstellungen besser als mit dynamischen, Expert:innen umgekehrt.
+  - Evidenzstärke: niedrig (Einzelstudien; das Kongressabstract ist nicht begutachtet).
+- Konsequenzen für SPIELIQ: „Langsam“ als Standard für Einsteiger:innen und Schlüsselmomente als Standbild („Stopp – schau hin“). Mit wachsender Sicherheit normales Tempo.
+
+### [C-75] Rekik et al. (2021; online 31.12.2020): Uncovering the Role of Different Instructional Designs When Learning Tactical Scenes of Play through Dynamic Visualizations: A Systematic Review
+- Typ, Stichprobe/Kontext: Systematisches Review mit 11 Studien zu vier Gestaltungsformen: statische Darstellung, sequenzielle Darbietung, Segmentierung, verlangsamte Darbietung. Szenen aus Fußball und Australian Football.
+- Venue/Organisation: International Journal of Environmental Research and Public Health 18(1), 256; DOI 10.3390/ijerph18010256.
+- URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7794790/ ; https://www.mdpi.com/1660-4601/18/1/256 ; https://ideas.repec.org/a/gam/jijerp/v18y2020i1p256-d473378.html ; Preprint: https://www.preprints.org/manuscript/202009.0139
+- Datum: 2021 (online 31.12.2020)
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Direktabruf des Preprints auf preprints.org am 30.10.2026: Proxy 403. Vollständige Autorenliste nicht angezeigt.
+- Kernaussagen und Evidenzstärke:
+  - Die Wirksamkeit aller vier Gestaltungsformen hängt vom Expertiseniveau ab.
+  - Ob Standbilder für Noviz:innen besser sind als Animation oder Video, hängt von der Wissensart ab (motorisch vs. beschreibend). Der Nutzen von Standbildern und Verlangsamung hängt von der Komplexität ab.
+  - Empfehlung: Gestaltung an Expertise, Wissensart und Komplexität anpassen.
+  - Evidenzstärke: niedrig bis mittel (systematisches Review, aber wenige kleine Studien). Es ist die einzige gefundene sportspezifische Übersicht zu dieser Frage.
+- Konsequenzen für SPIELIQ: Kein Einheitsformat für Erklärsequenzen. Einsteiger:innen und komplexe Szenen (etwa die Viererkette) bekommen langsamere, segmentierte Darbietung mit Standbildern; einfache Szenen und Fortgeschrittene normales Tempo.
+
+### Ergänzung 30.10.2026 – E3. Staffelung und Sicherung
+
+### [C-76] Yang, Luo, Vadillo, Yu & Shanks (2021): [Meta-Analyse zum Testing-Effekt im Klassenzimmer – exakter Titel im Ergebnis nicht angezeigt]
+- Typ, Stichprobe/Kontext: Meta-Analyse zu Abfragen und Quizzen im regulären Unterricht: 573 Effekte, 222 Studien, 48.478 Lernende.
+- Venue/Organisation: Psychological Bulletin.
+- URL: https://www.learningandthebrain.com/blog/?p=7226 ; https://notes.andymatuschak.org/zV1xNteVY4otyHP5gCcanVN (Sekundärquellen; Zuordnung nicht im Einzelnen geprüft)
+- Datum: 2021
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Nur Sekundärzusammenfassungen.
+- Kernaussagen und Evidenzstärke:
+  - Gesamteffekt g ≈ 0,50 (nach Bias-Korrektur ≈ 0,43).
+  - Quizzen war besser als Wiederlesen (g ≈ 0,33) und als keine Aktivität (g ≈ 0,61). Gegenüber anderen elaborierenden Strategien wie Notizen oder Zusammenfassen war der Unterschied nicht signifikant.
+  - Eine eigene Effektgröße für Grund- und Sekundarschulen wurde nicht angezeigt.
+  - Evidenzstärke: mittel (große Meta-Analyse im echten Unterricht; Taktik und Förderbedarf nicht geprüft).
+- Konsequenzen für SPIELIQ: Ein kurzes Abschlussquiz und Wiederholungsszenen sind gut begründet; sie sind dem bloßen Wiederansehen der Erklärung überlegen.
+
+### [C-77] Agarwal, Nunes & Blunt (2021): [Systematisches Review angewandter Forschung zur Abrufübung in Schulen und Klassenzimmern – exakter Titel im Ergebnis nicht angezeigt]
+- Typ, Stichprobe/Kontext: Systematisches Review (keine Meta-Analyse) von der Grundschule bis zum Medizinstudium: 50 Experimente, 49 Effektgrößen, rund 5.374 Lernende.
+- Venue/Organisation: Educational Psychology Review.
+- URL: https://retrievalpractice.org/review ; https://www.teachertoolkit.co.uk/2021/08/22/classroom-retrieval-practice/
+- Datum: 2021
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - 57 % der Experimente zeigten mittlere oder große Vorteile der Abrufübung.
+  - Nur 6 % der Experimente stammten aus Ländern außerhalb westlicher, gebildeter, industrialisierter, reicher und demokratischer Gesellschaften („WEIRD“).
+  - Schwerpunkt Sekundarstufe und Hochschule; Mathematik und Naturwissenschaften überwiegen (laut einem Kommentar 35 von 50).
+  - Offen sind der günstigste Abstand zwischen Übung und Test und der Zeitpunkt des Feedbacks.
+  - Evidenzstärke: mittel (konsistente Richtung in echten Klassen; Förderschulen nicht ausgewiesen).
+- Konsequenzen für SPIELIQ: Abrufübung wirkt in echten Klassen, nicht nur im Labor. Für Förderschüler:innen ist der Beleg indirekt (C-78).
+
+### [C-78] Abrufübung und verteiltes Lernen bei Kindern mit Sprachentwicklungsstörung und Lernschwierigkeiten (Sammeleintrag: Leonard et al. 2024; Gordon 2020; Praxisbeiträge)
+- Typ, Stichprobe/Kontext:
+  1. Leonard et al. (2024): Experiment mit Vorschulkindern mit Sprachentwicklungsstörung (Developmental Language Disorder); Titel laut Treffer „Retrieval practice and word learning by children with developmental language disorder: Does expanding retrieval provide additional benefit?“.
+  2. Gordon (2020): Übersicht zum Wortlernen bei Sprachstörungen; nur über die Zusammenfassung einer Klinik erschlossen.
+  3. Praxisartikel beim Council for Exceptional Children zu Abrufformaten für Schüler:innen mit Lernschwierigkeiten, illustriert an einem inklusiven Spanischkurs einer Highschool.
+  4. Praxisübersicht von Agarwal zu neurodiversen Lernenden.
+- Venue/Organisation: (1) Journal of Speech, Language, and Hearing Research; DOI laut Treffer-URL 10.1044/2024_JSLHR-23-00528. (2) bis (4) nicht angezeigt bzw. Webseiten.
+- URL: https://learninglab.psych.purdue.edu/downloads/2024/2024_Leonard_et_al_JSLHR_Expanding_Retrieval.pdf ; https://pubs.asha.org/doi/10.1044/2024_JSLHR-23-00528 ; https://www.boystownhospital.org/news/retrieval-based-and-space-learning-language-disorders ; https://exceptionalchildren.org/journal/retrieval-practice-retention-and-transfer ; https://www.retrievalpractice.org/strategies/neurodiversity
+- Datum: 2020–2024
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Wortlernen gelingt bei Sprachstörungen am besten durch anstrengendes Abrufen statt passives Zuhören; verteiltes Üben hilft zusätzlich (Gordon 2020).
+  - Kürzere Abstände zu Beginn führten zu mehr Abruferfolg; im Verlauf glichen sich die Bedingungen an. Den Nutzen schreiben die Autor:innen der Kombination aus Abrufhäufigkeit und Verteilung zu (Leonard et al. 2024).
+  - Die Praxisübersicht sieht Vorteile für neurodiverse Lernende (u. a. Legasthenie, ADHS); die Autorin weist selbst darauf hin, keine Expertin für diese Gruppen zu sein.
+  - Eine Studie speziell mit Jugendlichen mit Lernschwierigkeiten wurde nicht gefunden.
+  - Evidenzstärke: niedrig (kleine, jüngere bzw. sprachbezogene Stichproben).
+- Konsequenzen für SPIELIQ: Abrufen und Verteilen auch für die Zielgruppe einplanen, am Anfang mit kurzen Abständen (gleiche Sitzung, nächste Sitzung), dann länger. Für Taktik gibt es keinen eigenen Beleg.
+
+### [C-79] Renkl & Atkinson (2003): Structuring the Transition From Example Study to Problem Solving in Cognitive Skill Acquisition – mit Folgearbeiten zum Ausblenden („Fading“)
+- Typ, Stichprobe/Kontext: Theorie- und Übersichtsartikel mit eigenen Experimenten. Folgearbeiten u. a. Renkl, Atkinson & Große (2004) und eine Ingenieursstudie (Autor:innen im Ergebnis nicht angezeigt).
+- Venue/Organisation: Educational Psychologist (2003).
+- URL: https://asu.elsevierpure.com/en/publications/structuring-the-transition-from-example-study-to-problem-solving--2 ; https://faculty.engineering.asu.edu/mre/wp-content/uploads/sites/31/2020/02/MoRO09.pdf ; https://opus.bibliothek.uni-augsburg.de/opus4/files/118925/118925.pdf
+- Datum: 2003 ff.
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Effektgrößen und Studiendesigns nicht geprüft.
+- Kernaussagen und Evidenzstärke:
+  - Ausblenden heißt: zuerst ein vollständig gelöstes Beispiel, danach Beispiele, in denen nach und nach Lösungsschritte fehlen, bis die Lernenden alles selbst lösen.
+  - Beim Rückwärts-Ausblenden fällt zuerst der letzte Schritt weg, dann die letzten beiden usw. In Studien zur Wahrscheinlichkeitsrechnung zeigten sich positive Effekte. In einer Ingenieursstudie gab es höhere Nah- und Ferntransferwerte, wenn das Feedback die Lösung eines ähnlichen Beispiels enthielt.
+  - Ausblenden nach der Leistung der Lernenden (adaptiv) erscheint laut einer Quelle günstiger als ein fester Ablauf.
+  - Evidenzstärke: niedrig bis mittel (mehrere Experimente, überwiegend mit Studierenden in Mathematik und Technik).
+- Konsequenzen für SPIELIQ: Ergänzungsaufgaben: Die Erklärsequenz zeigt drei Spieler richtig, in der nächsten Aufgabe fehlt der letzte (das Kind setzt ihn), danach die letzten zwei. Das Ausblenden richtet sich nach der Leistung, nicht nach einem festen Plan.
+
+### Ergänzung 30.10.2026 – E4. Visuelle Darstellung: Realismus, Format, Perspektive, Avatare
+
+### [C-80] [Autor:innen im Ergebnis nicht angezeigt] (2021): [Review zu realistischen Visualisierungen beim Lernen – exakter Titel im Ergebnis nicht angezeigt]
+- Typ, Stichprobe/Kontext: Review mit kognitivem Modell. Ergänzend gefunden: zwei Einzelstudien zur Anatomie und eine Utrechter Dissertation zur Schematisierung.
+- Venue/Organisation: Educational Psychology Review; DOI laut URL 10.1007/s10648-021-09638-1.
+- URL: https://link.springer.com/article/10.1007/s10648-021-09638-1 ; Einzelstudien: https://link.springer.com/10.1007/s10639-022-11043-2 ; https://link.springer.com/10.1007/s10339-024-01183-3 ; Dissertation: https://research-portal.uu.nl/en/publications/visual-realism-exploring-effects-on-memory-language-production-co/
+- Datum: 2021 (aus dem DOI erschlossen)
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. [Hintergrundwissen, nicht per Suche bestätigt: Das Review stammt vermutlich von Skulmowski und Kolleg:innen.]
+- Kernaussagen und Evidenzstärke:
+  - Realismus ist ein Spektrum; schematische Darstellungen (meist Strichzeichnungen) liegen am unteren Ende. Das Review schlägt ein Modell mit drei Stufen vor: Wahrnehmung, Schemaaufbau, Prüfung.
+  - Die Befunde sind gemischt. In einer Anatomiestudie verbesserten realistische Details das Behalten, erzeugten aber auch die höchste kognitive Belastung. Irrelevante realistische Details können unnötige Belastung erzeugen.
+  - Realistische Darstellungen lohnen sich womöglich vor allem dann, wenn das Wissen später an realistischen Bildern angewendet werden muss (Passung von Lern- und Prüfsituation; nur über ein anderes Papier beschrieben).
+  - Schematische Bilder sind nicht automatisch leichter, etwa wenn Tiefe aus Konturzeichnungen erschlossen werden muss.
+  - Ein optimales Realismusniveau lässt sich laut Literatur nicht angeben.
+  - Utrechter Dissertation: Sekundarschüler:innen profitierten von Schematisierung, und zwar eher wegen der visuellen Hervorhebung als wegen des Weglassens.
+  - Evidenzstärke: konzeptionell bis niedrig (Review plus Einzelstudien aus Naturwissenschaft und Medizin).
+- Konsequenzen für SPIELIQ: Nicht „so realistisch wie möglich“, sondern „so realistisch wie für die Aufgabe nötig“. Was entscheidungsrelevant ist (Position, Blick- und Laufrichtung), wird betont, alles andere weggelassen.
+
+### [C-81] Sundararajan & Adesope (2020): Keep it Coherent: A Meta-Analysis of the Seductive Details Effect
+- Typ, Stichprobe/Kontext: Meta-Analyse mit 68 Effekten aus 58 Studien und über 7.500 Lernenden.
+- Venue/Organisation: Educational Psychology Review 32(3), 707–734.
+- URL: https://www.e-teaching.org/materialien/literatur/sundararajan-adesope-2020 ; https://news.wsu.edu/2020/03/19/seductive-details-inhibit-learning/ ; https://inspire.acu.edu.au/articles/seductive-details
+- Datum: 2020
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Effektgröße laut Zusammenfassungsseite.
+- Kernaussagen und Evidenzstärke:
+  - Interessante, aber für das Lernziel unwichtige Details („verführerische Details“) verschlechterten das Lernen (laut Zusammenfassungsseite g = −0,33).
+  - Stärker war der Nachteil, wenn das Detail neben relevanten Diagrammen stand oder dauerhaft sichtbar war.
+  - Noviz:innen waren stärker betroffen als Expert:innen.
+  - Laut einer Zusammenfassung zeigt sich der Effekt deutlich in kurzen Lektionen (unter 5 Minuten), in längeren (über 10 Minuten) nicht signifikant.
+  - Evidenzstärke: mittel (zwei konsistente Meta-Analysen, vgl. C-82; ohne Sportbezug).
+- Konsequenzen für SPIELIQ: Gerade kurze Erklärsequenzen müssen frei von Dekoration sein: kein Stadionpublikum, keine Effekte, keine kontrastreichen Texturen, die neben den Figuren um Aufmerksamkeit konkurrieren.
+
+### [C-82] Rey (2012): A review of research and a meta-analysis of the seductive detail effect
+- Typ, Stichprobe/Kontext: Review mit Meta-Analyse über 39 experimentelle Effekte.
+- Venue/Organisation: Educational Research Review 7(3), 216–237.
+- URL: https://inspire.acu.edu.au/articles/seductive-details ; https://www.learningandthebrain.com/blog/seductive-details-when-do-cool-stories-and-videos-interfere-with-learning/
+- Datum: 2012
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke: Mittlere negative Effekte verführerischer Details auf Behalten und Transfer; laut Zusammenfassung beim Transfer besonders dann, wenn die Details visuell waren. Evidenzstärke: mittel.
+- Konsequenzen für SPIELIQ: Wie C-81. Visuelle Ausschmückung ist das größere Risiko als ausschmückender Text.
+
+### [C-83] Kaminski, Sloutsky & Heckler (2008): [Science-Artikel zum Transfervorteil generischer gegenüber konkreter Darstellung – exakter Titel im Ergebnis nicht angezeigt] – mit Kaminski & Sloutsky (2013) und Replikationen
+- Typ, Stichprobe/Kontext: Experimente zum Lernen eines mathematischen Konzepts; 2013 mit Kindern (u. a. Sechstklässler:innen). Replikationen von De Bock et al. und Trninic (2020, Tagungsband der Cognitive Science Society).
+- Venue/Organisation: Science (2008); Journal of Educational Psychology (2013); Proceedings CogSci (2020).
+- URL: https://news.osu.edu/students-learn-better-when-the-numbers-dont-talk-and-dance/ ; https://edrl.berkeley.edu/wp-content/uploads/2020/08/Trninic-2020-CogSci.pdf ; https://bps.org.uk/research-digest/real-life-examples-may-not-be-best-teaching-maths
+- Datum: 2008, 2013, 2020
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Eine Meta-Analyse zur Frage wurde nicht gefunden.
+- Kernaussagen und Evidenzstärke:
+  - Ein abstraktes Konzept in konkreter, kontextreicher Form zu lernen, behinderte die Übertragung; eine generische Form erlaubte sie (2008).
+  - Überflüssige Wahrnehmungsinformation kann Kindern den Erwerb mathematischen Wissens erschweren (2013).
+  - Replikationen schränken ein: Die Transferaufgabe sei selbst eher abstrakt, und kleine Änderungen im Lernablauf verändern das Bild. Konkrete Beispiele lenken nicht alle gleichermaßen ab.
+  - Evidenzstärke: niedrig bis mittel (einflussreich, aber umstritten; Mathematik).
+- Konsequenzen für SPIELIQ: Ein Hinweis, kein Beleg: Sehr „echte“ Spieler mit Gesichtern, Trikotdetails und Stadion könnten das Prinzip hinter der Szene verdecken. Für den Transfer ist wichtiger, dass Szenen variieren (GP-02), als dass sie fotorealistisch sind.
+
+### [C-84] Mann, Farrow, Shuttleworth & Hopwood (2009): The influence of viewing perspective on decision-making and visual search behaviour in an invasive sport
+- Typ, Stichprobe/Kontext: Experiment; 19 leistungsstarke Nachwuchsfußballer sahen dieselben simulierten Spielzüge aus Spielerperspektive und aus erhöhter Vogelperspektive.
+- Venue/Organisation: International Journal of Sport Psychology 40, 546–564.
+- URL: https://research.vu.nl/en/publications/the-influence-of-viewing-perspective-on-decision-making-and-visua/ ; https://ijsp-online.com/abstract/view/40/546 ; https://vuir.vu.edu.au/7950/
+- Datum: 2009
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Laut Treffer liegt der Volltext nicht im Repositorium. Entspricht H-12.
+- Kernaussagen und Evidenzstärke:
+  - Aus der Vogelperspektive richteten die Spieler mehr Aufmerksamkeit auf freie Räume (mehr, aber kürzere Fixationen).
+  - Die Vogelperspektive führte zu besseren Entscheidungen. Die Autoren erklären das mit zusätzlicher entscheidungsrelevanter Information.
+  - Die Sportart ist laut Schlagwörtern Fußball.
+  - Evidenzstärke: niedrig (eine kleine Studie mit leistungsstarken Jugendlichen).
+- Konsequenzen für SPIELIQ: Stützt die Vogelperspektive zum Verstehen und Lernen (GP-05). Ob Entscheidungen aus der Vogelperspektive auf den Platz übertragen werden, zeigt die Studie nicht. Der Spielerblick bleibt für spätere Transferaufgaben sinnvoll.
+
+### [C-85] Punktlicht- und abstrakte Darstellungen vs. Video bei Antizipation und Mustererkennung (Sammeleintrag)
+- Typ, Stichprobe/Kontext: Experimente und Übersichten:
+  1. Fußballstudie (überarbeitetes Manuskript für Human Movement Science im Repositorium der University of Essex; Autor:innen nicht angezeigt): Video vs. Punktlicht, ballnah vs. ballfern.
+  2. Tennisstudie zu antizipatorischen Hinweisreizen (Treffer auf researchgate.net, nicht geöffnet).
+  3. Hope et al. (2024): lokale und globale Muster beim Wiedererkennen von Fußballsequenzen; dazu die Dissertation Hope (2016, Liverpool John Moores University).
+  4. Weitere Treffer: eine Badminton-Bildgebungsstudie, eine Cricket-Trainingsstudie mit Punktlicht, Arbeiten zu digital erzeugten Menschen.
+- Venue/Organisation: verschieden; überwiegend nicht angezeigt.
+- URL: https://repository.essex.ac.uk/21160/ ; https://eprints.chi.ac.uk/7321/1/Hope%20et%20al.%20%282024%29%20Examining%20the%20importance%20of%20local%20and%20global%20patterns%20for%20familiarity%20detection%20in%20soccer%20action%20sequences.pdf ; https://researchonline.ljmu.ac.uk/id/eprint/4102/ ; https://researchportal.murdoch.edu.au/esploro/outputs/conferencePaper/Training-of-anticipatory-skill-in-a/991005540244307891
+- Datum: verschiedene
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Direktabruf des Essex-Manuskripts am 30.10.2026: Proxy 403.
+- Kernaussagen und Evidenzstärke:
+  - Fußball: Ballnah war die Antizipation mit Video genauer als mit Punktlicht, ballfern gab es keinen Unterschied. Der Vorsprung der Könner war im Video größer.
+  - Tennis: Könner waren bei Live- und Videodarstellung genauer als Noviz:innen, bei Punktlicht nicht.
+  - Übersichten bezeichnen die Befunde insgesamt als uneinheitlich.
+  - Fußball mit ganzen Teams als farbige Punkte: Könner erfassen die Beziehungen zwischen Spielern und Ball, also strukturierte Muster (passt zu H-02).
+  - Bewegungsinformation (Kinematik) trägt einen Großteil der Information; Punktlicht-Training verbesserte in einer Cricketstudie die Vorhersage. In einer Arbeit zu digital erzeugten Menschen verschlechterten Punktlicht und einfache Polygon-Animation die Wahrnehmungsleistung gegenüber Video.
+  - Evidenzstärke: niedrig (Einzelstudien, uneinheitlich).
+- Konsequenzen für SPIELIQ: Für das, was SPIELIQ lehrt – Beziehungen zwischen Spielern, Räume, Abstände –, genügen abstrakte Figuren. Realistische Körper sind vor allem wichtig, um Körpersignale nah am Ball zu lesen (Schussrichtung, Täuschung). Das ist nicht Lernziel der App.
+
+### [C-86] [Autor:innen im Ergebnis nicht angezeigt] (2026): Drawing and Soccer Tactical Memorization: An Eye-Tracking Investigation of the Moderating Role of Visuospatial Abilities and Expertise
+- Typ, Stichprobe/Kontext: Experiment mit Blickbewegungsmessung; dynamisches vs. statisches Zeichnen taktischer Szenen; Noviz:innen und Expert:innen; räumlich-visuelle Fähigkeit als Moderator.
+- Venue/Organisation: Vision 10(1), 2 (MDPI; Zuordnung aus der URL).
+- URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12821417/ ; https://www.mdpi.com/2411-5150/10/1/2/html
+- Datum: 2026
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Noviz:innen mit hoher räumlich-visueller Fähigkeit lernten besser mit dynamischem Zeichnen; Expert:innen mit niedriger räumlich-visueller Fähigkeit profitierten eher von statischem Zeichnen.
+  - Eine frühere Studie (Tlili et al.) fand keinen Unterschied in der Lerneffizienz zwischen dynamischem und statischem Zeichnen.
+  - Evidenzstärke: niedrig.
+- Konsequenzen für SPIELIQ: Neben dem Vorwissen spielt die räumliche Vorstellungsfähigkeit eine Rolle. Falls in der Zielgruppe geringere räumliche Fähigkeiten häufiger sind (Annahme, nicht geprüft), spricht das für Standbilder an Schlüsselstellen und langsames Tempo.
+
+### [C-87] [Autor:innen im Ergebnis nicht angezeigt] (2025): The use of virtual reality for tactical learning: the moderation of expertise and visuospatial abilities
+- Typ, Stichprobe/Kontext: Experiment mit 104 Personen (52 Noviz:innen, 52 Fußballexpert:innen); immersive VR vs. nicht immersive Animation; Einprägen taktischer Szenen.
+- Venue/Organisation: International Journal of Sport and Exercise Psychology.
+- URL: https://lida.sport-iat.de/dfb/Record/4089174
+- Datum: 2025
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Nicht immersive Animation führte beim Einprägen der Szenen zu besseren Lernleistungen als VR.
+  - Ausnahme: Expert:innen mit hoher räumlich-visueller Fähigkeit profitierten von VR.
+  - Evidenzstärke: niedrig (eine Studie; Alter nicht angezeigt; gemessen wurde Gedächtnis, nicht Entscheidung).
+- Konsequenzen für SPIELIQ: Für Einsteiger:innen sind mehr Immersion und Realismus kein Vorteil, eher eine Belastung. 2D-Animation bleibt das Grundformat.
+
+### [C-88] Hohmann et al. (2016): Does training with 3D videos improve decision-making in team invasion sports?
+- Typ, Stichprobe/Kontext: Zwei Interventionsstudien mit Nachwuchs-Handballer:innen: (1) 3D- vs. 2D-Video; (2) 3D-Video vs. Kontrollgruppe vs. herkömmliche Taktiktafel.
+- Venue/Organisation: Journal of Sports Sciences.
+- URL: https://www.iat.uni-leipzig.de/datenbanken/iks/dbb/Record/4039355 ; https://openresearch.lsbu.ac.uk/item/87642
+- Datum: 2016
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Vollständige Autorenliste nicht angezeigt.
+- Kernaussagen und Evidenzstärke:
+  - Die 3D-Gruppe wählte die erste Option schneller als die 2D-Gruppe; die Qualität der Entscheidungen unterschied sich kaum.
+  - Auch gegenüber Kontrollgruppe und Taktiktafel war die 3D-Gruppe schneller.
+  - Fazit der Autor:innen: 3D-Video verbessert die Entscheidungszeit, nicht die Entscheidungsqualität.
+  - Evidenzstärke: niedrig (kleine Nachwuchsstichproben, eine Sportart).
+- Konsequenzen für SPIELIQ: Mehr Tiefe und Realismus beschleunigen womöglich, machen aber nicht klüger. Für das Verstehen genügt 2D; Tempo ist ein späteres Lernziel.
+
+### [C-89] 360°-Video und VR zur Entscheidungsdiagnostik im Nachwuchsfußball und im Vergleich mit Fernsehbildern (Sammeleintrag)
+- Typ, Stichprobe/Kontext:
+  1. Höner und Kolleg:innen: Diagnose der Entscheidungsfähigkeit von 48 Nachwuchsspielern mit 360°-Aufnahmen; eine Folgestudie mit Akademiespielern und Datenbrille.
+  2. Kittel und Kolleg:innen: Spielnähe von 360°-VR im Vergleich zu Fernsehübertragungsvideo.
+  3. Abschlussarbeit (Auckland University of Technology): Softball-Schiedsrichter:innen, 2D-Fernsehbild vs. 360°-VR.
+  4. Editorial „360° VR in sport and physical activity – it is very real“.
+- Venue/Organisation: überwiegend Frontiers-Zeitschriften (Domain gesperrt) bzw. Abschlussarbeit.
+- URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751358/ ; https://vuir.vu.edu.au/47537/1/fpsyg-14-1342533.pdf ; https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2023.1171262/full ; https://search.dev.ndltd.org/etd/auckland-tech/oai:openrepository.aut.ac.nz:10292/14382?q=%22Vr%22 (Zuordnung der URLs zu den Einzelaussagen nicht geprüft)
+- Datum: 2020–2024
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - 360°-VR wurde als spielnäher eingeschätzt als Fernsehbilder (Kittel u. a.).
+  - Bei Softball-Schiedsrichter:innen unterschied sich die Entscheidungsgenauigkeit zwischen 2D und 360° nicht signifikant; 360° erhielt höhere Werte für ökologische Validität.
+  - Weil 360°-Video vorab aufgenommen ist, lassen sich Wahrnehmung und Handlung schwer koppeln; meist wird verbal geantwortet.
+  - Ein direkter Vergleich 360° vs. 2D im Nachwuchsfußball wurde nicht gefunden.
+  - Evidenzstärke: niedrig.
+- Konsequenzen für SPIELIQ: Realistischere Darbietung wird als spielnäher erlebt, verbessert aber nicht nachweislich die Entscheidung. Kein Anlass, auf 3D oder VR umzusteigen. Interaktive 2D-Szenen erlauben handlungsnahe Antworten, die bei 360°-Video gerade fehlen.
+
+### [C-90] Avatar-Ähnlichkeit, Identifikation und Motivation in Lernspielen (Sammeleintrag: Zuo et al. 2021; Kao et al. 2021; Kao & Harrell 2016; Shao 2025)
+- Typ, Stichprobe/Kontext:
+  1. Zuo et al. (Tagung INTETAIN 2021): Kinder, AR-Mathematikspiel „MathMythos“, vier Bedingungen (Fantasie, Selbstähnlichkeit).
+  2. Kao et al. (CHI PLAY 2021): Stimmähnlichkeit des Avatars in einem Programmierspiel; Alter nicht angezeigt.
+  3. Kao & Harrell (2016): Avatare und Agenten mit äußeren Merkmalen der Nutzer:innen.
+  4. Shao (CHI PLAY Companion 2025): Studienplan zu KI-erzeugter Selbstähnlichkeit, ohne Ergebnisse.
+- Venue/Organisation: Tagungsbände INTETAIN und CHI PLAY u. a.
+- URL: https://eudl.eu/doi/10.1007/978-3-030-99188-3_17 ; https://people.csail.mit.edu/dkao/pdf/kao2021chiplay1.pdf ; https://people.csail.mit.edu/dkao/pdf/kao2016gls.pdf ; https://people.csail.mit.edu/dkao/pdf/conf25-CHIPLAY-VisualVocalSelfSimilarity.pdf
+- Datum: 2016–2025
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Kinder hatten mehr Freude an der Fantasie-Variante, wenn sie sich stärker mit dem Avatar identifizierten (Zuo et al.). Lernergebnisse wurden in den Auszügen nicht getrennt berichtet.
+  - Eine der spielenden Person ähnliche Stimme steigerte Leistung, Spieldauer, Identifikation, Kompetenz- und Zugehörigkeitserleben sowie Immersion; die Identifikation vermittelte diese Effekte (Kao et al. 2021).
+  - Avatare mit äußeren Merkmalen der Nutzer:innen gelten als einflussreicher und gehen mit besseren Lernergebnissen einher (Kao & Harrell 2016).
+  - Keine Studie misst Lernen, Avatar-Ähnlichkeit und Verkörperung zusammen bei Kindern oder Jugendlichen.
+  - Evidenzstärke: niedrig.
+- Konsequenzen für SPIELIQ: Identifikation entsteht eher über Ähnlichkeit und eigene Wahl (Trikotfarbe, Nummer, „Das bist du“) als über Fotorealismus. Das geht mit stilisierten Figuren und ohne Foto.
+
+### [C-91] Schroeder, Adesope & Gilbert (2013): How Effective are Pedagogical Agents for Learning? – mit Schroeder & Adesope (2014) und Einzelstudien zum Aussehen
+- Typ, Stichprobe/Kontext: Meta-Analyse mit 43 Studien und 3.088 Teilnehmenden; systematisches Review zu Motivation und Affekt (2014); Einzelstudien zu Realismusgraden von Erklärfiguren.
+- Venue/Organisation: DOI 10.2190/EC.49.1.a [Zeitschrift laut DOI-Präfix vermutlich Journal of Educational Computing Research – nicht bestätigt]; Review 2014: im Ergebnis nicht angezeigt.
+- URL: https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/How-Effective-are-Pedagogical-Agents-for/99900601056901842 ; https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/A-Systematic-Review-of-Pedagogical-Agents/99900601053701842 ; https://karlkapp.com/abstracts-of-three-studies-related-to-pedagogical-agents/ ; https://www.lunduniversity.lu.se/lup/publication/75e3e386-2ad3-461d-97e9-0217a25e7958
+- Datum: 2013, 2014
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Moderatoren zum Aussehen in der Meta-Analyse nicht geprüft.
+- Kernaussagen und Evidenzstärke:
+  - Pädagogische Agenten (Erklärfiguren) hatten einen kleinen, signifikanten Gesamteffekt auf das Lernen, abhängig von Kontext und Methodik.
+  - Lernende bevorzugen Agenten womöglich; motivationale Vorteile gibt es für manche Gruppen unter bestimmten Bedingungen. Das Bild des Agenten ist für die affektiven Vorteile möglicherweise nicht nötig (2014).
+  - In einer Einzelstudie mit vier Realismusgraden zweidimensionaler Agentinnen erzeugte das Cartoon-Design die geringste Erregung und die höchsten Werte für Emotionen beim Lernen. Laut einem Zitat (Domagk 2010) förderten ein ansprechendes Aussehen und eine ansprechende Stimme den Transfer.
+  - Evidenzstärke: niedrig bis mittel (eine Meta-Analyse; zum Aussehen nur Einzelstudien).
+- Konsequenzen für SPIELIQ: Ein Erklärer (Stimme, eventuell eine Trainerfigur) kann helfen. Entscheidend ist eine freundliche, verständliche Stimme, nicht ein realistisches Gesicht.
+
+### Ergänzung 30.10.2026 – E5. Einfache bzw. Leichte Sprache und Förderschwerpunkt Lernen
+
+### [C-92] Bock (2019): „Leichte Sprache“ – Kein Regelwerk. Ergebnisse des Projekts LeiSA (Universität Leipzig, 2014–2018) – mit neueren Einzelstudien
+- Typ, Stichprobe/Kontext: Interdisziplinäres Forschungsprojekt (Sonderpädagogik, Sozialmedizin, Soziologie, Linguistik), gefördert vom Bundesministerium für Arbeit und Soziales. Sprachwissenschaftliche Verständlichkeitstests mit Menschen mit Lernschwierigkeiten und Menschen mit geringer Lesekompetenz bzw. funktionalen Analphabet:innen; dazu eine Korpusstudie (rund 640.000 Token) und eine Studie zur Makrotypografie (2020).
+- Venue/Organisation: Universität Leipzig (Qucosa); Pressemitteilung im Informationsdienst Wissenschaft.
+- URL: https://ul.qucosa.de/landing-page/https%3A%2F%2Ful.qucosa.de%2Fapi%2Fqucosa%253A31959%2Fmets%2F/ ; https://idw-online.de/de/news708991 ; https://www.uni-potsdam.de/fileadmin/projects/daf/PSI_09.10.2018/Vortrag_Bock.pdf ; https://blogs.helsinki.fi/klaara-network/?p=1711 ; https://ojs.szh.ch/zeitschrift/article/view/899/pdf ; https://meiner-elibrary.de/article/3196/leichte-sprache-in-german-as-a-foreign-language-an-empirical-study-about-compound-separation-and-pronoun-use
+- Datum: Projekt 11/2014 bis 01/2018; Publikation 2019
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Effektstärken oder Prozentwerte wurden nicht gefunden.
+- Kernaussagen und Evidenzstärke:
+  - Die Projektbeteiligten bewerteten die bisherigen Regeln der Leichten Sprache insgesamt eher kritisch. Die Zusammenfassung formuliert Empfehlungen für das Schreiben statt eines starren Regelwerks.
+  - Eine Übersichtsarbeit (laut Treffer von Trescher) beschreibt einen Mangel an empirischen Wirksamkeitsbelegen und teils widersprüchliche Befunde.
+  - Neuere Einzelstudien: Die Regel „Genitiv vermeiden“ ließ sich in einem Leseverständnistest nicht als allgemein nötig bestätigen; frühere Studien hatten methodische Mängel (Hasenäcker, Wettmann & Domahs 2025). Für Lernende mit Deutsch als Fremdsprache sind manche Regeln hilfreich, andere nicht (Kalinowski 2024).
+  - Evidenzstärke: niedrig. Für Leichte Sprache als Regelpaket gibt es keine Wirksamkeitsbelege; einzelne Regeln sind empirisch infrage gestellt.
+- Konsequenzen für SPIELIQ: Die Sprachregeln in `docs/design/einfach-verstehen.md` sind plausibel, aber keine belegte Methode. Formulierungen mit Kindern der Zielgruppe testen und Regeln nicht dogmatisch anwenden (etwa Wortzerlegungen oder das Genitivverbot nicht ungeprüft übernehmen).
+
+### [C-93] Wilson et al. (2026): Easy Read Health Information for People With Intellectual Disabilities: A Systematic Review of the Evidence – mit Sutherland & Isherwood (2016) und Chinn & Homeyard (2017)
+- Typ, Stichprobe/Kontext: Systematisches Review mit 29 Studien (2026); systematisches Review mit 11 Publikationen (2016); meta-narratives Review (2017).
+- Venue/Organisation: 2026 im Ergebnis nicht eindeutig angezeigt (PMC, Repositorium der University of Hertfordshire); 2016 und 2017 nicht angezeigt.
+- URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12893875/ ; https://uhra.herts.ac.uk/id/eprint/26491/ ; https://metatoc.com/papers/97585-the-evidence-for-easy-read-for-people-with-intellectual-disabilities-a-systematic-literature-review ; https://pmc.ncbi.nlm.nih.gov/articles/PMC5689240 (Zuordnung zu Chinn & Homeyard nicht geprüft)
+- Datum: 2016, 2017, 2026
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Menschen mit geistiger Behinderung schätzten leicht lesbare Gesundheitsinformationen und Unterstützung beim Einordnen. Empirische Belege für die Wirksamkeit waren aber begrenzt; Erstellung und Qualitätssicherung variierten stark (2026).
+  - Ob zusätzliche Bilder zum Text das Verstehen verbessern, war uneinheitlich (2016).
+  - Evidenzstärke: niedrig (dünne Evidenzbasis; Erwachsene mit geistiger Behinderung, Gesundheitsinformation).
+- Konsequenzen für SPIELIQ: Bildsymbole und vereinfachter Text garantieren kein Verstehen. Die Wirkung muss im eigenen Test geprüft werden; Bilder müssen eindeutig sein und dürfen nicht nur schmücken (vgl. C-81).
+
+### [C-94] Buell et al. (2019): The Easy Read Task [Titel im Ergebnis nur verkürzt angezeigt]
+- Typ, Stichprobe/Kontext: Randomisierte Studie mit 60 Erwachsenen mit geistiger Behinderung; Bedingungen mit und ohne vereinfachte Sprache sowie mit und ohne Vermittlung durch eine Person.
+- Venue/Organisation: Journal of Applied Research in Intellectual Disabilities (laut Dateiname „JARID“).
+- URL: https://ueaeprints.uea.ac.uk/id/eprint/72356/1/SBuell_et_al._2019_The_Easy_Read_Task_JARID.pdf
+- Datum: 2019
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet. Direktabruf der PDF auf ueaeprints.uea.ac.uk am 30.10.2026: Proxy 403.
+- Kernaussagen und Evidenzstärke: Die Diskussion erwägt, dass der zusätzliche Verarbeitungsaufwand für Easy-Read-Material den Verständnisgewinn aufwiegen könnte. Einzelergebnisse wurden nicht angezeigt. Evidenzstärke: niedrig.
+- Konsequenzen für SPIELIQ: Vereinfachung allein reicht nicht. Die Unterstützung durch eine Person (hier: Trainer:in, Vorlesen, gesprochene Erklärung) ist ein eigener Faktor.
+
+### [C-95] Förderschwerpunkt Lernen, Sportunterricht und digitale Medien – Befund: keine spezifische Studie gefunden (Sammeleintrag)
+- Typ, Stichprobe/Kontext: Treffer zum Sportunterricht allgemein:
+  1. Systematisches Review „Video-based visual feedback to enhance motor learning in physical education—a systematic review“ (KIT-Publikationsserver; Abstract nicht angezeigt).
+  2. Mödinger et al. (KIT): digital gestütztes Unterrichtskonzept mit Videoanalyse (Gerätturnen, Gymnasium).
+  3. Fallstudie zu Peer-Feedback mit Tablets im Sportunterricht (26 Schüler:innen, sechs Wochen; Rezension im idrottsforum.org).
+  4. Diplomarbeit an der Universität Wien (Kopcsandy): Lehrer- vs. Videofeedback beim Hochsprung.
+  5. NRW-Materialtext zum Medieneinsatz im Sport.
+- Venue/Organisation: KIT, idrottsforum.org, Universität Wien, schulentwicklung.nrw.de.
+- URL: https://publikationen.bibliothek.kit.edu/1000176911/156455247 ; https://publikationen.bibliothek.kit.edu/1000171479/153044108 (Zuordnung der KIT-URLs zu 1 bzw. 2 nicht geprüft) ; https://idrottsforum.org/sondergaard-ostergaard-sssf171114-in-english/ ; https://phaidra.univie.ac.at/download/o:1318067 ; https://schulentwicklung.nrw.de/materialdatenbank/material/download/9768
+- Datum: verschiedene
+- Zugriff / Verifikationsstatus: Zugriff: Websuche 30.10.2026, Originalseite nicht geöffnet.
+- Kernaussagen und Evidenzstärke:
+  - Das Videokonzept verbesserte die Bewegungsquantität (Weite) in allen Varianten nachhaltig (Gymnasium).
+  - Beim Hochsprung zeigte sich kein signifikanter Unterschied zwischen Lehrer- und Videofeedback.
+  - Der NRW-Text nennt fehlende Hallenausstattung als möglichen Grund für geringen Medieneinsatz im Sport.
+  - Zum Förderschwerpunkt Lernen im Sportunterricht mit digitalen Medien wurde keine Studie gefunden.
+  - Evidenzstärke: niedrig; für die Zielgruppe besteht eine Lücke.
+- Konsequenzen für SPIELIQ: Für Lernende mit Förderschwerpunkt Lernen fehlt sportbezogene Evidenz zu digitalen Medien. SPIELIQ muss die eigene Wirkung in der Zielgruppe messen (GP-14) und auf gerätearme Nutzung setzen (Handy, kurze Einheiten).
+
 ### D. Ergänzende Literatur aus Hintergrundwissen – Prüfliste (H-01 ff.)
 
 > **Status aller folgenden Einträge: [Hintergrundwissen, nicht per Suche bestätigt].** Für sie lag in dieser Sitzung keine Such-URL vor. Zugriff: keiner. Angaben zu Autor:innen, Titel und Zeitschrift stammen aus dem Gedächtnis; DOIs und Effektgrößen werden bewusst nicht angegeben. Einträge mit „(bibliogr. Details unsicher)“ sind vor jeder Verwendung besonders sorgfältig zu prüfen. Die Kurzbeschreibungen sind qualitative Paraphrasen des Hintergrundwissens.
@@ -744,6 +1289,7 @@ Stand: 29.10.2026 · Bereich C der Grundlagenrecherche · Zielgruppe zuerst: C-J
 - [H-11] Faure, Limballe, Bideau & Kulpa (2020): Virtual reality to assess and train team ball sports performance: A scoping review. Journal of Sports Sciences (bibliogr. Details unsicher).
 - [H-12] Mann, Farrow, Shuttleworth & Hopwood (2009): The influence of viewing perspective on decision-making and visual search behaviour in an invasive sport. International Journal of Sport Psychology (bibliogr. Details unsicher).
   - Direkt relevant für die Frage Vogel- vs. Spielerperspektive; die Ergebnisse kann ich **nicht** verlässlich wiedergeben.
+  - → Per Websuche 30.10.2026 gefunden: [C-84].
 - [H-13] Lorains, Ball & MacMahon (2013): An above real time training intervention for sport decision making. Psychology of Sport and Exercise (bibliogr. Details unsicher).
   - Relevant für Zeitdruck bzw. beschleunigte Videodarbietung.
 - [H-14] Simons et al. (2016): Do “brain-training” programs work? Psychological Science in the Public Interest.
@@ -751,6 +1297,7 @@ Stand: 29.10.2026 · Bereich C der Grundlagenrecherche · Zielgruppe zuerst: C-J
 - [H-15] Khacharem, Spanjers, Zoudji, Kalyuga & Ripoll (2013): Using segmentation to support the learning from animated soccer scenes: An effect of prior knowledge. Psychology of Sport and Exercise (bibliogr. Details unsicher).
 - [H-16] Khacharem, Zoudji, Spanjers & Kalyuga (2014): Improving learning from animated soccer scenes: Evidence for the expertise reversal effect. Computers in Human Behavior (bibliogr. Details unsicher).
   - H-15 und H-16 sind Studien der Cognitive-Load-Theorie mit animierten Fußballszenen. Hilfen wie die Segmentierung nützen Noviz:innen, Fortgeschrittenen weniger bis gar nicht (Expertise-Umkehr).
+  - → Per Websuche 30.10.2026 gefunden: H-15 als [C-73], H-16 als [C-74].
 
 **Lernwissenschaft (Frage 4)**
 - [H-17] Dunlosky, Rawson, Marsh, Nathan & Willingham (2013): Improving students' learning with effective learning techniques. Psychological Science in the Public Interest.
@@ -767,12 +1314,12 @@ Stand: 29.10.2026 · Bereich C der Grundlagenrecherche · Zielgruppe zuerst: C-J
 - [H-26] Kalyuga, Ayres, Chandler & Sweller (2003): The expertise reversal effect. Educational Psychologist.
 - [H-27] Mayer (2021): Multimedia Learning (3. Aufl.). Cambridge University Press.
   - Prinzipien unter anderem: Kohärenz, Signalisierung, Redundanz, Kontiguität, Segmentierung, Vortraining, Modalität.
-- [H-28] Höffler & Leutner (2007): Instructional animation versus static pictures: A meta-analysis. Learning and Instruction.
+- [H-28] Höffler & Leutner (2007): Instructional animation versus static pictures: A meta-analysis. Learning and Instruction. → Per Websuche 30.10.2026 gefunden: [C-70].
 - [H-29] Berney & Bétrancourt (2016): Does animation enhance learning? A meta-analysis. Computers & Education.
-- [H-30] Schneider, Beege, Nebel & Rey (2018): A meta-analysis of how signaling affects learning with media. Educational Research Review.
-- [H-31] Rey, Beege, Nebel, Wirzberger, Schmitt & Schneider (2019): A meta-analysis of the segmenting effect. Educational Psychology Review (bibliogr. Details unsicher).
-- [H-32] Ginns (2005): Meta-analysis of the modality effect. Learning and Instruction.
-- [H-33] Noetel et al. (2022): Multimedia design for learning: An overview of reviews with meta-meta-analysis. Review of Educational Research (bibliogr. Details unsicher).
+- [H-30] Schneider, Beege, Nebel & Rey (2018): A meta-analysis of how signaling affects learning with media. Educational Research Review. → Per Websuche 30.10.2026 gefunden: [C-67].
+- [H-31] Rey, Beege, Nebel, Wirzberger, Schmitt & Schneider (2019): A meta-analysis of the segmenting effect. Educational Psychology Review (bibliogr. Details unsicher). → Per Websuche 30.10.2026 gefunden: [C-66].
+- [H-32] Ginns (2005): Meta-analysis of the modality effect. Learning and Instruction. → Per Websuche 30.10.2026 gefunden (Zeitschrift dort nicht angezeigt): [C-71].
+- [H-33] Noetel et al. (2022): Multimedia design for learning: An overview of reviews with meta-meta-analysis. Review of Educational Research (bibliogr. Details unsicher). → Per Websuche 30.10.2026 gefunden: [C-69].
 - [H-34] Hattie & Timperley (2007): The power of feedback. Review of Educational Research.
 - [H-35] Shute (2008): Focus on formative feedback. Review of Educational Research.
 - [H-36] Kluger & DeNisi (1996): The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory. Psychological Bulletin.
@@ -832,6 +1379,72 @@ Stand: 29.10.2026 · Bereich C der Grundlagenrecherche · Zielgruppe zuerst: C-J
 **Ergänzungen zu Frage 1/2**
 - [H-82] Renshaw, Davids, Newcombe & Roberts (2019): The Constraints-Led Approach: Principles for Sports Coaching and Practice Design. Routledge.
 - [H-83] Oslin, Mitchell & Griffin (1998): The Game Performance Assessment Instrument (GPAI): Development and preliminary validation. Journal of Teaching in Physical Education.
+
+**Ergänzung 30.10.2026 – Erklären vor Üben (Frage 1 der Ergänzungsrecherche)**
+- [H-84] Rosenshine (2012): Principles of Instruction: Research-based strategies that all teachers should know. American Educator.
+  - Zehn Unterrichtsprinzipien, u. a. kleine Schritte, Vormachen, angeleitetes Üben, Verstehen überprüfen, regelmäßig wiederholen.
+- [H-85] Archer & Hughes (2011): Explicit Instruction: Effective and Efficient Teaching. Guilford Press.
+  - Praxisbuch mit dem Ablauf „I do – we do – you do“ und kumulativer Wiederholung, ausgerichtet auf Lernende mit Lernschwierigkeiten.
+- [H-86] Kirschner, Sweller & Clark (2006): Why minimal guidance during instruction does not work: An analysis of the failure of constructivist, discovery, problem-based, experiential, and inquiry-based teaching. Educational Psychologist.
+- [H-87] Alfieri, Brooks, Aldrich & Tenenbaum (2011): Does discovery-based instruction enhance learning? Journal of Educational Psychology.
+  - Meta-Analyse: Unangeleitetes Entdecken schneidet schlechter ab als explizite Instruktion; angeleitetes Entdecken schneidet besser ab als andere Formen.
+- [H-88] Pearson & Gallagher (1983): The instruction of reading comprehension. Contemporary Educational Psychology.
+  - Ursprung des Modells „Gradual Release of Responsibility“ (schrittweise Übergabe der Verantwortung).
+- [H-89] Fisher & Frey (2008; 2. Aufl. 2013): Better Learning Through Structured Teaching: A Framework for the Gradual Release of Responsibility. ASCD (bibliogr. Details unsicher).
+  - Ergänzt die Dreiteilung um eine kooperative Phase, in der Lernende gemeinsam ohne Lehrkraft arbeiten.
+- [H-90] Gersten, Chard, Jayanthi, Baker, Morphy & Flojo (2009): Mathematics instruction for students with learning disabilities: A meta-analysis of instructional components. Review of Educational Research.
+  - Explizite Instruktion, visuelle Darstellungen und lautes Denken gelten als wirksame Bausteine.
+- [H-91] Kroesbergen & Van Luit (2003): Mathematics interventions for children with special educational needs: A meta-analysis. Remedial and Special Education.
+- [H-92] van Gog & Rummel (2010): Example-based learning: Integrating cognitive and social-cognitive research perspectives. Educational Psychology Review.
+  - Verbindet ausgearbeitete Beispiele und Modelllernen zu „Modellierungsbeispielen“ (eine Person macht vor und erklärt).
+- [H-93] Hoogerheide, van Wermeskerken, Loyens & van Gog (2016): Learning from video modeling examples: Content kept equal, adults are more effective models than peers. Learning and Instruction (bibliogr. Details unsicher).
+- [H-94] Schunk (1987): Peer models and children's behavioral change. Review of Educational Research.
+  - Ähnliche Modelle (Gleichaltrige, „Bewältigungsmodelle“, die erst Fehler machen und sich dann verbessern) stärken vor allem bei Kindern mit geringer Selbstwirksamkeit das Zutrauen.
+- [H-95] Bellini & Akullian (2007): A meta-analysis of video modeling and video self-modeling interventions for children and adolescents with autism spectrum disorders. Exceptional Children.
+- [H-96] Ste-Marie, Law, Rymal, O, Hall & McCullagh (2012): Observation interventions for motor skill learning and performance: An applied model for the use of observation. International Review of Sport and Exercise Psychology.
+- [H-97] Smeeton, Williams, Hodges & Ward (2005): The relative effectiveness of various instructional approaches in developing anticipation skill. Journal of Experimental Psychology: Applied (bibliogr. Details unsicher).
+  - Vergleicht explizite Instruktion, angeleitetes Entdecken und freies Entdecken beim Antizipationstraining im Tennis; angeleitetes Entdecken gilt als robust.
+- [H-98] Fiorella, van Gog, Hoogerheide & Mayer (2017): It's all a matter of perspective: Viewing first-person video modeling examples promotes learning of an assembly task. Journal of Educational Psychology.
+
+**Ergänzung 30.10.2026 – Erklärvideos und Animationen (Frage 2)**
+- [H-99] Spanjers, van Gog & van Merriënboer (2010): A theoretical analysis of how segmentation of dynamic visualizations optimizes students' learning. Educational Psychology Review.
+- [H-100] de Koning, Tabbers, Rikers & Paas (2009): Towards a framework for attention cueing in instructional animations: Guidelines for research and design. Educational Psychology Review.
+- [H-101] Leahy & Sweller (2011): Cognitive load theory, modality of presentation and the transient information effect. Applied Cognitive Psychology.
+  - Lange gesprochene Abschnitte überfordern das Arbeitsgedächtnis, weil gesprochene Information flüchtig ist; daher kurze Abschnitte.
+- [H-102] Kalyuga, Chandler & Sweller (2000): Incorporating learner experience into the design of multimedia instruction. Journal of Educational Psychology.
+  - Gesprochene Erklärungen helfen Noviz:innen und werden für Erfahrene überflüssig (Expertise-Umkehr beim Modalitätseffekt).
+- [H-103] Tversky, Morrison & Bétrancourt (2002): Animation: Can it facilitate? International Journal of Human-Computer Studies.
+  - Kritik: Viele Vorteile von Animationen verschwinden, wenn Standbilder dieselbe Information enthalten. Animationen müssen langsam und klar genug sein, um erfasst zu werden.
+- [H-104] van Gog, Paas, Marcus, Ayres & Sweller (2009): The mirror neuron system and observational learning: Implications for the effectiveness of dynamic visualizations. Educational Psychology Review.
+- [H-105] Wong, Marcus, Ayres, Smith, Cooper, Paas & Sweller (2009): Instructional animations can be superior to statics when learning human motor skills. Computers in Human Behavior.
+  - H-104 und H-105: Animationen sind vor allem bei menschlicher Bewegung überlegen.
+- [H-106] Brame (2016): Effective educational videos: Principles and guidelines for maximizing student learning from video content. CBE—Life Sciences Education.
+  - Praxisleitfaden: kurz halten, signalisieren, segmentieren, Aufgaben während des Zuschauens stellen.
+
+**Ergänzung 30.10.2026 – Staffelung und Sicherung (Frage 3)**
+- [H-107] Rawson & Dunlosky (2011): Optimizing schedules of retrieval practice for durable and efficient learning: How much is enough? Journal of Experimental Psychology: General.
+  - „Successive relearning“: bis zu einem Kriterium abrufen und das über mehrere Sitzungen wiederholen.
+- [H-108] van de Pol, Volman & Beishuizen (2010): Scaffolding in teacher–student interaction: A decade of research. Educational Psychology Review.
+  - Merkmale von Scaffolding: Anpassung an die Lernenden, schrittweises Ausblenden, Übergabe der Verantwortung.
+- [H-109] Belland, Walker, Kim & Lefler (2017): Synthesizing results from empirical research on computer-based scaffolding in STEM education: A meta-analysis. Review of Educational Research.
+
+**Ergänzung 30.10.2026 – Visuelle Darstellung und Avatare (Frage 4)**
+- [H-110] Butcher (2006): Learning from text with diagrams: Promoting mental model development and inference generation. Journal of Educational Psychology.
+  - Vereinfachte Diagramme förderten das Verstehen stärker als detailreiche.
+- [H-111] Mayer & DaPra (2012): An embodiment effect in computer-based learning with animated pedagogical agents. Journal of Experimental Psychology: Applied.
+  - Erklärfiguren mit menschenähnlicher Gestik, Blickrichtung und Bewegung förderten den Transfer stärker als starre Figuren.
+- [H-112] Brom, Stárková & D'Mello (2018): How effective is emotional design? A meta-analysis on facial anthropomorphisms and pleasant colors during multimedia learning. Educational Research Review.
+  - Gesichter an Lernobjekten und freundliche Farben: kleine positive Effekte auf Freude, Motivation und Lernen.
+- [H-113] Yee & Bailenson (2007): The Proteus effect: The effect of transformed self-representation on behavior. Human Communication Research.
+- [H-114] Birk, Atkins, Bowey & Mandryk (2016): Fostering intrinsic motivation through avatar identification in digital games. Proceedings CHI.
+  - Selbst gestaltete Avatare steigerten Identifikation, intrinsische Motivation und Ausdauer.
+- [H-115] Höffler (2010): Spatial ability: Its influence on learning with visualizations – a meta-analytic review. Educational Psychology Review (bibliogr. Details unsicher).
+  - Räumliche Fähigkeit moderiert das Lernen mit Visualisierungen; es gibt Hinweise, dass gut gestaltete dynamische Darstellungen Unterschiede verringern. Bezug zu C-86 und C-87.
+
+**Ergänzung 30.10.2026 – Leichte Sprache (Frage 5)**
+- [H-116] Bredel & Maaß (2016): Leichte Sprache. Theoretische Grundlagen. Orientierung für die Praxis. Duden.
+- [H-117] Netzwerk Leichte Sprache (2013): Die Regeln für Leichte Sprache; Bundesministerium für Arbeit und Soziales (2014): Leichte Sprache – Ein Ratgeber; Inclusion Europe (2009): Informationen für alle. Europäische Regeln, wie man Informationen leicht lesbar und leicht verständlich macht (bibliogr. Details unsicher).
+  - Regelwerke aus der Praxis, keine Wirksamkeitsstudien (vgl. C-92).
 
 ---
 
@@ -1182,6 +1795,142 @@ Kein Prinzip erreicht für den konkreten Anwendungsfall die Stufe „hoch“.
 | Feedback | Konsequenz → Prinzip → nächste Handlung; Prozessebene; Toleranzzonen; Reflexionsfrage | C-08; H-34–H-38, H-44 |
 | Wiederholen | Variation, Mischen und Verteilen; adaptive Schwierigkeit; Beherrschungskriterium mit Retention | C-45; H-17, H-20–H-24, H-48–H-53 |
 | Auf dem Platz anwenden | Platzform mit Constraints, Trainerfragen, Kurzbeobachtung, gleiche Begriffe; Feldmessung | C-08, C-09, C-10, C-22, C-24, C-28, C-49, C-51 |
+
+### 7. Ergänzung 30.10.2026: Erklären, Staffeln, Sichern und visuelle Darstellung
+
+> **Anlass:** Der Produktverantwortliche wünscht vor jeder Lektion ein Erklärvideo bzw. Tutorial auf einfachem Niveau, danach wie in der Schule gestaffelte Aufgaben und am Ende eine Sicherung des Gelernten. Außerdem fragt er, ob realistische Spielerfiguren statt Kreisen das Hineinversetzen erleichtern.
+>
+> **Grundlage und Grenzen:** 30 Websuchen vom 30.10.2026 (C-57–C-95, alle „Originalseite nicht geöffnet“) und Hintergrundwissen (H-84–H-117, nicht per Suche bestätigt). Fünf Direktabrufe auf offenen Repositorien scheiterten am Proxy (403). Effektgrößen stammen aus Suchzusammenfassungen. Die Evidenzstärke folgt der Skala dieses Dokuments und bezieht sich auf die Übertragung auf SPIELIQ; „Hintergrund“ wie in der Legende der Gestaltungsprinzipien. Keine Aussage erreicht „hoch“.
+
+**7.1 Erklären vor Üben (Frage 1)**
+- **Explizite Instruktion bei Lernschwierigkeiten:**
+  - Strukturierte, explizite Instruktion und Strategieinstruktion zeigen bei 6- bis 18-Jährigen mit Lernschwierigkeiten große Effekte, am stärksten in Kombination [C-57].
+  - Direct-Instruction-Programme erzielen über fünf Jahrzehnte mittlere bis große Effekte [C-58].
+  - Dazu passt (Hintergrundwissen, nicht per Suche bestätigt): kleine Schritte mit Vormachen und angeleitetem Üben [H-84, H-85], Meta-Analysen zu Mathematik bei Förderbedarf [H-90, H-91] und der Befund, dass unangeleitetes Entdecken schlechter abschneidet als explizite oder angeleitete Formen [H-86, H-87].
+  - Evidenzstärke: **mittel** für Schulfächer bei Lernenden mit Lernschwierigkeiten; **niedrig** für taktisches Lernen am Bildschirm (nicht getestet).
+- **Ausgearbeitete Beispiele:**
+  - Mittlerer Effekt in der Mathematik; korrekte Beispiele wirken besser als fehlerhafte; zusätzliche Selbsterklärungsaufforderungen brachten keinen Vorteil [C-59].
+  - Mit wachsender Expertise werden Hilfen überflüssig [H-26, Hintergrundwissen]; im Fußball zeigen das C-73 und C-74.
+  - Evidenzstärke: **mittel** (allgemein), **niedrig** (Sport).
+- **Vormachen und Video-Modeling:**
+  - Beobachten verbessert vor allem die Bewegungsform, kaum das Ergebnis [C-60]. Bei Kindern zeigt sich der Nutzen eher beim Erreichen des Aufgabenziels [C-61]. Evidenzstärke: **mittel** (motorische Aufgaben).
+  - Bei Menschen mit Behinderungen wirkt Video-Modeling in Einzelfallstudien deutlich, bei schulischen Inhalten aber am schwächsten [C-63]. In Sport und Bewegung reicht das Video allein oft nicht; zusätzliche Hinweise sind nötig [C-64]. Evidenzstärke: **niedrig bis mittel** bzw. **niedrig** (Sport).
+  - Hintergrundwissen, nicht per Suche bestätigt: Ähnliche Modelle (Gleichaltrige, Modelle mit Anfangsfehlern) stärken das Zutrauen von Kindern [H-94]. Für den Inhalt können Erwachsene wirksamere Modelle sein als Gleichaltrige [H-93]. Die Ich-Perspektive hilft beim Video-Modeling von Handlungsabfolgen [H-98].
+- **Im Sport (taktisch):**
+  - Explizites Lernen ist in komplexen Situationen überlegen, implizites in einfachen [C-21]. Viele Anweisungen verengen die Aufmerksamkeit [C-17].
+  - Angeleitetes Entdecken gilt im Antizipationstraining als robust [H-97, Hintergrundwissen].
+  - Eine Studie, die „Erklärung vor der Szene“ mit „Szene vor der Erklärung“ bei Jugendlichen mit Lernschwierigkeiten vergleicht, wurde nicht gefunden.
+- **„I do – we do – you do“:**
+  - Für die Abfolge als Ganzes fehlen kontrollierte Studien [C-65]. Ursprung und Ausbau des Modells liegen in der Lese- und Unterrichtsliteratur [H-88, H-89, Hintergrundwissen].
+  - Gut gestützt sind die Bausteine: explizite Instruktion [C-57, C-58], Beispiele [C-59], schrittweises Ausblenden [C-79] und Scaffolding [H-108, H-109, Hintergrundwissen].
+  - Evidenzstärke: **konzeptionell** für die Abfolge, **mittel** für die Bausteine.
+- **Antwort auf Frage 1:** Für 14-Jährige mit Lernschwierigkeiten ist „erst kurz zeigen und erklären, dann gemeinsam, dann allein“ besser gestützt als „erst allein ausprobieren“. Das widerspricht TGfU [C-01] nicht, solange die Erklärung von einer Spielsituation ausgeht und knapp bleibt [C-17].
+
+**7.2 Erklärvideos und Animationen (Frage 2)**
+
+| Merkmal | Befund | Quellen | Evidenzstärke |
+|---|---|---|---|
+| Segmentierung mit Lernersteuerung | Kleiner bis mittlerer Effekt. In der Meta-Analyse profitierten Lernende mit hohem Vorwissen beim Behalten stärker, in der Fußballstudie dagegen die Noviz:innen | C-66, C-73; H-99 | mittel (allgemein), niedrig (Sport) |
+| Signalisierung | Positiver Effekt auf das Behalten; bei Text-Bild-Bezügen besonders für Lernende mit wenig Vorwissen. Gegenpol: Hinweise verengen die Aufmerksamkeit | C-67, C-68, C-17; H-100 | mittel |
+| Gesprochen statt geschrieben | Vorteil vor allem, wenn das System das Tempo vorgibt; bei selbst gesteuertem Tempo klein oder umgekehrt. Lange gesprochene Abschnitte sind flüchtig. Kinder lesen weniger strategisch als Erwachsene | C-71; H-101, H-102 | mittel (allgemein), niedrig (Kinder) |
+| Untertitel | Größter Einzelnutzen im Meta-Review bei Videos in einer Zweitsprache | C-69 | mittel (aber Zweitsprachenlernen, nicht Taktik) |
+| Länge | Kürzere Videos fesseln Erwachsene besser (unter 6 Minuten). Verführerische Details schaden besonders in kurzen Lektionen | C-72, C-81 | niedrig (Länge für Kinder nicht untersucht) |
+| Animation vs. Standbild | Animation im Mittel überlegen, besonders wenn Veränderungen zu lernen sind und bei menschlicher Bewegung. Im Fußball profitieren Noviz:innen teils mehr von Standbildern oder Verlangsamung, Expert:innen von normalem Tempo; die räumliche Fähigkeit moderiert | C-70, C-74, C-75, C-86; H-103–H-105 | mittel (allgemein), niedrig (Sport) |
+| Kohärenz | Keine dekorativen Details; Noviz:innen sind stärker betroffen | C-81, C-82 | mittel |
+
+- **Kinder und Jugendliche:** In den gefundenen Meta-Analysen wurden keine Untergruppen für Kinder oder Förderbedarf angezeigt. Die sportspezifischen Arbeiten [C-73–C-75, C-86] nennen Alter und Herkunft der Stichproben im Suchergebnis nicht. Die Übertragung auf 14-Jährige mit Lernschwierigkeiten ist plausibel, aber nicht direkt belegt.
+- **Antwort auf Frage 2:** Eine kurze, segmentierte, vom Kind weitergeschaltete Animation mit gesprochener Erklärung, Hervorhebungen nur in der Erklärung und ohne Dekoration. Für Einsteiger:innen langsam und mit Standbildern an Schlüsselstellen.
+
+**7.3 Staffelung und Sicherung (Frage 3)**
+- **Gestufte Schwierigkeit und Ausblenden von Hilfen:**
+  - Vom vollständigen Beispiel über Ergänzungsaufgaben zur selbstständigen Lösung, am besten rückwärts und nach Leistung ausgeblendet [C-79].
+  - Das entspricht dem Scaffolding-Begriff und ist für computerbasiertes Scaffolding meta-analytisch untersucht [H-108, H-109, Hintergrundwissen]. Passend sind der „Challenge Point“ [H-24] und die Expertise-Umkehr [H-26; C-73, C-74].
+  - Evidenzstärke: **niedrig bis mittel**.
+- **Abrufübung:**
+  - Im echten Unterricht wirkt Quizzen mit kleinem bis mittlerem Effekt und besser als Wiederlesen [C-76].
+  - Die Mehrheit der Klassenexperimente zeigt mittlere bis große Vorteile, mit Schwerpunkt Sekundarstufe, Hochschule und westliche Länder [C-77].
+  - Bei Kindern mit Sprachentwicklungsstörung helfen Abrufen und Verteilen beim Wortlernen [C-78].
+  - Evidenzstärke: **mittel** (Schule), **niedrig** (Förderbedarf); für Taktik **nicht geprüft**.
+- **Verteilte Wiederholung:** In der Grundlagenforschung gut belegt [H-17, H-20]; wiederholtes Abrufen über mehrere Sitzungen [H-107] (alles Hintergrundwissen). Bei Kindern mit Sprachstörung helfen zu Beginn kurze Abstände [C-78]. Evidenzstärke: **Hintergrund**; **niedrig** für Förderbedarf.
+- **Mastery:** In dieser Runde nicht neu gesucht; es bleibt bei H-48 und H-49 (Hintergrundwissen). Die Literatur zur expliziten Instruktion empfiehlt für Lernende mit Lernschwierigkeiten viele Übungsgelegenheiten und kumulative Wiederholung [H-85, Hintergrundwissen].
+- **Antwort auf Frage 3:** Die Staffel „Beispiel → ergänzen → allein → gemischt und mit Abstand wiederholen“ ist in ihren Bausteinen belegt. Für Kinder mit Förderbedarf und für Taktik ist sie nicht direkt getestet.
+
+**7.4 Visuelle Darstellung (Frage 4)**
+- **Realismus allgemein:**
+  - Ein optimales Realismusniveau lässt sich nicht angeben. Realistische Details erhöhen die Belastung, nützen aber, wenn das Wissen später an realistischen Bildern angewendet wird. Schematisierung hilft Sekundarschüler:innen vor allem durch Hervorhebung [C-80].
+  - Verführerische Details schaden, besonders Noviz:innen und in kurzen Lektionen [C-81, C-82].
+  - Konkret-reiche Darstellungen können den Transfer abstrakter Prinzipien behindern; das ist umstritten [C-83]. Vereinfachte Diagramme fördern das Verstehen [H-110, Hintergrundwissen].
+  - Evidenzstärke: **mittel** (verführerische Details), **niedrig bis konzeptionell** (Realismus).
+- **Cartoon oder realistisch bei Erklärfiguren:**
+  - Erklärfiguren haben kleine Effekte; für den motivationalen Nutzen ist ihr Bild womöglich nicht nötig. Cartoon-Figuren erzeugten in einer Einzelstudie positivere Lernemotionen [C-91].
+  - Hintergrundwissen, nicht per Suche bestätigt: Menschenähnliche Gestik und Blickrichtung fördern bei Erklärfiguren den Transfer [H-111]; freundliche Gesichter und Farben haben kleine positive Effekte [H-112].
+  - Evidenzstärke: **niedrig**.
+- **Sport – Darstellungsformat:**
+  - Abstrakte Punktdarstellungen tragen die Information über Beziehungen zwischen Spielern. Realistisches Video ist vor allem bei ballnahen Körpersignalen und für Könner im Vorteil [C-85; H-02].
+  - Nicht immersive Animation schlägt VR beim Einprägen taktischer Szenen, außer bei Expert:innen mit hoher räumlicher Fähigkeit [C-87].
+  - 3D-Video beschleunigt Entscheidungen im Nachwuchshandball, verbessert aber nicht ihre Qualität [C-88]. 360°-Video wird als spielnäher erlebt, ohne genauere Entscheidungen [C-89].
+  - Ob statisch oder dynamisch besser ist, hängt von Expertise, Wissensart, Komplexität und räumlicher Fähigkeit ab [C-74, C-75, C-86].
+  - Evidenzstärke: **niedrig** (kleine Einzelstudien, ein schmales Review).
+- **Perspektive:** Die Vogelperspektive lenkte leistungsstarke Nachwuchsfußballer stärker auf freie Räume und führte zu besseren Entscheidungen [C-84]. Spielerperspektive und VR verbesserten in Videostudien die Reizdarbietung [C-47]. Das stützt die Hypothese aus 3.3 und GP-05: Vogelperspektive zum Verstehen, Spielerblick für spätere Transferaufgaben. Evidenzstärke: **niedrig**.
+- **Avatare, Identifikation, Verkörperung:**
+  - Ähnlichkeit (auch der Stimme) steigert die Identifikation, und diese vermittelt Motivation und Leistung. Kinder hatten mehr Freude, wenn sie sich mit dem Avatar identifizierten [C-90].
+  - Hintergrundwissen, nicht per Suche bestätigt: Selbst gestaltete Avatare steigern Identifikation und Motivation [H-114]; die Selbstdarstellung prägt das Verhalten [H-113].
+  - Eine Studie zu realistischen vs. stilisierten Spielerfiguren beim Taktiklernen wurde **nicht** gefunden.
+  - Evidenzstärke: **niedrig**.
+- **Antwort auf Frage 4:** Für das Lernziel von SPIELIQ (Beziehungen, Räume, Abstände) spricht die Evidenz gegen mehr Realismus und für vereinfachte Figuren, die die entscheidungsrelevante Information zeigen. Identifikation lässt sich über Ähnlichkeit und eigene Wahl erreichen statt über Fotorealismus.
+
+**7.5 Einfache bzw. Leichte Sprache und Förderschwerpunkt Lernen (Frage 5)**
+- **Leichte Sprache:** Das Leipziger Projekt LeiSA bewertete die bisherigen Regeln insgesamt eher kritisch. Wirksamkeitsbelege fehlen, einzelne Regeln wurden empirisch infrage gestellt [C-92]. Die Regelwerke stammen aus der Praxis [H-116, H-117, Hintergrundwissen]. Evidenzstärke: **niedrig**.
+- **Easy Read (international):** Menschen mit geistiger Behinderung schätzen solche Materialien, die Wirksamkeit für das Verstehen ist aber kaum belegt. Bilder zum Text helfen nicht verlässlich [C-93]. Eine randomisierte Studie mit Erwachsenen deutet an, dass der Mehraufwand den Gewinn aufwiegen kann; die Vermittlung durch eine Person ist ein eigener Faktor [C-94]. Evidenzstärke: **niedrig**.
+- **Einfache Sprache** (weniger streng geregelt als Leichte Sprache): Eine Wirksamkeitsstudie wurde nicht gefunden.
+- **Förderschwerpunkt Lernen im Sportunterricht und mit digitalen Medien:** Keine Studie gefunden [C-95]. Es gibt nur allgemeine Befunde zu Videofeedback im Sportunterricht [C-95] und Kleinstudien zu Video-Modeling bei Behinderungen [C-64]. Evidenzstärke: Lücke.
+- **Antwort auf Frage 5:** Die vereinfachten Spielertexte bleiben richtig, sind aber eine begründete Annahme und keine belegte Methode. Besser gestützt sind:
+  - die Leseanforderung senken durch gesprochene Erklärung bei laufender Animation [C-71],
+  - eindeutige Hervorhebungen mit gleicher Farbe und Nummer in Text und Bild [C-68],
+  - persönliche Unterstützung [C-94],
+  - und der Test mit Kindern der Zielgruppe (`docs/design/einfach-verstehen.md`, Abschnitt 6).
+
+**7.6 Designfolgerungen für SPIELIQ** (alle Punkte: **Designfolgerung**, eigene Ableitung; Zahlenwerte sind Annahmen für den Pilot)
+
+1. **Lektionsablauf „Zeigen – Zusammen – Allein – Sichern“.** Er deckt den Wunsch des Produktverantwortlichen ab und passt zu GP-07:
+
+   | Phase | Inhalt | Quellen |
+   |---|---|---|
+   | Zeigen (Erklärsequenz) | Eine Spielsituation, ein Prinzip, eine Musterlösung als Animation. Sie endet mit einer Vorhersagefrage („Wohin geht Nummer 5? Tippe.“), damit die Erklärung nicht passiv bleibt (GP-03) | C-57–C-59, C-01, C-17 |
+   | Zusammen (Ergänzen) | Lösung teilweise vorgegeben, das Kind setzt den letzten Spieler; Hervorhebungen und Anleitung (`guide`) sind an | C-79, C-68; H-108 |
+   | Allein (Staffel) | 3–6 Aufgaben, schwieriger durch mehr relevante Spieler, gespiegelte Seiten und anderes Gegnerverhalten; Hinweise aus, gestufte „Hilfe“ auf Anfrage | C-79, C-17; GP-02, GP-15 |
+   | Sichern | 2–3 Abrufszenen ohne Hilfe am Ende, eine davon aus einer früheren Lektion; Wiederholung der Lektion nach einigen Tagen | C-76–C-78; GP-10 |
+
+   Wer ein Prinzip sicher löst, darf „Zeigen“ überspringen (Expertise-Umkehr; C-73, C-74; H-26).
+2. **Erklärsequenz als Animation der Engine, nicht als Realfilm.** Sie nutzt dieselben Figuren und dasselbe Feld wie die Aufgaben; so passen Lern- und Anwendungssituation zusammen (C-80). Realfilm mit echten Jugendlichen allenfalls für die Platzbrücke und nur mit Einwilligung (Bildrechte, Register D).
+3. **Länge:**
+   - pro Segment ein Gedanke und ein Satz, etwa 10–20 Sekunden;
+   - 3–4 Segmente, zusammen höchstens etwa eine Minute;
+   - die ganze Lektion 5–10 Minuten (wie in 4.2).
+
+   Grundlage: Segmentierung [C-66, C-73], Kohärenz gerade in kurzen Lektionen [C-81], Flüchtigkeit gesprochener Information [H-101]. Die 6-Minuten-Grenze [C-72] gilt für Erwachsene und ist hier keine Zielmarke. Die Werte sind Annahmen; im Pilot über Abbruchquote und Verstehen prüfen.
+4. **Gesprochene Erklärung: ja, als Standard in der Erklärsequenz.**
+   - Regel: *Gesprochen, solange sich etwas bewegt; geschrieben nur, wenn das Bild steht und das Kind selbst weiterschaltet* [C-71, C-66].
+   - Ein kurzer Untertitel mit den Schlüsselwörtern ist als Einstellung standardmäßig an: Untertitel helfen Zweitsprachler:innen [C-69], und in Kabine oder Bus wird oft ohne Ton gelernt (4.5).
+   - Eine aufgenommene, freundliche menschliche Stimme ist der Gerätestimme vorzuziehen [C-90, C-91; Evidenzstärke niedrig]. Die Gerätestimme bleibt Rückfallebene.
+5. **Tempo und Standbild:** „Langsam“ ist der Standard für Einsteiger:innen. An Schlüsselmomenten hält die Animation an („Stopp – schau hin“), mit einer einzigen Hervorhebung. Normales Tempo, sobald das Prinzip sicher sitzt [C-74, C-75, C-86]. Komplexe kollektive Szenen (Viererkette) immer segmentiert [C-21, C-75].
+6. **Figuren: stilisiert mit Blickrichtung und Laufanimation statt realistisch.** Das beantwortet die Frage des Produktverantwortlichen:
+   - **Nicht fotorealistisch, kein 3D oder VR.** Mehr Realismus bringt für Wissen über Beziehungen und Räume keinen belegten Vorteil, erhöht die Belastung und lenkt Noviz:innen ab [C-80–C-83, C-85, C-87–C-89].
+   - **Aber mehr als Kreise.** Eine einfache Figur mit erkennbarer **Blick- und Körperrichtung** und einer schlichten **Laufanimation** trägt entscheidungsrelevante Information: wohin jemand schaut und läuft, ob er mit dem Rücken zum Tor steht [C-14, C-44]. Das ist kein dekoratives Detail, sondern ein Signal. Es passt zum Vorteil von Animationen bei Bewegung [C-70; H-104, H-105] und zur „Schulterblick“-Mechanik (3.3).
+   - **Identifikation über die eigene Figur:** deutlich als „Du“ markiert, mit selbst gewählter Trikotnummer und -farbe aus einer kleinen Auswahl [C-90; H-113, H-114]. Kein Foto. Wird die Auswahl im Konto gespeichert, ist das eine neue Datenverarbeitung und braucht vorher einen Eintrag im Datenschutzkonzept (Abschnitt 3) mit Speicherfrist.
+   - **Kein Dekor:** kein Publikum, keine kontrastreiche Rasentextur, keine Gesichter mit Mimik am Feld [C-81, C-82]. Ein freundlicher Stil (runde Formen, warme Teamfarben) ist zulässig [H-112].
+   - **Evidenzstärke: niedrig** (nur indirekt; keine Studie vergleicht realistische und stilisierte Spielerfiguren beim Taktiklernen). Im Pilot als A/B-Test prüfen: Kreise vs. stilisierte Figuren mit Blickrichtung, gemessen an Verstehen, Entscheidungsqualität und Freude.
+7. **Perspektive:** Die Vogelperspektive bleibt Standard für Zeigen und Üben [C-84]. Eine Spielerperspektive kommt erst als spätere Transferstufe [C-47; Hypothese 3.3, GP-05].
+8. **Hervorhebungen dosieren:** an in „Zeigen“ und „Zusammen“, aus in „Allein“ und „Sichern“ [C-17, C-67, C-68]. Gleiche Farbe und Nummer in Satz und Feld [C-68].
+9. **Sprache:** Die Regeln aus `docs/design/einfach-verstehen.md` beibehalten, aber nicht als belegte Methode darstellen. Formulierungen und Bildsymbole mit Kindern testen [C-92–C-94]. Trainer:innen als Vermittelnde einplanen, etwa mit einer Vorbesprechung in der Kabine [C-94].
+10. **Messung im Pilot (Ergänzung zu GP-14):** Vergleiche „mit Erklärsequenz“ vs. „ohne“, „Kreise“ vs. „stilisierte Figuren“ und gesprochene Erklärung an vs. aus. Soll dafür die Nutzung von „Überspringen“ und „Langsam“ protokolliert werden, ist das eine neue Datenverarbeitung und braucht vorher einen Eintrag im Datenschutzkonzept.
+
+**7.7 Grenzen und Prüfaufträge**
+- Kein Volltext geprüft. Bei C-67 stammt der Hauptwert aus einer Sekundärquelle (Lehrfolie), bei C-76 nur aus Blogzusammenfassungen.
+- Widerspruch beim Vorwissen: In der Segmentierungs-Meta-Analyse profitierten Lernende mit hohem Vorwissen stärker [C-66], in der Fußballstudie Noviz:innen [C-73].
+- Nicht gefunden wurden Studien zu realistischen vs. stilisierten Spielerfiguren, zu Erklärvideos für Jugendliche mit Lernschwierigkeiten im Sport und zu Leichter Sprache in Lern-Apps.
+- Prüfreihenfolge im Volltext: C-75, C-73, C-74, C-84, C-71, C-66, C-81, C-80, C-88, C-87.
+- Für diese Fragen wichtige gesperrte Domains: link.springer.com (C-59, C-66, C-80, C-81), journals.sagepub.com (C-58, C-69), tandfonline.com (C-60, C-61, C-87, C-88), pubmed/pmc (C-62, C-75, C-86, C-93), mdpi.com (C-75, C-86), frontiersin.org (C-89), researchgate.net (C-85). In dieser Runde zusätzlich gesperrt: preprints.org, wikicap.ulb.be, cs.rochester.edu, ueaeprints.uea.ac.uk, repository.essex.ac.uk. Nicht versucht: sciencedirect.com (Learning and Instruction, Educational Research Review, Computers in Human Behavior) und ijsp-online.com (C-84).
 
 ---
 
