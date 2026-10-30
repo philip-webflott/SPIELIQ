@@ -1,6 +1,6 @@
 # Entwicklungsplan
 
-Stand: 29.10.2026 · Lies zuerst diesen Plan und den [Doku-Index](README.md).
+Stand: 30.10.2026 · Lies zuerst diesen Plan und den [Doku-Index](README.md).
 
 ## 1. Aktueller Stand
 
@@ -14,9 +14,13 @@ Stand: 29.10.2026 · Lies zuerst diesen Plan und den [Doku-Index](README.md).
 **Technik – vertikaler Schnitt funktionsfähig**
 - Monorepo: `packages/engine` (Geometrie, zeitbasiertes Passweg-Modell, 20 Bewertungskriterien, Zeitleisten, Konsequenz-Simulation, Szenarioformat, Qualitätswerkzeuge), `packages/content` (10 Prinzipien, Kompetenzbaum, 6 Missionen, 6 Spielformen, 6 Spielformate, Texte, Fortschrittsregeln), `packages/pitch` (SVG-Spielfeld, Animation, Ziehen/Antippen/Tastatur, Hoch- und Querformat), `apps/web` (Next.js 16).
 - Funktionen: Gastmodus ohne Konto; Trainer-Registrierung mit Verein und Mannschaft; Teamcodes (Hash, Ablauf, Einwilligungsbestätigung für U16, keine Spielerkonten in G/F); pseudonyme Spielerkonten; Lerneinheit 1 mit Missionen 1–6 (Zuschauen, Erkennen, Positionieren, Feedback, Konsequenz, Zusammenfassung); serverseitige Neubewertung; Lernstand mit drei Zuständen; Hausaufgaben mit Bericht; Trainerbeobachtung „auf dem Platz“; Problemfelder und Spielform-Vorschläge; Auskunft (JSON), Berichtigung, Löschung; Speicherfristen-Job; Seite „Hilfe & Melden“; Demo-Daten klar gekennzeichnet.
-- Qualität: 41 Engine-, 3 Spielfeld-, 102 Content-, 26 Integrations- und 7 End-to-End-Tests (Smartphone und Desktop), alle grün; Content-Tests prüfen Beispiele, Zufallsschutz, Raterate, Spiegelinvarianz und die Existenz jeder Quellenangabe ([Content-Report](qualitaet/content-report.md)).
+- Qualität: 41 Engine-, 3 Spielfeld-, 128 Content-, 39 App-Tests (Integration gegen PostgreSQL und Unit) und 9 End-to-End-Tests (Smartphone und Desktop), alle grün; Content-Tests prüfen Beispiele, Zufallsschutz, Raterate, Spiegelinvarianz und die Existenz jeder Quellenangabe ([Content-Report](qualitaet/content-report.md)).
 
 **Einfach verstehen (30.10.2026):** Nach Rückmeldung zur Zielgruppe (Förder- und Hauptschule) überarbeitet: Einfache Sprache in allen Spielertexten, Spielfeld immer gleich ausgerichtet mit Legende, weniger Knöpfe, Schritt-für-Schritt-Anleitung bei mehreren Spielern, Hilfe nach dem ersten Fehlversuch – Regeln in [Einfach verstehen](design/einfach-verstehen.md). Nächster Schritt: Test mit Kindern der Zielgruppe.
+
+**Sprachausgabe (30.10.2026):** Vorlesen mit vorab erzeugter KI-Stimme (ElevenLabs, Entscheidung des Produktverantwortlichen): Katalog aller vorlesbaren Texte inkl. Rückmeldungen mit Spielernummern, Skript `pnpm voice`, automatisches Vorlesen mit Schalter, Rückfall auf Gerätestimme – [Sprachausgabe](konzept/sprachausgabe.md). Die Aufnahmen selbst entstehen, sobald der ElevenLabs-Zugang hinterlegt ist.
+
+**Spielerfiguren (30.10.2026):** Konzept, Prototyp und Umsetzungsplan für Figuren mit Blickrichtung und Posen statt Kreisen – [Spielerfiguren](design/spielerfiguren.md), ADR 0009 (vorgeschlagen). Stilabnahme durch den Produktverantwortlichen ausstehend.
 
 **Online-Vorschau:** vorbereitet für Vercel + Supabase (`apps/web/vercel.json`, Build mit Migrationen und optionalen Demo-Daten) – [Anleitung](betrieb/vorschau-vercel-supabase.md). Nur mit Demo-Daten.
 
@@ -45,12 +49,15 @@ Begründet und umkehrbar; grundlegende Fragen stehen in [Offene Fragen](recherch
 | ENT-15 | Begriffe „erster/zweiter/dritter Verteidiger“ mit Rollenwort („Stellen“, „Absichern“, „Mitte schützen“) | FIFA-belegt, im Auftrag verwendet; DFB-Begriff nur für den ersten belegt | [Taktische Grundlagen](recherche/taktische-grundlagen.md) |
 | ENT-16 | Pressing-Grundlagen ab C (statt B) im Altersrahmen | U14/U15-Einheiten von DFB und FIFA (A-15, B-10, B-12) | [Kompetenzbaum](konzept/kompetenzbaum.md) |
 | ENT-17 | CSP mit `'unsafe-inline'` für Skripte (vorerst) | Nonces erzwingen dynamisches Rendern; Härtung geplant | [Sicherheit](architektur/sicherheit.md) |
+| ENT-18 | Vorlesetexte vorab vertonen statt live: Die App spricht nie mit ElevenLabs, es gehen nur feste Lerntexte hinaus | keine Kinderdaten bei Dritten, keine Wartezeit, einmalige Kosten | [Sprachausgabe](konzept/sprachausgabe.md) |
+| ENT-19 | Figuren in Draufsicht als vorgerenderte Sprites; Schrägansichten nur außerhalb des Simulators (vorgeschlagen) | Leistung auf älteren Handys, gleiche Figur in allen Ansichten, kein belegter Vorteil von 3D | [Spielerfiguren](design/spielerfiguren.md), ADR 0009 |
 
 ## 3. Roadmap (priorisiert)
 
 | Meilenstein | Inhalt | Priorität | Voraussetzung |
 |---|---|---|---|
 | **M0 – Fundament** ✓ | Recherche, Konzepte, Technik, Einheit 1 spielbar, Tests | erledigt | – |
+| **L – Lernerlebnis** (Wunsch des Produktverantwortlichen, 30.10.2026) | Lektionsformat: Erklärfilm (ca. 1 Minute, kurze Abschnitte, gesprochen) → Vormachen → Üben in Stufen → Sichern (Quiz, spätere Wiederholung) → Aufgabe für den Platz; Figuren (Phasen 1–4 im [Figurenkonzept](design/spielerfiguren.md)); Ball-Simulation (Ballweg zum Gegner, Durchlaufen und Torschuss bei falscher Absicherung, „So wäre es richtig“); Positionswelten nach den Grundlagen für alle | Must | Sprachausgabe ✓; Stilabnahme Figuren; Mannschaftssystem der C-Jugend für Positionswelten |
 | **M1 – Fachliche Freigabe und Kalibrierung** | Review der Missionen 1–6 nach Checklisten; Werkzeug für Expertenurteile („passt / vertretbar / nicht passend“ zu standardisierten Situationen); Schwellen anpassen; Begriffe bestätigen; Freigabestatus `approved` | Must | lizenzierte:r Jugendtrainer:in (Entscheidung E-4) |
 | **M2 – Pilotfähigkeit** | anwaltliche Prüfung, DSFA, Verzeichnis, AVV-Vorlage, endgültige Datenschutzhinweise und Elterninformation; EU-Hosting; CI-Pipeline (Typprüfung, Lint, Tests, Build, E2E mit PostgreSQL); täglicher Retention-Job; Beitritt mit Freigabe durch Trainer:in; E-Mail-Verifikation und Passwort-Rücksetzung für Erwachsene; MFA für Trainer:innen/Admins; axe-Prüfungen | Must | E-1, E-2, E-6 |
 | **M3 – Pilot C-Jugend** | 6–8 Wochen, Vorher/Nachher/Retention: digitaler Test, Nahtransfer (neue Szenen), strukturierte Trainerbeobachtung in einer festen Spielform; qualitative Interviews | Must | M1, M2, Einwilligungen (E-5) |
@@ -63,6 +70,7 @@ Begründet und umkehrbar; grundlegende Fragen stehen in [Offene Fragen](recherch
 
 ## 4. Bekannte Grenzen und technische Schulden
 
+- **Sprachausgabe:** Aufnahmen noch nicht erzeugt (ElevenLabs-Zugang fehlt); bis dahin nur Gerätestimmen, falls vorhanden.
 - **Engine:** keine Blick-/Laufrichtungen, keine Geschwindigkeiten der Spieler in der Bewertung, kein gechippter Pass, kein Abseits; Torwart nur passiv; Gegnerverhalten in der Konsequenz-Simulation einfach; alle Schwellen unkalibriert.
 - **Inhalte:** alle Missionen auf `review`; nur Einheit 1; Feedbacktexte nur Deutsch.
 - **Sicherheit:** CSP ohne Nonces; IP-Ratenbegrenzung erst am Reverse Proxy; keine E-Mail-Rücksetzung und keine MFA für Erwachsene; keine Sitzungsübersicht.
@@ -73,9 +81,9 @@ Begründet und umkehrbar; grundlegende Fragen stehen in [Offene Fragen](recherch
 
 ## 5. Nächste Schritte (konkret für die nächste Sitzung)
 
-1. Test der vereinfachten Fassung mit 3–5 Kindern der Zielgruppe; Erkenntnisse in [Einfach verstehen](design/einfach-verstehen.md), Abschnitt 6, einarbeiten.
-2. CI-Workflow (GitHub Actions) mit PostgreSQL-Service anlegen: `pnpm check`, `pnpm build`, `pnpm test:e2e`.
-3. Kalibrierungswerkzeug für Trainer:innen (Situationen aus den Missionsbeispielen anzeigen, Urteil erfassen, Übereinstimmung mit der Engine auswerten).
-4. Beitritt mit Freigabe durch die Trainer:in (offene Beitrittsanfragen im Trainerbereich).
-5. Einheit 2 konzipieren (Missionsdrehbuch analog [Lerneinheit 1](konzept/lerneinheit-1.md)) und die Interaktion „Laufweg mit Zeitpunkt“ in Engine und Spielfeld ergänzen.
-6. Folgerecherche nach Freigabe der Domains (siehe [Recherche](recherche/README.md), Abschnitt 5), zuerst MEIN FUSSBALL und EU-Rechtstexte.
+1. **Vertonen:** sobald `ELEVENLABS_API_KEY` und `ELEVENLABS_VOICE_ID` in der Umgebung hinterlegt sind: `pnpm voice --dry-run`, `pnpm voice --limit=5` (Stimme anhören lassen), dann `pnpm voice` und `apps/web/public/voice/` committen ([Sprachausgabe](konzept/sprachausgabe.md), Abschnitt 3).
+2. **Figuren Phase 1–3** nach Stilabnahme: Blickrichtung und Zustände in der Engine, Renderer mit Atlanten, Einbau mit Rückfall auf Kreise ([Spielerfiguren](design/spielerfiguren.md), Abschnitt 10).
+3. **Lektionsformat** (Meilenstein L): Erklärfilm-Schritt im Szenarioformat (Abschnitte mit Animation und Sprachtext, Zeitmarken aus der Sprachausgabe), gestufte Übungen, Sicherungsquiz.
+4. Test der vereinfachten Fassung mit 3–5 Kindern der Zielgruppe; Erkenntnisse in [Einfach verstehen](design/einfach-verstehen.md), Abschnitt 6, einarbeiten.
+5. CI-Workflow (GitHub Actions) mit PostgreSQL-Service anlegen: `pnpm check`, `pnpm build`, `pnpm test:e2e`.
+6. Folgerecherche – die Domains sind seit 30.10.2026 freigegeben (siehe [Recherche](recherche/README.md), Abschnitt 5): MEIN FUSSBALL, EU-Rechtstexte, Studien im Volltext.

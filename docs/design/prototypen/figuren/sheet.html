@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<style>
+  body{margin:0;background:#0b1220;color:#e9eef7;font-family:Inter,system-ui,sans-serif}
+  .page{width:1400px;padding:28px 32px;box-sizing:border-box}
+  h1{font-family:'Barlow Condensed',Arial Narrow,sans-serif;font-size:34px;letter-spacing:.04em;text-transform:uppercase;margin:0}
+  .sub{color:#a5b1c8;margin:6px 0 22px;font-size:15px}
+  h2{font-family:'Barlow Condensed',Arial Narrow,sans-serif;font-size:22px;letter-spacing:.05em;text-transform:uppercase;margin:26px 0 10px;color:#cfe3ff}
+  .row{display:flex;gap:18px;align-items:flex-start}
+  .card{background:#111a2c;border:1px solid #22314d;border-radius:14px;padding:10px 10px 12px}
+  .card p{margin:6px 2px 0;font-size:13px;color:#a5b1c8;line-height:1.35}
+  .label{font-family:'Barlow Condensed',Arial Narrow,sans-serif;font-weight:700;font-size:17px;letter-spacing:.05em;text-transform:uppercase;text-align:center;margin-top:4px}
+  .hint{font-size:12px;color:#8090ab;text-align:center}
+  svg{display:block;border-radius:10px}
+</style></head>
+<body><div class="page">
+  <h1>SPIELIQ-Figuren · Prototyp Draufsicht</h1>
+  <div class="sub">Eigener Entwurf nach der Referenz „klare Blickrichtung, leicht erkennbar, bereit für Animation“. Gesicht und Nase zeigen die Blickrichtung, der tropfenförmige Fußabdruck mit weißer Spitze bestätigt sie. Nummer bleibt immer aufrecht.</div>
+
+  <h2>Sechs Zustände – Team Blau (wir) und Team Orange (Gegner)</h2>
+  <div class="row" id="states"></div>
+
+  <h2>Blickrichtung in jede Richtung (Körper dreht, Nummer nicht)</h2>
+  <div class="row"><div class="card"><svg id="wheel" width="1310" height="120"></svg></div></div>
+
+  <h2>Echte Größe auf dem Handy – dieselbe Situation</h2>
+  <div class="row" id="compare"></div>
+</div>
+<script src="figures.js"></script>
+<script>
+const STATES = [
+  ['ready', 'Bereit', 'steht, schaut zum Ball'],
+  ['runA', 'Laufen', 'Schritt + Armschwung, Spur'],
+  ['defend', 'Verteidigen', 'breit, tief, zum Gegner'],
+  ['receive', 'Pass annehmen', 'offen, Fuß zum Ball'],
+  ['pass', 'Passen', 'Standbein + Innenseite'],
+  ['shoot', 'Schießen', 'weit ausholen'],
+]
+const statesRow = document.getElementById('states')
+for (const [pose, name, hint] of STATES) {
+  const card = document.createElement('div'); card.className = 'card'
+  const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('width', 200); svg.setAttribute('height', 250)
+  card.appendChild(svg)
+  grass(svg, 200, 250)
+  const extra = pose === 'runA' ? { trail: { dir: 0 } } : {}
+  figure(svg, { x: 100, y: 72, s: 2.6, pose, team: 'own', label: '6', look: 0, ...extra })
+  figure(svg, { x: 100, y: 188, s: 2.6, pose, team: 'opp', label: '9', look: 2, facing: 0, ball: pose === 'pass' || pose === 'shoot' || pose === 'receive', ...extra })
+  if (pose === 'receive') {
+    // Ball kommt von vorne
+  }
+  const l = document.createElement('div'); l.className = 'label'; l.textContent = name; card.appendChild(l)
+  const h = document.createElement('div'); h.className = 'hint'; h.textContent = hint; card.appendChild(h)
+  statesRow.appendChild(card)
+}
+
+const wheel = document.getElementById('wheel')
+grass(wheel, 1310, 120)
+for (let i = 0; i < 16; i++) {
+  figure(wheel, { x: 46 + i * 81, y: 62, s: 1.9, facing: i * 22.5, pose: 'ready', team: i % 2 ? 'opp' : 'own', label: String((i % 11) + 1), look: i })
+}
+
+// Vergleich in echter Größe: Bildausschnitt 52 × 46 m, Handy-Breite 412 px → 7,9 px pro Meter.
+// Figur s = 1 entspricht ca. 28 px Breite mit Armen.
+const W = 412, H = 430, m = W / 52
+const P = (x, y) => [x * m, y * m] // Meter → px (Hochformat, unser Tor unten)
+const SITUATION = [
+  { team: 'opp', label: '9', at: [26, 17], facing: 180, pose: 'runA', ball: true, trail: { dir: 180 } },
+  { team: 'own', label: '4', at: [26, 24.5], facing: 0, pose: 'defend' },
+  { team: 'own', label: '3', at: [33, 28.5], facing: 315, pose: 'runB', trail: { dir: 315 } },
+  { team: 'own', label: '6', at: [19.5, 31], facing: 20, pose: 'ready' },
+  { team: 'opp', label: '7', at: [10, 22], facing: 120, pose: 'ready', free: true },
+  { team: 'opp', label: '10', at: [38, 12], facing: 200, pose: 'runA', trail: { dir: 200 } },
+  { team: 'opp', label: '8', at: [17, 9], facing: 160, pose: 'ready' },
+  { team: 'ownKeeper', label: '1', at: [26, 51], facing: 0, pose: 'ready' },
+]
+const compare = document.getElementById('compare')
+function panel(title, text, draw) {
+  const card = document.createElement('div'); card.className = 'card'
+  const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('width', W); svg.setAttribute('height', H)
+  card.appendChild(svg)
+  grass(svg, W, H)
+  // Linien: Strafraum unten
+  el(svg, 'rect', { x: P(5.8, 0)[0], y: P(0, 37.5)[1], width: 40.3 * m, height: 16.5 * m, fill: 'none', stroke: '#fff', 'stroke-width': 1.2, opacity: 0.85 })
+  el(svg, 'rect', { x: P(16.8, 0)[0], y: P(0, 48.5)[1], width: 18.3 * m, height: 5.5 * m, fill: 'none', stroke: '#fff', 'stroke-width': 1.2, opacity: 0.85 })
+  draw(svg)
+  const h = document.createElement('div'); h.className = 'label'; h.style.textAlign = 'left'; h.textContent = title; card.appendChild(h)
+  const p = document.createElement('p'); p.textContent = text; card.appendChild(p)
+  card.style.width = W + 20 + 'px'
+  compare.appendChild(card)
+}
+panel('Heute: Kreise', 'Wer läuft, wer schaut wohin, wer verteidigt? Muss man sich denken.', (svg) => {
+  for (const s of SITUATION) {
+    const [x, y] = P(...s.at)
+    circleToken(svg, { x, y, s: 0.78, team: s.team === 'ownKeeper' ? 'own' : s.team, label: s.label })
+    if (s.ball) ballAt(svg, x + 9, y + 8, 0.9)
+  }
+})
+panel('Entwurf: Figuren', 'Nummer 9 dribbelt auf unser Tor zu, Nummer 4 stellt ihn breit, Nummer 3 läuft zurück, Nummer 7 ist frei (Markierung nur in der Erklärung).', (svg) => {
+  for (const s of SITUATION) {
+    const [x, y] = P(...s.at)
+    figure(svg, { x, y, s: 1.25, team: s.team, label: s.label, facing: s.facing, pose: s.pose, ball: s.ball, trail: s.trail, free: s.free, look: Number(s.label) })
+  }
+})
+panel('Entwurf: Aufgabe „Du bist dran“', 'Steuerbare Figur mit DU und gestricheltem Ring; Blick automatisch zum Ball. Ohne weiße Spitze ruhiger – die Richtung zeigt dann nur der Tropfen. Blickfeld (Nummer 4) nur in Lektionen zur Körperstellung.', (svg) => {
+  for (const s of SITUATION) {
+    const [x, y] = P(...s.at)
+    const isYou = s.label === '6'
+    figure(svg, { x, y, s: 1.25, team: s.team, label: s.label, facing: isYou ? 20 : s.facing, pose: s.pose === 'runA' || s.pose === 'runB' ? 'ready' : s.pose, ball: s.ball, look: Number(s.label), you: isYou, movable: isYou, pointer: false, cone: s.label === '4' })
+  }
+})
+</script>
+</body></html>

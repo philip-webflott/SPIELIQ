@@ -1,6 +1,6 @@
 # SPIELIQ – Dokumentation
 
-Stand: 29.10.2026 · Einstieg für jede Entwicklungssitzung: zuerst den [Entwicklungsplan](entwicklungsplan.md) lesen.
+Stand: 30.10.2026 · Einstieg für jede Entwicklungssitzung: zuerst den [Entwicklungsplan](entwicklungsplan.md) lesen.
 
 ## Plan und offene Fragen
 
@@ -37,12 +37,13 @@ Stand: 29.10.2026 · Einstieg für jede Entwicklungssitzung: zuerst den [Entwick
 | Dokument | Inhalt |
 |---|---|
 | [Designsystem](design/designsystem.md) | Farben, Kontraste, Typografie, Spielfeld, Komponenten, Bewegung |
+| [Spielerfiguren](design/spielerfiguren.md) | Figurensystem für den Simulator: Prinzipien, Zustände, Ansichten, Technikentscheidung (Sprites), Skalierung, Umsetzungsplan, Prototyp |
 | [Einfach verstehen](design/einfach-verstehen.md) | Regeln für Sprache, Spielfeld und Bedienung, damit niemand überfordert wird (Einfache Sprache, Schritt für Schritt) |
 | [Architektur – Überblick](architektur/ueberblick.md) | Stack und Versionen, Module, Datenfluss, Struktur, Erweiterbarkeit |
 | [Datenmodell](architektur/datenmodell.md) | Entitäten, abgeleitete Werte, Aufbewahrung |
 | [Sicherheit](architektur/sicherheit.md) | Authentifizierung, Autorisierung, Härtung, offene Maßnahmen |
 | [Teststrategie](architektur/teststrategie.md) | Testebenen, Umfang, Grundsätze |
-| ADRs | [0001 Monorepo](architektur/adr/0001-monorepo-mit-fachpaketen.md) · [0002 SVG](architektur/adr/0002-svg-rendering.md) · [0003 Sitzungen](architektur/adr/0003-eigene-sitzungsverwaltung.md) · [0004 Cache Components](architektur/adr/0004-cache-components.md) · [0005 Prisma/PostgreSQL](architektur/adr/0005-prisma-7-postgresql.md) · [0006 TypeScript 6](architektur/adr/0006-typescript-6.md) · [0007 Zeitbasierte Bewertung](architektur/adr/0007-zeitbasierte-bewertung.md) · [0008 Inhalte im Code](architektur/adr/0008-inhalte-im-code.md) |
+| ADRs | [0001 Monorepo](architektur/adr/0001-monorepo-mit-fachpaketen.md) · [0002 SVG](architektur/adr/0002-svg-rendering.md) · [0003 Sitzungen](architektur/adr/0003-eigene-sitzungsverwaltung.md) · [0004 Cache Components](architektur/adr/0004-cache-components.md) · [0005 Prisma/PostgreSQL](architektur/adr/0005-prisma-7-postgresql.md) · [0006 TypeScript 6](architektur/adr/0006-typescript-6.md) · [0007 Zeitbasierte Bewertung](architektur/adr/0007-zeitbasierte-bewertung.md) · [0008 Inhalte im Code](architektur/adr/0008-inhalte-im-code.md) · [0009 Figuren als Sprites](architektur/adr/0009-figuren-als-sprites.md) |
 | [Datenschutz- und Kinderschutzkonzept](recht/datenschutzkonzept.md) | Daten, Sichtbarkeit, Einwilligung, Fristen, Betroffenenrechte, Speicher-Inventar, offene Rechtsfragen |
 | [Barrierefreiheit](recht/barrierefreiheit.md) | rechtlicher Rahmen, Umsetzungsstand je WCAG-Kriterium, Prüfplan |
 | [Online-Vorschau mit Vercel und Supabase](betrieb/vorschau-vercel-supabase.md) | Einrichtung, Umgebungsvariablen, Fehlerbehebung, Datenschutz-Hinweise |

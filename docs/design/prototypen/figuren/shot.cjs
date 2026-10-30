@@ -1,0 +1,10 @@
+const { chromium } = require('playwright')
+;(async () => {
+  const [file, out] = process.argv.slice(2)
+  const b = await chromium.launch()
+  const p = await b.newPage({ viewport: { width: 1400, height: 900 }, deviceScaleFactor: 1 })
+  await p.goto('file://' + file)
+  await p.waitForTimeout(300)
+  await p.screenshot({ path: out, fullPage: true })
+  await b.close()
+})()
