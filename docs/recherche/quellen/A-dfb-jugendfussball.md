@@ -111,6 +111,7 @@ Stand: 29.10.2026 · Erster Durchgang ausschließlich per Websuche; zweiter Durc
   - Reflexionsfragen für Jugendtrainer*innen, u. a. zu „Abrufen vs. Entwickeln" und zur „Rondoisierung und Taktisierung des Nachwuchsfußballs"; Leitfrage: Was trainieren wir heute nicht?
   - Coaching-Folie: direktes Umschalten organisieren (neuer Ball, „Shotclock"), das Spiel mit der Stimme begleiten; Leitsatz: Alle greifen gemeinsam an, alle verteidigen gemeinsam.
   - Korrektur nach Volltextprüfung: Die im ersten Durchgang unsichere Blockstruktur (3–4 × 4 Minuten netto, 1v1 bis 4v4) und die Altersangabe „10 bis 18 Jahre" stehen im Original. Zusätzlich gibt es die 3v3-Variante für 6 bis 18 Jahre. Dieses PDF ist nicht das 13,5-MB-Flipbook (das ist A-87).
+  - Ergänzung 30.10.2026: Eine inhaltsgleiche Vorfassung (https://assets.dfb.de/uploads/000/289/596/original_230824_FB.de_ohne_Videos_TBA.pdf, PDF-Metadaten 25.08.2023, neun Folien, Volltext abgerufen) nennt für den Block zwischen den Spielblöcken ausdrücklich „Positionstechnik" neben Dribbling, Flugbällen, Torschuss und Flanken.
 - Konsequenzen für SPIELIQ: Die Szenario-Bibliothek von 1v1 bis 4v4 aufbauen und nach den vier DFB-Formgruppen gliedern (Gleichzahl, mit Anspielern, Über-/Unterzahl, Linie verteidigen/bespielen). Die Aktionstabelle ist ein DFB-Argument für viele Entscheidungen pro Zeiteinheit, muss aber als DFB-Schätzung gekennzeichnet werden.
 
 ### [A-03] Sportliches Leitbild – „Unser Weg" (alte DFB-URL)
@@ -240,6 +241,7 @@ Stand: 29.10.2026 · Erster Durchgang ausschließlich per Websuche; zweiter Durc
   - Offensive Schwerpunkte u. a.: Abspielmöglichkeiten in Tiefe und Breite schaffen, über Positionswechsel und Hinterlaufen Überzahl herstellen, mit Dribblings Gegner binden; beim Steuerungsmittel Abseits geschicktes Freilaufen; Gegner binden, anspielbar sein, Räume „freiziehen".
   - Defensive Coachingpunkte beim Linie-Verteidigen: Ballführende attackieren, Verschieben, Übergeben/Übernehmen, Kommunikation, Timing beim Anlaufen, „Abwehrdreieck". Nur eine Person rückt aus der Formation heraus, die anderen sichern das Zentrum und schließen Schnittstellen.
   - Methodik: Intervalle schaffen Coachingzeit in den Pausen; Trainer*innen machen bewusst, dass in jeder Aktion Entscheidungen fallen; Aktionskarten nach dem Vorbild alternativer Ligaformate sollen strategisches Denken fördern; Handzettel für Technikspiele können vorab per Messenger verschickt werden.
+  - Ergänzung 30.10.2026: Das Heft enthält ein Programm „Torhüter*innenorientierte Ballschule". Weil in jungen Jahren eine breite Ausbildungsbasis gewollt sei, sollen auch Feldspieler*innen die Position im Tor erleben können; so ließen sich spätberufene Torwarttalente entdecken.
 - Konsequenzen für SPIELIQ: „Spiel auf 1 Tor" ist ein idealer Szenariotyp für Freilaufen und Verteidigen in Unter- oder Überzahl. Die U14-Feldmaße eignen sich direkt als Presets für die Zielgruppe. Die Defensiv-Coachingpunkte liefern DFB-Vokabular für das Modul kollektives Verteidigen.
 
 ### [A-15] DFB-Trainingsdialog 8: „Gemeinsam zum Torerfolg"
@@ -254,6 +256,7 @@ Stand: 29.10.2026 · Erster Durchgang ausschließlich per Websuche; zweiter Durc
   - Die Regel „hinten zwei Kontakte, vorne frei" entspreche den offensiven Leitlinien der DFB-Spielvision (schnelles Abspielen, Attackieren der Tiefe).
   - Wer über die Mittellinie nachrückt, schafft Anspielstationen und kann nach Ballverlust sofort ins Pressing gehen (Konterabsicherung). Leitsatz: Alle greifen gemeinsam an, alle verteidigen gemeinsam.
   - Coaching: Korrekturen begleitend oder in den Pausen; Fehler nicht kommentieren, sondern die nächste Aktion coachen; Regelanpassungen steuern das Verhalten, Kreativität und Entscheidungsfindung sollen erhalten bleiben (auch hier „weniger ist mehr").
+  - Ergänzung 30.10.2026: Ein Neutraler mit doppelt so vielen Offensivaktionen soll „Positionsungerechtigkeiten" ausgleichen, etwa für Stürmer, die im großen Spiel weniger Offensivaktionen haben als Innenverteidiger oder Mittelfeldspieler (Tipp „Positionstraining"); Rollen und Aufgaben in den Feldern werden nach einigen Minuten getauscht.
 - Konsequenzen für SPIELIQ: Der DFB rahmt die TPD über individuelle Qualität; SPIELIQ sollte deshalb Fortschritt pro Spieler*in zeigen. Die Formulierung „Gegner binden oder anspielbar sein" ist eine aktuelle DFB-Quelle für die Kernregel ohne Ball (vgl. A-57; der Teil „Zugriff haben" ist hier nicht belegt).
 
 ### [A-16] DFB-Trainingsdialog 4: „Geschwitzt – gelacht – gelernt. Vom Stadion aufs Kleinfeld mit 3-gegen-3-Variationen"
@@ -596,6 +599,7 @@ Stand: 29.10.2026 · Erster Durchgang ausschließlich per Websuche; zweiter Durc
   - Die Ausbildungspläne orientieren sich an den Spielmomenten „Tore erzielen", „Tore vorbereiten" und „Ballsicherung"; bewusst keine zu frühe Fixierung auf Positionen.
   - Ausbildungsprinzipien: spielorientiert („Das Spiel ist der Lehrmeister"; Übungsformen ergänzen Spielformen), individualisiert, im Detail (präzise Coachingtipps), Schwerpunkte („komplex, aber nicht kompliziert"), ganzheitlich (Spieler*innen in Entscheidungen einbinden, Selbstreflexion ermöglichen) und perspektivisch.
   - Wertekodex u. a.: aufmerksam sein, nicht ständig online sein und den Trainer*innen zuhören.
+  - Ergänzung 30.10.2026: In den Ausbildungsblöcken werden Offensiv- und Defensivthemen gemeinsam geschult; begründet wird der Verzicht auf frühe Positionsfixierung mit einer breiten, fundamentalen Ausbildung in allen Facetten des Spiels.
 - Konsequenzen für SPIELIQ: Kleingruppenarbeit spricht für Szenarien mit zwei bis vier aktiven Spieler*innen. Die Spielmomente und das Prinzip der Selbstreflexion sind direkt anschlussfähig, etwa als Reflexionsfragen nach einem Szenario. Der Wertekodex zeigt: Der DFB sieht ständiges Online-Sein im Trainingskontext kritisch.
 
 ### [A-47] Abbildung „Organisation" – Ausbildungsstufen im Fußball (bpb)
@@ -990,6 +994,7 @@ Stand: 29.10.2026 · Erster Durchgang ausschließlich per Websuche; zweiter Durc
   - Tabelle „Wiederholungszahlen": bei 32 Minuten netto in 3v3-Varianten je Einheit rund 200 Ballaktionen, 200 Entscheidungen, 100 Zweikämpfe und 25 Torschüsse (7v7: 50/50/30/5).
   - „Spieltag der Zukunft": höchstens eine Rotationsperson pro Feld; z. B. E-Jugend einmal 5v5 inklusive Torwart und zweimal 3v3; Spielzeit 6 × 7 Minuten; Einteilung in Gold, Silber und Bronze. Zur Debatte gestellt wird ein 7v7-Zwillingsspiel auf zwei Feldern für die D-Jugend; als „Buffet" für C-Junioren-Freundschaftsspiele z. B. 45 Minuten 7v7 auf zwei Feldern oder 60 Minuten 9v9 bzw. 11v11. Wolf: Alle Kinder sollen mindestens 75 % Spielzeit erhalten.
   - Übergreifende Konzepte bis mindestens zum Ende der D-Jugend, u. a. Hausaufgabenprogramme für das Individualtraining (Jonglieren, Fintieren, Sprünge, Sprints). Angekündigt wird der neue Bereich „Mein.Fußball" auf FUSSBALL.DE als Informationsplattform der TPD.
+  - Ergänzung 30.10.2026 (Positionsbezüge, erneut gelesen): Ziele gelten „auf jeder Position" (S. 17); weil Stürmer und Flügelspieler im 11v11 seltener den Ball haben als Innenverteidiger, solle „klein" trainiert werden (Wolf, S. 17); in kleinen Formen hätten alle positionsunabhängig den Ball, „Angreifer müssen verteidigen" (Gerland, S. 17); im 2v2 werde man vom Stürmer zum ersten Verteidiger, mit Herausstechen und Absichern (Lars Bender, S. 21); Zwischenblock „Grund- und Positionstechnik" (S. 10, 53); Linienspiele seien organisierter und positionsspezifischer, das 5 + TW auf Linie schule Achter, Flügelspieler und Stürmer bzw. Viererkette plus Sechser (Wolf, S. 43); Positionsspezifik lasse sich einbauen, indem Innenverteidiger eher hinten und Stürmer vorn spielen (Wolf, S. 48); „Problempositionen" Außenverteidiger, Außenspieler und Stürmer (S. 34) und Flügelspieler (Balitsch, S. 41); für Torhüter*innen bringen kleine Formen Raumverteidigung, Mitspielen und Kommunikation (Kronenberg, S. 12); Startspieler und Anspieler werden rotiert (u. a. S. 20, 21, 34).
 - Konsequenzen für SPIELIQ: Das Flipbook ist die wichtigste DFB-Originalquelle für Spielformen, Feldmaße und Terminologie. Spannungsfeld: Der DFB sieht reines Prinzipien- und Spielausschnittstraining kritisch. SPIELIQ sollte Taktik deshalb als individuelle Entscheidung im Spiel vermitteln (wann, wohin, mit wem) und den Transfer in Platz-Spielformen herstellen. Die Hausaufgabenprogramme zeigen, dass der DFB häusliches Individualtraining befürwortet, bisher motorisch und nicht digital-kognitiv.
 
 ### [A-88] „Kinderfußball – Leitfaden für die Implementierung neuer Wettbewerbsformen in den Altersklassen U6–U11 (G- bis E-Jugend)" (DFB-Booklet, Stand 03/2026)
@@ -1142,6 +1147,76 @@ Stand: 29.10.2026 · Erster Durchgang ausschließlich per Websuche; zweiter Durc
 - Zugriff / Verifikationsstatus: Volltext abgerufen 29.10.2026 (Platzhalterseite mit Kurztext und dem Vermerk, ein Link fehle noch).
 - Kernaussagen (paraphrasiert): Im C-Junioren-Alter wird erstmals 11 gegen 11 auf dem Großfeld gespielt; die Pubertät verlangt von Trainer*innen viel Fingerspitzengefühl.
 - Konsequenzen für SPIELIQ: DFB-Beleg für das 11v11-Format der Zielgruppe. Pubertätsbedingte Unterschiede (vgl. biologisches Alter in A-87) bei Feedback und Vergleichen berücksichtigen.
+
+**Block 10 – Positionen und Rollen (Ergänzungsrecherche 30.10.2026)**
+
+Gefunden über die DFB-News-Sitemap (Titel und Datum je Meldung), über Links in abgerufenen Seiten und über einzelne Websuchen; alle Einträge im Original gelesen. Synthese dazu: Register B, Abschnitt S8.
+
+### [A-103] „Coachin' U": Di Salvo übers Stürmertraining und „Erkenntnisse aus der WM in Katar" (DFB-Blog)
+- Organisation/Autor: DFB (Blog „Coachin' U"; Texte von U21-Cheftrainer Antonio Di Salvo; Kürzel „dfb")
+- URL: https://www.dfb.de/news/detail/coachin-u-di-salvo-uebers-stuermertraining-248349 ; https://www.dfb.de/news/detail/coachin-u-mit-di-salvo-erkenntnisse-aus-der-wm-in-katar-248352
+- Datum (Veröffentlichung/Aktualisierung): 15.02.2023 bzw. 20.02.2023 (Seitenkopf)
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (beide Beiträge vollständig).
+- Kernaussagen (paraphrasiert):
+  - Die U-Nationaltrainer entwickeln seit mehr als drei Jahren „positionsspezifische Programme", weil der Ruf nach Positionsspezialisten lauter werde. Das Stürmerkonzept begannen Stefan Kuntz und Di Salvo Ende 2019.
+  - Laut einer eigenen Auswertung der vergangenen zehn Jahre fallen etwa 75–85 % aller Tore zwischen Fünfmeterraum und Strafraumgrenze („Golden Zone"), rund die Hälfte per Direktabnahme; bei der WM 2022 fielen laut Di Salvo 94 % der Tore im Strafraum und etwa 78 % in dieser Zone. Die Methode wird nicht beschrieben.
+  - Drei Stürmerprofile: klassischer Mittelstürmer, „falsche 9", Außenstürmer. Die Anforderungen, vor allem die Abschlusstechniken, seien bis auf wenige Unterschiede gleich. Der Stürmer stehe stärker als andere Positionen unter Gegnerdruck und habe in engen Räumen sehr wenig Zeit.
+  - Methodik: erst isolierte Übungen mit vielen Wiederholungen, dann kleine und große Spielformen mit Gegnerdruck. Schwerpunkte: Abschluss in der Golden Zone, Start aus dem Rücken des Innenverteidigers, Querläufe in Abschlusssituationen, Kreuzen mit und ohne Ball; als Nächstes Zweikämpfe mit dem Rücken zum Tor und Kopfball.
+  - WM-Beobachtung: Einzelne Spieler stellten sich in den Dienst der Mannschaft; Dembélé habe viele Defensivaufgaben übernommen, damit Mbappé Kraft für die Offensive hatte.
+- Konsequenzen für SPIELIQ: Positionsspezifik ist beim DFB vor allem ein Thema der Leistungsspitze und überwiegend technisch (Abschluss). Übertragbar sind die Timing- und Laufentscheidungen ohne Ball (Start in den Rücken des Verteidigers, Querlauf, Kreuzen). Wie viel ein einzelner Angreifer verteidigt, erscheint hier als Rollenverteilung im Team (c) [Eigene Ableitung].
+
+### [A-104] Arne Janssen: „Routenplaner roter Faden in der Ausbildung" (DFB-Interview)
+- Organisation/Autor: DFB (Interview mit Arne Janssen, Trainer*innen-Entwickler der weiblichen U-Nationalmannschaften)
+- URL: https://www.dfb.de/news/detail/arne-janssen-routenplaner-roter-faden-in-der-ausbildung-247742
+- Datum (Veröffentlichung/Aktualisierung): 16.01.2023 (Seitenkopf)
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026.
+- Kernaussagen (paraphrasiert):
+  - Mit der U16 der Juniorinnen werde meist in kleinen Gruppen und sehr positionsspezifisch gearbeitet; im Vordergrund stünden technische Basics sowie individual- und gruppentaktische Inhalte. Bei der U17 gehe es stärker um Mannschaftsabstimmung, Spieleröffnung und Pressing im Teamverbund; die individuelle Positionierung bleibe eine Basiskompetenz.
+  - Ein „Routenplaner" soll als roter Faden von der U15 bis zur U20 aufeinander aufbauende Schwerpunkte setzen. Inhalte des Routenplaners nennt das Interview nicht.
+  - Nachwuchs-Nationaltrainer*innen sollen nicht nur mannschaftstaktisch, sondern auch altersspezifisch trainieren; die langfristige Entwicklung stehe vor dem Ergebnis.
+- Konsequenzen für SPIELIQ: Hinweis auf eine Reihenfolge im DFB-Elitebereich: positionsspezifische Kleingruppenarbeit (U16) vor Mannschaftsabstimmung und Pressing im Verbund (U17). Für Amateur-C-Junior*innen nur ein Anhaltspunkt [Eigene Ableitung]. Den Routenplaner im Original suchen (offen).
+
+### [A-105] Christian Wück zur U17-EM 2023: „Coachin' U" und Interview „Paradebeispiel für die Ausbildung in Deutschland" (DFB)
+- Organisation/Autor: DFB (Blogtext von U17-Cheftrainer Christian Wück; Interview mit Kürzel „of")
+- URL: https://www.dfb.de/news/detail/coachin-u-christian-wueck-ueber-die-u-17-em-252339 ; https://www.dfb.de/news/detail/wueck-paradebeispiel-fuer-die-ausbildung-in-deutschland-252118
+- Datum (Veröffentlichung/Aktualisierung): 11.06.2023 bzw. 04.06.2023 (Seitenkopf)
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026.
+- Kernaussagen (paraphrasiert):
+  - Haupt-Leitlinien der Turniervorbereitung seien die Zuordnung mit und ohne Ball, die Positionierung im Rücken des Gegenspielers und die Kommunikation gewesen; sie hätten mehr im Mittelpunkt gestanden als taktische Übungen.
+  - Ein Spieler (Finn Jeltsch) sei über alle sechs EM-Spiele eine Stütze in der Innenverteidigung gewesen, obwohl er im Verein nicht auf dieser Position spielte.
+  - Zwischen U15 und U17 dürfe es nicht ums Gewinnen gehen, sondern um Ausbildung und Entwicklung; der Jahrgang habe vor der EM kaum zwei Spiele in Folge gewonnen.
+- Konsequenzen für SPIELIQ: Die positionsübergreifenden Leitlinien (Zuordnung, Positionierung im Rücken des Gegners, Kommunikation) passen zu den SPIELIQ-Grundprinzipien (a). Das Beispiel eines Positionswechsels ist ein Einzelfall aus dem Elitebereich [Eigene Ableitung].
+
+### [A-106] DFB-Trainingseinheiten 2020 für A-, B- und C-Junior*innen (Vorlagen „DFB.DE/MEIN-FUSSBALL", Dateiserie 485)
+- Organisation/Autor: DFB (ohne Autorenangabe; Kopfzeile „DFB.DE/MEIN-FUSSBALL")
+- URL: https://www.dfb.de/fileadmin/_dfbdam/219115-485-b-te.pdf ; https://www.dfb.de/fileadmin/_dfbdam/219121-485-c-te.pdf ; https://www.dfb.de/fileadmin/_dfbdam/219109-485-a-te.pdf (die B-Datei ist auch unter training-service.fussball.de verlinkt; diese Domain leitet heute auf meinfussball.de um)
+- Datum (Veröffentlichung/Aktualisierung): PDF-Metadaten 17.02.2020
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (je fünf Seiten). B-Datei per Websuche gefunden, A-Datei über benachbarte Dateinummern derselben Serie; eine D-Datei wurde dabei nicht gefunden.
+- Kernaussagen (paraphrasiert):
+  - B-Junior*innen, „Den Gegner schon beim Spielaufbau lenken": Im Hauptteil 1 stellt das verteidigende Team einen Mittel- und zwei Außenstürmer; der Mittelstürmer läuft so an, dass der Ballbesitzer nach außen spielen muss, dann setzen alle den Empfänger sofort unter Druck. Im Hauptteil 2 laufen zwei zentrale Stürmer so an, dass nach innen gespielt werden muss; sie stehen so, dass der Torhüter nur einen Innenverteidiger anspielen kann, und verhindern nach dem Pass ins Zentrum den Rückpass. Schon im Aufwärmen sollen Verteidiger auch in Unterzahl mit höchstem Tempo anlaufen.
+  - C-Junior*innen, „Torchancen gezielt herausspielen" (8 gegen 6 mit Konter): Feste Flügelstürmer betonen Aktionen auf den Außenpositionen; erst eigene Lösungen suchen lassen, später Hilfen wie Hinterlaufen vorschlagen; nach einer Weile neue Angreifer bestimmen, damit möglichst viele Spieler die taktischen Aufgaben lösen. Mit zwei Zentrumsstürmern sollen diese gestaffelt agieren, und Spieler aus dem zentralen Mittelfeld rücken in die Spitze nach.
+  - A-Junior*innen, „Ballorientiertes Verteidigen": gemeinsam Druck auf den Ballbesitzer, den Pass ins Zentrum antizipieren und den Passweg zustellen; im 1v2 und 2v2 den Ballbesitzer je nach Spielsituation nach außen oder zum Mitspieler lenken, indem die entsprechende Seite angeboten wird; Absicherung von Mitspieler und Raum, Übergeben und Übernehmen; Nahtstellen durch geringen Abstand schließen, im Kollektiv zur Ballseite verschieben; Verteidiger regelmäßig wechseln.
+- Konsequenzen für SPIELIQ: DFB-Beleg, dass Stürmer die erste Pressinglinie bilden und je nach Plan nach außen oder nach innen lenken (Richtung = Kontextvorgabe c), und dass „zum Mitspieler lenken" als situative Option gelehrt wird. Rollentausch (neue Angreifer, Verteidiger wechseln) gehört zur Übungsorganisation. Die Blätter stammen aus der Zeit vor der TPD [Eigene Ableitung].
+
+### [A-107] „So geht positionsspezifisches Training" (FUSSBALL.DE, Rubrik Trainingstipps)
+- Organisation/Autor: FUSSBALL.DE (Autor laut Seite „FUSSBALL.DE"; Hinweis auf das Serviceportal „Training und Service" von DFB.de und FUSSBALL.DE)
+- URL: https://www.fussball.de/newsdetail/so-geht-positionsspezifisches-training/-/article-id/201244
+- Datum (Veröffentlichung/Aktualisierung): 16.04.2019 (Seitenkopf)
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Übersichtsartikel). Die verlinkten Einheiten von „Training online" liegen auf training-service.fussball.de und leiten auf das gesperrte meinfussball.de um; sie wurden nicht geprüft.
+- Kernaussagen (paraphrasiert):
+  - An verschiedene Positionen gebe es verschiedene Anforderungen, die Trainer*innen im Saisonverlauf trainieren sollen; je nach Alter reichen die Aufgaben von einfachen Hinweisen bis zu komplexen Spielsituationen.
+  - Wochenauswahl nach Altersklassen: Ü20 Stürmerverhalten mit Gegner im Rücken; A-Junioren zentraler offensiver Mittelfeldspieler; B-Junioren Verteidigen von Flanken; C-Junioren Abwehrarbeit in wechselnden Überzahlsituationen; F-Junioren zwischen Ball und eigenem Tor bleiben und aus dem Zentrum abdrängen.
+- Konsequenzen für SPIELIQ: Im früheren DFB-Trainingsportal wurde Positionsspezifik nach Alter dosiert; für die C-Jugend war das Thema in dieser Auswahl positionsübergreifendes Abwehrverhalten. Älterer Beleg aus der Zeit vor der TPD.
+
+### [A-108] Stimmen aus der A-Nationalmannschaft zu Rollen und gemeinsamem Verteidigen (Klopp 2026; Raum und Baku 2025)
+- Organisation/Autor: DFB (Stimmensammlung nach dem Länderspiel bzw. Interview im Teamquartier; Kürzel „dfb")
+- URL: https://www.dfb.de/news/klopp-das-gegenpressing-ging-durch-die-decke ; https://www.dfb.de/news/als-aussenverteidiger-muss-man-einiges-im-repertoire-haben
+- Datum (Veröffentlichung/Aktualisierung): 01.10.2026 bzw. 11.11.2025 (Seitenkopf)
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026.
+- Kernaussagen (paraphrasiert):
+  - Bundestrainer Jürgen Klopp nach dem 2:0 gegen Serbien: In den Pressingmomenten seien alle da gewesen, die letzte Linie habe gut nach vorn verteidigt, der Mittelstürmer habe sich dafür verausgabt. Wenn alle gemeinsam den Ball zurückerobern, könne sich das Team im Ballbesitz Risiko leisten.
+  - David Raum: Über die Außenverteidiger laufe viel Spielaufbau, sie hätten wichtige 1v1-Duelle; man habe gemeinsam verteidigt, oberste Priorität sei das eigene Tor. Im Nationalteam stehe er im Ballbesitz zentraler als im Verein. Ridle Baku: Außenverteidiger müssen angreifen, verteidigen und flanken können.
+- Konsequenzen für SPIELIQ: Zeigt die Haltung „alle verteidigen" im Spitzenfußball, ist aber Spieler- und Trainersprache aus dem Profibereich, keine Ausbildungsvorgabe. Namen und Aussagen realer Spieler nicht in SPIELIQ-Inhalte übernehmen [Eigene Ableitung].
 
 ### Weitere Treffer ohne verwertbaren Inhalt (erster Durchgang nur Titel/URL; Stand nach Volltextprüfung 29.10.2026)
 - https://www.dfb.de/sportliches-leitbild/unsere-ziele/ – „Unsere Ziele": Abruf 29.10.2026 ergab HTTP 301 auf die TPD-Seite (A-01); kein eigener Inhalt mehr.

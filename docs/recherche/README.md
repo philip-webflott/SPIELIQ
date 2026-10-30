@@ -1,6 +1,6 @@
 # Recherche – Methodik, Stand und Lesehilfe
 
-Stand: 29.10.2026 · Phase A (Grundlagenrecherche)
+Stand: 30.10.2026 · Phase A (Grundlagenrecherche) mit Ergänzung zu Positionen, Didaktik und Darstellung
 
 Dieses Verzeichnis enthält die fachlichen, wissenschaftlichen und rechtlichen Grundlagen von SPIELIQ. Jede fachliche Aussage in Code, Inhalten und Konzepten soll auf eine Quelle aus diesen Registern verweisen oder ausdrücklich als Annahme gekennzeichnet sein (siehe `CLAUDE.md`).
 
@@ -28,12 +28,12 @@ Dieses Verzeichnis enthält die fachlichen, wissenschaftlichen und rechtlichen G
 
 | Register | Inhalt | Einträge | Im Volltext geprüft | Nur Suchergebnis | Nur Hintergrundwissen |
 |---|---|---|---|---|---|
-| [A – DFB und deutsche Strukturen](quellen/A-dfb-jugendfussball.md) | TPD, Kinderfußball-Spielformen, Altersklassen, Spielauffassung, MEIN FUSSBALL, Trainingsthemen | 102 (A-01–A-102) | 42 (26 nachgeprüft, 16 neue Originale A-87–A-102) | 58 (Domains gesperrt) + A-05 (nur Weiterleitung), A-79 (HTTP 404) | einzelne Angaben, markiert |
-| [B – FIFA, UEFA, andere Verbände](quellen/B-fifa-uefa-verbaende.md) | Verteidigen individuell/kollektiv, Druck–Absicherung–Balance, Zonenverteidigung, Passen/Freilaufen, Wahrnehmung, Football Language, UEFA-Ausbildung | 105 (B-01–B-105) | 72 (60 nachgeprüft, 12 neue Originale B-94–B-105) | 33 (B-40, B-41, B-52, B-64–B-93) | einzelne Angaben, markiert |
-| [C – Sport- und Lernwissenschaft](quellen/C-sport-und-lernwissenschaft.md) | spielbasierte Vermittlung, taktisches Wissen, perzeptuell-kognitives Training, Transfer, Lernwissenschaft, Motivation, Entwicklung | 56 (C-01–C-56) + Prüfliste H-01–H-83 | 0 (Verlage/Repositorien gesperrt) | 56 | H-01–H-83 (Lernwissenschaft, Gamification, Entwicklung) |
+| [A – DFB und deutsche Strukturen](quellen/A-dfb-jugendfussball.md) | TPD, Kinderfußball-Spielformen, Altersklassen, Spielauffassung, MEIN FUSSBALL, Trainingsthemen, Positionen | 108 (A-01–A-108) | 48 (26 nachgeprüft, 22 neue Originale A-87–A-108) | 58 (Domains gesperrt) + A-05 (nur Weiterleitung), A-79 (HTTP 404) | einzelne Angaben, markiert |
+| [B – FIFA, UEFA, andere Verbände](quellen/B-fifa-uefa-verbaende.md) | Verteidigen individuell/kollektiv, Druck–Absicherung–Balance, Zonenverteidigung, Passen/Freilaufen, Wahrnehmung, Football Language, UEFA-Ausbildung, Positionen und Rollen (S8) | 120 (B-01–B-120) | 87 (60 nachgeprüft, 27 neue Originale B-94–B-120) | 33 (B-40, B-41, B-52, B-64–B-93) | einzelne Angaben, markiert |
+| [C – Sport- und Lernwissenschaft](quellen/C-sport-und-lernwissenschaft.md) | spielbasierte Vermittlung, taktisches Wissen, perzeptuell-kognitives Training, Transfer, Lernwissenschaft, Motivation, Entwicklung, Erklären/Staffeln/Sichern, visuelle Darstellung (Synthese 7) | 95 (C-01–C-95) + Prüfliste H-01–H-117 | 0 (Verlage/Repositorien gesperrt) | 95 | H-01–H-117 (Lernwissenschaft, Gamification, Entwicklung) |
 | [D – Recht, Datenschutz, Kinderschutz, Barrierefreiheit](quellen/D-recht-datenschutz-barrierefreiheit.md) | DSGVO/BDSG, TDDDG, DDG, JuSchG, SGB VIII, BFSG, BGB, UWG, KUG, DFB-Kinderschutz, DSA, KI-VO, WCAG | 51 (D-01–D-51) | 24 (D-01–D-24: Bundesgesetze, DFB-Dokumente) | 4 (D-25–D-28) | 23 (D-29–D-51, u. a. DSGVO-Volltext, EDPB, WCAG) |
 
-Gesamt: 314 Registereinträge, davon 138 im Volltext geprüft. Suchläufe im ersten Durchgang: A 59, B 93, C 44, D 3.
+Gesamt: 374 Registereinträge, davon 159 im Volltext geprüft. Suchläufe im ersten Durchgang: A 59, B 93, C 44, D 3; Ergänzung 30.10.2026: 11 (Positionen) und 30 (Didaktik/Darstellung).
 
 **Bekannte Fehlerquote des Suchwerkzeugs:** Bei der Volltextprüfung in A und B wurden falsche Zuordnungen (Aussage stammt aus einer anderen Quelle), eine nicht gedeckte Aussage (A-51: Viererkette „ab 11–12 Jahren“ steht nicht im Original) und mehrere falsche Negativbefunde gefunden. Ungeprüfte Einträge sind deshalb mit Vorsicht zu behandeln.
 

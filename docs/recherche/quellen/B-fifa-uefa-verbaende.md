@@ -923,6 +923,7 @@ Stand: 29.10.2026 (Websuche und Volltextprüfung der FIFA- und UEFA-Quellen) · 
   - Mindestens 120 Stunden, davon mindestens 95 h angeleitete Inhalte und 25 h Praxiserfahrung, etwa zur Hälfte auf und neben dem Platz. Die genaue Stundenverteilung je Modul legen die Mitgliedsverbände fest [verifiziert].
   - Entscheidungen: Entscheidungen und Problemlösen regelmäßig in die Trainingseinheiten einbauen; im Spiel die Autonomie der Spieler bei Entscheidungen und Problemlösen unterstützen; Spieler anleiten, ihr eigenes Spiel zu bewerten und sich selbst zu steuern [verifiziert].
   - Altersgerecht coachen; Ziele nach biologischem, kalendarischem und Trainingsalter setzen; Spieler in den Lernprozess einbeziehen und Eigenverantwortung ermöglichen [verifiziert].
+  - Ergänzung 30.10.2026: Unter „Playing styles" verlangt der Syllabus, die Positionen und Aufgaben der Spieler in verschiedenen Spielsystemen zu verstehen; einzelne Spieler sollen bei Bedarf in einer älteren Altersklasse gefordert werden [verifiziert, erneut abgerufen].
 - Konsequenzen für SPIELIQ: Die UEFA-Ausbildung verlangt spielnahes Training mit Gegnern und Druck und ausdrücklich Entscheidungs- und Problemlösetraining sowie Selbstbewertung. Deshalb Szenarien immer mit Gegenspielern bauen, später mit Zeitdruck; Reflexion und Selbstbewertung als Ergänzung [Eigene Ableitung]. Die Lizenz zielt auf Elite-Jugendliche auf dem Weg zum Profi; die Übertragung auf Amateur-C-Junioren ist eine Ableitung.
 
 ### [B-56] UEFA C Diploma und Grassroots-Trainerausbildung (mit iCoachKids-Partnerschaft)
@@ -1425,6 +1426,7 @@ Stand: 29.10.2026 (Websuche und Volltextprüfung der FIFA- und UEFA-Quellen) · 
   - Die Nummer 6 im Aufbau: Raum zum Annehmen finden, vor der Annahme scannen, offen stehen und nach vorn spielen, wenn möglich; sonst den Ball sichern und sicher weiterspielen [verifiziert].
   - Spielsituationen: Räume zum Annehmen vor, zwischen oder hinter den Linien finden und halten; Passwinkel schaffen, indem man sich hinter die beiden Pressenden stellt; früh und oft scannen; per Andribbeln Gegner binden [verifiziert].
   - Spielphasen: Die beiden zentralen Mittelfeldspieler sollen nicht auf derselben vertikalen oder horizontalen Linie stehen, um bessere Winkel und mehr Raum zu schaffen. Das Team nutzt die volle Breite, um im Zentrum Raum zu öffnen [verifiziert].
+  - Ergänzung 30.10.2026: Der Rahmenartikel begründet Positionstraining damit, dass Spitzenteams Spieler für klar definierte Rollen suchen, und beschreibt Profile (6 tiefer, schützt die Abwehr und steuert den Spielfluss; 8 als Box-to-box-Spieler in Abwehr und Angriff; 10 als Spielmacher). Gegen den Ball schützt die 6 zentrale Räume, vor allem im Umschalten, schirmt Passwege ab, organisiert das Pressing und trägt zur Restverteidigung bei; verlangt wird auch Positionsflexibilität bis zum Abkippen in die Abwehrlinie [verifiziert, erneut abgerufen].
 - Konsequenzen für SPIELIQ:
   - Die Regel „nicht auf einer Linie stehen" ist für zwei zentrale Mittelfeldspieler in FIFA-Material belegt und direkt prüfbar (a/b).
   - Die drei Phasen passen zur Rolle eines Simulators als Ergänzung: Er kann Entscheidungen in Spielsituationen üben, ersetzt aber weder das Techniktraining noch das Training in Spielphasen [Eigene Ableitung].
@@ -1451,6 +1453,7 @@ Stand: 29.10.2026 (Websuche und Volltextprüfung der FIFA- und UEFA-Quellen) · 
   - Legia beginnt die Nachwuchsarbeit mit Fragen statt fertigen Antworten: Was siehst du? Was kannst du tun? Welche Lösung wählst du? Etwa 90 % der Arbeit finden in Spielformen mit Gegnern, Mitspielern und Spielkontext statt [verifiziert].
   - Coachingpunkte der U10-Einheit: vor jeder Annahme über die Schulter schauen; seitlich annehmen; die erste Berührung in den Raum; Breite und Tiefe für klare Passoptionen; schnell erkennen, ob man kombiniert oder direkt angreift [verifiziert].
   - 8–12 Jahre: Modell Global-Analytisch-Global (Spiel → isolierte Technik → Spiel) und Spiele mit steigender Spielerzahl, in denen Kinder Probleme selbst lösen; taktische Hinweise sparsam dosieren [verifiziert].
+  - Ergänzung 30.10.2026: In der Folge zu Spielen mit steigender Spielerzahl rät Gardiner, die Rollen zwischen den Spielern zu tauschen; Kinder sollen viele Gelegenheiten bekommen, verschiedene Positionen zu erleben, um das Spiel besser zu verstehen [verifiziert, erneut abgerufen].
 - Konsequenzen für SPIELIQ: Das Fragenschema „Was siehst du? Was kannst du tun? Was wählst du?" eignet sich als Dialogstruktur vor einem Zug im Simulator [Eigene Ableitung]. Die Quellen betreffen jüngere Altersgruppen.
 
 ### [B-102] FIFA World Cup 2026 – TSG-Analysen auf dem FIFA Training Centre (Cabo Verde; Kanada gegen Bosnien-Herzegowina; Round review zu Mittelfeld- und tiefen Blöcken)
@@ -1499,6 +1502,187 @@ Stand: 29.10.2026 (Websuche und Volltextprüfung der FIFA- und UEFA-Quellen) · 
   - Unscharfe Begriffe wie „Potenzial" und „Leistung" sind schwer zu messen und damit schwer zu trainieren [verifiziert].
   - Empfehlung: zentrale Begriffe präziser und messbar definieren, auch wenn dafür bestehende Praktiken hinterfragt werden müssen [verifiziert].
 - Konsequenzen für SPIELIQ: Stützt die Forderung nach einem eigenen, dokumentierten Glossar mit messbaren Definitionen (siehe S7) [Eigene Ableitung].
+
+### I. Neu aufgenommen 30.10.2026: Positionen und Rollen
+
+Ergänzungsrecherche zu Positionen, Rollen und Positionsspezifik im Nachwuchs. Direkter Abruf von www.fifatrainingcentre.com, www.uefa.com (ohne Browser-Kennung) und editorial.uefa.com; Fundstellen über Links und elf Websuchen. Alle Einträge im Original gelesen, Videos und Grafiken nicht ausgewertet. Auswertung in Abschnitt S8.
+
+### [B-106] UEFA-Syllabi 2020: Youth B Diploma und UEFA B Diploma (Positionen und Spezialisierung)
+- Organisation/Autor: UEFA (Coaching Convention 2020, „Syllabus of minimum content"); Kursseiten auf uefa.com
+- URL: https://editorial.uefa.com/resources/0268-11efc151e48c-550ddc2c7a6a-1000/uefa_youth_b_diploma_2020_en_20210401154446.pdf ; https://editorial.uefa.com/resources/0267-11ebff960bb7-405a74be27d5-1000/uefa_b_diploma_2020_en.pdf ; Kursseiten: https://www.uefa.com/news-media/news/0268-11f1a6163371-a7ff28482e99-1000--course-details-the-uefa-youth-b-diploma/ ; https://www.uefa.com/news-media/news/0267-11ed7b4c1e13-63896dc6efc2-1000--course-details-the-uefa-b-diploma/
+- Datum (Veröffentlichung/Aktualisierung): Syllabi „2020 edition" (PDF erstellt 18.06.2020 bzw. 18.08.2020); Kursseiten 02.04.2021 bzw. 31.03.2021 (Meta-Angabe) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (beide PDFs mit je sieben Seiten, beide Kursseiten). Laut Websuche gibt es eine Ausgabe 2025 des UEFA-B-Syllabus; die gefundene Kopie liegt auf kff.kz (gesperrt) und wurde nicht geprüft.
+- Kernaussagen (paraphrasiert):
+  - Youth B (Ausbildung für Trainer talentierter Jugendlicher vor und während der Pubertät): Trainer sollen die Rollen der Spieler im Team verstehen und dabei „early specialisation of set positions" vermeiden, besonders im Alter von 11 bis 13 Jahren [verifiziert].
+  - Youth B außerdem: gleiche Spielzeit sichern; den Übergang vom Kleinfeld (z. B. 8v8) zum 11v11 verstehen; Spielerautonomie unterstützen und Spieler in Entscheidungen einbinden; Training auf Entscheidungen ausrichten; ein Lernklima, in dem Fehler erlaubt sind [verifiziert].
+  - UEFA B: Trainer sollen Merkmale und Anforderungen der Spielpositionen kennen, um Spieler innerhalb der Teamstruktur passend zum Spielformat zu entwickeln; Spielerprofile zur Analyse nutzen; Spieler und Team mit klarem Verständnis der Rollen und Grundanforderungen der Positionen in verschiedenen Spielformaten und -systemen auf Spiele vorbereiten; allen möglichst gleiche Spielzeit geben [verifiziert].
+- Konsequenzen für SPIELIQ: Die UEFA verankert beides in der Trainerausbildung: Wissen über Positionen (B) und Schutz vor früher Positionsfixierung (Youth B, 11–13 Jahre). Die SPIELIQ-Zielgruppe (13–15) liegt am Ende dieses Fensters: Positionen als Rollen einführen, aber nicht festschreiben [Eigene Ableitung].
+
+### [B-107] Champions League Performance Insights: Pressing und Rotation von Paris im Finale 2025, mit Coaching-Hinweisen aus Belgien und England
+- Organisation/Autor: UEFA (Analyseabteilung mit Technical Observer Group); Coaching-Beiträge von Kris Van Der Haegen (laut Seite Leiter der Trainerausbildung des belgischen Verbands) und Phil Church (laut Seite English FA)
+- URL: https://www.uefa.com/uefachampionsleague/news/029a-1de9d126962d-87e708b9adaf-1000--champions-league-performance-insights-paris-pressing-and/
+- Datum (Veröffentlichung/Aktualisierung): 03.06.2025 (article:published_time) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Artikeltext; Videos und Grafiken nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Mittelstürmer Dembélé führte das Pressing an (laut UEFA-Grafik 14 Pressingaktionen im letzten Drittel, Rang 1 im Team, und 39 Sprints). Laut Michael O'Neill rückte das ganze Team hinter ihm nach und hielt das Spiel so kompakt [verifiziert].
+  - Rui Faria: Nach Ballverlust seien alle sofort bereit zu verteidigen [verifiziert].
+  - Positionsrotation: Der nominelle Sechser ließ sich zu den Innenverteidigern fallen und stieß auch wie ein Offensivspieler vor; laut Southgate können alle Pariser Mittelfeldspieler als 6, 8 oder 10 spielen [verifiziert].
+  - Van Der Haegen: Belgien bilde Spieler von klein auf im hohen Pressing aus. Bis U14 werde 5v5 oder 8v8 gespielt; im 5v5 sollen die vier Feldspieler den Ball mit zwei oder drei Spielern angreifen und lernten so unbewusst Gegenpressing (Ballraum überladen). Hinten sollen sie dabei 1v1 sicher verteidigen [verifiziert].
+  - Church: Spieler sollen die Grundlagen (passen, annehmen, dribbeln, pressen und tackeln, schießen) so lernen, dass sie verschiedene Positionen spielen können; Schwerpunkte wie 6 oder 8 erst später; frühe Spezialisierung hält er für keine gute Idee [verifiziert].
+  - Van Der Haegen: Rotationen verlangen gutes Spielverständnis; junge Spieler laufen oft zum Ball, statt sich im Rücken des Gegners anzubieten [verifiziert].
+- Konsequenzen für SPIELIQ: Stützt die Rolle des Stürmers als erste Pressinglinie, hinter der das Team nachschiebt. Aus dem UEFA-Umfeld belegt: Gegenpressing wird schon im Kinderformat über einfache Regeln vermittelt. Die Aussagen zur Spezialisierung sind Meinungen von Verbandsausbildern, keine UEFA-Regel [Eigene Ableitung].
+
+### [B-108] Champions League Performance Insights: Paris gegen Barcelona (2026) – Angreifer verteidigen mit; Vielseitigkeit als Ausbildungsziel
+- Organisation/Autor: UEFA; Technical Observers Erik ten Hag und Aitor Karanka (laut Seite Technischer Direktor des spanischen Verbands RFEF); Zitat von Kris Van Der Haegen (laut Seite UEFA Head of Coach Development)
+- URL: https://www.uefa.com/uefachampionsleague/news/02aa-21e536218091-7738165cf593-1000--champions-league-performance-insights-when-paris-saint-ger/
+- Datum (Veröffentlichung/Aktualisierung): 23.10.2026 (article:published_time) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Artikeltext; Videos nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Paris verteidigt Mann gegen Mann, beginnend vorn. Laut Luis Enrique halfen die Angreifer in der ersten Hälfte Mittelfeld und Abwehr; er lobte, wie sie verteidigten, wenn der Ball schon hinter ihnen war [verifiziert].
+  - Ten Hag: Wer überspielt ist, muss sich zurückfallen lassen, um den Ball zurückzuerobern, von hinten nachzupressen oder sich wieder in den Block einzuordnen [verifiziert].
+  - Karanka: Ein Barcelona-Talent spielte bei der U19-EM mehrere Mittelfeld- und Angriffsrollen und nun Rechtsverteidiger; verschiedene Positionen spielen zu können, komme aus gutem Spielverständnis, und so bilde der spanische Verband aus [verifiziert].
+  - Van Der Haegen: Wer früh Allroundspieler entwickelt, gibt ihnen mehr Mittel, Gegner vor Probleme zu stellen [verifiziert].
+- Konsequenzen für SPIELIQ: Beleg für eine Umschaltaufgabe von Angreifern: nach dem Überspielen nicht stehen bleiben, sondern nachsetzen oder in den Block zurück (a). Vielseitigkeit nennen UEFA-Fachleute als Ausbildungsziel [Eigene Ableitung].
+
+### [B-109] Champions League Performance Insights: Liverpool gegen Atlético (2025) – Pressing aller Mannschaftsteile; Umschalten im Nachwuchs
+- Organisation/Autor: UEFA (Analyseabteilung); Technical Observer Rafa Benítez; Coaching-Reflexion von Kris Van Der Haegen (UEFA Head of Coach Development)
+- URL: https://www.uefa.com/uefachampionsleague/news/029d-1ec35936bff7-722086a73dc1-1000--champions-league-performance-insights-liverpool-overcome/
+- Datum (Veröffentlichung/Aktualisierung): 19.09.2025 (article:published_time) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Artikeltext; Videos und Grafiken nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Benítez: Am Pressing beteiligten sich Stürmer, Mittelfeldspieler und Verteidiger, besonders die hoch pressenden Außenverteidiger; Liverpool hatte 18 Ballgewinne in der gegnerischen Hälfte, Atlético 10 [verifiziert].
+  - Liverpool passte sich an: hoch pressen, bei Bedarf im Mittelfeld- oder tiefen Block verteidigen und kontern [verifiziert].
+  - Van Der Haegen: Angriff und Verteidigung lassen sich nicht trennen; wie man verteidigt, bestimmt, wie man angreifen kann (etwa lange Sprints nach tiefem Verteidigen). Für Jugendspieler vergleicht er die Momente mit einer Ampel: Grün angreifen, Rot verteidigen, Gelb umschalten. Schon im Ballbesitz bereiten sich einige Spieler auf den Ballverlust vor; schnelles Umschalten sei auch Kopfsache. Jugendtrainer sollen Spielern helfen, flexibel zu bleiben und das Spiel zu lesen [verifiziert].
+- Konsequenzen für SPIELIQ: „Im Ballbesitz schon an den Ballverlust denken" ist eine positionsübergreifende Aufgabe (a). Die Ampel ist eine jugendgerechte Metapher für die Spielmomente; als Idee für eine Momentanzeige nutzbar, ohne den Wortlaut zu übernehmen [Eigene Ableitung].
+
+### [B-110] Champions League Performance Insights: Die vier Spielphasen am Beispiel der Halbfinalisten 2026 (ten Hag, Mendieta)
+- Organisation/Autor: UEFA (game insights unit); Technical Observers Erik ten Hag und Gaizka Mendieta
+- URL: https://www.uefa.com/uefachampionsleague/news/02a4-207d3e47819e-f92d393cfd51-1000--champions-league-performance-insights-how-semi-finalists-sho/
+- Datum (Veröffentlichung/Aktualisierung): 27.04.2026 (article:published_time) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Artikeltext; Videos und Grafiken nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Vier Phasen des offenen Spiels mit Kurzdefinition: Angriffsorganisation, defensives Umschalten (gegnerischer Ballbesitz direkt nach dem Ballverlust, bevor die eigene Ordnung steht), Verteidigungsorganisation, offensives Umschalten [verifiziert].
+  - Ten Hag: Ein Spielmodell gibt Prinzipien und Regeln, damit Spieler ihre Aufgabe kennen und innerhalb und zwischen den Mannschaftsteilen zusammenarbeiten. Ziele je Phase sinngemäß: Ballkontrolle, Dynamik, Torgefahr und Restverteidigung; schnelle Reaktion jedes Spielers, als Einheit pressen und/oder zurückfallen; hoher, mittlerer oder tiefer Block mit guten Abständen und Auslösern; Abschluss suchen oder Ball sichern [verifiziert].
+  - Beispiele: Arsenal sprintete nach Ballverlust fast mit der ganzen Mannschaft zurück; Atlético schloss das Zentrum, zwang nach außen und verteidigte tief mit Fünfer- oder Sechserkette; Paris ließ bewusst Spieler vorn, um jederzeit kontern zu können [verifiziert].
+  - Mendieta: Man müsse wissen, was man in jeder Phase, in jeder Zone und auf jeder Position will, das Modell aber auf zwei bis drei Details beschränken; Spieler brauchen Alternativen innerhalb des Plans statt zu vieler Informationen [verifiziert].
+- Konsequenzen für SPIELIQ: Kanonische UEFA-Gliederung nach Spielmomenten mit Teamzielen; Aufgaben einzelner Positionen hängen am Spielmodell (c). Inhalte nach Spielmoment ordnen und je Rolle zwei bis drei Kernaufgaben formulieren [Eigene Ableitung]. Ob Angreifer im Verteidigen vorn bleiben dürfen, ist hier ausdrücklich Teamentscheidung.
+
+### [B-111] Champions League Performance Insights: Außenverteidiger – Angriffsfluidität (McKenna, 2026) und 1v1-Verteidigen (Cucurella, 2025)
+- Organisation/Autor: UEFA (game insights unit); Technical Observers Kieran McKenna, Rui Faria und Roberto Martínez; Gunnar Pettersson (laut Seite Grassroots-Manager des schwedischen Verbands)
+- URL: https://www.uefa.com/uefachampionsleague/news/02aa-21cec89a929a-1e5ff57b6650-1000--champions-league-performance-insights-full-backs-showcas/ ; https://www.uefa.com/uefachampionsleague/news/029f-1f4ff3a2dfa2-8f711ec7d108-1000--champions-league-performance-insights-marc-cucurella-s-1v1-d/
+- Datum (Veröffentlichung/Aktualisierung): 12.10.2026 bzw. 28.11.2025 (article:published_time) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (beide Artikel; Videos nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Fluidität heißt Bewegungsfreiheit innerhalb eines Angriffssystems, um unberechenbar zu sein; mehrere Außen- und Flügelverteidiger tauchten im Zentrum und im Strafraum auf [verifiziert].
+  - McKenna: Trainer sollen die Kompetenzen der Spieler in mehr Rollen entwickeln, im Angriff wie in der Verteidigung, und bei Positionswechseln die eigene Restverteidigung mitdenken: Spieler müssen ihre Rolle beim Ballverlust kennen [verifiziert].
+  - Linksverteidiger Cucurella gegen einen Flügelspieler: geduldig auf den richtigen Moment warten; ihm die Linie auf den schwächeren Fuß zeigen, während innen ein Mitspieler absichert; sofort hoch pressen statt zurückweichen, wenn die Balance des Teams es erlaubt (Martínez, Faria) [verifiziert].
+  - Pettersson: Nachwuchsverteidiger halten aus Angst oft zu viel Abstand und sollen mutiger verteidigen. Im 1v1-Training gehe meist der Großteil des Feedbacks an den Angreifer, besser sei etwa halbe-halbe. In Schweden spielen 13- und 14-Jährige 9v9; im 2-4-2 tragen Flügelspieler viel Verantwortung in Abwehr und Angriff, im Umschalten entstehen viele 2v2. Schon junge Spieler können lernen, den Ball nach Verlust sofort zurückerobern zu wollen [verifiziert].
+  - Faria: Übung mit wechselnden 1v1, 2v2, 3v3 und Neutralen; in Unterzahl geduldiger, in Gleichzahl stärker pressen [verifiziert].
+- Konsequenzen für SPIELIQ: Für Außenverteidiger belegt: doppelte Rolle; zur Linie auf den schwachen Fuß lenken nur mit Absicherung innen; pressen oder zurückweichen nach Teambalance. Für alle Positionen: Kompetenz in mehreren Rollen und Restverteidigung bei Rotation. Das 50/50-Feedback spricht dafür, Verteidigerentscheidungen ebenso ausführlich zu bewerten wie Angreiferentscheidungen [Eigene Ableitung].
+
+### [B-112] Champions League Performance Insights: Defensive demands (De Boer, Carrick, 2025)
+- Organisation/Autor: UEFA (game insights unit); Technical Observers Frank de Boer und Michael Carrick
+- URL: https://www.uefa.com/uefachampionsleague/news/029e-1f01451878fc-a5aa207b99c7-1000--champions-league-performance-insights-defensive-demands/
+- Datum (Veröffentlichung/Aktualisierung): 20.10.2025 (article:published_time) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Artikeltext; Videos nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Bei hohem Pressing müssen Abwehrspieler große Räume vor und hinter sich verteidigen: Ein Außenverteidiger rückt weit heraus, um den gegnerischen Außenverteidiger anzulaufen; der Innenverteidiger muss den Raum dahinter antizipieren und für herausgerückte Mitspieler absichern [verifiziert].
+  - Carrick: Gefahr erkennen und priorisieren, was man zulässt und was man wegnimmt; notfalls den ungefährlicheren Gegner den Ball haben lassen, um den gefährlicheren Läufer zu verfolgen. Rettungsgrätschen seien das letzte Mittel; gute Verteidiger stehen vorher richtig [verifiziert].
+  - De Boer zur hohen Linie: alle vier Verteidiger verbunden, Kommunikation besonders zwischen den Innenverteidigern, offene Stellung, Torwart an der Strafraumgrenze. Ohne Druck auf den Ballführenden droht der Ball hinter die Kette; dann müssen Verteidiger bereit sein, rückwärts zu sprinten. Barcelonas Linie stand in einem Halbfinale im Mittel 40,8 m hoch [verifiziert].
+  - Carrick: Verteidigen sei heute weniger Körperkontakt als Raummanagement; Positionsbewusstsein und taktisches Verständnis seien wichtiger denn je; je nach Lage verzögern oder hoch draufgehen [verifiziert].
+- Konsequenzen für SPIELIQ: Präzisiert Aufgaben der Innenverteidiger (Tiefe sichern, Herausrücken absichern, Prioritäten setzen) und bestätigt die Regel „Druck auf den Ball → Linie hält oder rückt vor, kein Druck → Tiefe sichern" aus [B-06] (a). Elitekontext; Zahlen nur beschreibend.
+
+### [B-113] Champions League Performance Insights: Flügelspiel (Southgate, 2025) und „Viking and Harry Kane" (Cheyrou, 2026)
+- Organisation/Autor: UEFA (game insights unit); Technical Observer Sir Gareth Southgate; Bruno Cheyrou (laut Seite UEFA Senior Player Development Manager)
+- URL: https://www.uefa.com/uefachampionsleague/news/029d-1ed6577d678b-a8e995ccd337-1000--champions-league-performance-insights-the-art-of-wing-play/ ; https://www.uefa.com/uefachampionsleague/news/02aa-21d75849bcd5-7a2b1d97c9a5-1000--champions-league-performance-insights-how-viking-and-harry-/
+- Datum (Veröffentlichung/Aktualisierung): 29.09.2025 bzw. 16.10.2026 (article:published_time) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (beide Artikel; Videos und Grafiken nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Southgate: Flügelspieler spielen frühe Hereingaben in den Raum zwischen Torwart und Abwehrlinie, Rückpässe in den Rückraum oder Flanken an den zweiten Pfosten; Stürmer müssen das erkennen und ihre Läufe danach richten (zwischen die Verteidiger, hinter sie oder spät davor). Viele Spieler im Strafraum binden Verteidiger [verifiziert].
+  - Einziehende Flügelspieler seien schwer zu stoppen; Gegenmittel sei ein absichernder Mittelfeldspieler. Im letzten Drittel zählten Intuition und Entscheidungsqualität mehr als einstudierte Muster [verifiziert].
+  - Viking verteidigte gegen Bayern entweder hoch Mann gegen Mann oder konsequent tief, nicht dazwischen; auf der Ballseite lösten Flügelspieler, Achter und Außenverteidiger die Situationen im Flügelraum gemeinsam (Trainer Aarsheim) [verifiziert].
+  - Cheyrou: Kane löst sich aus der Deckung, findet Passwinkel und spielt den richtigen Pass zur richtigen Zeit. Nachwuchsstürmer sollten intelligent, anpassungsfähig und technisch komplett ausgebildet werden, statt sie auf Abschluss und Strafraumspiel zu beschränken [verifiziert].
+- Konsequenzen für SPIELIQ: Belegt positionsspezifische Aufgaben mit Ball für Flügel und Stürmer (Hereingabe, Laufweg, Lösen aus der Deckung) und ein UEFA-Ausbildungsziel „vielseitiger Stürmer". Strafraumbesetzung und Laufwege auf Hereingaben eignen sich als Szenariotyp [Eigene Ableitung].
+
+### [B-114] Defending as a unit (Belinda Wilson) – erster, zweiter und dritter Pressingspieler
+- Organisation/Autor: FIFA Training Centre, Elite sessions (Out of possession); FIFA Women's Football Technical Expert Belinda Wilson
+- URL: https://www.fifatrainingcentre.com/en/practice/elite-sessions/out-of-possession/defending-as-a-unit.php
+- Datum (Veröffentlichung/Aktualisierung): 12.09.2023 (Seitenkopf) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Seite vollständig; Videos und Sessionplan-PDF nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Wer diese Pressingprinzipien jung versteht, kann sie im Erwachsenenfußball, wo sie grundlegend sind, leicht umsetzen [verifiziert].
+  - Der Ballnächste löst das Pressing aus, die nächsten schließen sofort an; der 2. sichert den 1. ab und blockiert Pässe an ihm vorbei; der 3. sichert den 2. und antizipiert Pässe. Die Rollen wechseln ständig: Wird der 1. überspielt, wird der 2. zum 1. und der bisherige 1. zur Absicherung [verifiziert].
+  - Beim ersten Kontakt des Empfängers ankommen und eng an ihm sein, seitliche Körperstellung, damit der Gegner in enge Zonen spielt; die Richtung des Pressings weg von gefährlichen Zonen vorgeben; das Feld klein machen [verifiziert].
+  - Organisation: Spieler regelmäßig tauschen, damit alle verteidigen und angreifen; 8v8 im 4-3-1 auf 70 × 30 m mit Drei-Linien-Struktur; im freien Abschlussspiel nur ermutigen, nicht unterbrechen [verifiziert].
+- Konsequenzen für SPIELIQ: Die Rollen 1./2./3. hängen an der Ballnähe, nicht an der Position, und wechseln laufend; sie gelten damit für alle Spieler (a). Vorlage für Szenarien mit Rollenwechsel nach einem Pass [Eigene Ableitung].
+
+### [B-115] FIFA Talent Coach Programme: „8v8 attack v. defence: Pressing the goal kick" und „8v8 team game: Building up through middle areas"
+- Organisation/Autor: FIFA Training Centre, Talent Coach Programme (Press and regain bzw. Build and progress)
+- URL: https://www.fifatrainingcentre.com/en/practice/talent-coach-programme/press-and-regain/8v8-attack-v-defence-pressing-the-goal-kick.php ; https://www.fifatrainingcentre.com/en/practice/talent-coach-programme/build-and-progress/8v8-team-game-building-up-through-middle-areas.php
+- Datum (Veröffentlichung/Aktualisierung): 04.06.2024 bzw. 02.07.2024 (Seitenkopf) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (beide Seiten; Sessionplan-PDFs nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Jede Einheit beschreibt die Absicht (was geübt wird), die Skala (für wen sie relevant ist, teils mit Positionen) und den Übungstyp [verifiziert].
+  - Pressing beim Abstoß im 4-4-2, ausdrücklich positionsspezifisch mit festen Rollen: Die beiden Stürmer pressen und schließen die Wege der Innenverteidiger; der rechte Angreifer presst, sobald der Torwart auf den linken Innenverteidiger spielt, der linke schiebt herüber und blockiert den Rückpass nach innen. Der rechte Mittelfeldspieler presst den Linksverteidiger, sobald der Innenverteidiger den Ball berührt. Ein Innenverteidiger bleibt eng an der gegnerischen 9 und folgt ihr, der andere sichert den frei werdenden Raum [verifiziert].
+  - Coachingpunkte: bei Ballbesitz des Torwarts kompakt die zentralen Passwege schließen; auf einer Seite zuschieben, den Rückpass zum Torwart abschneiden und den Innenverteidiger zur Linie zeigen; der Spieler auf der ballfernen Seite rückt ein; der Außenspieler schneidet den Pass auf den Gegner zwischen den Linien ab und springt beim Pass auf den Außenverteidiger heraus. Auslöser ist der Moment, in dem der Gegner den Ball zum Pass berührt [verifiziert].
+  - Aufbau durch das Zentrum: besonders relevant für Torwart, Innenverteidiger, defensive und zentrale Mittelfeldspieler, die sich zwischen den Linien anbieten, offen annehmen und den Raum hinter herausspringenden Gegnern nutzen sollen. Für das pressende Team: Die vorderste Linie läuft die Innenverteidiger an, die Mittelfeldspieler schatten die sich fallen lassenden Gegner ab, die Abwehrlinie rückt zum Abfangen heraus [verifiziert].
+- Konsequenzen für SPIELIQ: FIFA ordnet Übungen nach Spielmoment und Skala und benennt die betroffenen Positionen. Die Rollen sind Beispiele eines 4-4-2-Plans (c); positionsübergreifend (a) bleiben Kompaktheit, Passwege schließen, Auslöser und Einrücken auf der ballfernen Seite [Eigene Ableitung].
+
+### [B-116] Preparing and executing counter-pressing (Anne Pochert)
+- Organisation/Autor: FIFA Training Centre, Elite sessions (Transition to defending; Grasshopper Club Zürich); FIFA Technical Expert Anne Pochert mit einer Frauenmannschaft
+- URL: https://www.fifatrainingcentre.com/en/practice/elite-sessions/transition-to-defending/preparing-and-executing-counter-pressing.php
+- Datum (Veröffentlichung/Aktualisierung): 30.10.2023 (Seitenkopf) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Seite vollständig; Sessionplan-PDF nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Im defensiven Umschalten sind Teams am verwundbarsten; sofortiger Druck auf den Ballführenden erhöht die Chance, den Ball binnen Sekunden zurückzugewinnen [verifiziert].
+  - Der Ballnächste presst und gibt den Ton an; gelingt der erste Zugriff nicht, Passwege schließen; Pässe hinter die Abwehr durch Nachrücken oder Abseitsfalle verhindern [verifiziert].
+  - Das Team in Ballbesitz soll eine Struktur zur Restverteidigung einnehmen und gute Abstände halten. Ist sofortiger Druck nicht möglich: Passwege schließen, das Zentrum sichern, Konter in den Rücken verhindern [verifiziert].
+  - Ablauf: 3v1-Rondo auf 5 × 5 m → 4v4 + 2 in vier Zonen auf 20 × 20 m → 7 + TW gegen 7 + 2 TW auf halbem Feld [verifiziert].
+- Konsequenzen für SPIELIQ: Gegenpressing und Restverteidigung sind Aufgaben aller Spieler: Wer nah ist, presst; wer weiter weg ist, schließt Passwege und sichert das Zentrum (a). Wer konkret in der Restverteidigung bleibt, ist Teamvorgabe (c) [Eigene Ableitung].
+
+### [B-117] Außenspieler im Ballbesitz: Frankreich U17 „Using the full-backs to create and finish" (2023), Boothroyd „Movement patterns for wing play" (2022), Skinner „Using the goalkeeper for successful build-up" (2022)
+- Organisation/Autor: FIFA Training Centre, Elite sessions; Jean-Luc Vannuchi und Vincent Hamonic (französische U17 der Männer); Aidy Boothroyd (laut Seite ehemals Trainer der englischen U21); Rehanne Skinner (laut Seite Tottenham Hotspur Women)
+- URL: https://www.fifatrainingcentre.com/en/practice/elite-sessions/youth-national-teams/france-u17-men/thursday-session.php ; https://www.fifatrainingcentre.com/en/practice/elite-sessions/in-possession/wing-play.php ; https://www.fifatrainingcentre.com/en/practice/elite-sessions/in-possession/building_from_the_back_skinner.php
+- Datum (Veröffentlichung/Aktualisierung): 27.06.2023; 17.05.2022; 22.02.2022 (jeweils Seitenkopf) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Seitentexte; Sessionplan-PDFs und Videos nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Frankreich U17 im 4-3-3: Flügelräume frei machen, damit Außenverteidiger aufrücken und Überzahl schaffen; die Flügelspieler ziehen nach innen, um zu kombinieren und den freien Außenverteidiger zu finden; nach Spielverlagerung den ballfernen Außenverteidiger hinter der Abwehr suchen. Für das Umschalten sollen die Innenverteidiger bei hohem Ballbesitz nah beieinander stehen, um den gegnerischen Mittelstürmer zu kontrollieren [verifiziert].
+  - Boothroyd: Ein Flügelmittelfeldspieler lässt sich in den Raum vor der Abwehrlinie fallen und zieht seinen Gegenspieler mit; so entsteht außen Raum für den Außenverteidiger. Außenverteidiger halten die Breite, damit die Innenverteidiger mehr Raum haben; Läufe mit den Mitspielern abstimmen [verifiziert].
+  - Skinner: Außenverteidiger sind im Aufbau wichtig und sollen breit bleiben; alle Spieler fordern den Ball, Mittelfeldspieler suchen Lücken; auf Raum und Unterstützungswinkel achten [verifiziert].
+- Konsequenzen für SPIELIQ: Aufgaben mit Ball für Außenverteidiger und Flügel sind eng verzahnt (wer zieht ein, wer hält die Breite) und teamabhängig (c). Prinzip (a) bleibt: Breite und Tiefe besetzen, Räume für Mitspieler schaffen. Elite- bzw. Nationalteam-Kontext [Eigene Ableitung].
+
+### [B-118] FIFA Grassroots 12 to 15: „Experimenting with positional freedom"
+- Organisation/Autor: FIFA Training Centre, Grassroots (12 to 15); im Seitenkopf „FIFA"
+- URL: https://www.fifatrainingcentre.com/en/practice/grassroots/12-to-15/experimenting-with-positional-freedom.php
+- Datum (Veröffentlichung/Aktualisierung): 14.03.2023 (Seitenkopf) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Seite vollständig; Sessionplan-PDF nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Ablauf: 5v5-Ballbesitz mit Zielspielern (alle zwei Minuten wechseln) → Pass- und Schusswettbewerb (Torhüter rotieren) → 9v9, in dem die Spieler ermutigt werden, verschiedene Positionen auszuprobieren; die Spieler leiten ihr Spiel selbst [verifiziert].
+  - Leitfragen u. a.: Könnt ihr euch selbst in eine Formation ordnen (z. B. 3-3-2)? Könnt ihr alle im Spiel mindestens zwei Positionen spielen? Könnt ihr einen Kapitän bestimmen, der das Team organisiert? [verifiziert]
+- Konsequenzen für SPIELIQ: FIFA-Grassroots-Material für genau die Altersgruppe 12–15 fordert Positionswechsel im Spiel. SPIELIQ kann dieselbe Situation aus zwei Rollen lösen lassen [Eigene Ableitung].
+
+### [B-119] Research brief: Biological maturation selection biases across playing positions in youth football (Liam Sweeney)
+- Organisation/Autor: FIFA Training Centre, Research brief; Dr. Liam Sweeney (Maynooth University); zugrunde liegende Studie laut Seite: Sweeney, Cumming, MacNamara und Horan, Biology of Sport 2023, 40(3), 715–722
+- URL: https://www.fifatrainingcentre.com/en/environment/research-brief/high-performance/talent-pathways/biological-maturation-selection-biases-in-youth-football.php
+- Datum (Veröffentlichung/Aktualisierung): 28.03.2024 (Seitenkopf) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (schriftliche Zusammenfassung; Video und Originalstudie nicht geprüft).
+- Kernaussagen (paraphrasiert):
+  - Kinder gleichen Kalenderalters können biologisch bis zu sechs Jahre auseinanderliegen; Frühentwickelte sind ab etwa 11–12 Jahren in Akademien überrepräsentiert [verifiziert].
+  - In der Stichprobe (irische Auswahlspieler U13–U16) war die Auswahlverzerrung zugunsten Frühentwickelter am größten bei Torhütern, Innenverteidigern, Mittelstürmern und offensiven Außenspielern; bei zentralen offensiven und defensiven Mittelfeldspielern zeigte sie sich nicht, Spätentwickler waren aber insgesamt unterrepräsentiert [verifiziert].
+- Konsequenzen für SPIELIQ: In der Pubertät hängt die Positionszuweisung oft am Körper. SPIELIQ sollte keine Positionen nach körperlichen Merkmalen vorschlagen und Spielverständnis für alle Rollen fördern [Eigene Ableitung]. Ergänzt den DFB-Hinweis auf das biologische Alter (A-87 nennt bis zu fünf Jahre Abweichung, hier bis zu sechs).
+
+### [B-120] FIFA-Analysen zu Positionsrollen: WM 2022 „Part 7: Five player case studies" und Frauen-WM 2023 „Part 3: Setting physical benchmarks across positions" (Paul Bradley)
+- Organisation/Autor: FIFA Training Centre (Turnieranalysen, physische Analyse); Dr. Paul Bradley
+- URL: https://www.fifatrainingcentre.com/en/fwc2022/physical-analysis/using-case-studies-to-reveal-the-reasons-why-various-tactical-roles-exert-themselves-physically-during-world-cup-matches.php ; https://www.fifatrainingcentre.com/en/game/tournaments/fifa-womens-world-cup/2023/post-tournament-analysis/physical-analysis/part-3-setting-physical-benchmarks-across-positions.php
+- Datum (Veröffentlichung/Aktualisierung): 24.05.2023 bzw. 06.02.2024 (Seitenkopf) [verifiziert]
+- Zugriff / Verifikationsstatus: Volltext abgerufen 30.10.2026 (Artikeltexte; Grafiken und Videos nicht ausgewertet).
+- Kernaussagen (paraphrasiert):
+  - Die Frauen-WM-Analyse unterscheidet acht Feldspielerrollen: Innenverteidiger, Außenverteidiger, defensiver, zentraler und offensiver Mittelfeldspieler, Außenmittelfeldspieler, Flügelstürmer, Mittelstürmer. Die Rollen vergab der Datenanbieter nach der Startformation; dieselbe Spielerin konnte in verschiedenen Spielen verschiedene Rollen haben [verifiziert].
+  - Innenverteidiger (Fallbeispiel WM 2022): Rolle vor allem gegen den Ball (Gegner neutralisieren und verzögern), Rückwärtsläufe zur Absicherung im Umschalten; zunehmend auch Spielaufbau mit Linien brechenden Pässen und Andribbeln [verifiziert].
+  - Außen- bzw. Flügelverteidiger: doppelte Rolle; mit Ball viele Bewegungen zum Anbieten, Hinterlaufen, Flanken und Rückpässe; gegen den Ball Unterstützung im Pressing, Absichern langer Bälle hinter sich, nach Ballverlust zurücksprinten in die Ordnung oder ins 1v1 [verifiziert].
+  - Zentraler Mittelfeldspieler: verbindet Abwehr und Angriff, bietet sich vor, zwischen und hinter den Linien an, lässt sich zum Aufbau fallen, fängt Bälle ab und läuft im Umschalten zurück [verifiziert].
+  - Flügelstürmer (Mbappé): im französischen Spielmodell mit großen Freiheiten; gegen den Ball etwa 50 % weniger intensive Aktionen als der Rollendurchschnitt, presste nur gelegentlich. Stürmer (Messi): sehr selektiver Krafteinsatz [verifiziert].
+- Konsequenzen für SPIELIQ: FIFA-Positionsprofile bestätigen die Grundaufgaben je Rolle. Dass Weltklasse-Angreifer wenig verteidigen, ist eine Teamentscheidung im Spitzenfußball (c), kein Vorbild für die Ausbildung [Eigene Ableitung; vgl. A-103].
 
 ---
 
@@ -1808,6 +1992,72 @@ FIFA veröffentlicht die Rechenheuristiken der EFI-Metriken nicht vollständig [
 5. **Progression:** 1v1/1v2 → 2v2/2v3/3v3 (Druck, Absicherung, Balance) → eine Linie → zwei Linien → drei Linien (11v11), analog zu [B-01, B-94]; Kleinformate wie [B-10, B-13].
 6. **Transfer:** Der Simulator ergänzt das Platztraining (Technik und Spielphasen), ersetzt es aber nicht [B-35, B-99, B-100] [verifiziert]; [B-74, B-86, B-87] [nur Suchergebnis]. Den Transfer messen.
 7. **Motivation:** Verteidigen als Ballgewinn und Start eines Konters darstellen [B-10, B-50] [verifiziert]; [B-83] [nur Suchergebnis]. Freude und nicht bloßstellendes Feedback sind auch wegen des Ausstiegsrisikos im frühen Teenageralter wichtig [B-104].
+
+### S8. Ergänzung 30.10.2026: Positionen und Rollen
+
+**Grundlage und Lesart.** Neue Einträge A-103 bis A-108 (Register A) und B-106 bis B-120, dazu Ergänzungen in A-02, A-14, A-15, A-46, A-87, B-55, B-99 und B-101; alle im Original gelesen [verifiziert], sofern nicht anders markiert. Abweichend von S0 bedeutet die Ebene (b) in diesem Abschnitt **positionsspezifische Aufgabe**: (a) Prinzip für alle Spieler, (b) Aufgabe, die sich aus Position und Zone ergibt, (c) Kontextvorgabe aus Spielmodell, Gegner oder Übungsform. Viele Belege stammen aus Elite- oder Erwachsenenfußball (UEFA-Analysen, FIFA-Elite-Sessions); Nachwuchsbezug ist jeweils genannt.
+
+**S8.1 Frage 1: Lernen alle Spieler die defensiven Grundlagen, auch Stürmer und Flügel?**
+
+Antwort: Ja. Keine der geprüften DFB-, FIFA- oder UEFA-Quellen nimmt Angreifer von den defensiven Grundlagen aus; mehrere fordern ausdrücklich das Gegenteil.
+
+- (a) Prinzip für alle:
+  - DFB-Leitsatz „Alle greifen gemeinsam an, alle verteidigen gemeinsam" [A-02, A-15]; Trainer*innen sollen zum gemeinsamen Angreifen und Verteidigen animieren [A-91] [verifiziert].
+  - In kleinen Formen haben alle positionsunabhängig den Ball, und Angreifer müssen verteidigen (Gerland); der „globale Spieler" soll unabhängig von seiner Position Zweikampfverhalten offensiv und defensiv sowie sofortiges Umschalten in beide Richtungen beherrschen; im 2v2 wird man vom Stürmer zum ersten Verteidiger und muss mit dem Partner herausstechen und absichern (Lars Bender) [A-87, S. 17, 18, 21] [verifiziert].
+  - Die Grundlagen des Verteidigens auf einer Linie (Verschieben, Herausrücken, Absichern) werden spätestens ab D in kleinen 4v4-Linienformen vermittelt; eine Beschränkung auf Abwehrspieler nennt das Flipbook nicht [A-87, S. 39; A-14]; die Talentförderung schult Offensiv- und Defensivthemen gemeinsam [A-46] [verifiziert].
+  - FIFA: Die Rollen 1., 2. und 3. Verteidiger bzw. Pressingspieler richten sich nach der Ballnähe und wechseln ständig [B-01, B-94, B-114]; alle Spieler sollen die Rollen verstehen und austauschbar übernehmen [B-97]; in Übungen werden Spieler getauscht, damit alle verteidigen und angreifen [B-114] [verifiziert].
+  - UEFA-Umfeld: Angriff und Verteidigung lassen sich nicht trennen, schon im Ballbesitz bereiten sich Spieler auf den Ballverlust vor [B-109]; Kompetenzen in mehr Rollen im Angriff und in der Verteidigung entwickeln [B-111]; die Gewohnheit, den Ball sofort zurückzuerobern, schon früh anlegen [B-111]; in Belgien greifen bis U14 im 5v5 zwei bis drei Spieler den Ball an (Gegenpressing ohne Erklärung) [B-107]; im defensiven Umschalten reagiert jeder Spieler sofort [B-110] [verifiziert].
+- Rolle der Angreifer beim Verteidigen (Funktion = a, konkrete Ausgestaltung = b oder c):
+  - **Erste Pressinglinie:** Der ballnahe Stürmer führt das Pressing an [B-95]; zentrale Angreifer lösen aus, das Team rückt nach [B-16, B-107]; Anlaufen im Bogen oder Winkel, zu einer Seite lenken, den Seitenwechsel nehmen [B-08, B-10 (U15), B-11, B-14]; bei zwei Stürmern presst einer, der andere schirmt den zentralen Passweg ab [B-11]; nach dem Lenken den Rückpass verhindern [A-106]; aus dem toten Winkel pressen [B-12] [verifiziert].
+  - **Passwege ins Zentrum zustellen:** Formation an Position und Passoptionen des Ballführenden ausrichten [B-08]; die 9 nimmt den Seitenwechsel, die 8 oder 10 blockiert den Vorwärtspass [B-10]; Flügelstürmer blockieren Pässe auf die Außenverteidiger [B-14]; beim Abstoß schiebt der ballferne Angreifer herüber und blockiert den Rückpass nach innen [B-115] [verifiziert].
+  - **Gegenpressing und Konterabsicherung:** Wer nachrückt, kann nach Ballverlust sofort pressen [A-15]; das individuelle Gegenpressing übernimmt meist der Spieler, der den Ball verloren hat [B-96]; der Ballnächste presst, sonst Passwege schließen und das Zentrum sichern [B-116]; überspielte Angreifer setzen nach oder ordnen sich in den Block ein [B-108]; im 2v2 wird der Stürmer sofort zum 1. Verteidiger [A-87, S. 21] [verifiziert].
+- (c) Kontext: Wie hoch, wie lange und mit welcher Orientierung Angreifer verteidigen, ist Teamplan: Mann gegen Mann von vorn [B-108], „ganz oder gar nicht" statt Mittelfeldblock [B-113], bewusst Spieler vorn lassen, um kontern zu können [B-110], Freiheiten für einzelne Weltklasse-Angreifer [B-120, A-103]; Lenkrichtung außen oder innen [A-106, B-96] [verifiziert].
+- Folgerung [Eigene Ableitung]: Alle Feldspieler lernen Druck, Absicherung, Balance, Verschieben und Kompaktheit als Rollen nach Ballnähe. Für Angreifer kommen als Pflichtinhalte hinzu: Anlaufen mit Richtung, Passweg im Deckungsschatten halten, sofort umschalten nach Ballverlust, nachsetzen oder zurück in den Block nach dem Überspielen.
+
+**S8.2 Frage 2: Wann und wie wird Positionsspezifik eingeführt? Positionswechsel?**
+
+- **DFB** [verifiziert]:
+  - Ab der C-Jugend darf Positionsspezifik einfließen, „in einer gesunden Mischung" mit ganzheitlicher Ausbildung [A-87, S. 8]; in der Talentförderung (U12–U15) bewusst keine zu frühe Positionsfixierung [A-46]; Detailcoaching komme erst später in der Spezialisierung [A-87].
+  - Wie: Positionsspezifik in Spielformen einbauen (Innenverteidiger eher hinten, Stürmer vorn) [A-87, S. 48]; Linienspiele sind „organisierter und positionsspezifischer" und schulen Achter, Flügel, Stürmer bzw. Viererkette plus Sechser [A-87, S. 43]; Zwischenblock „Grund- und Positionstechnik" [A-87, S. 10 und 53; A-02]; Überzahlspieler gleichen die geringere Zahl an Offensivaktionen von Stürmern aus [A-15, A-87, S. 17].
+  - Leistungsspitze: positionsspezifische Programme der U-Nationalteams mit drei Stürmerprofilen [A-103]; U16-Juniorinnen positionsspezifisch in Kleingruppen, U17 Mannschaftsabstimmung und Pressing im Verbund [A-104]. Älteres Trainingsportal (2019): positionsspezifische Anforderungen nach Alter, für C damals positionsübergreifendes Abwehrverhalten [A-107].
+- **UEFA** [verifiziert]: Youth B verlangt, Rollen im Team zu verstehen und frühe Spezialisierung auf feste Positionen zu vermeiden, besonders mit 11–13 Jahren; UEFA B verlangt, Merkmale und Anforderungen der Positionen zu kennen und Spieler passend zu Teamstruktur und Spielformat zu entwickeln [B-106]; Elite Youth A: Positionen und Aufgaben in verschiedenen Systemen [B-55]. Verbandsausbilder im UEFA-Umfeld: zuerst Grundlagen für mehrere Positionen, Positionsschwerpunkt nicht zu früh, frühe Spezialisierung keine gute Idee [B-107]; Allroundspieler früh entwickeln, Vielseitigkeit aus Spielverständnis [B-108]; Rollenkompetenz in mehreren Positionen [B-111].
+- **FIFA** [verifiziert]: Positionsspezifisches Training in drei Phasen (individuelle Aktionen, Spielsituationen, Spielphasen), die keine starren Stufen sind und nach Alter, Erfahrung und Bedarf gewählt werden; begründet mit klar definierten Rollen im Spitzenfußball [B-99, B-27]. Im Talentprogramm U12–U15 sollen alle die Rollen austauschbar übernehmen können [B-97].
+- **Positionswechsel und Rotation** [verifiziert]: FIFA-Grassroots 12–15: im 9v9 Positionen ausprobieren, jeder mindestens zwei Positionen pro Spiel [B-118]; 8–12 Jahre: Rollen tauschen, verschiedene Positionen erleben [B-101]; Rollen rotieren [B-100]. DFB: Startspieler, Anspieler, Angreifer und Verteidiger werden in Übungen rotiert [A-87, A-15, A-106]; Feldspieler*innen sollen die Torwartposition erleben können [A-14]; im F-Junioren-Spielbetrieb wechselt der Torwart nach jeder Runde [A-88]; Einzelfall eines Positionswechsels bei der U17-EM [A-105].
+- **Warnhinweis** [verifiziert]: Die Auswahl nach Reife ist auf bestimmten Positionen (Torwart, Innenverteidiger, Mittelstürmer, offensive Außen) besonders verzerrt [B-119]; das biologische Alter weicht laut DFB bis zu fünf, laut FIFA-Research-Brief bis zu sechs Jahre ab [A-87, B-119].
+- Spannungsfeld: FIFA begründet Positionstraining mit den Rollenanforderungen des Spitzenfußballs [B-99], der DFB warnt vor „Taktisierung" und gegnerorientierter Mannschaftstaktik im Nachwuchs [A-87, A-92]. Beide setzen individuelle Qualität und spielnahe Formen voraus; der Unterschied liegt in der Dosierung [Eigene Ableitung].
+- Folgerung für U14/U15 [Eigene Ableitung]: Die Zielgruppe liegt direkt hinter dem UEFA-Fenster (11–13) und am Beginn der DFB-Freigabe (ab C). Positionen in SPIELIQ deshalb als Rolle und Perspektive eines Szenarios führen, nicht als festes Profil des Spielers; jede Mission sollte aus mindestens zwei Rollen spielbar sein; bewertet werden zuerst die positionsübergreifenden Prinzipien (a), positionsspezifische Feinheiten (b) als Zusatzebene.
+
+**S8.3 Frage 3: Aufgaben je Position**
+
+Tabelle: Position → Aufgaben ohne Ball / mit Ball / Umschalten → Belege. Einträge ohne Markierung sind (b); (c) = teamabhängige Vorgabe. Alle genannten Belege [verifiziert].
+
+| Position | Ohne Ball | Mit Ball | Umschalten | Belege |
+|---|---|---|---|---|
+| Innenverteidiger | Raum hinter der Kette sichern, halb offen stehen, für herausrückende Nebenleute absichern; Kette verbunden, Kommunikation zwischen den Innenverteidigern; Prioritäten setzen (gefährlichster Gegner oder Läufer); im Strafraum zuordnen, Flanken und hohe Bälle; einer bleibt am Mittelstürmer, der andere sichert (c); bei Druck auf den Ball nach vorn verteidigen | Aufbau einleiten, Linien mit Pass oder Andribbeln brechen; im 11v11 deutlich mehr Ballkontakte als Stürmer | bei hohem eigenem Ballbesitz nah beieinander gegen den Mittelstürmer (Restverteidigung, c); nach Ballverlust zurück und absichern | B-03, B-05, B-06, B-14, B-57, B-112, B-115, B-117, B-120; A-87 (S. 17, 48), A-108 |
+| Außenverteidiger | Flügelspieler nicht nach innen lassen; wird der Außenverteidiger überspielt, schließt der Nächste; zur Linie auf den schwachen Fuß lenken nur mit Absicherung innen; ballfern einrücken, Gegner im Blick; je nach Teambalance hoch pressen oder zurückweichen | Breite geben und anspielbar sein; Hinterlaufen für Überzahl; aufrücken, flanken, zum Teil ins Zentrum (c) | nach Ballverlust zurücksprinten, in die Ordnung oder ins 1v1; eigene Rolle in der Restverteidigung kennen | B-07, B-14, B-57, B-109, B-111, B-112, B-117, B-120; A-14, A-87 (S. 22, 34), A-106, A-108 |
+| Zentrales defensives Mittelfeld (6) | Zentrum schützen, Passwege abschirmen, Pressing organisieren; nach Überspielen der ersten Linie die Wege durchs Zentrum schneiden; herausrücken, wenn zwischen die Stürmer gespielt wird; mit dem Partner gestaffelt statt flach; gegen einziehende Flügel absichern; Viererkette plus Sechser als DFB-Linienform | Raum zum Annehmen finden, vor der Annahme scannen, offen stehen, nach vorn spielen oder sichern; Tempo steuern; bei Bedarf in die Abwehrlinie abkippen; nicht auf einer Linie mit dem zweiten zentralen Mittelfeldspieler | zentrale Räume besonders im Umschalten schützen; Teil der Restverteidigung | B-07, B-11, B-27, B-95, B-99, B-113; A-87 (S. 43) |
+| 8er/10er | 8 arbeitet in Abwehr und Angriff; Vorwärtspass blockieren und Gegner mit dem Rücken zum Tor attackieren; tiefere 10 sichert den Raum hinter dem Pressing (c); sich fallen lassende Gegner im Deckungsschatten halten; im Mittelfeld rückt der Nächste heraus, der Fernste ein; ballseitig mit Flügel und Außenverteidiger Räume schließen | zwischen den Linien anbieten, offen annehmen, Raum hinter herausspringenden Gegnern nutzen; die 10 öffnet die Abwehr; in die Spitze nachrücken; Bewegungen vor, zwischen und hinter den Linien; 6, 8 und 10 austauschbar (c) | im Umschalten zurücklaufen und abfangen; in Ballnähe sofort Gegenpressing | B-10, B-14, B-99, B-107, B-113, B-115, B-116, B-120; A-87 (S. 43), A-106 |
+| Flügelspieler | mit dem Mittelstürmer pressen, Pässe auf den Außenverteidiger blockieren; ballfern einrücken oder sich in die Kette fallen lassen; gute Anlaufwinkel; im Nachwuchs-9v9 (13–14 J.) Verantwortung in Abwehr und Angriff | Breite halten; 1v1 suchen; nach innen ziehen, um dem Außenverteidiger Raum zu geben (c); frühe Hereingabe zwischen Torwart und Kette, Rückpass in den Rückraum, Flanke an den zweiten Pfosten; beidfüßig flanken | nach dem Überspielen nachsetzen oder in den Block zurück; nach Ballgewinn Konter mit Tempo | B-07, B-14, B-57, B-95, B-108, B-110, B-111, B-113, B-115, B-117; A-87 (S. 22, 35, 41), A-98, A-106 |
+| Stürmer | Pressing anführen, Team schiebt nach; im Bogen anlaufen, zu einer Seite lenken, Seitenwechsel nehmen; einer presst, einer schirmt ab; nach außen oder innen lenken (c) und den Rückpass verhindern; Innenverteidiger zustellen; aus dem toten Winkel pressen | anbieten und entgegenstarten; mit dem Rücken zum Tor behaupten; in den Rücken des Innenverteidigers starten, Querläufe, Kreuzen; Einlaufen „in den Ball" statt zu früh vor dem Tor; aus der Deckung lösen, Passwinkel suchen; zwei Stürmer gestaffelt; sich fallen lassen für Überzahl (c) | sofort Gegenpressing, oft durch den Ballverlierer; überspielt: nachsetzen oder in den Block; nach Ballgewinn erste Option nach vorn | B-08, B-10, B-11, B-12, B-14, B-16, B-95, B-96, B-107, B-108, B-113, B-115; A-87 (S. 21, 34, 36), A-98, A-103, A-106 |
+| Torwart als Mitspieler | dirigiert, rückt mit dem Block auf und läuft Bälle hinter der Kette ab; bei hoher Linie an der Strafraumgrenze; Kommunikation mit den Vorderleuten, Raumverteidigung im Strafraum | Überzahlspieler im Aufbau; Aufbauspieler; Spiel öffnen, wenn der Gegner zurückgedrängt wird | Abstand zur Abwehrlinie je nach Ballposition (beschreibende Werte) | B-05, B-07, B-49, B-96, B-102, B-112, B-114; A-87 (S. 12, 48), A-98 |
+
+- **Positionsübergreifend gleich (a):** Rolle nach Ballnähe (1./2./3. Verteidiger, Ballführender und Unterstützer) [B-01, B-94, B-97, B-114]; torseitig stehen, Druck, Absicherung, Balance; Verschieben und Kompaktheit [B-95, A-87]; sofortiges Umschalten in beide Richtungen [A-87, B-109, B-110]; Scannen und offene Stellung [B-27, B-30]; Gegner binden oder anspielbar sein [A-15]; Zuordnung, Positionierung im Rücken des Gegners und Kommunikation [A-105]; im Ballbesitz den Ballverlust mitdenken [B-109, B-111] [verifiziert].
+- **Was sich unterscheidet (b):** die Zone und die typische Situation (Innenverteidiger: Raum hinter der Kette; Außenverteidiger: Flügel-1v1 und Breite; 6: Zentrum und Restverteidigung; 8/10: Räume zwischen den Linien; Flügel: 1v1, Hereingaben, Einrücken; Stürmer: erste Linie, Strafraum, Spiel mit dem Rücken zum Tor; Torwart: Raum hinter der Kette und Aufbau) sowie die Häufigkeit von Situationen (Stürmer haben im 11v11 weniger Ballkontakte und scannen seltener) [A-87, A-15, B-31] [verifiziert].
+- **Kontextvorgaben (c):** Lenkrichtung, Pressinghöhe, Mann- oder Raumorientierung, wer in der Restverteidigung bleibt, ob Außenverteidiger hoch schieben und Flügel einziehen, Freiheiten einzelner Angreifer [A-106, B-108, B-110, B-113, B-115, B-117, B-120] [verifiziert].
+- Hinweis zu S4.1, Punkt 1: Ein DFB-Blatt für A-Junior*innen lehrt, je nach Situation „nach außen oder zum Mitspieler" zu lenken [A-106]; im UEFA-Beispiel zum Außenverteidiger fallen „zur Linie" und „auf den schwachen Fuß" zusammen, weil innen abgesichert ist [B-111] [verifiziert]. Eine allgemeine Regel ist damit weiterhin nicht belegt.
+
+**S8.4 Frage 4: Wie strukturieren Verbände Lehrpläne – nach Positionen oder nach Spielmomenten?**
+
+- **Oberste Ebene sind Spielmomente oder Teamaufgaben, nicht Positionen:**
+  - DFB-Talentförderung nach den Spielmomenten „Tore erzielen", „Tore vorbereiten" und „Ballsicherung" [A-46]; Spielphasen Offensive, Defensive, Umschalten [A-100]; die TPD gliedert nach vier Formgruppen statt nach Positionen [A-87, A-02] [verifiziert].
+  - UEFA-Analyse: vier Phasen mit Teamzielen je Phase; das Modell soll Spielern zeigen, was ihre Aufgabe in und zwischen den Mannschaftsteilen ist [B-110] [verifiziert].
+  - FIFA: acht spielbezogene Absichten plus Umschaltmomente und drei Skalen (Spieler, Einheit, Team) [B-97]; Einheiten des Talentprogramms nennen unter „Skala", für welche Positionen sie relevant sind [B-115] [verifiziert].
+  - Football Australia (Teamaufgaben je Hauptmoment), U.S. Soccer (vier Spielmomente) und KNVB (Teamfunktionen) gliedern ebenso [B-73, B-75, B-77] [nur Suchergebnis].
+- **Positionsprofile kommen als zweite Ebene im Leistungsbereich hinzu:** DFB-U-Nationalteams mit positionsspezifischen Programmen und Profilen [A-103, A-104]; FIFA-Reihe „Position-specific training" (bisher nur für die 6 veröffentlicht) [B-99, B-27]; FIFA-Turnieranalysen mit acht Feldspielerrollen [B-120]; UEFA B mit Spielerprofilen und Positionsanforderungen [B-106] [verifiziert].
+- **Nicht gefunden:** ein DFB-, FIFA- oder UEFA-Lehrplan für den Amateur-Nachwuchs, der ausdrücklich nach Positionen gegliedert ist; eine verbindliche Altersangabe, ab wann Positionen festgelegt werden (belegt ist nur das UEFA-Fenster 11–13 für das Vermeiden früher Spezialisierung [B-106]); FIFA-Positionsreihen für andere Positionen als die 6 [verifiziert: in den abgerufenen Seiten nicht vorhanden].
+- Folgerung [Eigene Ableitung]: Den SPIELIQ-Lehrplan als Matrix aufbauen: Spielmoment (vier Phasen) × Rolle zum Ball (1./2./3. Verteidiger bzw. Ballführender und Unterstützer) × Position als Kontext (Zone, Startposition). Positionspfade ab C wiederholen dieselben Prinzipien aus der Sicht einer Position (Spiralprinzip wie [B-97]), statt eigene Prinzipien je Position einzuführen.
+
+**Zugriff in dieser Ergänzung:** gesperrt waren kff.kz (Kopie des UEFA-B-Syllabus 2025), uefatechnicalreports.com (vollständige UEFA-Technikberichte mit Trainingsformen) und www.meinfussball.de (Weiterleitungsziel von training-service.fussball.de); je ein Versuch pro Adresse.
 
 ---
 
