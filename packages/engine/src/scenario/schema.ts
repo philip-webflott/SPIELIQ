@@ -140,6 +140,28 @@ export const watchStepSchema = z.object({
   after: z.object({ caption: localizedTextSchema, overlays: z.array(overlaySchema).default([]) }).optional(),
 })
 
+const filmSegmentSchema = z.object({
+  /** Gesprochener und angezeigter Text (Einfache Sprache, höchstens zwei kurze Sätze) */
+  text: localizedTextSchema,
+  /** Neue Situation für diesen Abschnitt (sonst Fortsetzung des vorherigen) */
+  board: boardInputSchema.optional(),
+  /** Bewegung, während der Text gesprochen wird */
+  script: z.array(scriptEventSchema).default([]),
+  /** Hervorhebungen, sobald die Bewegung des Abschnitts fertig ist */
+  overlays: z.array(overlaySchema).default([]),
+})
+
+/**
+ * Erklärfilm vor den Aufgaben: wenige kurze Abschnitte, in denen sich die
+ * Figuren bewegen und eine Stimme dazu erklärt (docs/konzept/lernsystem.md,
+ * Lektionsformat). Reine Darstellung, keine Bewertung.
+ */
+export const filmStepSchema = z.object({
+  ...stepBase,
+  kind: z.literal('film'),
+  segments: z.array(filmSegmentSchema).min(1).max(6),
+})
+
 export const explainStepSchema = z.object({
   ...stepBase,
   kind: z.literal('explain'),
@@ -186,6 +208,7 @@ export const chooseStepSchema = z.object({
 })
 
 export const stepSchema = z.discriminatedUnion('kind', [
+  filmStepSchema,
   watchStepSchema,
   explainStepSchema,
   identifyStepSchema,
@@ -196,6 +219,7 @@ export const stepSchema = z.discriminatedUnion('kind', [
 export type StepInput = z.input<typeof stepSchema>
 export type Step = z.output<typeof stepSchema>
 export type InteractiveStep = Extract<Step, { kind: 'identify' | 'place' | 'choose' }>
+export type FilmStep = Extract<Step, { kind: 'film' }>
 
 export const missionSchema = z.object({
   schemaVersion: z.literal(1),

@@ -59,6 +59,7 @@ describe.each(missions)('Mission %s', (_id, loaded: LoadedMission) => {
     for (const step of mission.steps) {
       texts.push(step.instruction.de)
       if (step.kind === 'watch' && step.after) texts.push(step.after.caption.de)
+      if (step.kind === 'film') texts.push(...step.segments.map((seg) => seg.text.de))
       if (step.kind === 'explain') texts.push(step.text.de, ...step.keyPoints.map((k) => k.de))
       if (isInteractive(step)) {
         texts.push(...step.hints.map((h) => h.de), ...Object.values(step.feedback).map((f) => f?.de ?? ''))
@@ -66,6 +67,18 @@ describe.each(missions)('Mission %s', (_id, loaded: LoadedMission) => {
       }
     }
     for (const text of texts) expect(text, text).not.toMatch(UNIT_PATTERN)
+  })
+
+  it('hält Erklärfilme kurz: 3–5 Abschnitte, je höchstens zwei Sätze und 120 Zeichen', () => {
+    for (const step of mission.steps) {
+      if (step.kind !== 'film') continue
+      expect(step.segments.length, step.id).toBeGreaterThanOrEqual(3)
+      expect(step.segments.length, step.id).toBeLessThanOrEqual(5)
+      for (const seg of step.segments) {
+        expect(seg.text.de.length, seg.text.de).toBeLessThanOrEqual(120)
+        expect(seg.text.de.split(/[.!?](\s|$)/).filter((x) => x && x.trim().length > 1).length, seg.text.de).toBeLessThanOrEqual(2)
+      }
+    }
   })
 
   it('hat bei mehreren Spielern höchstens einen Anleitungsschritt pro Spieler, jeder kurz', () => {

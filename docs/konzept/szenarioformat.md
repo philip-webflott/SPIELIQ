@@ -32,6 +32,7 @@ Jeder Schritt hat `id`, eine kurze `instruction` (≤ 140 Zeichen, Test prüft d
 
 | Art | Zweck | Wichtige Felder |
 |---|---|---|
+| `film` | Erklärfilm vor den Aufgaben: kurze Abschnitte mit Bewegung und gesprochenem Text | `segments` (1–6; Content-Test verlangt 3–5): je `text` (höchstens zwei Sätze, ≤ 120 Zeichen, wird vorgelesen), optional `board` (neue Situation), `script`, `overlays` (erscheinen, wenn die Bewegung fertig ist) |
 | `watch` | Situation beobachten (Animation) | `script` (Ereignisse), `after` (Erklärung + Overlays am Ende) |
 | `explain` | Lösung/Prinzip zeigen | `text`, `keyPoints` (≤ 3), optional `script` |
 | `identify` | Spieler oder Punkt antippen | `target`, `selectable` |

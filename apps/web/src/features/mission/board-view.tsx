@@ -108,7 +108,9 @@ function goalLabels(loaded: LoadedMission, window: PitchWindow): { at: Vec2; tex
     const text = goal.opensTowards === ownDirection ? 'UNSER TOR' : 'TOR GEGNER'
     const x = goal.center.x - goal.opensTowards * 1.6
     const candidates = [goal.center.y + goal.width / 2 + 6, goal.center.y - goal.width / 2 - 6].map((y) => ({ x, y }))
-    const at = candidates.find(inside)
+    // Seite mit mehr Platz zum Rand wählen, damit die Beschriftung nicht abgeschnitten wird
+    const margin = (p: Vec2) => Math.min(p.y - window.y, window.y + window.height - p.y)
+    const at = candidates.filter(inside).sort((a, b) => margin(b) - margin(a))[0]
     if (at && inside(goal.center)) labels.push({ at, text })
   }
   return loaded.pitch.goals.length === 2 ? labels : []

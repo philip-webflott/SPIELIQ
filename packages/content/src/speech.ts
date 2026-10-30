@@ -95,6 +95,9 @@ export function missionSpeechTexts(loaded: LoadedMission): string[] {
   loaded.mission.steps.forEach((step, index) => {
     add(t(step.instruction))
     switch (step.kind) {
+      case 'film':
+        for (const seg of step.segments) add(t(seg.text))
+        return
       case 'watch':
         add(t(step.after?.caption))
         return

@@ -14,11 +14,13 @@ Stand: 30.10.2026 · Lies zuerst diesen Plan und den [Doku-Index](README.md).
 **Technik – vertikaler Schnitt funktionsfähig**
 - Monorepo: `packages/engine` (Geometrie, zeitbasiertes Passweg-Modell, 20 Bewertungskriterien, Zeitleisten, Konsequenz-Simulation, Szenarioformat, Qualitätswerkzeuge), `packages/content` (10 Prinzipien, Kompetenzbaum, 6 Missionen, 6 Spielformen, 6 Spielformate, Texte, Fortschrittsregeln), `packages/pitch` (SVG-Spielfeld, Animation, Ziehen/Antippen/Tastatur, Hoch- und Querformat), `apps/web` (Next.js 16).
 - Funktionen: Gastmodus ohne Konto; Trainer-Registrierung mit Verein und Mannschaft; Teamcodes (Hash, Ablauf, Einwilligungsbestätigung für U16, keine Spielerkonten in G/F); pseudonyme Spielerkonten; Lerneinheit 1 mit Missionen 1–6 (Zuschauen, Erkennen, Positionieren, Feedback, Konsequenz, Zusammenfassung); serverseitige Neubewertung; Lernstand mit drei Zuständen; Hausaufgaben mit Bericht; Trainerbeobachtung „auf dem Platz“; Problemfelder und Spielform-Vorschläge; Auskunft (JSON), Berichtigung, Löschung; Speicherfristen-Job; Seite „Hilfe & Melden“; Demo-Daten klar gekennzeichnet.
-- Qualität: 47 Engine-, 7 Spielfeld-, 128 Content-, 39 App-Tests (Integration gegen PostgreSQL und Unit) und 9 End-to-End-Tests (Smartphone und Desktop), alle grün; Content-Tests prüfen Beispiele, Zufallsschutz, Raterate, Spiegelinvarianz und die Existenz jeder Quellenangabe ([Content-Report](qualitaet/content-report.md)).
+- Qualität: 47 Engine-, 7 Spielfeld-, 134 Content-, 39 App-Tests (Integration gegen PostgreSQL und Unit) und 9 End-to-End-Tests (Smartphone und Desktop), alle grün; Content-Tests prüfen Beispiele, Zufallsschutz, Raterate, Spiegelinvarianz und die Existenz jeder Quellenangabe ([Content-Report](qualitaet/content-report.md)).
 
 **Einfach verstehen (30.10.2026):** Nach Rückmeldung zur Zielgruppe (Förder- und Hauptschule) überarbeitet: Einfache Sprache in allen Spielertexten, Spielfeld immer gleich ausgerichtet mit Legende, weniger Knöpfe, Schritt-für-Schritt-Anleitung bei mehreren Spielern, Hilfe nach dem ersten Fehlversuch – Regeln in [Einfach verstehen](design/einfach-verstehen.md). Nächster Schritt: Test mit Kindern der Zielgruppe.
 
 **Sprachausgabe (30.10.2026):** Vorlesen mit vorab erzeugter KI-Stimme (ElevenLabs, Entscheidung des Produktverantwortlichen): Katalog aller vorlesbaren Texte inkl. Rückmeldungen mit Spielernummern, Skript `pnpm voice`, automatisches Vorlesen mit Schalter, Rückfall auf Gerätestimme – [Sprachausgabe](konzept/sprachausgabe.md). Die Aufnahmen selbst entstehen, sobald der ElevenLabs-Zugang hinterlegt ist.
+
+**Erklärfilm (30.10.2026):** Neuer Schritttyp `film` – kurze Abschnitte mit Bewegung und Stimme vor den Aufgaben; Mission 1 beginnt mit einem Erklärfilm „Nicht alle zum Ball“ (5 Abschnitte). Nächste: Filme für die übrigen Missionen, gestufte Übungen, Sichern.
 
 **Spielerfiguren (30.10.2026):** Figuren mit Blickrichtung und Haltung (Bereit, Laufen, Verteidigen, Annehmen, Passen, Schießen) ersetzen die Kreise in allen Missionen; Torhüter mit eigenem Trikot, Haut- und Haartöne variieren – [Spielerfiguren](design/spielerfiguren.md), ADR 0009. Offen: Leistung auf sehr langsamen Geräten, Blickfeld und „frei“-Bereich, große Ansichten.
 
@@ -83,7 +85,7 @@ Begründet und umkehrbar; grundlegende Fragen stehen in [Offene Fragen](recherch
 
 1. **Vertonen:** sobald `ELEVENLABS_API_KEY` und `ELEVENLABS_VOICE_ID` in der Umgebung hinterlegt sind: `pnpm voice --dry-run`, `pnpm voice --limit=5` (Stimme anhören lassen), dann `pnpm voice` und `apps/web/public/voice/` committen ([Sprachausgabe](konzept/sprachausgabe.md), Abschnitt 3).
 2. **Figuren:** Leistung optimieren (Abschnitt 7 im [Figurenkonzept](design/spielerfiguren.md)), dann Phase 4 (Ball-Simulation mit Posen). Danach **Aufstellung und Namen** ([Konzept](konzept/aufstellung-und-namen.md)).
-3. **Lektionsformat** (Meilenstein L): Erklärfilm-Schritt im Szenarioformat (Abschnitte mit Animation und Sprachtext, Zeitmarken aus der Sprachausgabe), gestufte Übungen, Sicherungsquiz.
+3. **Lektionsformat** (Meilenstein L, Vorrang laut Produktverantwortlichem: „einfach und mit Stimme erklärt“): Erklärfilme für Missionen 2–6 bzw. einen Einheiten-Film „Wer macht was?“, gestufte Übungen (leicht → schwer), Sicherungsquiz am Ende der Einheit und spätere Wiederholung.
 4. Test der vereinfachten Fassung mit 3–5 Kindern der Zielgruppe; Erkenntnisse in [Einfach verstehen](design/einfach-verstehen.md), Abschnitt 6, einarbeiten.
 5. CI-Workflow (GitHub Actions) mit PostgreSQL-Service anlegen: `pnpm check`, `pnpm build`, `pnpm test:e2e`.
 6. Folgerecherche – die Domains sind seit 30.10.2026 freigegeben (siehe [Recherche](recherche/README.md), Abschnitt 5): MEIN FUSSBALL, EU-Rechtstexte, Studien im Volltext.

@@ -32,7 +32,7 @@ Missionstexte ──► speechCatalog() ──► pnpm voice ──► ElevenLab
 - **Automatisch vorlesen:** an, sobald Aufnahmen vorhanden sind; Schalter „Vorlesen“ im Kopf jeder Mission. Die Einstellung gilt nur für die laufende Mission und wird nicht gespeichert. Vorgelesen werden: Anweisung (mit erstem Teilschritt und Bedienhinweis), jeder neue Teilschritt, jede angeforderte Hilfe, die gewählte Antwort bei Auswahlaufgaben, die Rückmeldung nach der Folge-Animation.
 - **Kennzeichnung:** Neben dem Schalter steht „KI-Stimme“, der Tooltip sagt „die Stimme ist mit KI erzeugt“. ElevenLabs bettet nach eigenen Angaben ein unhörbares Wasserzeichen in erzeugtes Audio ein ([Hilfeseite](https://elevenlabs.io/docs/help-center/legal/audio-detector/what-is-watermarking-and-why-is-eleven-labs-using-it), abgerufen 30.10.2026). Rechtliche Einordnung: Abschnitt 5.
 
-Umfang heute: 230 Abschnitte mit zusammen rund 10 500 Zeichen (`pnpm voice --dry-run` zeigt den aktuellen Stand).
+Vorgelesen werden auch die Abschnitte der Erklärfilme. Umfang heute: 236 Abschnitte mit zusammen rund 10 900 Zeichen (`pnpm voice --dry-run` zeigt den aktuellen Stand).
 
 ## 3. Einrichtung (einmalig, durch den Produktverantwortlichen)
 

@@ -61,6 +61,13 @@ Rückmeldung des Produktverantwortlichen nach der ersten Online-Vorschau: Für 1
 - „Hilfe“ (gestufte Tipps) jederzeit, „Zeig mir die Lösung“ schon nach dem ersten Fehlversuch. Wer die Lösung ansieht, gilt für diese Aufgabe nicht als „selbstständig gelöst“.
 - Höchstens eine positive Zusatzzeile im Feedback.
 
+## 3a. Erklärfilm
+
+- Höchstens zwei kurze Sätze je Abschnitt (≤ 120 Zeichen), 3–5 Abschnitte – automatisch geprüft.
+- Jeder gesprochene Satz steht auch auf dem Bildschirm.
+- Mit Stimme läuft der Film von selbst weiter; ohne Stimme bestimmt das Kind das Tempo („Weiter“). Der letzte Abschnitt wartet immer auf „Los geht’s“.
+- Wörter aus der Wortliste gelten auch hier (z. B. „zum Gegner mit dem Ball gehen“ statt „stellen“).
+
 ## 4. Abschluss einer Mission
 
 - „Geschafft!“ statt Quote („0 von 1 Aufgaben im ersten Versuch“).

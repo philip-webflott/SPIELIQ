@@ -45,8 +45,10 @@ test('Trainer lädt ein, Spieler lernt, Trainer sieht den Fortschritt', async ({
 
   await player.getByRole('link', { name: /Training starten/ }).click()
   await player.waitForURL(/\/play\/mission\/nazb-m1/)
-  await player.getByTestId('next-step').click()
-  if (await player.getByTestId('next-step').isVisible()) await player.getByTestId('next-step').click()
+  // Erklärfilm und Zuschauen überspringen
+  for (let i = 0; i < 10 && !(await player.locator('[data-player-id="o7"][data-interactive="true"]').isVisible()); i++) {
+    await player.getByTestId('next-step').click()
+  }
   await player.locator('[data-player-id="o7"]').click()
   await player.getByTestId('check').click()
   await expect(player.getByTestId('feedback-headline')).toContainText('Nummer 7')

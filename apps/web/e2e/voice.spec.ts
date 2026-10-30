@@ -8,8 +8,8 @@ import { expect, test } from '@playwright/test'
  */
 const tone = readFileSync(new URL('./fixtures/ton.mp3', import.meta.url))
 const TEXTS = [
-  'Schau zu: Was machen die Blauen?',
-  'Alle drei Blauen laufen zum Ball. Hinten ist es jetzt leer.',
+  'Der Gegner hat den Ball. Alle drei Blauen rennen zu ihm.',
+  'Hinten ist jetzt alles leer. Nummer 7 bekommt den Ball und läuft allein auf unser Tor.',
   'Welcher Gegner ist frei? Tippe ihn an.',
 ]
 const fileFor = (i: number) => `${String(i + 1).padStart(20, '0')}.mp3`
@@ -34,10 +34,11 @@ test('liest mit KI-Stimme vor und lässt sich ausschalten', async ({ page }) => 
   await expect(toggle).toHaveAttribute('aria-pressed', 'true')
   await expect(toggle).toHaveAttribute('aria-label', 'Vorlesen (KI-Stimme)')
 
-  // Erst nach der Animation erscheint die Erklärung – sie wird vorgelesen.
+  // Erklärfilm: Jeder Abschnitt wird vorgelesen.
   await page.getByTestId('next-step').click()
   await expect.poll(played).toContain(fileFor(1))
-  await page.getByTestId('next-step').click()
+  // Rest des Films und das Zuschauen überspringen, bis die Aufgabe kommt
+  for (let i = 0; i < 10 && !(await page.getByTestId('check').isVisible()); i++) await page.getByTestId('next-step').click()
   await expect.poll(played).toContain(fileFor(2))
 
   // Ausschalten: neue Texte werden nicht mehr vorgelesen, der Knopf am Text bleibt.

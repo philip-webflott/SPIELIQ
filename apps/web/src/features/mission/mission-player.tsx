@@ -7,7 +7,7 @@ import { getPrinciple, t } from '@spieliq/content'
 import { usePrefersReducedMotion } from '@spieliq/pitch'
 import { ArrowLeft, CircleCheck, Flag, RotateCcw, Trophy, Volume2, VolumeX, Waves, X } from 'lucide-react'
 import { Button, LinkButton } from '@/components/ui/button'
-import { ExplainStep, InteractiveStepView, WatchStep } from './step-views'
+import { ExplainStep, FilmStep, InteractiveStepView, WatchStep } from './step-views'
 import type { MissionPersistence, StepOutcome } from './types'
 import { useVoice } from '@/features/voice/use-voice'
 
@@ -122,7 +122,9 @@ export function MissionPlayer({ mission, persistence, exitHref, nextHref, assign
           <span className="hidden sm:inline">Weniger Bewegung</span>
         </button>
       </header>
-      {step.kind === 'watch' ? (
+      {step.kind === 'film' ? (
+        <FilmStep key={index} {...common} />
+      ) : step.kind === 'watch' ? (
         <WatchStep key={index} {...common} />
       ) : step.kind === 'explain' ? (
         <ExplainStep key={index} {...common} />

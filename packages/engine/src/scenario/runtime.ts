@@ -6,7 +6,7 @@ import type { Vec2 } from '../geometry/vec'
 import { motionModel, type MotionModel } from '../model/motion'
 import { planPlayout, type PlayoutResult } from '../simulation/playout'
 import { compileScript, finalState, type Timeline } from '../simulation/timeline'
-import { missionSchema, type BoardInput, type InteractiveStep, type Mission, type Rect, type Step } from './schema'
+import { missionSchema, type BoardInput, type FilmStep, type InteractiveStep, type Mission, type Rect, type Step } from './schema'
 
 export interface LoadedMission {
   readonly mission: Mission
@@ -44,9 +44,12 @@ export class MissionValidationError extends Error {
   }
 }
 
-function collectReferences(step: Step): string[] {
+type Overlays = Step['overlays']
+type Script = Extract<Step, { kind: 'watch' }>['script']
+
+function collectOverlayAndScriptRefs(overlays: Overlays, script: Script): string[] {
   const refs: string[] = []
-  for (const o of step.overlays) {
+  for (const o of overlays) {
     if (o.type === 'lane') refs.push(o.from, o.to)
     if (o.type === 'passOptions') refs.push(o.from)
     if (o.type === 'freeSpace') refs.push(o.around)
@@ -54,12 +57,16 @@ function collectReferences(step: Step): string[] {
     if (o.type === 'ring') refs.push(o.player)
     if (o.type === 'distance') refs.push(o.a, o.b)
   }
-  if (step.kind === 'watch' || step.kind === 'explain') {
-    for (const ev of step.script) {
-      if (ev.type === 'pass') refs.push(ev.from, ev.to)
-      else refs.push(ev.player)
-    }
+  for (const ev of script) {
+    if (ev.type === 'pass') refs.push(ev.from, ev.to)
+    else refs.push(ev.player)
   }
+  return refs
+}
+
+function collectReferences(step: Step): string[] {
+  const script = step.kind === 'watch' || step.kind === 'explain' ? step.script : []
+  const refs = collectOverlayAndScriptRefs(step.overlays, script)
   if (step.kind === 'place') refs.push(...step.controlled, ...Object.keys(step.solution))
   if (step.kind === 'identify') refs.push(...step.selectable)
   return refs
@@ -76,6 +83,19 @@ export function validateMission(mission: Mission, boards: readonly BoardState[])
     if (!board.ball.ownerId && !board.ball.pos) problems.push(`${where}: Ball ohne Besitzer braucht eine Position`)
   }
   checkBoard(mission.board, 'Ausgangssituation')
+  const checkFilm = (step: FilmStep, board: BoardState) => {
+    let known = new Set(board.players.map((p) => p.id))
+    step.segments.forEach((seg, k) => {
+      const where = `Schritt ${step.id}, Abschnitt ${k + 1}`
+      if (seg.board) {
+        checkBoard(seg.board, where)
+        known = new Set(seg.board.players.map((p) => p.id))
+      }
+      for (const ref of collectOverlayAndScriptRefs(seg.overlays, seg.script)) {
+        if (!known.has(ref)) problems.push(`${where}: unbekannter Spieler "${ref}"`)
+      }
+    })
+  }
   const stepIds = new Set<string>()
   mission.steps.forEach((step, i) => {
     if (stepIds.has(step.id)) problems.push(`Schritt ${step.id}: ID doppelt`)
@@ -87,6 +107,7 @@ export function validateMission(mission: Mission, boards: readonly BoardState[])
     for (const ref of collectReferences(step)) {
       if (!known.has(ref)) problems.push(`Schritt ${step.id}: unbekannter Spieler "${ref}"`)
     }
+    if (step.kind === 'film') checkFilm(step, board)
     if (step.kind === 'place') {
       for (const id of Object.keys(step.solution)) {
         if (!step.controlled.includes(id)) problems.push(`Schritt ${step.id}: Lösung bewegt nicht steuerbaren Spieler ${id}`)
@@ -115,6 +136,9 @@ export function loadMission(raw: unknown): LoadedMission {
     const start = step.board ? toBoardState(step.board) : current
     boards.push(start)
     switch (step.kind) {
+      case 'film':
+        current = compileFilm(start, step, model).at(-1)?.end ?? start
+        break
       case 'watch':
         current = finalState(compileScript(start, step.script, model))
         break
@@ -131,6 +155,31 @@ export function loadMission(raw: unknown): LoadedMission {
   const problems = validateMission(mission, boards)
   if (problems.length > 0) throw new MissionValidationError(mission.id, problems)
   return { mission, pitch, teams, model, boards }
+}
+
+export interface FilmSegmentPlan {
+  readonly start: BoardState
+  /** Bewegung des Abschnitts; null, wenn das Bild steht */
+  readonly timeline: Timeline | null
+  readonly end: BoardState
+}
+
+/** Abschnitte eines Erklärfilms mit Ausgangssituation und Bewegung (deterministisch). */
+export function compileFilm(start: BoardState, step: FilmStep, model: MotionModel): FilmSegmentPlan[] {
+  let current = start
+  return step.segments.map((seg) => {
+    const segStart = seg.board ? toBoardState(seg.board) : current
+    const timeline = seg.script.length > 0 ? compileScript(segStart, seg.script, model) : null
+    const end = timeline ? finalState(timeline) : segStart
+    current = end
+    return { start: segStart, timeline, end }
+  })
+}
+
+export function filmSegments(loaded: LoadedMission, stepIndex: number): FilmSegmentPlan[] {
+  const step = getStep(loaded, stepIndex)
+  if (step.kind !== 'film') throw new Error(`Schritt ${step.id} ist kein Erklärfilm`)
+  return compileFilm(loaded.boards[stepIndex]!, step, loaded.model)
 }
 
 export function getStep(loaded: LoadedMission, stepIndex: number): Step {

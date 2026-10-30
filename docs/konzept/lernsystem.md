@@ -46,6 +46,7 @@ Ein digital bestandener Test ist kein Beweis für richtiges Verhalten im Spiel �
 
 ## 5. Ablauf einer Mission
 
+0. **Erklärfilm** (Lektionsformat, Wunsch des Produktverantwortlichen) – vor den Aufgaben erklärt ein kurzer Film mit Stimme die Idee: 3–5 Abschnitte, je höchstens zwei Sätze, die Figuren bewegen sich zum gesprochenen Text, Hervorhebungen erscheinen danach. Mit Stimme läuft er von selbst weiter (vom System getaktet), ohne Stimme im eigenen Tempo; „Nochmal“ wiederholt einen Abschnitt. Grundlage: kurze Abschnitte und gesprochene Erklärung zur Animation (Register C, C-66, C-71; nachgeprüft am 30.10.2026). Umgesetzt für Mission 1; weitere folgen.
 1. **Zuschauen** – kurze Animation (Pause, Zeitlupe 0,5×, Wiederholen); am Ende Erklärung und Hervorhebung (z. B. „FREI“).
 2. **Erkennen / Entscheiden** – antippen oder auswählen.
 3. **Ausprobieren** – Spieler ziehen (oder antippen + Zielpunkt antippen, oder Tastatur); im Lernmodus optional Live-Passwege.

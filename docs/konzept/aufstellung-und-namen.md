@@ -1,10 +1,10 @@
 # Aufstellung und Spielernamen in den Aufgaben
 
-Stand: 30.10.2026 · Status: **Konzept, Umsetzung nach Rückmeldung zu Abschnitt 8** · Anregung des Produktverantwortlichen
+Stand: 30.10.2026 · Status: **Konzept abgestimmt (30.10.2026), Umsetzung nachrangig** – Priorität haben einfach erklärte Lektionen mit Stimme · Anregung des Produktverantwortlichen
 
 ## 1. Idee
 
-Die Trainer:in stellt für die eigene Mannschaft eine **Formation** ein (z. B. 4-4-2) und ordnet den Positionen ihre Spieler:innen zu („Innenverteidiger links: Ali“, „Innenverteidiger rechts: Adam“). In den Lektionen tragen die blauen Figuren dann **Namen statt Nummern**: Statt „Nummer 4 steht zu nah am Ball“ steht dort „Ali steht zu nah am Ball“.
+Die Trainer:in stellt für die eigene Mannschaft eine **Formation** ein (z. B. 4-4-2) und ordnet den Positionen ihre Spieler:innen zu („Innenverteidiger links: Ali“, „Innenverteidiger rechts: Adam“). In den Lektionen tragen die blauen Figuren dann **ihre Namen** („4 · Ali“). Texte und Stimme nennen weiter die Nummer (Abschnitt 4).
 
 **Warum das sinnvoll ist (Einschätzung):**
 - Kinder sehen sich und ihre Mitspieler:innen in der Situation – „das bin ich, das ist Adam“. Das passt zum Vereinsmodus, in dem Trainer:innen ohnehin Aufgaben für ihre Mannschaft auswählen. Ein Wirkungsbeleg speziell für Namen in Taktikaufgaben ist mir nicht bekannt; es ist eine **Annahme**, die wir im Test mit Kindern prüfen.
@@ -29,14 +29,16 @@ Missionen sind bewusst unabhängig von einer Formation geschrieben. Deshalb ordn
 
 Neue reine Funktion in `packages/engine` (z. B. `assignLineupNames`), testbar ohne Datenbank: gleiche Rolle vor Seite, eindeutige Zuordnung, Spiegelinvarianz, Rückfall auf Nummern. Gegner behalten immer Nummern.
 
-**Darstellung:** Das blaue Schild wird zur Namenspille (abgerundet, höchstens 8 Zeichen, sonst gekürzt); Gegner behalten das quadratische Nummernschild – die Formen unterscheiden die Teams weiter auch ohne Farbe. Ist die angemeldete Spielerin selbst in der Aufstellung, kann ihre Figur später zusätzlich „DU“ tragen (Phase 3).
+**Darstellung:** Das blaue Schild zeigt Nummer und Namen (abgerundet, Name höchstens 8 Zeichen, sonst gekürzt); Gegner behalten das quadratische Nummernschild – die Formen unterscheiden die Teams weiter auch ohne Farbe. Ist die angemeldete Spielerin selbst in der Aufstellung, kann ihre Figur später zusätzlich „DU“ tragen (Phase 3).
 
 **Bewertung:** unverändert. Namen sind nur Anzeige; der Server bewertet weiter mit den Missionsdaten neu ([Architekturregel](../../CLAUDE.md)).
 
 ## 4. Rückmeldungen und Sprachausgabe
 
-- **Text:** Rückmeldungen nennen den Namen statt der Nummer („Ali steht zu nah am Ball.“). Technisch: Die Vorlagen bekommen den angezeigten Namen statt der Nummer.
-- **Stimme:** Namen gehen **nicht** an ElevenLabs – das wären Daten von Kindern bei einem Dienstleister in den USA, mit Auftragsverarbeitung, Drittlandfragen und Folgenabschätzung. Sätze mit Namen liest deshalb die **Gerätestimme** (läuft lokal, nichts verlässt das Gerät); alle anderen Sätze weiter die KI-Stimme. Gibt es keine deutsche Gerätestimme, bleibt der Satz mit Namen stumm, der Text steht auf dem Bildschirm. Das sagt der Hinweistext beim Einschalten.
+Entscheidung des Produktverantwortlichen (30.10.2026): **Keine Zusatzkosten und kein Aufwand für Namen in der Sprache** – wichtig ist, dass jede Lektion einfach und mit Stimme erklärt wird.
+
+- **Namen stehen nur an den Figuren:** Namensschild unter bzw. neben der Figur, die Rückennummer bleibt im Schild sichtbar (z. B. „4 · Ali“).
+- **Texte und Stimme bleiben bei Nummern** („Nummer 4 steht zu nah am Ball.“). So passen geschriebener Text, KI-Stimme und Figur immer zusammen, alle Aufnahmen bleiben gültig, und Namen gehen nie an ElevenLabs. Keine Gerätestimme, kein zusätzliches Vertonen.
 
 ## 5. Datenschutz
 
@@ -63,19 +65,19 @@ Rechtliche Prüfung vor dem Echtbetrieb wie beim übrigen Vereinsmodus (Einwilli
 - **Datenbank:** `Team.formation`, `Team.showNamesInMissions` (Standard false), Tabelle `LineupSlot` (Mannschaft, Position, Spieler:in; eindeutig je Position und je Spieler:in; wird mit Mitgliedschaft bzw. Konto gelöscht); Zugriff nur über `src/server/modules/*` mit Berechtigungsprüfung: Bearbeiten nur Trainer:innen der Mannschaft, Lesen der Namen nur Mitglieder der Mannschaft bei eingeschaltetem Schalter.
 - **Speicherfristen:** in `apps/web/src/server/modules/retention.ts` dokumentiert (Löschung mit Mitgliedschaft, keine eigene Frist nötig).
 - **Oberfläche:** Seite „Aufstellung“ im Trainerbereich; Missionen bekommen die Namen über die bestehende Persistenz-Schnittstelle.
-- **Sprachausgabe:** Abschnitte mit Namen werden nicht vertont; die App nimmt dafür die Gerätestimme.
+- **Sprachausgabe:** unverändert – Texte und Stimme nennen weiter Nummern.
 
 ## 7. Umsetzungsplan
 
 | Phase | Inhalt | Abnahme |
 |---|---|---|
-| 1 | Formationen, Zuordnungsfunktion, Namenspille im Spielfeld (mit Testdaten) | Unit-Tests, Screenshot Handy |
+| 1 | Formationen, Zuordnungsfunktion, Namensschild mit Nummer im Spielfeld (mit Testdaten) | Unit-Tests, Screenshot Handy |
 | 2 | Datenbank, Servermodul mit Berechtigungen, Trainerseite „Aufstellung“, Datenschutzkonzept und Kinderhinweise | Integrationstests (nur eigene Mannschaft, nur bei eingeschaltetem Schalter), E2E Trainer stellt auf → Spieler sieht Namen |
-| 3 | Rückmeldungen mit Namen, Gerätestimme für Namenssätze, „DU“ an der eigenen Position | Content-Test: kein Platzhalter offen; E2E mit Namen |
+| 3 | „DU“ an der eigenen Position | E2E mit Namen |
 | 4 | Positionswelten nutzen die Aufstellung (Aufgaben aus Sicht der eigenen Position, Grundlagen bleiben für alle) | Konzept Positionswelten |
 
-## 8. Fragen an den Produktverantwortlichen
+## 8. Entscheidungen des Produktverantwortlichen (30.10.2026)
 
-1. **Standard „Namen zeigen“ aus** und Einschalten durch die Trainer:in – einverstanden?
-2. **Nur Spitznamen aus der Mannschaftsliste** (keine frei eingetippten Namen für Kinder ohne Konto) – einverstanden? Das hält die Daten an einer Stelle und löscht sie automatisch mit.
-3. **Stimme bei Namen:** Gerätestimme für Sätze mit Namen (Vorschlag) – oder lieber Nummern in der Sprache behalten und Namen nur auf dem Bildschirm?
+1. „Namen zeigen“ ist standardmäßig **aus**; die Trainer:in schaltet es ein.
+2. **Nur Spitznamen aus der Mannschaftsliste**, keine frei eingetippten Namen.
+3. **Keine Namen in Sprache und Text** – nur an den Figuren; keine Zusatzkosten. Die Funktion ist nachrangig; Vorrang hat, dass jede Lektion einfach und mit Stimme erklärt wird.

@@ -5,6 +5,7 @@ import {
   applyPlacement,
   assessStep,
   clampToPitch,
+  filmSegments,
   planConsequence,
   possessionTeam,
   stepTimeline,
@@ -12,6 +13,7 @@ import {
   withPositions,
   type AssessmentResult,
   type BoardState,
+  type FilmSegmentPlan,
   type InteractiveStep,
   type LoadedMission,
   type LocalizedText,
@@ -113,6 +115,128 @@ function GuideBox({ guide, movedCount }: { guide: readonly LocalizedText[]; move
       <p className="text-sm font-semibold text-text-muted">{allDone ? 'Alle gesetzt' : `Schritt ${current + 1} von ${guide.length}`}</p>
       <p className="text-lg font-semibold leading-snug text-text">{allDone ? UI_TEXT.allPlaced : t(guide[current]!)}</p>
     </div>
+  )
+}
+
+/* ------------------------------------------------------------------ Erklärfilm */
+
+/** Lesezeit, falls niemand vorliest bzw. als Mindestdauer eines Abschnitts (Annahme: gut zwei Wörter pro Sekunde). */
+function readingMs(text: string): number {
+  return Math.max(2500, text.split(/\s+/).length * 430 + 800)
+}
+
+/**
+ * Erklärfilm vor den Aufgaben (Lektionsformat): kurze Abschnitte, die Figuren
+ * bewegen sich, die Stimme erklärt dazu, Hervorhebungen erscheinen danach.
+ * Mit Stimme geht es von selbst weiter (vom System getaktet); ohne Stimme
+ * im eigenen Tempo mit „Weiter“.
+ */
+export function FilmStep({ loaded, index, reducedMotion, voice, onComplete }: StepProps) {
+  const step = loaded.mission.steps[index] as Extract<Step, { kind: 'film' }>
+  const plans = useMemo(() => filmSegments(loaded, index), [loaded, index])
+  const [segment, setSegment] = useState(0)
+  const [replay, setReplay] = useState(0)
+  const last = segment === plans.length - 1
+  const next = useCallback(() => (last ? onComplete(null) : setSegment((k) => k + 1)), [last, onComplete])
+  return (
+    <FilmSegmentView
+      key={`${segment}-${replay}`}
+      loaded={loaded}
+      index={index}
+      step={step}
+      segment={segment}
+      plan={plans[segment]!}
+      reducedMotion={reducedMotion}
+      voice={voice}
+      last={last}
+      onNext={next}
+      onReplay={() => setReplay((r) => r + 1)}
+    />
+  )
+}
+
+function FilmSegmentView({
+  loaded,
+  index,
+  step,
+  segment,
+  plan,
+  reducedMotion,
+  voice,
+  last,
+  onNext,
+  onReplay,
+}: {
+  loaded: LoadedMission
+  index: number
+  step: Extract<Step, { kind: 'film' }>
+  segment: number
+  plan: FilmSegmentPlan
+  reducedMotion: boolean
+  voice: StepProps['voice']
+  last: boolean
+  onNext: () => void
+  onReplay: () => void
+}) {
+  const player = useTimelinePlayer(plan.timeline, { autoplay: true, reducedMotion })
+  const seg = step.segments[segment]!
+  const text = t(seg.text)
+  const board = player.frame?.state ?? plan.start
+  const animationDone = !plan.timeline || player.finished
+  const [minTimeDone, setMinTimeDone] = useState(false)
+  useAutoSpeak(voice, [text], `${index}:film:${segment}`)
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setMinTimeDone(true), readingMs(text))
+    return () => window.clearTimeout(timer)
+  }, [text])
+
+  // Mit Stimme: weiter, sobald Bewegung und Sprache fertig sind. Letzter Abschnitt: Kind entscheidet.
+  const autoAdvance = voice.auto && voice.available && !last
+  const ready = animationDone && minTimeDone && !voice.speaking
+  useEffect(() => {
+    if (!autoAdvance || !ready) return
+    const timer = window.setTimeout(onNext, 900)
+    return () => window.clearTimeout(timer)
+  }, [autoAdvance, ready, onNext])
+
+  return (
+    <StepLayout
+      board={
+        <BoardView
+          loaded={loaded}
+          state={board}
+          poses={plan.timeline ? timelinePoses(plan.timeline, player.time, loaded) : undefined}
+          reducedMotion={reducedMotion}
+          view={step.view}
+          overlays={animationDone ? seg.overlays : []}
+          label="Erklärfilm"
+        />
+      }
+      panel={
+        <div className="flex h-full flex-col gap-4" data-testid="film">
+          <p className="eyebrow">{t(step.instruction)}</p>
+          <div className="flex gap-1.5" aria-label={`Teil ${segment + 1} von ${step.segments.length}`}>
+            {step.segments.map((s, i) => (
+              <span key={s.text.de} className={`h-2 flex-1 rounded-full ${i < segment ? 'bg-accent' : i === segment ? 'bg-accent/60' : 'bg-ink-600'}`} />
+            ))}
+          </div>
+          <Instruction text={text} voice={voice} />
+          <div className="mt-auto flex items-center justify-between gap-3">
+            <button
+              type="button"
+              onClick={onReplay}
+              className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-text-muted hover:bg-ink-700 hover:text-text"
+            >
+              <RotateCcw size={18} aria-hidden="true" /> Nochmal
+            </button>
+            <Button size="lg" onClick={onNext} data-testid="next-step">
+              {last ? 'Los geht’s' : 'Weiter'}
+            </Button>
+          </div>
+        </div>
+      }
+    />
   )
 }
 

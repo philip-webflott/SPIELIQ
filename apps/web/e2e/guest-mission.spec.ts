@@ -1,5 +1,11 @@
 import { expect, test, type Page } from '@playwright/test'
 
+/** Erklärfilm überspringen: „Weiter“ geht je Abschnitt eins weiter. */
+async function skipFilm(page: Page) {
+  for (let i = 0; i < 8 && (await page.getByTestId('film').isVisible()); i++) await page.getByTestId('next-step').click()
+  await expect(page.getByTestId('film')).toHaveCount(0)
+}
+
 /** „Weiter“ springt während der Animation erst ans Ende; ein zweiter Klick geht weiter. */
 async function finishWatch(page: Page) {
   await page.getByTestId('next-step').click()
@@ -9,6 +15,12 @@ async function finishWatch(page: Page) {
 test.describe('Gastmodus', () => {
   test('Mission 1 vollständig spielen: zuschauen, freien Gegner erkennen, Feedback, Zusammenfassung', async ({ page }) => {
     await page.goto('/try/nazb-m1-problem-erkennen')
+    // Erst der Erklärfilm (mit Stimme, falls vorhanden), dann die Aufgaben
+    await expect(page.getByText('Erklärfilm: Nicht alle zum Ball')).toBeVisible()
+    await expect(page.getByText('Der Gegner hat den Ball. Alle drei Blauen rennen zu ihm.')).toBeVisible()
+    await page.getByTestId('next-step').click()
+    await expect(page.getByText('Hinten ist jetzt alles leer.', { exact: false })).toBeVisible()
+    await skipFilm(page)
     await expect(page.getByText('Schau zu: Was machen die Blauen?')).toBeVisible()
     await expect(page.getByText('Wir spielen nach oben')).toBeVisible()
     // Figuren mit Blickrichtung statt Kreisen (sobald das Figurenbild im Browser erzeugt ist)

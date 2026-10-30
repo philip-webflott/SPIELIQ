@@ -21,6 +21,15 @@ const start = {
   ball: { ownerId: 'o9' },
 }
 
+/**
+ * Erklärfilm vor den Aufgaben: dieselbe Idee auf der anderen Spielfeldseite
+ * (gespiegelt), damit die Aufgaben danach Übung sind und nicht nur Wiederholung.
+ */
+const filmStart = {
+  players: start.players.map((p) => ({ ...p, pos: { x: p.pos.x, y: 68 - p.pos.y } })),
+  ball: start.ball,
+}
+
 export const m1ProblemErkennen: MissionInput = {
   schemaVersion: 1,
   id: 'nazb-m1-problem-erkennen',
@@ -36,7 +45,7 @@ export const m1ProblemErkennen: MissionInput = {
   competencies: ['K-RAUM-ERKENNEN', 'K-NICHT-ALLE'],
   ageGroups: ['E', 'D', 'C', 'B'],
   level: 1,
-  estimatedMinutes: 2,
+  estimatedMinutes: 3,
   prerequisites: [],
   sources: ['B-01', 'B-06', 'B-14', 'B-102', 'C-17'],
   pitch: FULL_PITCH,
@@ -46,9 +55,71 @@ export const m1ProblemErkennen: MissionInput = {
   board: start,
   steps: [
     {
+      id: 'erklaerfilm',
+      kind: 'film',
+      instruction: { de: 'Erklärfilm: Nicht alle zum Ball' },
+      view: { x: -3, y: -2, width: 52, height: 46 },
+      board: filmStart,
+      segments: [
+        {
+          text: { de: 'Der Gegner hat den Ball. Alle drei Blauen rennen zu ihm.' },
+          script: [
+            { type: 'dribble', player: 'o9', to: { x: 32, y: 11 }, at: 0, duration: 1.6 },
+            { type: 'move', player: 'd3', to: { x: 33.6, y: 13.8 }, at: 0.3, duration: 1.5 },
+            { type: 'move', player: 'd4', to: { x: 29.4, y: 9.4 }, at: 0.45, duration: 1.9 },
+            { type: 'move', player: 'd6', to: { x: 34.2, y: 8.6 }, at: 0.35, duration: 1.9 },
+          ],
+          overlays: [
+            { type: 'ring', player: 'd3', tone: 'bad' },
+            { type: 'ring', player: 'd4', tone: 'bad' },
+            { type: 'ring', player: 'd6', tone: 'bad' },
+            { type: 'emptyArea', center: { x: 21, y: 28 }, radius: 9 },
+          ],
+        },
+        {
+          text: { de: 'Hinten ist jetzt alles leer. Nummer 7 bekommt den Ball und läuft allein auf unser Tor.' },
+          script: [
+            { type: 'pass', from: 'o9', to: 'o7', at: 0.4 },
+            { type: 'dribble', player: 'o7', to: { x: 11, y: 30 }, at: 1.7, duration: 1.8 },
+          ],
+          overlays: [{ type: 'ring', player: 'o7', tone: 'bad' }],
+        },
+        {
+          text: { de: 'Besser so: Nur einer geht zum Gegner mit dem Ball. Die anderen bleiben hinten.' },
+          board: filmStart,
+          script: [
+            { type: 'dribble', player: 'o9', to: { x: 32, y: 11 }, at: 0, duration: 1.6 },
+            { type: 'move', player: 'd3', to: { x: 30.2, y: 12.4 }, at: 0.3, duration: 1.4 },
+          ],
+          overlays: [{ type: 'ring', player: 'd3', tone: 'good' }],
+        },
+        {
+          text: { de: 'Einer steht schräg hinter ihm und hilft. Einer passt in der Mitte auf Nummer 7 auf.' },
+          script: [
+            { type: 'move', player: 'd6', to: { x: 26.5, y: 19.5 }, at: 0, duration: 1.6 },
+            { type: 'move', player: 'd4', to: { x: 20.5, y: 27.4 }, at: 0.1, duration: 1.0 },
+          ],
+          overlays: [
+            { type: 'ring', player: 'd6', tone: 'good' },
+            { type: 'ring', player: 'd4', tone: 'good' },
+            { type: 'lane', from: 'o9', to: 'o7' },
+          ],
+        },
+        {
+          text: { de: 'Das merken wir uns: Einer geht zum Ball. Einer hilft, einer schützt die Mitte.' },
+          overlays: [
+            { type: 'ring', player: 'd3', tone: 'good' },
+            { type: 'ring', player: 'd6', tone: 'good' },
+            { type: 'ring', player: 'd4', tone: 'good' },
+          ],
+        },
+      ],
+    },
+    {
       id: 'zuschauen',
       kind: 'watch',
       instruction: { de: 'Schau zu: Was machen die Blauen?' },
+      board: start,
       script: [
         { type: 'dribble', player: 'o9', to: { x: 32, y: 57 }, at: 0, duration: 1.6 },
         { type: 'move', player: 'd3', to: { x: 33.6, y: 54.2 }, at: 0.3, duration: 1.5 },
