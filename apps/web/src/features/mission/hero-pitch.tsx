@@ -26,7 +26,7 @@ function HeroLoop({ loaded, reducedMotion, onLoop }: { loaded: ReturnType<typeof
   const overlays = done && step?.kind === 'watch' ? (step.after?.overlays ?? []) : []
   return (
     <div className="aspect-[58/74] w-full max-w-md sm:aspect-[74/58]">
-      <BoardView loaded={loaded} state={player.frame?.state ?? loaded.boards[0]!} overlays={overlays} label="Beispielsituation: Drei Spieler laufen zum Ball, ein Gegner wird frei" />
+      <BoardView loaded={loaded} state={player.frame?.state ?? loaded.boards[0]!} overlays={overlays} legend={false} fitOrientation label="Beispielsituation: Drei Spieler laufen zum Ball, ein Gegner wird frei" />
     </div>
   )
 }

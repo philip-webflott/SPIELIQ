@@ -24,10 +24,10 @@ Stand: 29.10.2026 · Grundlage: [Register D](../recherche/quellen/D-recht-datens
 | Zeitlimits | 2.2.1 (A) | derzeit keine Zeitlimits; geplante Zeitentscheidungen nur optional, abschaltbar, für jüngere Altersbänder standardmäßig aus | Vorgabe für künftige Einheiten |
 | Struktur, Namen, Statusmeldungen | 1.1.1, 1.3.1, 4.1.2, 4.1.3 | Figuren mit zugänglichen Namen (Nummer, Mannschaft, Torwart, „Du kannst diesen Spieler bewegen“); Feedback und Konsequenzen in `aria-live`-Bereichen; Überschriftenstruktur, `lang="de"` | umgesetzt; Text- bzw. Listenansicht der Spielsituation für Screenreader geplant |
 | Anweisungen | 1.3.3, 3.3.1, 3.3.3 | Aufgaben nennen Nummern und Rollen statt nur Farben oder Positionen; Feedback nennt die Ursache und einen Tipp | umgesetzt (Content-Regel) |
-| Ausrichtung und Zoom | 1.3.4, 1.4.4, 1.4.10 | Hoch- und Querformat mit gleicher Spiellogik (eigene Projektion); responsives Layout; Spielfeld skaliert mit | umgesetzt; Test mit 200–400 % Zoom ausstehend |
+| Ausrichtung und Zoom | 1.3.4, 1.4.4, 1.4.10 | Gerät hoch oder quer nutzbar; das Spielfeld ist immer gleich ausgerichtet (eigenes Tor unten); responsives Layout; Spielfeld skaliert mit | umgesetzt; Test mit 200–400 % Zoom ausstehend |
 | Bewegungssteuerung | 2.5.4 | keine Gerätebewegung als Eingabe | umgesetzt |
 | Anmeldung und Teamcode | 3.3.7, 3.3.8; § 19 BFSGV | kein CAPTCHA, kein kognitiver Test; Einfügen erlaubt; Passwortmanager funktionieren; Teamcode unempfindlich gegen Groß-/Kleinschreibung und Bindestrich | umgesetzt; QR-Code/Link geplant |
-| Sprache | 3.1.1, 3.1.5 | kurze Sätze (≤ 140 Zeichen je Anweisung), Spielersprache; optionale Vorlesefunktion mit lokalen Gerätestimmen | umgesetzt |
+| Sprache | 3.1.1, 3.1.5 | Einfache Sprache nach [Einfach verstehen](../design/einfach-verstehen.md): kurze Sätze, keine Fachwörter, keine Zahlen mit Einheiten (automatisch geprüft); optionale Vorlesefunktion mit lokalen Gerätestimmen | umgesetzt; Test mit der Zielgruppe ausstehend |
 | Medien | 1.2.2, 1.2.5 | keine Videos; Animationen sind selbst erzeugte Grafiken mit Texterklärung | entfällt derzeit |
 
 ## 3. Prüfplan

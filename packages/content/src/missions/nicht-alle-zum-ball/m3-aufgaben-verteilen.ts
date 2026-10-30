@@ -23,8 +23,8 @@ export const m3AufgabenVerteilen: MissionInput = {
   id: 'nazb-m3-aufgaben-verteilen',
   version: 1,
   status: 'review',
-  title: { de: 'Wer übernimmt welche Aufgabe?' },
-  goal: { de: 'Einer stellt den Ballführenden – ich sichere ihn ab.' },
+  title: { de: 'Wer macht was?' },
+  goal: { de: 'Einer geht zum Ball. Ich stehe schräg hinter ihm.' },
   coachNote: {
     de: 'Erster Verteidiger: Druck auf den Ball, torseitig. Zweiter Verteidiger: Absicherung – tiefer gestaffelt, schräg versetzt, nah genug zum Eingreifen und gleichzeitig in der Lage, einen Pass auf den zweiten Angreifer rechtzeitig zu verteidigen. Eine enge Deckung des zweiten Angreifers wird als vertretbare Alternative erkannt und erklärt. Abstände sind Modellannahmen für die C-Jugend auf dem Großfeld und müssen in der Erprobung kalibriert werden.',
   },
@@ -44,14 +44,14 @@ export const m3AufgabenVerteilen: MissionInput = {
     {
       id: 'zuschauen',
       kind: 'watch',
-      instruction: { de: 'Nummer 9 dribbelt auf euch zu. Schau, was Nummer 3 und Nummer 4 machen.' },
+      instruction: { de: 'Nummer 9 läuft mit dem Ball auf euch zu. Schau auf 3 und 4.' },
       script: [
         { type: 'dribble', player: 'o9', to: { x: 27, y: 55 }, at: 0, duration: 1.8 },
         { type: 'move', player: 'd3', to: { x: 25.2, y: 53.3 }, at: 0.3, duration: 1.4 },
         { type: 'move', player: 'd4', to: { x: 28.6, y: 51.4 }, at: 0.4, duration: 1.6 },
       ],
       after: {
-        caption: { de: 'Beide gehen zum Ball. Wird Nummer 3 ausgespielt, ist hinter ihm niemand mehr.' },
+        caption: { de: 'Beide gehen zum Ball. Kommt 9 an 3 vorbei, ist keiner mehr da.' },
         overlays: [
           { type: 'ring', player: 'd4', tone: 'bad' },
           { type: 'lane', from: 'o9', to: 'o10' },
@@ -62,7 +62,7 @@ export const m3AufgabenVerteilen: MissionInput = {
     {
       id: 'absichern',
       kind: 'place',
-      instruction: { de: 'Nummer 3 stellt den Gegner. Zieh Nummer 4 dorthin, wo er Nummer 3 absichert.' },
+      instruction: { de: 'Nummer 3 geht zum Ball. Wo hilft Nummer 4? Zieh ihn hin.' },
       controlled: ['d4'],
       area: { min: { x: 0, y: 14 }, max: { x: 50, y: 68 } },
       overlays: [{ type: 'ring', player: 'd3', tone: 'good' }],
@@ -83,7 +83,7 @@ export const m3AufgabenVerteilen: MissionInput = {
           {
             id: 'nummer-10-eng-decken',
             explanation: {
-              de: 'Auch möglich: Du deckst Nummer 10 eng, so kommt kein Pass an. Aber wird Nummer 3 ausgespielt, ist niemand mehr hinter ihm. Meist ist "schräg dahinter" die bessere Wahl.',
+              de: 'Das geht auch: Du bist eng bei Nummer 10. Aber kommt 9 an 3 vorbei, ist keiner mehr da. Besser: schräg hinter Nummer 3.',
             },
             criteria: [
               { id: 'eng', kind: 'reachInTime', params: { defender: 'd4', target: 'o10', tolerance: 0.1 }, required: true },
@@ -93,13 +93,13 @@ export const m3AufgabenVerteilen: MissionInput = {
         ],
       },
       feedback: {
-        excellent: { de: 'Stark abgesichert!' },
+        excellent: { de: 'Super abgesichert!' },
         good: { de: 'Gut gemacht!' },
         notYet: { de: 'Noch nicht ganz.' },
       },
       hints: [
-        { de: 'Nicht auch zum Ball – bleib hinter Nummer 3.' },
-        { de: 'Schräg hinter Nummer 3, Richtung Tor – und Nummer 10 im Blick.' },
+        { de: 'Nicht auch zum Ball. Bleib hinter Nummer 3.' },
+        { de: 'Schräg hinter Nummer 3. Etwas näher an unserem Tor.' },
       ],
       consequence: 'auto',
       solution: { d4: { x: 21, y: 48 } },
@@ -117,18 +117,18 @@ export const m3AufgabenVerteilen: MissionInput = {
       kind: 'explain',
       instruction: { de: 'Merke:' },
       text: {
-        de: 'Der erste Verteidiger stellt: nah dran, zwischen Ball und Tor. Der zweite sichert ab: schräg dahinter – nah genug zum Helfen, weit genug, dass nicht beide überspielt werden.',
+        de: 'Einer geht zum Ball. Der zweite steht schräg hinter ihm. Nicht zu nah und nicht zu weit weg.',
       },
       overlays: [
         { type: 'ring', player: 'd3', tone: 'good' },
         { type: 'ring', player: 'd4', tone: 'good' },
         { type: 'distance', a: 'd3', b: 'd4' },
       ],
-      keyPoints: [{ de: 'Erster Verteidiger: stellen.' }, { de: 'Zweiter Verteidiger: absichern.' }],
+      keyPoints: [{ de: 'Der Erste geht zum Ball.' }, { de: 'Der Zweite hilft schräg dahinter.' }],
     },
   ],
   fieldTransfer: {
     drills: ['D-2V2-ABSICHERN'],
-    challenge: { de: 'Im nächsten Spiel: Wenn dein Mitspieler zum Ball geht, ruf "Ich sichere!" und stell dich schräg hinter ihn.' },
+    challenge: { de: 'Im Spiel: Geht dein Mitspieler zum Ball? Ruf „Ich helfe!“ und stell dich schräg hinter ihn.' },
   },
 }

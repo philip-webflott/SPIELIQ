@@ -36,6 +36,7 @@ Stand: 29.10.2026 · Einstieg für jede Entwicklungssitzung: zuerst den [Entwick
 | Dokument | Inhalt |
 |---|---|
 | [Designsystem](design/designsystem.md) | Farben, Kontraste, Typografie, Spielfeld, Komponenten, Bewegung |
+| [Einfach verstehen](design/einfach-verstehen.md) | Regeln für Sprache, Spielfeld und Bedienung, damit niemand überfordert wird (Einfache Sprache, Schritt für Schritt) |
 | [Architektur – Überblick](architektur/ueberblick.md) | Stack und Versionen, Module, Datenfluss, Struktur, Erweiterbarkeit |
 | [Datenmodell](architektur/datenmodell.md) | Entitäten, abgeleitete Werte, Aufbewahrung |
 | [Sicherheit](architektur/sicherheit.md) | Authentifizierung, Autorisierung, Härtung, offene Maßnahmen |

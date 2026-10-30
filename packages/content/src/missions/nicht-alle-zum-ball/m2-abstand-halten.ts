@@ -26,7 +26,7 @@ export const m2AbstandHalten: MissionInput = {
   version: 1,
   status: 'review',
   title: { de: 'Abstand halten' },
-  goal: { de: 'Wir machen das Feld groß: Jeder ist anspielbar – breit und tief.' },
+  goal: { de: 'Mit Abstand kann jeder den Ball bekommen.' },
   coachNote: {
     de: 'Ballnähe ohne Abstand nimmt dem Ballführenden die Optionen und erleichtert dem Gegner das Pressing. Bewertet wird nicht eine Zielposition, sondern ob alle drei Mitspieler über offene Passwege in sinnvoller Distanz erreichbar sind, sich nicht gegenseitig im Weg stehen und gemeinsam Breite und Tiefe erzeugen. Rückpassoptionen zählen ausdrücklich als Tiefe.',
   },
@@ -46,16 +46,16 @@ export const m2AbstandHalten: MissionInput = {
     {
       id: 'zuschauen',
       kind: 'watch',
-      instruction: { de: 'Wir haben den Ball. Schau, wohin die Mitspieler von Nummer 6 laufen.' },
+      instruction: { de: 'Wir haben den Ball. Wohin laufen die Blauen?' },
       script: [
         { type: 'move', player: 'm8', to: { x: 50.5, y: 36.8 }, at: 0.2, duration: 1.6 },
         { type: 'move', player: 'm10', to: { x: 50.8, y: 31.6 }, at: 0.3, duration: 1.6 },
         { type: 'move', player: 'm7', to: { x: 45.5, y: 37 }, at: 0.25, duration: 1.6 },
-        { type: 'move', player: 'x14', to: { x: 53.2, y: 31 }, at: 0.9, duration: 1.2 },
-        { type: 'move', player: 'x16', to: { x: 53.2, y: 37.8 }, at: 0.9, duration: 1.2 },
+        { type: 'move', player: 'x14', to: { x: 54.2, y: 29.6 }, at: 0.9, duration: 1.2 },
+        { type: 'move', player: 'x16', to: { x: 54.2, y: 39 }, at: 0.9, duration: 1.2 },
       ],
       after: {
-        caption: { de: 'Alle kommen zum Ball. Zwei Gegner reichen, um alle zu stören – und das Feld bleibt leer.' },
+        caption: { de: 'Alle laufen zum Ball. Jetzt können zwei Gegner alle stören.' },
         overlays: [
           { type: 'ring', player: 'm8', tone: 'bad' },
           { type: 'ring', player: 'm10', tone: 'bad' },
@@ -68,7 +68,8 @@ export const m2AbstandHalten: MissionInput = {
     {
       id: 'verteilen',
       kind: 'place',
-      instruction: { de: 'Zieh die Nummern 7, 8 und 10 so, dass Nummer 6 jeden sicher anspielen kann.' },
+      instruction: { de: 'Zieh 7, 8 und 10 weg vom Ball. Jeder soll frei für einen Pass sein.' },
+      guide: [{ de: 'Einer geht nach links.' }, { de: 'Einer geht nach rechts.' }, { de: 'Einer geht nach hinten.' }],
       controlled: ['m7', 'm8', 'm10'],
       area: { min: { x: 30, y: 1 }, max: { x: 82, y: 67 } },
       liveLanes: true,
@@ -103,13 +104,13 @@ export const m2AbstandHalten: MissionInput = {
         ],
       },
       feedback: {
-        excellent: { de: 'Stark! Nummer 6 hat drei sichere Anspielstationen.' },
+        excellent: { de: 'Super! Nummer 6 kann jeden anspielen.' },
         good: { de: 'Gut gemacht!' },
         notYet: { de: 'Noch nicht ganz.' },
       },
       hints: [
-        { de: 'Geh weg vom Ball – in die freien Räume.' },
-        { de: 'Einer nach links, einer nach rechts, einer hinter den Ball.' },
+        { de: 'Geh weg vom Ball. Such freien Platz.' },
+        { de: 'Kein Gegner soll zwischen Nummer 6 und dir stehen.' },
       ],
       consequence: 'auto',
       solution: { m8: { x: 51, y: 13 }, m7: { x: 51, y: 55 }, m10: { x: 37, y: 37 } },
@@ -139,14 +140,14 @@ export const m2AbstandHalten: MissionInput = {
       kind: 'explain',
       instruction: { de: 'Merke:' },
       text: {
-        de: 'Mit Abstand ist jeder anspielbar. Breite heißt: nach außen gehen. Tiefe heißt: vor oder hinter den Ball.',
+        de: 'Mit Abstand kann jeder den Ball bekommen. Geht zur Seite, nach vorne und nach hinten.',
       },
       overlays: [{ type: 'passOptions', from: 'c6' }],
-      keyPoints: [{ de: 'Nicht zum Ball laufen – Raum suchen.' }, { de: 'Jeder braucht einen freien Passweg.' }],
+      keyPoints: [{ de: 'Nicht zum Ball laufen.' }, { de: 'Such freien Platz.' }, { de: 'Kein Gegner zwischen dir und dem Ball.' }],
     },
   ],
   fieldTransfer: {
     drills: ['D-RONDO-4V2', 'D-3V1-DREIECK'],
-    challenge: { de: 'Im nächsten Training: Bevor du dich anbietest, schau, ob zwischen dir und dem Ball ein Gegner steht.' },
+    challenge: { de: 'Im Training: Steht ein Gegner zwischen dir und dem Ball? Dann geh zur Seite.' },
   },
 }

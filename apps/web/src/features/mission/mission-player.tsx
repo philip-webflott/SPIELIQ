@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
-import { isInteractive, loadMission, type MissionInput } from '@spieliq/engine'
-import { getDrill, getPrinciple, t } from '@spieliq/content'
+import { loadMission, type MissionInput } from '@spieliq/engine'
+import { getPrinciple, t } from '@spieliq/content'
 import { usePrefersReducedMotion } from '@spieliq/pitch'
 import { ArrowLeft, CircleCheck, Flag, RotateCcw, Trophy, Waves, X } from 'lucide-react'
 import { Button, LinkButton } from '@/components/ui/button'
@@ -132,8 +132,6 @@ function MissionSummary({
   completionError: string | null
   onRestart: () => void
 }) {
-  const interactiveCount = mission.steps.filter(isInteractive).length
-  const firstTry = outcomes.filter((o) => o.attempts === 1 && o.rating !== 'not-yet' && !o.usedSolution).length
   const principleState = new Map<string, 'sicher' | 'wiederholen'>()
   for (const o of outcomes) {
     for (const [p, ok] of Object.entries(o.principles)) {
@@ -143,7 +141,6 @@ function MissionSummary({
     }
   }
   const isTest = mission.mode === 'test'
-  const drills = (mission.fieldTransfer?.drills ?? []).map(getDrill).filter((d) => d !== undefined)
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-2xl flex-col gap-6 px-4 py-8 sm:py-12">
@@ -154,34 +151,26 @@ function MissionSummary({
         <div className="mx-auto mb-3 grid h-16 w-16 place-items-center rounded-full bg-accent-soft text-accent">
           <Trophy size={30} aria-hidden="true" />
         </div>
-        <p className="eyebrow">{isTest ? 'Test beendet' : 'Mission geschafft'}</p>
-        <h1 className="font-display text-4xl font-bold uppercase tracking-wide">{t(mission.title)}</h1>
-        {interactiveCount > 0 && (
-          <p className="mt-2 text-text-muted">
-            {firstTry} von {interactiveCount} Aufgaben im ersten Versuch gelöst
-          </p>
-        )}
+        <p className="eyebrow">{t(mission.title)}</p>
+        <h1 className="font-display text-4xl font-bold uppercase tracking-wide">{isTest ? 'Test geschafft!' : 'Geschafft!'}</h1>
       </section>
 
       {principleState.size > 0 && (
         <section className="card p-5" aria-labelledby="prinzipien">
           <h2 id="prinzipien" className="eyebrow mb-3">
-            Deine Prinzipien
+            Das hast du gelernt
           </h2>
           <ul className="space-y-2">
             {[...principleState.entries()].map(([id, state]) => (
               <li key={id} className="flex items-center justify-between gap-3 rounded-xl bg-ink-700 px-4 py-3">
-                <span>
-                  <span className="block font-semibold">{getPrinciple(id)?.name ?? id}</span>
-                  <span className="block text-sm text-text-muted">{getPrinciple(id)?.playerText}</span>
-                </span>
+                <span className="font-semibold">{getPrinciple(id)?.playerText ?? id}</span>
                 {state === 'sicher' ? (
                   <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-good">
-                    <CircleCheck size={18} aria-hidden="true" /> sicher
+                    <CircleCheck size={18} aria-hidden="true" /> kannst du
                   </span>
                 ) : (
                   <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-warn">
-                    <RotateCcw size={18} aria-hidden="true" /> üben
+                    <RotateCcw size={18} aria-hidden="true" /> noch üben
                   </span>
                 )}
               </li>
@@ -196,13 +185,12 @@ function MissionSummary({
             <Flag size={16} aria-hidden="true" /> Auf dem Platz
           </h2>
           <p className="text-lg font-semibold">{t(mission.fieldTransfer.challenge)}</p>
-          {drills.length > 0 && <p className="mt-2 text-sm text-text-muted">Passende Spielform fürs Training: {drills.map((d) => d.title).join(' · ')}</p>}
         </section>
       )}
 
       {guest && (
         <p className="rounded-2xl border border-line-strong bg-ink-800 px-4 py-3 text-sm text-text-muted">
-          Gastmodus: Dein Fortschritt wird nicht gespeichert. Mit dem Teamcode deines Trainers kannst du ihn sichern.
+          Gastmodus: Dein Fortschritt wird nicht gespeichert. Mit dem Teamcode von deinem Trainer geht das.
         </p>
       )}
       {completionError && <p className="text-sm text-bad">{completionError}</p>}

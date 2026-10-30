@@ -12,7 +12,7 @@ import {
   randomPlacementPassRate,
   type LoadedMission,
 } from '@spieliq/engine'
-import { allFeedbackKeys, COMPETENCIES, DRILLS, GAME_FORMATS, getMission, MISSION_INPUTS, PRINCIPLES, UNITS } from '../src'
+import { allFeedbackKeys, COMPETENCIES, DRILLS, feedbackTemplate, GAME_FORMATS, getMission, MISSION_INPUTS, PRINCIPLES, UNITS } from '../src'
 
 /**
  * Content-Qualitätstests (laufen in CI)
@@ -27,6 +27,8 @@ import { allFeedbackKeys, COMPETENCIES, DRILLS, GAME_FORMATS, getMission, MISSIO
  */
 
 const missions = MISSION_INPUTS.map((m) => [m.id, getMission(m.id)] as const)
+/** Zahlen mit Einheit (z. B. „3,7 m“, „1,6 Sekunden“) sind für schwache Leser:innen zu abstrakt. */
+const UNIT_PATTERN = /\d+([,.]\d+)?\s?(m|s|Meter|Sekunden?)\b/
 const knownKeys = new Set(allFeedbackKeys())
 
 describe.each(missions)('Mission %s', (_id, loaded: LoadedMission) => {
@@ -50,6 +52,28 @@ describe.each(missions)('Mission %s', (_id, loaded: LoadedMission) => {
 
   it('hält kurze Anweisungen ein (max. 140 Zeichen)', () => {
     for (const step of mission.steps) expect(step.instruction.de.length, step.id).toBeLessThanOrEqual(140)
+  })
+
+  it('nutzt Einfache Sprache: keine Meter- oder Sekundenangaben in Spielertexten', () => {
+    const texts: string[] = [mission.goal.de, mission.fieldTransfer?.challenge.de ?? '']
+    for (const step of mission.steps) {
+      texts.push(step.instruction.de)
+      if (step.kind === 'watch' && step.after) texts.push(step.after.caption.de)
+      if (step.kind === 'explain') texts.push(step.text.de, ...step.keyPoints.map((k) => k.de))
+      if (isInteractive(step)) {
+        texts.push(...step.hints.map((h) => h.de), ...Object.values(step.feedback).map((f) => f?.de ?? ''))
+        if (step.kind === 'place') texts.push(...step.guide.map((g) => g.de))
+      }
+    }
+    for (const text of texts) expect(text, text).not.toMatch(UNIT_PATTERN)
+  })
+
+  it('hat bei mehreren Spielern höchstens einen Anleitungsschritt pro Spieler, jeder kurz', () => {
+    for (const step of mission.steps) {
+      if (step.kind !== 'place') continue
+      expect(step.guide.length, step.id).toBeLessThanOrEqual(step.controlled.length)
+      for (const g of step.guide) expect(g.de.length, g.de).toBeLessThanOrEqual(70)
+    }
   })
 
   if (mission.mode === 'test') {
@@ -165,6 +189,12 @@ describe('Inhaltsstruktur', () => {
     for (const d of DRILLS) {
       expect(d.coachingPoints.length).toBeGreaterThan(0)
       for (const p of d.principles) expect(PRINCIPLES.map((x) => x.id)).toContain(p)
+    }
+  })
+
+  it('Feedbacktexte enthalten keine Meter- oder Sekundenangaben (Einfache Sprache)', () => {
+    for (const key of allFeedbackKeys()) {
+      expect(feedbackTemplate(key) ?? '', key).not.toMatch(/\{(meters|seconds|width|depth)\}/)
     }
   })
 

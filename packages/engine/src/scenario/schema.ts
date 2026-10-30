@@ -170,6 +170,12 @@ export const placeStepSchema = z.object({
   solution: z.record(z.string(), vec2Schema),
   /** Passwege während des Ziehens live anzeigen (Lernmodus) */
   liveLanes: z.boolean().default(false),
+  /**
+   * Schritt-für-Schritt-Anleitung bei mehreren Spielern: je ein kurzer Satz pro
+   * Teilschritt, beschreibt Aufgaben (Rollen), nicht feste Spieler oder Zielpunkte.
+   * Reine Bedienhilfe – die Bewertung bleibt unverändert.
+   */
+  guide: z.array(localizedTextSchema).max(4).default([]),
 })
 
 export const chooseStepSchema = z.object({

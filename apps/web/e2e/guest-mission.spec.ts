@@ -1,18 +1,25 @@
-import { expect, test } from '@playwright/test'
+import { expect, test, type Page } from '@playwright/test'
+
+/** „Weiter“ springt während der Animation erst ans Ende; ein zweiter Klick geht weiter. */
+async function finishWatch(page: Page) {
+  await page.getByTestId('next-step').click()
+  if (await page.getByTestId('next-step').isVisible()) await page.getByTestId('next-step').click()
+}
 
 test.describe('Gastmodus', () => {
   test('Mission 1 vollständig spielen: zuschauen, freien Gegner erkennen, Feedback, Zusammenfassung', async ({ page }) => {
     await page.goto('/try/nazb-m1-problem-erkennen')
-    await expect(page.getByText('Schau genau hin')).toBeVisible()
-    // Animation zu Ende laufen lassen bzw. überspringen
-    await page.getByRole('button', { name: 'Zum Ende springen' }).click()
-    await page.getByTestId('next-step').click()
+    await expect(page.getByText('Schau zu: Was machen die Blauen?')).toBeVisible()
+    await expect(page.getByText('Wir spielen nach oben')).toBeVisible()
+    await finishWatch(page)
 
-    await expect(page.getByText('Tippe auf den Gegner, der jetzt frei ist.')).toBeVisible()
+    await expect(page.getByText('Welcher Gegner ist frei? Tippe ihn an.')).toBeVisible()
     // Falsche Antwort zuerst: positive Fehlerkorrektur statt Bestrafung
     await page.locator('[data-player-id="o10"]').click()
     await page.getByTestId('check').click()
     await expect(page.getByTestId('feedback-headline')).toContainText(/noch mal/i)
+    // Nach dem ersten Fehlversuch gibt es sofort Hilfe
+    await expect(page.getByTestId('show-solution')).toBeVisible()
     await page.getByTestId('retry').click()
 
     await page.locator('[data-player-id="o7"]').click()
@@ -21,18 +28,17 @@ test.describe('Gastmodus', () => {
     await page.getByTestId('next-step').click()
 
     // Erklärung der besseren Lösung
-    await expect(page.getByText('Einer geht zum Ball und stellt den Gegner')).toBeVisible()
+    await expect(page.getByText('Nur einer geht zum Ball. Die anderen bleiben hinten')).toBeVisible()
     await page.getByTestId('next-step').click()
 
-    await expect(page.getByText('Mission geschafft')).toBeVisible()
-    await expect(page.getByText('Freie Räume erkennen')).toBeVisible()
+    await expect(page.getByText('Geschafft!')).toBeVisible()
+    await expect(page.getByText('Ich sehe, wer frei ist.')).toBeVisible()
     await expect(page.getByText('Gastmodus: Dein Fortschritt wird nicht gespeichert.')).toBeVisible()
   })
 
   test('Positionieren ohne Ziehen: antippen und Zielpunkt antippen (Barrierefreiheit)', async ({ page }) => {
     await page.goto('/try/nazb-m3-aufgaben-verteilen')
-    await page.getByRole('button', { name: 'Zum Ende springen' }).click()
-    await page.getByTestId('next-step').click()
+    await finishWatch(page)
     const token = page.locator('[data-player-id="d4"]')
     await token.click()
     // Zielpunkt über die Bildschirm-Matrix des Spielfelds berechnen (Spielfeldkoordinate 21|48)

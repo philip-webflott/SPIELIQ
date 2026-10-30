@@ -83,7 +83,7 @@ export const m5NeueSituation: MissionInput = {
   status: 'review',
   role: 'transfer',
   title: { de: 'Neue Spielsituation' },
-  goal: { de: 'Ich übertrage die Aufgaben auf neue Situationen: stellen, absichern, Gefahr im Blick.' },
+  goal: { de: 'Ich verteile die Aufgaben auch in neuen Situationen.' },
   coachNote: {
     de: 'Transferaufgabe: neue Ballpositionen und Gegnerverteilungen. Die Rollen werden aus der Position abgeleitet, nicht vorgegeben – so wird geprüft, ob das Prinzip verstanden wurde und nicht eine Kreisposition auswendig gelernt ist. Der weit entfernte Flügelspieler darf bewusst offen bleiben (ballferner Raum ist weniger gefährlich als das Zentrum).',
   },
@@ -103,16 +103,21 @@ export const m5NeueSituation: MissionInput = {
     {
       id: 'halbraum',
       kind: 'place',
-      instruction: { de: 'Drei Blaue stehen am Ball. Verteile die Aufgaben: Wer stellt, wer sichert, wer passt auf Nummer 9 auf?' },
+      instruction: { de: 'Drei Blaue sind am Ball. Verteile die Aufgaben.' },
+      guide: [
+        { de: 'Einer geht zu Nummer 10 mit dem Ball.' },
+        { de: 'Einer steht schräg hinter ihm.' },
+        { de: 'Einer passt vor unserem Tor auf Nummer 9 auf.' },
+      ],
       controlled: trio,
       area: { min: { x: 2, y: 1 }, max: { x: 50, y: 67 } },
       assessment: { criteria: [...roleCriteria(trio, 'o9')] },
       feedback: {
-        excellent: { de: 'Aufgaben perfekt verteilt!' },
+        excellent: { de: 'Super verteilt!' },
         good: { de: 'Gut verteilt!' },
         notYet: { de: 'Noch nicht ganz.' },
       },
-      hints: [{ de: 'Nur einer bleibt am Ball.' }, { de: 'Der dritte Spieler kümmert sich um Nummer 9 vor dem Tor.' }],
+      hints: [{ de: 'Nur einer bleibt am Ball.' }, { de: 'Der Dritte passt vor dem Tor auf Nummer 9 auf.' }],
       consequence: 'auto',
       solution: { d5: { x: 27.9, y: 26.6 }, d6: { x: 23, y: 31 }, d4: { x: 19.5, y: 36.5 } },
       examples: [
@@ -140,18 +145,23 @@ export const m5NeueSituation: MissionInput = {
     {
       id: 'fluegel',
       kind: 'place',
-      instruction: { de: 'Andere Seite, andere Lage. Verteile die Aufgaben wieder selbst.' },
+      instruction: { de: 'Der Ball ist jetzt auf der anderen Seite. Verteile die Aufgaben.' },
+      guide: [
+        { de: 'Einer geht zu Nummer 7 mit dem Ball.' },
+        { de: 'Einer steht schräg hinter ihm.' },
+        { de: 'Einer läuft zu Nummer 9 vor unser Tor.' },
+      ],
       board: wing,
       view: { x: -3, y: 26, width: 52, height: 44 },
       controlled: wingTrio,
       area: { min: { x: 2, y: 1 }, max: { x: 54, y: 67 } },
       assessment: { criteria: [...roleCriteria(wingTrio, 'o9')] },
       feedback: {
-        excellent: { de: 'Stark übertragen!' },
-        good: { de: 'Gut übertragen!' },
+        excellent: { de: 'Super gemacht!' },
+        good: { de: 'Gut gemacht!' },
         notYet: { de: 'Noch nicht ganz.' },
       },
-      hints: [{ de: 'Einer stellt Nummer 7.' }, { de: 'Einer sichert ab, einer schützt die Mitte.' }],
+      hints: [{ de: 'Nur einer geht zu Nummer 7.' }, { de: 'Einer hilft schräg dahinter. Einer bleibt in der Mitte.' }],
       consequence: 'auto',
       solution: { d2: { x: 37.95, y: 60.6 }, d6: { x: 33.5, y: 55.5 }, d5: { x: 23, y: 37.5 } },
       examples: [
@@ -167,6 +177,6 @@ export const m5NeueSituation: MissionInput = {
   ],
   fieldTransfer: {
     drills: ['D-3V3-AUFGABEN'],
-    challenge: { de: 'Im Spiel: Bevor du zum Ball läufst, schau, ob schon ein Mitspieler dort ist.' },
+    challenge: { de: 'Im Spiel: Ist schon ein Mitspieler am Ball? Dann lauf nicht auch hin.' },
   },
 }

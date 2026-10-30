@@ -63,21 +63,24 @@ export function LaneLine({ from, to, status, emphasis = false }: { from: Vec2; t
   )
 }
 
-export function DistanceLine({ from, to, meters, tone = 'info' }: { from: Vec2; to: Vec2; meters: number; tone?: OverlayTone }) {
+/** Abstandslinie; die Meterangabe erscheint nur, wenn `meters` übergeben wird (Spieleransicht: ohne Zahlen). */
+export function DistanceLine({ from, to, meters, tone = 'info' }: { from: Vec2; to: Vec2; meters?: number; tone?: OverlayTone }) {
   const { projection, unit } = usePitchContext()
   const a = projection.toScreen(from)
   const b = projection.toScreen(to)
   const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }
-  const text = `${meters.toLocaleString('de-DE', { maximumFractionDigits: 0 })} m`
+  const text = meters === undefined ? null : `${meters.toLocaleString('de-DE', { maximumFractionDigits: 0 })} m`
   return (
     <g aria-hidden="true" style={{ pointerEvents: 'none' }}>
       <line x1={round(a.x)} y1={round(a.y)} x2={round(b.x)} y2={round(b.y)} stroke={TONE[tone]} strokeWidth={0.18 * unit} strokeDasharray={`${0.35 * unit} ${0.35 * unit}`} />
-      <g transform={`translate(${round(mid.x)} ${round(mid.y)})`}>
-        <rect x={-2.1 * unit} y={-0.75 * unit} width={4.2 * unit} height={1.5 * unit} rx={0.75 * unit} fill="rgba(5,10,20,0.88)" stroke={TONE[tone]} strokeWidth={0.12 * unit} />
-        <text textAnchor="middle" dominantBaseline="central" fontSize={0.95 * unit} fontWeight={700} fill="#ffffff" style={{ fontFamily: 'var(--font-display, sans-serif)' }}>
-          {text}
-        </text>
-      </g>
+      {text && (
+        <g transform={`translate(${round(mid.x)} ${round(mid.y)})`}>
+          <rect x={-2.1 * unit} y={-0.75 * unit} width={4.2 * unit} height={1.5 * unit} rx={0.75 * unit} fill="rgba(5,10,20,0.88)" stroke={TONE[tone]} strokeWidth={0.12 * unit} />
+          <text textAnchor="middle" dominantBaseline="central" fontSize={0.95 * unit} fontWeight={700} fill="#ffffff" style={{ fontFamily: 'var(--font-display, sans-serif)' }}>
+            {text}
+          </text>
+        </g>
+      )}
     </g>
   )
 }
@@ -146,7 +149,7 @@ export function EmptyArea({ center, radius }: { center: Vec2; radius: number }) 
     <g aria-hidden="true" style={{ pointerEvents: 'none' }}>
       <circle cx={round(c.x)} cy={round(c.y)} r={radius} fill="var(--free-space, #ffd84d)" fillOpacity={0.1} stroke="var(--free-space, #ffd84d)" strokeWidth={0.22 * unit} strokeDasharray={`${0.9 * unit} ${0.6 * unit}`} className="pitch-breathe" />
       <text x={round(c.x)} y={round(c.y - radius * 0.62)} textAnchor="middle" dominantBaseline="central" fontSize={1.5 * unit} fontWeight={800} fill="var(--free-space, #ffd84d)" style={{ fontFamily: 'var(--font-display, sans-serif)', letterSpacing: '0.06em' }}>
-        FREI
+        LEER
       </text>
     </g>
   )

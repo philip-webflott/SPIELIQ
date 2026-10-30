@@ -21,9 +21,11 @@ SPIELIQ ist eine **Ergänzung** zum Training, kein Ersatz. Die Trainingsphilosop
 | Ein Prinzip pro Bildschirm, wenige Hinweise | eine Anweisung (≤ 140 Zeichen), höchstens 3 gestufte Tipps | Viele Instruktionen ließen Spieler freie Mitspieler übersehen (Memmert & Furley 2007, C-17) |
 | Variation statt Auswendiglernen | Transfermission mit neuen Lagen, gespiegelte Varianten, Rollen aus der Position statt fest vergeben | Variabilität/Interleaving fördern Prinzip- statt Positionslernen (Hintergrundwissen, zu verifizieren) |
 | Unmittelbares, erklärendes Feedback | Ursache + Visualisierung (Passwege, Abstände) + Konsequenz-Animation | Feedback-Forschung (Hintergrundwissen, zu verifizieren) |
-| Fehler als Lernchance | „Noch nicht ganz“, Nochmal, Tipp, Lösung erst nach 2 Versuchen | Positive Fehlerkultur; Lösung zum Nachmachen statt Bestrafung |
+| Fehler als Lernchance | „Noch nicht ganz“, Nochmal, Hilfe, Lösung zum Nachmachen schon nach dem ersten Fehlversuch | Positive Fehlerkultur; Lösung zum Nachmachen statt Bestrafung |
 | Wissen ≠ Können | „digital verstanden“ ≠ „auf dem Platz angewendet“; Trainerbeobachtung als eigener Status | Wissen und Spielhandeln korrelieren nur schwach bis mittel (C) |
 | Transfer bewusst planen | Pflicht-Verknüpfung jeder Mission mit einer Spielform; Pilotstudie mit Retentionstest geplant | Laboreffekte deutlich größer als Feldeffekte (Zhu et al. 2024, C-49); keine Studie zu 2D-Simulatoren für U14/U15 (C) |
+
+**Einfach verstehen:** Alle Spielertexte, das Spielfeld und die Bedienung folgen den Regeln in [Einfach verstehen](../design/einfach-verstehen.md) (Einfache Sprache, feste Ausrichtung, Schritt-für-Schritt-Anleitung, Hilfe nach dem ersten Fehlversuch).
 
 ## 3. Zwei getrennte Dimensionen
 
@@ -49,7 +51,7 @@ Ein digital bestandener Test ist kein Beweis für richtiges Verhalten im Spiel �
 3. **Ausprobieren** – Spieler ziehen (oder antippen + Zielpunkt antippen, oder Tastatur); im Lernmodus optional Live-Passwege.
 4. **Feedback** – Überschrift, wichtigster Satz mit Ursache, bis zu zwei positive Punkte; am Feld: Passwege, Abstände, Zonen.
 5. **Konsequenz** – „Was passiert jetzt?“: Der Gegner spielt die beste Option; das Ergebnis wird benannt.
-6. **Wiederholen / Lösung** – Nochmal; ab dem 2. Fehlversuch „Lösung zeigen“ (zählt nicht als selbstständig gelöst).
+6. **Wiederholen / Lösung** – Nochmal; ab dem 1. Fehlversuch „Zeig mir die Lösung“ (zählt nicht als selbstständig gelöst).
 7. **Zusammenfassung** – Prinzipien „sicher“ / „üben“, Aufgabe für den Platz, nächste Mission.
 
 ## 6. Altersgerechter Einsatz (Empfehlung)

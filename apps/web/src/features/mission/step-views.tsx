@@ -13,12 +13,13 @@ import {
   type BoardState,
   type InteractiveStep,
   type LoadedMission,
+  type LocalizedText,
   type Step,
   type Vec2,
 } from '@spieliq/engine'
 import { playoutMessage, summarizeFeedback, t } from '@spieliq/content'
 import { useTimelinePlayer, type TokenTone } from '@spieliq/pitch'
-import { CircleCheck, Eye, Lightbulb, Pause, Play, RotateCcw, SkipForward, Sparkles, Volume2 } from 'lucide-react'
+import { CircleCheck, Lightbulb, RotateCcw, Sparkles, Turtle, Volume2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { BoardView } from './board-view'
 import type { MissionPersistence, StepOutcome } from './types'
@@ -62,34 +63,46 @@ function Instruction({ text, speech }: { text: string; speech: StepProps['speech
   )
 }
 
-function PlaybackControls({ player }: { player: ReturnType<typeof useTimelinePlayer> }) {
+/** Wenige, beschriftete Knöpfe statt einer Symbolleiste: nochmal ansehen und langsam ansehen. */
+function ReplayControls({ player }: { player: ReturnType<typeof useTimelinePlayer> }) {
+  const slow = player.speed < 1
   return (
     <div className="flex items-center gap-1" role="group" aria-label="Wiedergabe">
       <button
         type="button"
-        className="rounded-full p-2.5 text-text-muted hover:bg-ink-700 hover:text-text"
-        onClick={player.playing ? player.pause : player.play}
-        aria-label={player.playing ? 'Pause' : 'Abspielen'}
+        onClick={player.restart}
+        className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-text-muted hover:bg-ink-700 hover:text-text"
       >
-        {player.playing ? <Pause size={20} /> : <Play size={20} />}
-      </button>
-      <button type="button" className="rounded-full p-2.5 text-text-muted hover:bg-ink-700 hover:text-text" onClick={player.restart} aria-label="Wiederholen">
-        <RotateCcw size={20} />
+        <RotateCcw size={18} aria-hidden="true" /> Nochmal
       </button>
       <button
         type="button"
-        className={`rounded-full p-2.5 hover:bg-ink-700 ${player.speed < 1 ? 'text-accent' : 'text-text-muted hover:text-text'}`}
-        onClick={() => player.setSpeed(player.speed < 1 ? 1 : 0.5)}
-        aria-pressed={player.speed < 1}
-        aria-label="Zeitlupe (halbe Geschwindigkeit)"
+        onClick={() => {
+          player.setSpeed(slow ? 1 : 0.5)
+          if (!slow && player.finished) player.restart()
+        }}
+        aria-pressed={slow}
+        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold hover:bg-ink-700 ${slow ? 'text-accent' : 'text-text-muted hover:text-text'}`}
       >
-        <span className="font-display text-base font-bold">0,5×</span>
+        <Turtle size={18} aria-hidden="true" /> Langsam
       </button>
-      {!player.finished && (
-        <button type="button" className="rounded-full p-2.5 text-text-muted hover:bg-ink-700 hover:text-text" onClick={player.skipToEnd} aria-label="Zum Ende springen">
-          <SkipForward size={20} />
-        </button>
-      )}
+    </div>
+  )
+}
+
+/** Schritt für Schritt: zeigt nur den aktuellen Teilschritt; gezählt wird, wie viele Spieler schon bewegt wurden. */
+function GuideBox({ guide, movedCount }: { guide: readonly LocalizedText[]; movedCount: number }) {
+  const allDone = movedCount >= guide.length
+  const current = Math.min(movedCount, guide.length - 1)
+  return (
+    <div className="rounded-2xl border border-accent/30 bg-accent-soft px-4 py-3" aria-live="polite" data-testid="guide">
+      <div className="mb-1.5 flex gap-1.5" aria-hidden="true">
+        {guide.map((g, i) => (
+          <span key={g.de} className={`h-2 w-7 rounded-full ${i < movedCount ? 'bg-accent' : i === current ? 'bg-accent/50' : 'bg-ink-600'}`} />
+        ))}
+      </div>
+      <p className="text-sm font-semibold text-text-muted">{allDone ? 'Alle gesetzt' : `Schritt ${current + 1} von ${guide.length}`}</p>
+      <p className="text-lg font-semibold leading-snug text-text">{allDone ? 'Passt alles? Dann tippe auf „Prüfen“.' : t(guide[current]!)}</p>
     </div>
   )
 }
@@ -111,8 +124,9 @@ export function WatchStep({ loaded, index, reducedMotion, speech, onComplete }: 
           <p className="eyebrow">Schau zu</p>
           <Instruction text={caption} speech={speech} />
           <div className="mt-auto flex items-center justify-between gap-3">
-            <PlaybackControls player={player} />
-            <Button size="lg" onClick={() => onComplete(null)} disabled={!done} data-testid="next-step">
+            <ReplayControls player={player} />
+            {/* Erster Klick während der Animation springt ans Ende (Erklärung), der zweite geht weiter. */}
+            <Button size="lg" onClick={() => (done ? onComplete(null) : player.skipToEnd())} data-testid="next-step">
               Weiter
             </Button>
           </div>
@@ -146,7 +160,7 @@ export function ExplainStep({ loaded, index, reducedMotion, speech, onComplete }
             </ul>
           )}
           <div className="mt-auto flex items-center justify-between gap-3">
-            {timeline ? <PlaybackControls player={player} /> : <span />}
+            {timeline ? <ReplayControls player={player} /> : <span />}
             <Button size="lg" onClick={() => onComplete(null)} data-testid="next-step">
               Weiter
             </Button>
@@ -183,14 +197,7 @@ function ConsequenceBoard({
 }) {
   const player = useTimelinePlayer(plan.timeline, { autoplay: true, reducedMotion, onFinish })
   const state = player.frame?.state ?? plan.timeline.initial
-  return (
-    <>
-      <BoardView loaded={loaded} state={state} view={view} highlight={highlight} label="Was passiert jetzt?" />
-      <div className="absolute right-3 top-3 rounded-full bg-ink-900/80 backdrop-blur">
-        <PlaybackControls player={player} />
-      </div>
-    </>
-  )
+  return <BoardView loaded={loaded} state={state} view={view} highlight={highlight} label="Was passiert jetzt?" />
 }
 
 export function InteractiveStepView({ loaded, index, reducedMotion, speech, onComplete, persistence, assignmentId }: InteractiveProps) {
@@ -215,15 +222,18 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
   const [plan, setPlan] = useState<ReturnType<typeof planConsequence>>(null)
   const [consequenceDone, setConsequenceDone] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
-  /** Im Feedback zuerst die Begründung (Passwege, Abstände), dann die Konsequenz-Animation. */
+  /** Im Feedback zuerst die Folge („Was passiert?“), danach automatisch die Begründung am Feld. */
   const [boardMode, setBoardMode] = useState<'evidence' | 'consequence'>('evidence')
+  const [replay, setReplay] = useState(0)
+  /** Bewegte Spieler – steuert die Schritt-für-Schritt-Anleitung */
+  const [moved, setMoved] = useState<string[]>([])
   const startedAt = useRef<number | null>(null)
 
   useEffect(() => {
-    if (phase !== 'feedback' || !plan || reducedMotion || boardMode !== 'evidence' || consequenceDone) return
-    const timer = window.setTimeout(() => setBoardMode('consequence'), 1600)
+    if (phase !== 'feedback' || boardMode !== 'consequence' || !consequenceDone) return
+    const timer = window.setTimeout(() => setBoardMode('evidence'), 1200)
     return () => window.clearTimeout(timer)
-  }, [phase, plan, reducedMotion, boardMode, consequenceDone, attempts])
+  }, [phase, boardMode, consequenceDone])
 
   const clamp = useCallback(
     (p: Vec2) => {
@@ -241,6 +251,7 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
   const onMove = useCallback((id: string, pos: Vec2) => {
     startedAt.current ??= performance.now()
     setPositions((prev) => ({ ...prev, [id]: pos }))
+    setMoved((prev) => (prev.includes(id) ? prev : [...prev, id]))
   }, [])
 
   const answerState: BoardState = step.kind === 'place' ? withPositions(start, positions) : start
@@ -266,7 +277,7 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
     const nextPlan = planConsequence(loaded, index, finalState)
     setPlan(nextPlan)
     setConsequenceDone(!nextPlan)
-    setBoardMode('evidence')
+    setBoardMode(nextPlan && !reducedMotion ? 'consequence' : 'evidence')
     persist(answer, solution ? step.hints.length + 1 : hintsShown)
   }
 
@@ -334,7 +345,7 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
     <>
       {showConsequence && plan ? (
         <ConsequenceBoard
-          key={`c${attempts}`}
+          key={`c${attempts}-${replay}`}
           loaded={loaded}
           plan={plan}
           reducedMotion={reducedMotion}
@@ -371,16 +382,19 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
           label={step.kind === 'place' ? 'Spielfeld – ziehe deine Spieler oder tippe sie an und dann auf den Zielpunkt' : 'Spielfeld – tippe deine Antwort an'}
         />
       )}
-      {phase === 'feedback' && plan && (
+      {phase === 'feedback' && plan && !reducedMotion && boardMode === 'evidence' && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
           <button
             type="button"
-            onClick={() => setBoardMode((m) => (m === 'evidence' ? 'consequence' : 'evidence'))}
+            onClick={() => {
+              setConsequenceDone(false)
+              setBoardMode('consequence')
+              setReplay((r) => r + 1)
+            }}
             className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-ink-900/85 px-4 py-2 text-sm font-semibold text-text backdrop-blur hover:bg-ink-800"
-            data-testid="toggle-consequence"
+            data-testid="replay-consequence"
           >
-            {boardMode === 'evidence' ? <Play size={16} aria-hidden="true" /> : <Eye size={16} aria-hidden="true" />}
-            {boardMode === 'evidence' ? 'Was passiert jetzt?' : 'Erklärung zeigen'}
+            <RotateCcw size={16} aria-hidden="true" /> Nochmal ansehen
           </button>
         </div>
       )}
@@ -393,8 +407,12 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
       {phase === 'answer' && (
         <>
           <Instruction text={t(step.instruction)} speech={speech} />
+          {step.kind === 'place' && step.guide.length > 0 && <GuideBox guide={step.guide} movedCount={moved.length} />}
           {step.kind === 'place' && attempts === 0 && (
-            <p className="text-sm text-text-faint">Ziehen – oder antippen und dann den Zielpunkt antippen. Tastatur: Tab und Pfeiltasten.</p>
+            <p className="text-sm text-text-faint">
+              Tippe einen Blauen mit gestricheltem Ring an. Dann tippe, wo er hin soll.
+              <span className="sr-only"> Mit der Tastatur: Tab und Pfeiltasten.</span>
+            </p>
           )}
           {step.kind === 'choose' && (
             <div className="grid gap-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
@@ -428,7 +446,7 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
           <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
             {!isTest && hintsShown < step.hints.length ? (
               <Button variant="ghost" onClick={() => setHintsShown((h) => h + 1)} data-testid="hint">
-                <Lightbulb size={18} aria-hidden="true" /> Tipp
+                <Lightbulb size={18} aria-hidden="true" /> Hilfe
               </Button>
             ) : (
               <span />
@@ -456,7 +474,7 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
           {feedback.main && <p className="text-lg leading-snug text-text">{feedback.main}</p>}
           {feedback.positives.length > 0 && (
             <ul className="space-y-1.5">
-              {feedback.positives.map((p) => (
+              {feedback.positives.slice(0, 1).map((p) => (
                 <li key={p} className="flex gap-2 text-sm text-text-muted">
                   <CircleCheck size={16} className="mt-0.5 shrink-0 text-good" aria-hidden="true" />
                   {p}
@@ -471,9 +489,9 @@ export function InteractiveStepView({ loaded, index, reducedMotion, speech, onCo
           )}
           {saveError && <p className="text-xs text-bad">{saveError}</p>}
           <div className="mt-auto flex flex-wrap items-center justify-end gap-3">
-            {!passed && !isTest && attempts >= 2 && !usedSolution && (
+            {!passed && !isTest && attempts >= 1 && !usedSolution && (
               <Button variant="ghost" onClick={showSolution} data-testid="show-solution">
-                Lösung zeigen
+                Zeig mir die Lösung
               </Button>
             )}
             {(!passed || (!isTest && passed && !usedSolution)) && !isTest && (

@@ -2,6 +2,8 @@
 
 Stand: 29.10.2026 · Status aller Missionen: `review` (fachliche Freigabe durch lizenzierte Jugendtrainer:in ausstehend) · Code: `packages/content/src/missions/nicht-alle-zum-ball/`
 
+> Die Spielertexte stehen in Einfacher Sprache in den Missionsdateien (`packages/content/src/missions/`); Regeln: [Einfach verstehen](../design/einfach-verstehen.md). Dieses Drehbuch beschreibt Ablauf und Absicht, nicht den genauen Wortlaut.
+
 **Zielgruppe:** Einsteiger und C-Jugendliche mit Defiziten bei Raumverständnis, Stellungsspiel und gemeinsamem Verteidigen; einsetzbar D–B.
 **Dauer:** ca. 20 Minuten gesamt, je Mission 2–5 Minuten – gedacht für mehrere kurze Sitzungen.
 **Leitfrage:** Was passiert, wenn alle zum Ball laufen – und was hat jeder stattdessen zu tun?
@@ -22,7 +24,7 @@ Mission 2 behandelt das Prinzip mit Ball (Abstand schafft Anspielstationen), Mis
 ## Mission 1 – Das Problem erkennen
 
 - **Situation:** Gegner 9 dribbelt auf unserer Außenbahn. Die blauen Spieler 3, 4 und 6 laufen alle zum Ball. Nummer 7 des Gegners steht danach frei vor dem Strafraum.
-- **Schritte:** (1) Animation mit Pause/Zeitlupe; am Ende rote Ringe um die drei Zuläufer und „FREI“-Zone. (2) „Tippe auf den Gegner, der jetzt frei ist“ (Auswahl 7, 10, 8). (3) Konsequenz: Pass auf 7, Torchance. (4) Bessere Lösung als Animation: einer stellt, einer sichert, einer bleibt bei 7.
+- **Schritte:** (1) Animation (Nochmal/Langsam); am Ende rote Ringe um die drei Zuläufer und eine „LEER“-Zone. (2) „Welcher Gegner ist frei? Tippe ihn an.“ (Auswahl 7, 10, 8; keine Markierung in der Aufgabe selbst). (3) Konsequenz: Pass auf 7, Torchance. (4) Bessere Lösung als Animation: einer geht zum Ball, einer steht schräg dahinter, einer passt auf 7 auf.
 - **Bewertung:** `selectFree` (most-free) – „frei“ heißt: Passweg nicht zugestellt **und** ≥ 0,8 s Zeit nach der Annahme. Nummer 10 ist durch den Deckungsschatten von 3 zugestellt, Nummer 8 ist gedeckt. Raterate 33 %.
 - **Transfer:** Spielform „4 gegen 4 auf vier Minitore – Einer geht, einer sichert“; Beobachtungsauftrag fürs Training.
 

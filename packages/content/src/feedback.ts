@@ -4,92 +4,93 @@ import { format, t, type Locale } from './i18n'
 /**
  * Standard-Feedbacktexte zu den Ergebnisschlüsseln der Bewertungsengine.
  *
- * Leitlinien (siehe docs/konzept/lernsystem.md):
- * - Du-Form, kurze Sätze, keine Fachbegriffe ohne Erklärung
+ * Leitlinien (Einfache Sprache, siehe docs/design/einfach-verstehen.md):
+ * - Du-Form, kurze Sätze (ein Gedanke pro Satz), keine Fachwörter
+ * - keine Meter- oder Sekundenangaben – Spielernummern statt Abstände
  * - zuerst, was gut ist; Fehler als Hinweis auf die Lösung formulieren
- * - immer die Ursache nennen ("weil …"), nie nur "falsch"
+ * - immer die Ursache nennen, nie nur "falsch"
  */
 const DE: Record<string, string> = {
   'common.missingEntity': 'Diese Situation kann gerade nicht ausgewertet werden.',
   'common.notApplicable': '',
 
-  'passLane.open': 'Der Passweg zu Nummer {to} ist frei.',
-  'passLane.risky': 'Der Pass zu Nummer {to} ist riskant – ein Gegner ist nah an der Passlinie.',
-  'passLane.blocked': 'Ein Gegner steht im Passweg zu Nummer {to}.',
-  'passLane.closed': 'Stark: Der Passweg zu Nummer {to} ist zu.',
-  'passLane.stillOpen': 'Der Passweg zu Nummer {to} ist noch offen.',
+  'passLane.open': 'Der Ball kommt sicher zu Nummer {to}.',
+  'passLane.risky': 'Der Pass zu Nummer {to} ist gefährlich. Ein Gegner ist nah dran.',
+  'passLane.blocked': 'Ein Gegner steht im Weg zu Nummer {to}.',
+  'passLane.closed': 'Super: Der Pass zu Nummer {to} geht nicht mehr.',
+  'passLane.stillOpen': 'Der Pass zu Nummer {to} geht noch.',
 
-  'passOptions.enough': 'Super: {open} sichere Anspielstationen.',
-  'passOptions.tooFew': 'Erst {open} sichere Anspielstation. Mindestens {min} sollen es sein – sucht die Lücken zwischen den Gegnern.',
+  'passOptions.enough': 'Super: Mehrere Mitspieler können den Ball bekommen.',
+  'passOptions.tooFew': 'Zu wenige sind frei für einen Pass. Geht in die Lücken zwischen den Gegnern.',
 
-  'selectFree.ok': 'Er hätte nach dem Pass etwa {seconds} Sekunden Zeit – niemand stört ihn.',
-  'selectFree.notFree': 'Bei ihm ist schnell ein Gegenspieler da oder der Passweg ist zu. Wer steht weit weg von allen?',
-  'selectFree.notMostFree': 'Der ist auch frei – aber einer steht noch freier.',
+  'selectFree.ok': 'Bei ihm ist kein Gegenspieler. Er hat viel Zeit.',
+  'selectFree.notFree': 'Bei ihm ist ein Gegenspieler nah dran. Wer steht ganz allein?',
+  'selectFree.notMostFree': 'Der ist auch frei. Aber einer steht noch freier.',
   'selectFree.none': 'Tippe auf einen Spieler.',
-  'selectFree.wrongTeam': 'Tippe auf einen Spieler der anderen Mannschaft.',
+  'selectFree.wrongTeam': 'Tippe auf einen Gegner.',
 
-  'spacing.ok': 'Gute Abstände – niemand steht auf einem Fleck.',
-  'spacing.tooClose': 'Nummer {a} und Nummer {b} stehen nur {meters} m auseinander. Ein einziger Gegner kann beide stören.',
+  'spacing.ok': 'Gute Abstände. Keiner steht zu nah am anderen.',
+  'spacing.tooClose': 'Nummer {a} und Nummer {b} stehen zu nah zusammen. Ein Gegner kann beide stören.',
 
-  'widthDepth.ok': 'Ihr macht das Feld groß – breit und tief.',
-  'widthDepth.noWidth': 'Nutzt die Breite: Einer sollte weiter nach außen.',
-  'widthDepth.noDepth': 'Nutzt die Tiefe: Einer sollte weiter vor oder hinter den Ball.',
+  'widthDepth.ok': 'Ihr macht das Feld groß.',
+  'widthDepth.noWidth': 'Einer muss weiter zur Seite.',
+  'widthDepth.noDepth': 'Einer muss weiter nach vorne oder nach hinten.',
 
-  'triangle.ok': 'Ihr bildet ein Dreieck – der Ballführende hat zwei Passwege auf einmal.',
-  'triangle.flat': 'Ihr steht fast auf einer Linie. Versetzt euch zu einem Dreieck.',
-  'triangle.laneBlocked': 'In eurem Dreieck ist ein Passweg zugestellt.',
+  'triangle.ok': 'Ihr steht wie ein Dreieck. So gibt es zwei Wege für den Pass.',
+  'triangle.flat': 'Ihr steht fast in einer Reihe. Stellt euch wie ein Dreieck auf.',
+  'triangle.laneBlocked': 'Ein Gegner steht im Weg. Einer von euch muss sich bewegen.',
 
-  'groupDistance.ok': 'Alle stehen in guter Passdistanz.',
-  'groupDistance.tooClose': 'Nummer {player} steht mit {meters} m zu nah am Ball – so stört ein Gegner beide.',
-  'groupDistance.tooFar': 'Nummer {player} ist {meters} m weg – zu weit für einen sicheren Pass.',
+  'groupDistance.ok': 'Alle stehen gut für einen Pass.',
+  'groupDistance.tooClose': 'Nummer {player} steht zu nah am Ball. So stört ein Gegner beide.',
+  'groupDistance.tooFar': 'Nummer {player} steht zu weit weg. Der Pass ist zu lang.',
 
   'distance.ok': 'Der Abstand passt.',
-  'distance.tooClose': 'Zu nah: nur {meters} m.',
-  'distance.tooFar': 'Zu weit weg: {meters} m.',
+  'distance.tooClose': 'Zu nah dran.',
+  'distance.tooFar': 'Zu weit weg.',
 
-  'pressure.ok': 'Gut gestellt: nah dran und zwischen Ball und Tor.',
-  'pressure.tooFar': 'Der nächste Verteidiger ist {meters} m vom Ballführenden weg – zu weit, um ihn zu stören.',
-  'pressure.tooClose': 'Sehr eng dran. Mit etwas mehr Abstand wirst du nicht so leicht ausgespielt.',
-  'pressure.notGoalSide': 'Wer den Ballführenden stellt, muss zwischen Ball und eigenem Tor stehen.',
+  'pressure.ok': 'Gut! Nah am Gegner und zwischen Ball und Tor.',
+  'pressure.tooFar': 'Keiner ist nah genug am Gegner mit dem Ball. Einer muss hin.',
+  'pressure.tooClose': 'Sehr nah dran. Ein kleines Stück Abstand ist besser.',
+  'pressure.notGoalSide': 'Stell dich zwischen den Ball und unser Tor.',
 
-  'cover.ok': 'Stark abgesichert: schräg hinter deinem Mitspieler.',
-  'cover.notDeeper': 'Du stehst auf einer Höhe mit deinem Mitspieler. Wird er ausgespielt, seid ihr beide weg – geh etwas tiefer.',
-  'cover.tooFar': 'Du bist {meters} m von deinem Mitspieler entfernt – zu weit, um ihm zu helfen.',
-  'cover.tooClose': 'Zu nah an deinem Mitspieler – mit einer Aktion wärt ihr beide überspielt.',
-  'cover.flat': 'Steh nicht neben ihm, sondern schräg hinter ihm.',
-  'cover.outside': 'Gut! Noch besser: etwas weiter innen absichern – dort ist der Weg zum Tor.',
-  'cover.samePlayer': 'Absichern muss ein anderer Spieler als der, der stellt.',
+  'cover.ok': 'Super abgesichert: schräg hinter deinem Mitspieler.',
+  'cover.notDeeper': 'Du stehst neben deinem Mitspieler. Geh ein Stück nach hinten.',
+  'cover.tooFar': 'Du bist zu weit weg. So kannst du nicht helfen.',
+  'cover.tooClose': 'Du bist zu nah dran. Dann kommt der Gegner an euch beiden vorbei.',
+  'cover.flat': 'Nicht neben ihm. Schräg hinter ihm.',
+  'cover.outside': 'Gut! Noch besser: ein Stück mehr zur Mitte.',
+  'cover.samePlayer': 'Absichern muss ein anderer Spieler.',
 
-  'reachInTime.ok': 'Wird Nummer {target} angespielt, bist du rechtzeitig da.',
-  'reachInTime.laneClosed': 'Der Pass zu Nummer {target} ist zugestellt.',
-  'reachInTime.late': 'Wird Nummer {target} angespielt, kommst du etwa {seconds} s zu spät.',
+  'reachInTime.ok': 'Kommt der Ball zu Nummer {target}, bist du schnell da.',
+  'reachInTime.laneClosed': 'Der Pass zu Nummer {target} geht nicht durch.',
+  'reachInTime.late': 'Kommt der Ball zu Nummer {target}, bist du zu spät.',
 
-  'goalSide.ok': 'Du stehst zwischen Nummer {attacker} und dem Tor.',
-  'goalSide.no': 'Stell dich zwischen Nummer {attacker} und das eigene Tor.',
+  'goalSide.ok': 'Du stehst zwischen Nummer {attacker} und unserem Tor.',
+  'goalSide.no': 'Stell dich zwischen Nummer {attacker} und unser Tor.',
 
-  'crowding.ok': 'Nur einer am Ball – die anderen halten Abstand.',
-  'crowding.tooMany': '{count} Spieler sind direkt am Ball – zu viele! Die anderen werden woanders gebraucht.',
+  'crowding.ok': 'Nur einer ist am Ball. Gut!',
+  'crowding.tooMany': 'Zu viele sind am Ball. Nur einer geht hin.',
 
   'behindBall.ok': 'Alle stehen zwischen Ball und Tor.',
-  'behindBall.beaten': '{count} Spieler stehen schon hinter dem Ball – sie können nicht mehr helfen.',
+  'behindBall.beaten': 'Einige stehen schon hinter dem Ball. Sie können nicht mehr helfen.',
 
-  'chainGaps.ok': 'Keine großen Lücken in eurer Kette.',
-  'chainGaps.tooBig': 'Zwischen Nummer {a} und Nummer {b} ist eine Lücke von {meters} m.',
+  'chainGaps.ok': 'Keine großen Lücken zwischen euch.',
+  'chainGaps.tooBig': 'Zwischen Nummer {a} und Nummer {b} ist zu viel Platz.',
 
-  'protectCentre.ok': 'Die Mitte vor dem Tor ist geschützt.',
-  'protectCentre.open': 'Vor dem Tor ist es zu leer. Mindestens {min} Spieler sollten die Mitte schützen.',
+  'protectCentre.ok': 'Vor unserem Tor ist jemand. Gut!',
+  'protectCentre.open': 'Vor unserem Tor ist es zu leer. Rückt in die Mitte.',
 
-  'shift.ok': 'Gut verschoben – ihr seid auf der Ballseite.',
-  'shift.notEnough': 'Schiebt weiter zur Ballseite!',
-  'shift.tooMuch': 'Zu weit verschoben – jetzt wird die Mitte frei.',
+  'shift.ok': 'Gut! Ihr seid auf der Seite vom Ball.',
+  'shift.notEnough': 'Geht noch weiter zur Seite vom Ball.',
+  'shift.tooMuch': 'Zu weit! Jetzt ist die Mitte leer.',
   'shift.ballCentral': '',
 
-  'compactness.ok': 'Kompakt!',
-  'compactness.tooWide': 'Ihr steht zu breit auseinander ({width} m).',
-  'compactness.tooDeep': 'Ihr steht zu weit hintereinander ({depth} m).',
+  'compactness.ok': 'Ihr steht eng zusammen. Gut!',
+  'compactness.tooWide': 'Ihr steht zu weit auseinander.',
+  'compactness.tooDeep': 'Ihr steht zu weit hintereinander.',
 
-  'freeSpace.ok': 'Genau, hier ist freier Raum.',
-  'freeSpace.notFree': 'Hier ist ein Spieler in der Nähe. Such die Stelle, an der niemand ist.',
+  'freeSpace.ok': 'Genau! Hier ist Platz.',
+  'freeSpace.notFree': 'Hier ist schon ein Spieler. Such eine Stelle, wo keiner ist.',
   'freeSpace.none': 'Tippe auf eine Stelle im Feld.',
 
   'choice.correct': 'Richtig!',
@@ -99,8 +100,8 @@ const DE: Record<string, string> = {
 }
 
 const RATING_DE: Record<Rating, string> = {
-  excellent: 'Stark gelöst!',
-  good: 'Gut gelöst!',
+  excellent: 'Super!',
+  good: 'Gut gemacht!',
   'not-yet': 'Noch nicht ganz.',
 }
 
@@ -130,17 +131,17 @@ export function playoutMessage(outcome: PlayoutOutcome, attackingTeamIsOwn: bool
       case 'goalChance':
         return 'Torchance für uns!'
       case 'progress':
-        return 'Der Pass kommt an – wir kommen nach vorne.'
+        return 'Der Pass kommt an. Wir kommen nach vorne.'
       case 'safePass':
-        return 'Sicherer Pass – wir behalten den Ball.'
+        return 'Wir behalten den Ball.'
       case 'interception':
-        return 'Abgefangen – der Gegner hat den Ball.'
+        return 'Der Gegner fängt den Ball ab.'
       case 'pressured':
-        return 'Der Pass kommt an, aber sofort ist ein Gegner da.'
+        return 'Der Pass kommt an. Aber sofort ist ein Gegner da.'
       case 'forcedBack':
         return 'Wir müssen zurückspielen.'
       case 'noOption':
-        return 'Keine Anspielstation.'
+        return 'Keiner ist frei für einen Pass.'
     }
   }
   switch (outcome) {
@@ -149,15 +150,15 @@ export function playoutMessage(outcome: PlayoutOutcome, attackingTeamIsOwn: bool
     case 'progress':
       return 'Der Gegner kommt weiter nach vorne.'
     case 'safePass':
-      return 'Der Gegner behält den Ball, kommt aber nicht durch.'
+      return 'Der Gegner hat den Ball. Aber er kommt nicht durch.'
     case 'interception':
-      return 'Abgefangen – Ballgewinn für uns!'
+      return 'Wir haben den Ball! Gut verteidigt.'
     case 'pressured':
-      return 'Sofort unter Druck – gut verteidigt!'
+      return 'Ein Blauer ist sofort da. Gut verteidigt!'
     case 'forcedBack':
-      return 'Der Gegner muss zurückspielen – gut verteidigt!'
+      return 'Der Gegner muss zurückspielen. Gut verteidigt!'
     case 'noOption':
-      return 'Der Gegner findet keine Anspielstation.'
+      return 'Beim Gegner ist keiner frei. Super!'
   }
 }
 

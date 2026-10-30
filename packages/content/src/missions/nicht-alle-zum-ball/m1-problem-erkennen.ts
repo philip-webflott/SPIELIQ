@@ -28,7 +28,7 @@ export const m1ProblemErkennen: MissionInput = {
   status: 'review',
   role: 'intro',
   title: { de: 'Das Problem erkennen' },
-  goal: { de: 'Ich erkenne: Wenn alle zum Ball laufen, wird ein Gegner frei.' },
+  goal: { de: 'Laufen alle zum Ball, ist ein Gegner frei.' },
   coachNote: {
     de: 'Ballorientierung ohne Aufgabenverteilung ("Rudelbildung") öffnet Räume und lässt Gegenspieler frei. Die Mission macht die Ursache-Wirkung-Kette sichtbar: Zulaufen → freier Gegner → offener Passweg → Torchance. Danach wird die Grundidee "einer stellt, einer sichert, einer bleibt beim Gegner" als bessere Lösung gezeigt.',
   },
@@ -48,7 +48,7 @@ export const m1ProblemErkennen: MissionInput = {
     {
       id: 'zuschauen',
       kind: 'watch',
-      instruction: { de: 'Schau genau hin: Was machen die blauen Spieler?' },
+      instruction: { de: 'Schau zu: Was machen die Blauen?' },
       script: [
         { type: 'dribble', player: 'o9', to: { x: 32, y: 57 }, at: 0, duration: 1.6 },
         { type: 'move', player: 'd3', to: { x: 33.6, y: 54.2 }, at: 0.3, duration: 1.5 },
@@ -56,7 +56,7 @@ export const m1ProblemErkennen: MissionInput = {
         { type: 'move', player: 'd6', to: { x: 34.2, y: 59.4 }, at: 0.35, duration: 1.9 },
       ],
       after: {
-        caption: { de: 'Alle drei laufen zum Ball. Wer passt jetzt noch auf Nummer 7 auf?' },
+        caption: { de: 'Alle drei Blauen laufen zum Ball. Hinten ist es jetzt leer.' },
         overlays: [
           { type: 'ring', player: 'd3', tone: 'bad' },
           { type: 'ring', player: 'd4', tone: 'bad' },
@@ -68,10 +68,9 @@ export const m1ProblemErkennen: MissionInput = {
     {
       id: 'freien-gegner-finden',
       kind: 'identify',
-      instruction: { de: 'Tippe auf den Gegner, der jetzt frei ist.' },
+      instruction: { de: 'Welcher Gegner ist frei? Tippe ihn an.' },
       target: 'player',
       selectable: ['o7', 'o10', 'o8'],
-      overlays: [{ type: 'emptyArea', center: { x: 21, y: 40 }, radius: 9 }],
       assessment: {
         criteria: [
           {
@@ -85,9 +84,9 @@ export const m1ProblemErkennen: MissionInput = {
       },
       feedback: {
         excellent: { de: 'Genau! Nummer 7 steht frei.' },
-        notYet: { de: 'Schau noch mal genau hin.' },
+        notYet: { de: 'Schau noch mal hin.' },
       },
-      hints: [{ de: 'Schau weg vom Ball.' }, { de: 'Bei wem ist weit und breit kein blauer Spieler?' }],
+      hints: [{ de: 'Schau weg vom Ball.' }, { de: 'Bei welchem Gegner ist kein Blauer?' }],
       consequence: 'auto',
       examples: [
         { name: 'Nummer 7 ist frei', selection: { playerId: 'o7' }, expect: 'excellent' },
@@ -101,7 +100,7 @@ export const m1ProblemErkennen: MissionInput = {
       instruction: { de: 'So ist es besser:' },
       board: start,
       text: {
-        de: 'Einer geht zum Ball und stellt den Gegner. Die anderen bleiben bei ihren Gegenspielern und schützen den Raum vor dem Tor.',
+        de: 'Nur einer geht zum Ball. Die anderen bleiben hinten und passen auf.',
       },
       script: [
         { type: 'dribble', player: 'o9', to: { x: 32, y: 57 }, at: 0, duration: 1.6 },
@@ -115,13 +114,13 @@ export const m1ProblemErkennen: MissionInput = {
       ],
       keyPoints: [
         { de: 'Einer geht zum Ball.' },
-        { de: 'Einer sichert ab.' },
-        { de: 'Einer bleibt beim gefährlichen Gegner.' },
+        { de: 'Einer steht schräg hinter ihm.' },
+        { de: 'Einer passt auf Nummer 7 auf.' },
       ],
     },
   ],
   fieldTransfer: {
     drills: ['D-4V4-AUFGABEN'],
-    challenge: { de: 'Achte im nächsten Training darauf: Wer geht zum Ball – und was machen die anderen?' },
+    challenge: { de: 'Im Training: Wer geht zum Ball? Was machen die anderen?' },
   },
 }

@@ -45,14 +45,14 @@ test('Trainer lädt ein, Spieler lernt, Trainer sieht den Fortschritt', async ({
 
   await player.getByRole('link', { name: /Training starten/ }).click()
   await player.waitForURL(/\/play\/mission\/nazb-m1/)
-  await player.getByRole('button', { name: 'Zum Ende springen' }).click()
   await player.getByTestId('next-step').click()
+  if (await player.getByTestId('next-step').isVisible()) await player.getByTestId('next-step').click()
   await player.locator('[data-player-id="o7"]').click()
   await player.getByTestId('check').click()
   await expect(player.getByTestId('feedback-headline')).toContainText('Nummer 7')
   await player.getByTestId('next-step').click()
   await player.getByTestId('next-step').click()
-  await expect(player.getByText('Mission geschafft')).toBeVisible()
+  await expect(player.getByText('Geschafft!')).toBeVisible()
 
   // Trainer sieht den Fortschritt
   await expect

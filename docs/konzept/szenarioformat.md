@@ -35,7 +35,7 @@ Jeder Schritt hat `id`, eine kurze `instruction` (≤ 140 Zeichen, Test prüft d
 | `watch` | Situation beobachten (Animation) | `script` (Ereignisse), `after` (Erklärung + Overlays am Ende) |
 | `explain` | Lösung/Prinzip zeigen | `text`, `keyPoints` (≤ 3), optional `script` |
 | `identify` | Spieler oder Punkt antippen | `target`, `selectable` |
-| `place` | Spieler positionieren | `controlled`, `area`, `solution`, `liveLanes` |
+| `place` | Spieler positionieren | `controlled`, `area`, `solution`, `liveLanes`, `guide` (Schritt-für-Schritt-Anleitung: je Teilschritt ein kurzer Satz, Aufgaben statt fester Spieler; reine Bedienhilfe, siehe [Einfach verstehen](../design/einfach-verstehen.md)) |
 | `choose` | Entscheidung zwischen 2–4 Optionen | `options` |
 
 Interaktive Schritte (`identify`, `place`, `choose`) haben zusätzlich:
@@ -62,7 +62,7 @@ Interaktive Schritte (`identify`, `place`, `choose`) haben zusätzlich:
 ```ts
 {
   kind: 'place',
-  instruction: { de: 'Nummer 3 stellt den Gegner. Zieh Nummer 4 dorthin, wo er Nummer 3 absichert.' },
+  instruction: { de: 'Nummer 3 geht zum Ball. Wo hilft Nummer 4? Zieh ihn hin.' },
   controlled: ['d4'],
   assessment: {
     criteria: [

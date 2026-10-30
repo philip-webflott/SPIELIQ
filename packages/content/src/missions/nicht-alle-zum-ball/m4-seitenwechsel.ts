@@ -31,7 +31,7 @@ export const m4Seitenwechsel: MissionInput = {
   version: 1,
   status: 'review',
   title: { de: 'Der Ball wechselt die Seite' },
-  goal: { de: 'Wir verschieben gemeinsam zum Ball und schützen die Mitte.' },
+  goal: { de: 'Wir rücken gemeinsam zur Seite vom Ball.' },
   coachNote: {
     de: 'Ballorientiertes Verschieben einer Viererkette nach einer Spielverlagerung. Bewertet werden Rollen (wer stellt, wer sichert), Lücken mit kontextabhängigen Grenzen (ballnah enger als ballfern), die Verschiebung des Blockschwerpunkts zur Ballseite, der Schutz des Zentrums und die Kontrolle des Mittelstürmers. Bewusst nicht verlangt: gleiche Abstände oder eine starre Linie. Mehrere Lösungen sind gültig.',
   },
@@ -51,13 +51,13 @@ export const m4Seitenwechsel: MissionInput = {
     {
       id: 'zuschauen',
       kind: 'watch',
-      instruction: { de: 'Der Gegner hat den Ball auf der einen Seite. Schau, was jetzt passiert.' },
+      instruction: { de: 'Der Gegner hat den Ball. Schau, was passiert.' },
       script: [
         { type: 'move', player: 'o7', to: { x: 36, y: 58 }, at: 0.2, duration: 1.6 },
         { type: 'pass', from: 'o6', to: 'o7', at: 0.6, speed: 17 },
       ],
       after: {
-        caption: { de: 'Seitenwechsel! Die Kette steht noch auf der alten Seite – Nummer 7 hat viel Platz.' },
+        caption: { de: 'Der Ball ist jetzt auf der anderen Seite. Nummer 7 hat viel Platz.' },
         overlays: [
           { type: 'freeSpace', around: 'o7' },
           { type: 'arrow', from: 'd2', to: { x: 33, y: 56 }, tone: 'info' },
@@ -67,7 +67,13 @@ export const m4Seitenwechsel: MissionInput = {
     {
       id: 'verschieben',
       kind: 'place',
-      instruction: { de: 'Verschiebe die Viererkette: Wer stellt Nummer 7? Wo stehen die anderen?' },
+      instruction: { de: 'Schiebt alle vier zur Seite von Nummer 7.' },
+      guide: [
+        { de: 'Wer ist am nächsten an Nummer 7? Zieh ihn zu Nummer 7.' },
+        { de: 'Zieh den Nächsten schräg hinter ihn.' },
+        { de: 'Zieh einen in die Mitte vor unser Tor.' },
+        { de: 'Zieh den Letzten auch Richtung Mitte.' },
+      ],
       controlled: four,
       area: { min: { x: 2, y: 1 }, max: { x: 50, y: 67 } },
       assessment: {
@@ -115,13 +121,13 @@ export const m4Seitenwechsel: MissionInput = {
         ],
       },
       feedback: {
-        excellent: { de: 'Stark verschoben!' },
+        excellent: { de: 'Super verschoben!' },
         good: { de: 'Gut verschoben!' },
         notYet: { de: 'Noch nicht ganz.' },
       },
       hints: [
-        { de: 'Der Spieler, der Nummer 7 am nächsten ist, stellt ihn.' },
-        { de: 'Alle rücken zur Ballseite – aber die Mitte vor dem Tor bleibt besetzt.' },
+        { de: 'Wer am nächsten an Nummer 7 ist, geht hin.' },
+        { de: 'Alle rücken zur Seite vom Ball. Aber vor unserem Tor bleibt jemand.' },
       ],
       consequence: 'auto',
       solution: { d2: { x: 33.1, y: 56 }, d5: { x: 27, y: 48.5 }, d4: { x: 22.5, y: 38.5 }, d3: { x: 23, y: 29 } },
@@ -156,14 +162,14 @@ export const m4Seitenwechsel: MissionInput = {
       kind: 'explain',
       instruction: { de: 'Merke:' },
       text: {
-        de: 'Wechselt der Ball die Seite, schieben alle mit. Ballnah stehen wir eng, ballfern rücken wir ein – so bleibt die Mitte zu. Gleiche Abstände sind dabei nicht nötig.',
+        de: 'Wechselt der Ball die Seite, rücken alle mit. Nah am Ball stehen wir eng. Die Mitte bleibt zu.',
       },
       overlays: [{ type: 'lane', from: 'o7', to: 'o9' }],
-      keyPoints: [{ de: 'Ballnah: eng.' }, { de: 'Ballfern: einrücken, Mitte schützen.' }],
+      keyPoints: [{ de: 'Nah am Ball: eng zusammen.' }, { de: 'Weit weg vom Ball: zur Mitte rücken.' }],
     },
   ],
   fieldTransfer: {
     drills: ['D-VERSCHIEBEN-4V4-ZONEN'],
-    challenge: { de: 'Im nächsten Training: Wenn der Ball die Seite wechselt, rufst du "Schieben!" und rückst mit.' },
+    challenge: { de: 'Im Training: Wechselt der Ball die Seite? Ruf „Schieben!“ und lauf mit.' },
   },
 }

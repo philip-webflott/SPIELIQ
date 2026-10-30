@@ -24,7 +24,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-NICHT-ALLE',
     name: 'Nicht alle zum Ball',
-    playerText: 'Einer geht zum Ball – die anderen haben andere Aufgaben.',
+    playerText: 'Nur einer geht zum Ball.',
     coachText:
       'Aufgabenverteilung statt Rudelbildung: Ein Spieler übt Druck auf den Ball aus, die übrigen sichern ab, halten Gegenspieler und Räume. Gilt mit und gegen den Ball (mit Ball: Abstand zum Ballführenden).',
     phase: 'allgemein',
@@ -34,7 +34,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-FREIER-RAUM',
     name: 'Freie Räume erkennen',
-    playerText: 'Schau weg vom Ball: Wo ist Platz, wer ist frei?',
+    playerText: 'Ich sehe, wer frei ist.',
     coachText:
       'Wahrnehmung von freien Gegenspielern und Räumen abseits des Balls. Operationalisiert über offene Passwege und die Zeit, die ein Empfänger nach der Annahme hätte.',
     phase: 'allgemein',
@@ -44,7 +44,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-ABSTAND',
     name: 'Abstand halten',
-    playerText: 'Mit Abstand bist du anspielbar – und ein Gegner kann nicht zwei stören.',
+    playerText: 'Ich halte Abstand zu meinen Mitspielern.',
     coachText:
       'Sinnvolle Abstände zum Ballführenden und zwischen Mitspielern: nicht so nah, dass ein Gegenspieler mehrere stören kann, nicht so weit, dass der Pass unsicher wird. Abstandswerte sind Modellannahmen (C-Jugend, Großfeld).',
     phase: 'mit-ball',
@@ -54,7 +54,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-ANSPIELBAR',
     name: 'Anspielbar sein',
-    playerText: 'Stell dich so, dass zwischen dir und dem Ball kein Gegner steht.',
+    playerText: 'Ich stelle mich frei für einen Pass.',
     coachText:
       'Leitgedanke "ohne Ball anspielbar sein": offener Passweg zum Ballführenden. Bewertet über ein zeitbasiertes Abfangmodell (Ball vs. schnellster Gegenspieler).',
     phase: 'mit-ball',
@@ -64,7 +64,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-BREITE-TIEFE',
     name: 'Breite und Tiefe',
-    playerText: 'Macht das Feld groß: zur Seite und nach vorn/hinten verteilen.',
+    playerText: 'Wir verteilen uns im ganzen Feld.',
     coachText:
       'Raumaufteilung in Breite und Tiefe: Abspielmöglichkeiten in Tiefe und Breite schaffen, Breite halten, Tiefe bedrohen – je nach Situation. Tiefe umfasst ausdrücklich auch Anspielstationen hinter dem Ball. Nicht: "immer maximal breit".',
     phase: 'mit-ball',
@@ -74,7 +74,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-DREIECK',
     name: 'Dreiecke bilden',
-    playerText: 'Zu dritt im Dreieck hat der Ballführende zwei Passwege.',
+    playerText: 'Wir stellen uns wie ein Dreieck auf.',
     coachText:
       'Versetzte Positionen (kein Linienstand) schaffen zwei gleichzeitige Passoptionen und Anschlussaktionen. Ein Lösungsweg, keine Pflicht: Das Prinzip dahinter ist Anspielbarkeit in mehreren Winkeln.',
     phase: 'mit-ball',
@@ -84,7 +84,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-STELLEN',
     name: 'Stellen (erster Verteidiger)',
-    playerText: 'Der Nächste zum Ball stellt: nah dran und zwischen Ball und Tor.',
+    playerText: 'Der Nächste geht zum Gegner mit dem Ball.',
     coachText:
       'Erster Verteidiger: Druck auf den Ballführenden, torseitig, auf Distanz, die Zugriff erlaubt, ohne sofort überspielt zu werden. Lenkrichtung ist kontextabhängig und wird hier noch nicht bewertet.',
     phase: 'gegen-ball',
@@ -94,7 +94,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-ABSICHERN',
     name: 'Absichern (zweiter Verteidiger)',
-    playerText: 'Steh schräg hinter deinem Mitspieler – nah genug zum Helfen.',
+    playerText: 'Ich stehe schräg hinter meinem Mitspieler.',
     coachText:
       'Zweiter Verteidiger: tiefer gestaffelt, schräg versetzt (bevorzugt Richtung Tor/innen), nah genug für sofortige Hilfe, weit genug, um nicht mit derselben Aktion überspielt zu werden; zugleich den nächsten Gegenspieler im Blick.',
     phase: 'gegen-ball',
@@ -104,7 +104,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-VERSCHIEBEN',
     name: 'Gemeinsam verschieben',
-    playerText: 'Wechselt der Ball die Seite, schieben alle mit.',
+    playerText: 'Wechselt der Ball die Seite, rücken wir mit.',
     coachText:
       'Ballorientiertes Verschieben als Block: Schwerpunkt Richtung Ballseite, ballnah enge Abstände, ballfern größere – ausdrücklich keine gleichen Abstände.',
     phase: 'gegen-ball',
@@ -114,7 +114,7 @@ export const PRINCIPLES: readonly Principle[] = [
   {
     id: 'P-MITTE',
     name: 'Mitte schützen',
-    playerText: 'Vor dem eigenen Tor bleibt immer jemand.',
+    playerText: 'Vor unserem Tor bleibt immer jemand.',
     coachText:
       'Balance: Der ballferne Spieler rückt ein und schützt den zentralen Raum bzw. kontrolliert den gefährlichsten Gegenspieler – ballferne Außenräume dürfen eher offen bleiben.',
     phase: 'gegen-ball',

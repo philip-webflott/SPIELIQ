@@ -76,7 +76,7 @@ export const m6Abschlusstest: MissionInput = {
   mode: 'test',
   role: 'test',
   title: { de: 'Abschlusstest' },
-  goal: { de: 'Ich zeige in neuen Situationen, was ich gelernt habe.' },
+  goal: { de: 'Ich zeige, was ich gelernt habe.' },
   coachNote: {
     de: 'Vier neue Situationen ohne Hinweise: freien Gegner erkennen, Dreieck/Anspielbarkeit, Absicherung, Verschieben. Die Auswertung je Prinzip ergibt den Status "digital verstanden". Er ersetzt nicht die Beobachtung im Training.',
   },
@@ -96,7 +96,7 @@ export const m6Abschlusstest: MissionInput = {
     {
       id: 'test-freier-gegner',
       kind: 'identify',
-      instruction: { de: 'Tippe auf den Gegner, der am gefährlichsten frei steht.' },
+      instruction: { de: 'Welcher Gegner ist ganz allein? Tippe ihn an.' },
       target: 'player',
       selectable: ['o10', 'o11', 'o7'],
       assessment: {
@@ -113,7 +113,7 @@ export const m6Abschlusstest: MissionInput = {
     {
       id: 'test-dreieck',
       kind: 'place',
-      instruction: { de: 'Wir haben den Ball. Bilde mit Nummer 6 und Nummer 10 ein Dreieck, damit Nummer 8 zwei sichere Passwege hat.' },
+      instruction: { de: 'Wir haben den Ball. Zieh 6 und 10 so, dass ihr mit Nummer 8 ein Dreieck seid.' },
       board: triangleBoard,
       view: { x: 30, y: 2, width: 44, height: 50 },
       controlled: ['m6', 'm10'],
@@ -152,7 +152,7 @@ export const m6Abschlusstest: MissionInput = {
     {
       id: 'test-absichern',
       kind: 'place',
-      instruction: { de: 'Nummer 3 stellt. Wo sichert Nummer 4 ab?' },
+      instruction: { de: 'Nummer 3 geht zum Ball. Wo hilft Nummer 4?' },
       board: coverBoard,
       view: { x: -3, y: 0, width: 46, height: 42 },
       controlled: ['d4'],
@@ -175,7 +175,13 @@ export const m6Abschlusstest: MissionInput = {
     {
       id: 'test-verschieben',
       kind: 'place',
-      instruction: { de: 'Der Ball ist auf die andere Seite gewechselt. Verschiebe die Viererkette.' },
+      instruction: { de: 'Der Ball ist jetzt auf der anderen Seite. Schiebt alle vier mit.' },
+      guide: [
+        { de: 'Wer ist am nächsten am Ball? Zieh ihn hin.' },
+        { de: 'Zieh den Nächsten schräg hinter ihn.' },
+        { de: 'Zieh einen in die Mitte vor unser Tor.' },
+        { de: 'Zieh den Letzten auch Richtung Mitte.' },
+      ],
       board: shiftBoard,
       view: { x: -3, y: -3, width: 53, height: 74 },
       controlled: four,

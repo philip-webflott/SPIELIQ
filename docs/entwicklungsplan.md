@@ -16,6 +16,8 @@ Stand: 29.10.2026 · Lies zuerst diesen Plan und den [Doku-Index](README.md).
 - Funktionen: Gastmodus ohne Konto; Trainer-Registrierung mit Verein und Mannschaft; Teamcodes (Hash, Ablauf, Einwilligungsbestätigung für U16, keine Spielerkonten in G/F); pseudonyme Spielerkonten; Lerneinheit 1 mit Missionen 1–6 (Zuschauen, Erkennen, Positionieren, Feedback, Konsequenz, Zusammenfassung); serverseitige Neubewertung; Lernstand mit drei Zuständen; Hausaufgaben mit Bericht; Trainerbeobachtung „auf dem Platz“; Problemfelder und Spielform-Vorschläge; Auskunft (JSON), Berichtigung, Löschung; Speicherfristen-Job; Seite „Hilfe & Melden“; Demo-Daten klar gekennzeichnet.
 - Qualität: 41 Engine-, 3 Spielfeld-, 102 Content-, 26 Integrations- und 7 End-to-End-Tests (Smartphone und Desktop), alle grün; Content-Tests prüfen Beispiele, Zufallsschutz, Raterate, Spiegelinvarianz und die Existenz jeder Quellenangabe ([Content-Report](qualitaet/content-report.md)).
 
+**Einfach verstehen (30.10.2026):** Nach Rückmeldung zur Zielgruppe (Förder- und Hauptschule) überarbeitet: Einfache Sprache in allen Spielertexten, Spielfeld immer gleich ausgerichtet mit Legende, weniger Knöpfe, Schritt-für-Schritt-Anleitung bei mehreren Spielern, Hilfe nach dem ersten Fehlversuch – Regeln in [Einfach verstehen](design/einfach-verstehen.md). Nächster Schritt: Test mit Kindern der Zielgruppe.
+
 **Online-Vorschau:** vorbereitet für Vercel + Supabase (`apps/web/vercel.json`, Build mit Migrationen und optionalen Demo-Daten) – [Anleitung](betrieb/vorschau-vercel-supabase.md). Nur mit Demo-Daten.
 
 **Noch nicht erfolgt:** fachliche Freigabe durch lizenzierte Jugendtrainer:innen, Kalibrierung der Schwellenwerte, rechtliche Prüfung, Nutzertests, Pilot, Echtbetrieb (Hosting-Verträge, CI, Monitoring).
@@ -71,8 +73,9 @@ Begründet und umkehrbar; grundlegende Fragen stehen in [Offene Fragen](recherch
 
 ## 5. Nächste Schritte (konkret für die nächste Sitzung)
 
-1. CI-Workflow (GitHub Actions) mit PostgreSQL-Service anlegen: `pnpm check`, `pnpm build`, `pnpm test:e2e`.
-2. Kalibrierungswerkzeug für Trainer:innen (Situationen aus den Missionsbeispielen anzeigen, Urteil erfassen, Übereinstimmung mit der Engine auswerten).
-3. Beitritt mit Freigabe durch die Trainer:in (offene Beitrittsanfragen im Trainerbereich).
-4. Einheit 2 konzipieren (Missionsdrehbuch analog [Lerneinheit 1](konzept/lerneinheit-1.md)) und die Interaktion „Laufweg mit Zeitpunkt“ in Engine und Spielfeld ergänzen.
-5. Folgerecherche nach Freigabe der Domains (siehe [Recherche](recherche/README.md), Abschnitt 5), zuerst MEIN FUSSBALL und EU-Rechtstexte.
+1. Test der vereinfachten Fassung mit 3–5 Kindern der Zielgruppe; Erkenntnisse in [Einfach verstehen](design/einfach-verstehen.md), Abschnitt 6, einarbeiten.
+2. CI-Workflow (GitHub Actions) mit PostgreSQL-Service anlegen: `pnpm check`, `pnpm build`, `pnpm test:e2e`.
+3. Kalibrierungswerkzeug für Trainer:innen (Situationen aus den Missionsbeispielen anzeigen, Urteil erfassen, Übereinstimmung mit der Engine auswerten).
+4. Beitritt mit Freigabe durch die Trainer:in (offene Beitrittsanfragen im Trainerbereich).
+5. Einheit 2 konzipieren (Missionsdrehbuch analog [Lerneinheit 1](konzept/lerneinheit-1.md)) und die Interaktion „Laufweg mit Zeitpunkt“ in Engine und Spielfeld ergänzen.
+6. Folgerecherche nach Freigabe der Domains (siehe [Recherche](recherche/README.md), Abschnitt 5), zuerst MEIN FUSSBALL und EU-Rechtstexte.

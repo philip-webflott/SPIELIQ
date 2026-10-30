@@ -59,7 +59,7 @@ Stand: 29.10.2026 · Code: `apps/web/src/app/globals.css` (Tokens), `apps/web/sr
 | Abstände | gestrichelte Linie mit Meter-Plakette |
 | Deckungsschatten | dunkler Kegel hinter dem Verteidiger |
 
-**Ausrichtung:** automatisch nach Bildschirmformat. Im Hochformat zeigt die eigene Angriffsrichtung nach oben, das eigene Tor liegt unten (Spielkamera-Gefühl). Jede Mission und jeder Schritt definiert einen **Ausschnitt** in Metern, damit Situationen auf dem Smartphone groß genug sind und Figuren nicht überlappen.
+**Ausrichtung:** immer gleich – die eigene Angriffsrichtung zeigt nach oben, das eigene Tor liegt unten, auf jedem Gerät und in jeder Aufgabe (Orientierung ohne Vorwissen; siehe [Einfach verstehen](einfach-verstehen.md)). Über dem Feld steht eine Legende „Wir / Gegner / Wir spielen nach oben“, Tore sind beschriftet. Jede Mission und jeder Schritt definiert einen **Ausschnitt** in Metern, damit Situationen auf dem Smartphone groß genug sind und Figuren nicht überlappen.
 
 ## 7. Interaktion und Barrierefreiheit
 

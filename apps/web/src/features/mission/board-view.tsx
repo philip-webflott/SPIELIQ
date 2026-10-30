@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
+import { ArrowUp } from 'lucide-react'
 import {
   analyzePass,
   coverShadow,
@@ -63,6 +64,13 @@ export interface BoardViewProps {
   /** Bildausschnitt (Meter); Standard: Ausschnitt der Mission bzw. ganzes Feld */
   readonly view?: PitchWindow
   readonly label: string
+  /** Legende „Wir / Gegner / Spielrichtung“ über dem Feld (Standard: an) */
+  readonly legend?: boolean
+  /**
+   * Ausrichtung an den Platz anpassen (nur Startseite). Standard: immer Hochformat –
+   * das eigene Tor liegt in jeder Aufgabe unten, wir spielen nach oben.
+   */
+  readonly fitOrientation?: boolean
 }
 
 function resolvePoint(state: BoardState, ref: string | Vec2): Vec2 | null {
@@ -73,6 +81,21 @@ function resolvePoint(state: BoardState, ref: string | Vec2): Vec2 | null {
 function nearestOpponentDistance(state: BoardState, player: PlayerState): number {
   const others = teamPlayers(state, player.team === 'own' ? 'opp' : 'own').filter((p) => p.role !== 'GK')
   return Math.min(...others.map((o) => Math.hypot(o.pos.x - player.pos.x, o.pos.y - player.pos.y)), 25)
+}
+
+/** Beschriftung neben den Toren, damit die Spielrichtung ohne Vorwissen klar ist. */
+function goalLabels(loaded: LoadedMission, window: PitchWindow): { at: Vec2; text: string }[] {
+  const ownDirection = loaded.mission.teams.own.attackDirection
+  const inside = (p: Vec2) => p.x >= window.x && p.x <= window.x + window.width && p.y >= window.y && p.y <= window.y + window.height
+  const labels: { at: Vec2; text: string }[] = []
+  for (const goal of loaded.pitch.goals) {
+    const text = goal.opensTowards === ownDirection ? 'UNSER TOR' : 'TOR GEGNER'
+    const x = goal.center.x - goal.opensTowards * 1.6
+    const candidates = [goal.center.y + goal.width / 2 + 6, goal.center.y - goal.width / 2 - 6].map((y) => ({ x, y }))
+    const at = candidates.find(inside)
+    if (at && inside(goal.center)) labels.push({ at, text })
+  }
+  return loaded.pitch.goals.length === 2 ? labels : []
 }
 
 function describePlayer(p: PlayerState, controlled: boolean): string {
@@ -97,23 +120,26 @@ export function BoardView({
   placement,
   view,
   label,
+  legend = true,
+  fitOrientation = false,
 }: BoardViewProps) {
   const { pitch, model } = loaded
   const pitchWindow = useMemo(() => view ?? loaded.mission.view ?? fullWindow(pitch), [view, loaded, pitch])
   const containerRef = useRef<HTMLDivElement | null>(null)
   const svgRef = useRef<SVGSVGElement | null>(null)
-  const [orientation, setOrientation] = useState<Orientation>('landscape')
+  const [fittedOrientation, setFittedOrientation] = useState<Orientation>('landscape')
+  const orientation: Orientation = fitOrientation ? fittedOrientation : 'portrait'
 
   useEffect(() => {
     const el = containerRef.current
-    if (!el || typeof ResizeObserver === 'undefined') return
+    if (!fitOrientation || !el || typeof ResizeObserver === 'undefined') return
     const observer = new ResizeObserver((entries) => {
       const rect = entries[0]?.contentRect
-      if (rect && rect.width > 0 && rect.height > 0) setOrientation(preferredOrientation(pitchWindow, rect.width / rect.height))
+      if (rect && rect.width > 0 && rect.height > 0) setFittedOrientation(preferredOrientation(pitchWindow, rect.width / rect.height))
     })
     observer.observe(el)
     return () => observer.disconnect()
-  }, [pitchWindow])
+  }, [pitchWindow, fitOrientation])
 
   const projection = useMemo(() => createProjection(pitch, pitchWindow, orientation), [pitch, pitchWindow, orientation])
   const tap = usePitchTap(svgRef, projection)
@@ -192,7 +218,7 @@ export function BoardView({
         const a = findPlayer(state, o.a)
         const b = findPlayer(state, o.b)
         if (!a || !b) return null
-        return <DistanceLine key={`o${i}`} from={a.pos} to={b.pos} meters={Math.hypot(a.pos.x - b.pos.x, a.pos.y - b.pos.y)} />
+        return <DistanceLine key={`o${i}`} from={a.pos} to={b.pos} />
       }
       case 'label': {
         const at = resolvePoint(state, o.at)
@@ -210,74 +236,96 @@ export function BoardView({
   for (const e of evidence) if (e.type === 'highlight') ringTones[e.playerId] = e.tone
 
   return (
-    <div ref={containerRef} className="relative h-full w-full">
-      <PitchSvg
-        ref={svgRef}
-        pitch={pitch}
-        window={pitchWindow}
-        orientation={orientation}
-        label={label}
-        className="h-full w-full touch-none select-none"
-        onClick={handleSvgClick}
-        onPointerMove={placementApi.svgHandlers.onPointerMove}
-        onPointerUp={placementApi.svgHandlers.onPointerUp}
-        onPointerCancel={placementApi.svgHandlers.onPointerCancel}
-      >
-        <g>{overlays.map(renderOverlay)}</g>
-        <g>
-          {evidence.map((e, i) => {
-            switch (e.type) {
-              case 'lane':
-                return <LaneLine key={`e${i}`} from={e.from} to={e.to} status={e.status} emphasis />
-              case 'distance':
-                return <DistanceLine key={`e${i}`} from={e.from} to={e.to} meters={e.meters} tone={e.tone} />
-              case 'zone':
-                return <ZoneShape key={`e${i}`} polygon={e.polygon} tone={e.tone} />
-              case 'circle':
-                return <CircleZone key={`e${i}`} center={e.center} radius={e.radius} tone={e.tone} />
-              default:
-                return null
-            }
-          })}
-          {lanes.map((pass) => (
-            <LaneLine key={`live-${pass.toId}`} from={pass.from} to={pass.to} status={pass.status} />
-          ))}
-        </g>
-        <g>
-          {sortedPlayers.map((p) => {
-            const isControlled = controlled.includes(p.id) && Boolean(placement?.enabled)
-            const isSelectable = selectable.includes(p.id)
-            return (
-              <PlayerToken
-                key={p.id}
-                player={p}
-                interactive={isControlled || isSelectable}
-                selected={placementApi.selectedId === p.id || selectedPlayerId === p.id}
-                dragging={placementApi.draggingId === p.id}
-                tone={ringTones[p.id] ?? null}
-                isYou={controlled.length === 1 && controlled[0] === p.id}
-                ariaLabel={describePlayer(p, isControlled)}
-                onPointerDown={isControlled ? placementApi.tokenHandlers.onPointerDown : undefined}
-                onKeyDown={
-                  isControlled
-                    ? placementApi.tokenHandlers.onKeyDown
-                    : isSelectable && onPlayerTap
-                      ? (e, player) => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault()
-                            onPlayerTap(player.id)
+    <div className="flex h-full w-full flex-col">
+      {legend && (
+        <div className="flex shrink-0 flex-wrap items-center justify-center gap-x-4 gap-y-1 pb-1.5 text-sm font-semibold text-text-muted" aria-hidden="true">
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-3.5 w-3.5 rounded-full border-2 border-white/80 bg-[var(--team-own,#4aa3ff)]" /> Wir
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-3.5 w-3.5 rounded-full border-2 border-[var(--team-opp-rim,#4a1d00)] bg-[var(--team-opp,#ff8a3d)] ring-2 ring-[var(--team-opp-edge,#ffe3cc)]" /> Gegner
+          </span>
+          {orientation === 'portrait' && (
+            <span className="inline-flex items-center gap-1">
+              <ArrowUp size={16} className="text-accent" /> Wir spielen nach oben
+            </span>
+          )}
+        </div>
+      )}
+      <div ref={containerRef} className="relative min-h-0 w-full flex-1">
+        <PitchSvg
+          ref={svgRef}
+          pitch={pitch}
+          window={pitchWindow}
+          orientation={orientation}
+          label={label}
+          className="h-full w-full touch-none select-none"
+          onClick={handleSvgClick}
+          onPointerMove={placementApi.svgHandlers.onPointerMove}
+          onPointerUp={placementApi.svgHandlers.onPointerUp}
+          onPointerCancel={placementApi.svgHandlers.onPointerCancel}
+        >
+          <g>
+            {goalLabels(loaded, pitchWindow).map((g) => (
+              <PitchLabel key={g.text} at={g.at} text={g.text} />
+            ))}
+          </g>
+          <g>{overlays.map(renderOverlay)}</g>
+          <g>
+            {evidence.map((e, i) => {
+              switch (e.type) {
+                case 'lane':
+                  return <LaneLine key={`e${i}`} from={e.from} to={e.to} status={e.status} emphasis />
+                case 'distance':
+                  return <DistanceLine key={`e${i}`} from={e.from} to={e.to} tone={e.tone} />
+                case 'zone':
+                  return <ZoneShape key={`e${i}`} polygon={e.polygon} tone={e.tone} />
+                case 'circle':
+                  return <CircleZone key={`e${i}`} center={e.center} radius={e.radius} tone={e.tone} />
+                default:
+                  return null
+              }
+            })}
+            {lanes.map((pass) => (
+              <LaneLine key={`live-${pass.toId}`} from={pass.from} to={pass.to} status={pass.status} />
+            ))}
+          </g>
+          <g>
+            {sortedPlayers.map((p) => {
+              const isControlled = controlled.includes(p.id) && Boolean(placement?.enabled)
+              const isSelectable = selectable.includes(p.id)
+              return (
+                <PlayerToken
+                  key={p.id}
+                  player={p}
+                  interactive={isControlled || isSelectable}
+                  selected={placementApi.selectedId === p.id || selectedPlayerId === p.id}
+                  dragging={placementApi.draggingId === p.id}
+                  tone={ringTones[p.id] ?? null}
+                  isYou={controlled.length === 1 && controlled[0] === p.id}
+                  ariaLabel={describePlayer(p, isControlled)}
+                  onPointerDown={isControlled ? placementApi.tokenHandlers.onPointerDown : undefined}
+                  onKeyDown={
+                    isControlled
+                      ? placementApi.tokenHandlers.onKeyDown
+                      : isSelectable && onPlayerTap
+                        ? (e, player) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault()
+                              onPlayerTap(player.id)
+                            }
                           }
-                        }
-                      : undefined
-                }
-                onActivate={isSelectable && onPlayerTap ? (player) => onPlayerTap(player.id) : undefined}
-              />
-            )
-          })}
-        </g>
-        <BallToken pos={state.ball.pos} owned={Boolean(state.ball.ownerId)} />
-        {tapPoint && <TapMarker at={tapPoint} tone="warn" />}
-      </PitchSvg>
+                        : undefined
+                  }
+                  onActivate={isSelectable && onPlayerTap ? (player) => onPlayerTap(player.id) : undefined}
+                />
+              )
+            })}
+          </g>
+          <BallToken pos={state.ball.pos} owned={Boolean(state.ball.ownerId)} />
+          {tapPoint && <TapMarker at={tapPoint} tone="warn" />}
+        </PitchSvg>
+      </div>
     </div>
   )
 }
